@@ -1,7 +1,7 @@
 <?php
 class Model
 {
-    function __construct($db_user)
+    function __construct()
     {
      
         $pdo = new PDO('mysql:host=localhost; port=8080; dbname=moh','root','');
