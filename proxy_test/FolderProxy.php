@@ -1,23 +1,23 @@
 <?php
-require_once 'IFolder.php';
-require_once 'User_1.php';
-require_once 'Folder.php';
-class FolderProxy implements IFolder{
+require_once 'IOperation.php';
+require_once 'user_1.php';
+require_once 'Operation.php';
+class FolderProxy implements IOperation{
     //private $folder;
-    protected $use;
+    protected $user;
 
-    function _contruct($use){
-        $this->use = $use;
+    function _contruct($user){
+        $this->user = $user;
     }
     
-    public function ADD($use){
+    public function ADD($user){
         try{
-            $name_of_User_1=$use->get_designation();
-            if ($name_of_User_1=='CEO'){
+            $name_of_user_1=$user->get_designation();
+            if ($name_of_user_1=='CEO'){
                 //$this-> folder=new Folder();
-                $folder=new Folder();
+                $folder=new Operation();
                 echo "Acccess granted for adding.<br>";
-                $folder->ADD($use);
+                $folder->ADD($user);
             }
             else{
                 echo 'Access denied.<br>';
@@ -32,8 +32,8 @@ class FolderProxy implements IFolder{
 
     }
     // public function UPDATE(){
-    //     $name_of_User_1=$User_1->get_designation();
-    //     if ($name_of_User_1=='CEO'){
+    //     $name_of_userr_1=$userr_1->get_designation();
+    //     if ($name_of_userr_1=='CEO'){
     //         $this-> folder=new Folder();
     //         echo "Acccess granted for updating";
     //         folder.UPDATE();
