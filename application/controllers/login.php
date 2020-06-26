@@ -1,8 +1,11 @@
 <?php include('server.php') ?>
 
 <?php
-require '../../../framework/libraries/Model.php'; //-------------------------------CALL DIRECTORY-----------------------------------------
+require '../../../framework/libraries/Model.php';
+require '../../models/table.php'; //-------------------------------CALL DIRECTORY-----------------------------------------
 class Login_model extends Model{
+    use table;
+    
     // public function __construct($user_type)
     // {
     //     parent::__construct($user_type);
