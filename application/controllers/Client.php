@@ -1,6 +1,7 @@
 <?php
-require_once 'user_1.php';
+require_once 'User_1.php';
 require 'FolderProxy.php';
+
 class Client{
     protected $user;
     function _construct($user){

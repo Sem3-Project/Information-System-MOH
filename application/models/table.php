@@ -1,8 +1,10 @@
 <?php
+
 abstract class table
 {
-    protected $id = null;
-    protected $tableName = null;
+    
+    public $id = null;
+    public $tableName = null;
 
     function __construct()
     {
@@ -47,7 +49,7 @@ abstract class table
     function load($dbObj, $id)
     {
         $this->id = $id;
-        //$dbObj = database::getInstance();
+      
         $sql = $this->buildQuery('load');
         $dbObj->doQuery($sql);
 
@@ -69,14 +71,12 @@ abstract class table
 
     function insert($dbObj)
     {
-        //$dbObj = database::getInstance();
         $sql = $this->buildQuery('insert');
         $dbObj->doQuery($sql);
     }
 
     function update($dbObj)
     {
-        //$dbObj = database::getInstance();
         $sql = $this->buildQuery('update');
         $dbObj->doQuery($sql);
     }

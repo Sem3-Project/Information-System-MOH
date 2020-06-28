@@ -10,8 +10,6 @@ class User_1{
         $this->category = $category;
     }
 
-
-
     function set_username($username) {
         $this->username = $username;
     }
@@ -19,14 +17,12 @@ class User_1{
         return $this->username;
     }
 
-
     function set_password($password) {
         $this->password = $password;
     }
     function get_password() {
         return $this->password;
     }
-
 
     function set_category($category) {
         $this->category = $category;

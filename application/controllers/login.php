@@ -1,62 +1,57 @@
-<?php include('server.php') ?>
-
 <?php
-require '../../../framework/libraries/Model.php';
-require '../../models/table.php'; //-------------------------------CALL DIRECTORY-----------------------------------------
-class Login_model extends Model{
-    use table;
-    
-    // public function __construct($user_type)
-    // {
-    //     parent::__construct($user_type);
-        
-    // }
-}
+require '../../framework/libraries/Model.php';
+require '../models/table.php';
+require '../models/login_table.php';
+//require 'errors.php'; -----------------------------------include error catching code --------------------------------------------------------------------
+
+session_start();
+$dbObj = Model::getInstance();
+$dbObj->connect('localhost','root','','moh');
+$message ="";
+
+// LOGIN USER
+if (isset($_POST['login_user'])) {
+
+    if (empty($_POST['id']) || empty($_POST['password'])) {
+        $message = "Username or password is invalid!";
+    }
+    else{
+        $id = $_POST['id'];
+        $password = $_POST['password'];
+        $catagory = $_POST['catagory'];
+        $passwordEnc = md5("$password");
+        $log = new login(); //place where form value variables assigned to NULL
+        $sql = "Select * from users where id = '$id'";
+        $result = $log->featuredLoad($dbObj, $sql);
+     
+        $numOfRows = mysqli_num_rows($result);
+        if ($numOfRows == 1) {
+            foreach (mysqli_fetch_assoc($result) as $key => $value) {
+                $log->$key = $value;
+            }
+            
+            if($id != $log->id ){
+                $message = "Incorrect username..!";
+               
+//-----------------------very imp. select cat-------------------------
+            }
+            else if($log->password != $password ){ //------------------------------------should be changed to passwordEnc in final------------------------
+                $message = "Incorrect password..!";
+            
+            }
+            else if($log->password == $password && $log->id==$id ) {
+           
+                header("Location:../../index.php");
+                echo "logged in successfully!";
+            }
+            else{
+                $message = "Invalid username..!";
+               
+            }
+        }
+    }
+}$dbObj->closeConnection();
+ 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>User Login Page</title>
-  	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="public/css/new.css">
-</head>
-<body>
-  <div class="header">
-  	<h2>Login</h2>
-  </div>
-	 
-  <form method="post" action="login.php">
-  	<!--?php include('errors.php'); ?-- INCLUDE SERVER------------------------------------------------>
-  	<div class="input-group"> 
-  		<label>Username</label>
-  		<input type="text" name="username" >
-  	</div>
-  	<div class="input-group">
-  		<label>Password</label>
-  		<input type="password" name="password">
-      </div>
-      
-      <div class="input-group">
-		<label>Select catagory</label>
-		<select name="catagory">
-				<option value="Patient(Mother)" <?php if($catagory=="Patient(Mother)") echo 'selected="selected"'; ?>>Patient(Mother)</option>
-				<option value="Patient(Child)" <?php if($catagory=="Patient(Child)") echo 'selected="selected"'; ?>>Patient(Child)</option>
-				<option value="Medical officer" <?php if($catagory=="Medical officer") echo 'selected="selected"'; ?>>Medical officer</option>
-                <option value="Midwife" <?php if($catagory=="Midwife") echo 'selected="selected"'; ?>>Midwife</option>
-				<option value="Receptionist" <?php if($catagory=="Receptionist") echo 'selected="selected"'; ?>>Receptionist</option>
-				
-		</select>
-      </div>
-      
-  	<div class="input-group">
-  		<button type="submit" class="btn" name="login_user">Login</button>
-  	</div>
-	  
 
-
-  </form>
-  
-</body>
-</html>
