@@ -1,13 +1,13 @@
 <?php
-require_once "User_1.php";
+require_once "login_page.php";
 
 //---------------------prototype clss---------------------
-class PatientMother extends User_1{
+class PatientMother extends login{
     
-    public function _construct($username, $password, $category){
+    public function _construct($username, $password, $catagory){
         $this->username = $username;
         $this->password = $password;
-        $this->category = $category;
+        $this->catagory = $catagory;
         
     }
 //------------------------using the function clone.So it is cloanable.----------------

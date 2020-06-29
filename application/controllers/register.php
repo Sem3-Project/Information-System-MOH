@@ -17,7 +17,7 @@ if (isset($_POST['reg_user'])) {
     }
     else if ($_POST['password_1'] != $_POST['password_2']) {
         $message = "The two passwords do not match";
-      }
+    }
     else{
         $id = $_POST['id'];
         $password1 = $_POST['password_1'];
@@ -42,7 +42,8 @@ if (isset($_POST['reg_user'])) {
         
         $_SESSION['id'] = $id;
         $_SESSION['success'] = "You are now logged in";
-        header("Location:../../index.php");
+        //header("Location:../../index.php");
+        header("Location:../views/login_page.php");//--------------------------after registration completed, redirected to login-----------------
         
     }
 }$dbObj->closeConnection();

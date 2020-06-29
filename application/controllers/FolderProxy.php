@@ -1,5 +1,77 @@
 <?php
 require_once 'IOperation.php';
+//require_once 'login_table.php';
+require_once 'Operation.php';
+class FolderProxy implements IOperation{
+    //private $folder;
+    protected $user;
+
+    function _contruct($user){
+        $this->user = $user;
+    }
+     //----------------------------re check -------------------------------------------------------------
+   /* public function isAdmin()
+    {
+	if ((isset($_SESSION['id']) && $_SESSION['id']['catagory'] == 'Patient-Mother') || (isset($_SESSION['id']) && $_SESSION['id']['catagory'] == 'Patient-Child')) {
+		return true;
+	}else{
+		return false;
+	}
+    } */
+
+
+    public function permit($user){
+        try{
+            $name_of_user_1=$user->get_designation();
+            //if ($name_of_user_1=='CEO'){
+            if ($name_of_user_1=='Patient-Mother'|| $name_of_user_1=='Patient-Child'){
+                //$this-> folder=new Folder();
+                $folder=new Operation();
+                echo "Not granted for editing.<br>";
+                $folder->permit($user);
+            }
+            else{
+                echo 'Access granted.<br>';
+            }
+        }catch(Exception $ex){
+            echo 'error.<br>';
+        }
+    }
+       /* function allowEdit() {
+            var $userType= "<?php echo $session_value; ?>";
+            if($userType == "Patient-Mother" || $userType == "Patient-Mother"){
+                return true;
+            }else{
+                alert("Not allowed for editing");
+                return false;
+            }
+        }   */ 
+
+        
+
+    
+    // public function UPDATE(){
+    //     $name_of_userr_1=$userr_1->get_designation();
+    //     if ($name_of_userr_1=='CEO'){
+    //         $this-> folder=new Folder();
+    //         echo "Acccess granted for updating";
+    //         folder.UPDATE();
+    //     }
+    //     else{
+    //         echo 'Access denied';
+    //     }
+        
+    // }
+}
+
+?>
+
+
+
+
+
+<!--?php
+require_once 'IOperation.php';
 require_once 'User_1.php';
 require_once 'Operation.php';
 class FolderProxy implements IOperation{
@@ -25,7 +97,7 @@ class FolderProxy implements IOperation{
         }catch(Exception $ex){
             echo 'error.<br>';
         }
-        
+       
         
 
         
@@ -45,4 +117,4 @@ class FolderProxy implements IOperation{
     // }
 }
 
-?>
+?-->

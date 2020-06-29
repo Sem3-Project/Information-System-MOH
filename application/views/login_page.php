@@ -1,4 +1,5 @@
-<?php 
+<?php
+//require_once (__DIR__ .'../controllers/login.php'); 
 require '../controllers/login.php';
 ?>
 
@@ -15,7 +16,7 @@ require '../controllers/login.php';
   	<h2>Login</h2>
   </div>
 	 
-  <form method="post" action=""><!--check again... somethig is wrong with action------------------------------------------------>
+  <form method="post" action=""><!--check again... something is wrong with action------------------------------------------------>
   
   	<div class="input-group"> 
   		<label>Username</label>

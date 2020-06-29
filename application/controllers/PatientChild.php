@@ -1,14 +1,15 @@
 <?php
-require_once "User_1.php";
+//require_once "User_1.php";
+require_once "login_table.php";
 
 //--------------------class which is used prototype--------------------
-class PatientChild extends User_1{
-    public function _construct($username, $password, $category){
-        $prototype=new PatientMother($username, $password, $category);
+class PatientChild extends login{
+    public function _construct( $password, $catagory, $id){
+        $prototype=new PatientMother( $password, $catagory, $id);
         $baby=clone $prototype;//-----------create the clone of PatientMother as $baby
-        $this->username = $baby->get_username();
+        $this->id = $baby->get_id();
         $this->password = $baby->get_password();
-        $this->category = $baby->get_category();
+        $this->catagory = $baby->get_designation();
         //return ($baby);
     }
 }

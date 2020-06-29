@@ -1,9 +1,5 @@
 <?php
-
-//entry-point file
-echo "Welcome";
-//home page should be here
-//require 'application/views/login_page.php';
+require '../../index.php';
 ?>
 
 <html>
@@ -14,7 +10,7 @@ echo "Welcome";
     <body>
         <div>
             <br><br>
-            <form action="">
+            <form method="POST">
                 
                 <button type="submit" name="edit" value="edit">Edit clinic details</button><br><br>
                 <button type="submit" name="report" value="report">View Reports</button><br><br>
