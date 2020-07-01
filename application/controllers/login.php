@@ -34,7 +34,7 @@ function permit($user){
 }*/
 
 
-$access = new FolderProxy(); //instance of FolderProxy
+//$access = new FolderProxy(); //instance of FolderProxy---------------/////-------------/////-------------------
 //$access->_contruct($id);
 
 class Client{
@@ -48,6 +48,15 @@ class Client{
         $fold_proxy->permit($user);
         //return $t;
     }
+    //function restrictUsers() {
+      //  var adminType= "<?php echo $session_value; ?-->";
+    //     if(adminType == "clerk" || adminType == "librarian"){
+    //         return true;
+    //     }else{
+    //         alert("The area you are trying to enter is restricted to your admin type.\nPlease login as a valid admin.");
+    //         return false;
+    //     }
+    // }
 }
 
 
@@ -68,7 +77,6 @@ if (isset($_POST['login_user'])) {
         $passwordEnc = md5("$password");
         $log = new login(); //place where form value variables assigned to NULL
 
-    
         $sql = "Select * from users where id = '$id'";
         $result = $log->featuredLoad($dbObj, $sql);
      
@@ -87,26 +95,37 @@ if (isset($_POST['login_user'])) {
                 $message = "Incorrect password..!";
             
             }
-            else if($log->password == $passwordEnc && $log->id==$id ) {
-           
+            else if ($log->catagory != $catagory){
+                $message = "Please select correct category!";
+            }
+            else if($log->password == $passwordEnc && $log->id==$id && $log->catagory==$catagory ) {
+                
+                // $fold_proxy=new FolderProxy($user);
+                // $fold_proxy->permit($user);
+                $detail=new login($id,$passwordEnc,$catagory);
+                $c=new Client($detail); 
+                $c->folderAccess($detail);
+                
+                $message = "logged in successfully!";
                 //header("Location:../../index.php"); ----------------------------------//////////////uncomment this to redirect///////////-----
-                echo "logged in successfully!";
+                // header("Location:../../index.php?message=".$message);
+                //header("Location:../../index.php?message=".$message);
+
+                die;
             }
             else{
                 $message = "Invalid username..!";
                
             }
         }
-        $john=new login($id,$passwordEnc,$catagory);
-        $c=new Client($john); 
-        $c->folderAccess($john);
+        // $john=new login($id,$passwordEnc,$catagory);
+        // $c=new Client($john); 
+        // $c->folderAccess($john);
         // $access = new Access();
         //permit($catagory);
     }
-    
+  echo $message;  
 }$dbObj->closeConnection(); 
-
-
 
 /*require '../../framework/libraries/Model.php';
 require '../models/table.php';

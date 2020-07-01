@@ -5,10 +5,11 @@ require '../models/login_table.php';
 
 class Operation implements IOperation{
     protected $user;
+    var $session_value;
     public function permit($user){
         //grant access
         echo "Access denied for editing.<br>"; //---------------------------------add js code for disabling-------------------------------
-
+        //$session_value = "user"; //-------------------recheck-------------------------------
     }
     // public function UPDATE(){
     //     echo "Access approved for updating";

@@ -2,10 +2,13 @@
 require_once 'IOperation.php';
 //require_once 'login_table.php';
 require_once 'Operation.php';
+
+
 class FolderProxy implements IOperation{
     //private $folder;
     protected $user;
-
+    var $session_value; //---------------------recheck---------------------------
+    //var $session_value=(isset($_SESSION['catagory']))?$_SESSION['catagory']:'';
     function _contruct($user){
         $this->user = $user;
     }
@@ -25,27 +28,34 @@ class FolderProxy implements IOperation{
             $name_of_user_1=$user->get_designation();
             //if ($name_of_user_1=='CEO'){
             if ($name_of_user_1=='Patient-Mother'|| $name_of_user_1=='Patient-Child'){
+                header("Location:../../index.php");
                 //$this-> folder=new Folder();
                 $folder=new Operation();
                 echo "Not granted for editing.<br>";
                 $folder->permit($user);
+                // header("Location:../../index.php");
+               
             }
             else{
+                header("Location:../views/home.php");
+               // $session_value = "admin";
                 echo 'Access granted.<br>';
             }
         }catch(Exception $ex){
             echo 'error.<br>';
         }
     }
-       /* function allowEdit() {
-            var $userType= "<?php echo $session_value; ?>";
+      /*  function allowEdit() {
+            $session_value=(isset($_SESSION['catagory']))?$_SESSION['catagory']:'';
+
+            $userType= "<?php echo $session_value; ?>";
             if($userType == "Patient-Mother" || $userType == "Patient-Mother"){
                 return true;
             }else{
-                alert("Not allowed for editing");
+                echo("Not allowed for editing");
                 return false;
             }
-        }   */ 
+        }   */
 
         
 
@@ -54,7 +64,7 @@ class FolderProxy implements IOperation{
     //     $name_of_userr_1=$userr_1->get_designation();
     //     if ($name_of_userr_1=='CEO'){
     //         $this-> folder=new Folder();
-    //         echo "Acccess granted for updating";
+    //         echo "Access granted for updating";
     //         folder.UPDATE();
     //     }
     //     else{

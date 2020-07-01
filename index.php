@@ -1,9 +1,24 @@
 <?php
 
+//require 'application/controllers/login.php';
+
+// if(isset($_GET['message'])){
+//     echo $_GET['message'];
+// }
+
+
 //entry-point file
+// $john=new login($id,$passwordEnc,$catagory);
+// $c=new Client($john); 
+// $c->folderAccess($john);
+echo '<br><br>';
 echo "Welcome";
 //home page should be here
 //require 'application/views/login_page.php';
+if(isset($_POST['edit'])){
+    
+    //<a href="configure_id_for_usersettings.php" onclick="return allowLibrarianOnly()">
+}
 ?>
 
 <html>
