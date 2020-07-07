@@ -2,7 +2,7 @@
 require_once 'IOperation.php';
 //require_once 'login_table.php';
 require_once 'Operation.php';
-
+//require '../models/login_table.php';
 
 class FolderProxy implements IOperation{
     //private $folder;
@@ -26,8 +26,17 @@ class FolderProxy implements IOperation{
     public function permit($user){
         try{
             $name_of_user_1=$user->get_designation();
+            $user_id = $user->get_id();
             //if ($name_of_user_1=='CEO'){
             if ($name_of_user_1=='Patient-Mother'|| $name_of_user_1=='Patient-Child'){
+
+                   // Storing id of the logged in user, in the session variable 
+                $_SESSION['id'] = $user_id; 
+          
+                    // Welcome message 
+                $_SESSION['success'] = "You have logged in"; 
+
+
                 header("Location:../../index.php");
                 //$this-> folder=new Folder();
                 $folder=new Operation();

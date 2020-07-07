@@ -8,6 +8,7 @@ class login extends table
     var $catagory=null;
     var $password_1 = null;
     var $password_2 = null;
+    // $_SESSION['success'] = ""; 
     var $tableName="users";
 
     function __construct($id=null, $password=null, $catagory=null) {

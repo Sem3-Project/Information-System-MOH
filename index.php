@@ -6,7 +6,7 @@
 //     echo $_GET['message'];
 // }
 session_start();
-echo $id;
+//echo $id;
 //entry-point file
 // $john=new login($id,$passwordEnc,$catagory);
 // $c=new Client($john); 
