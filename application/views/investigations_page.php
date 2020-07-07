@@ -1,9 +1,12 @@
 <?php
 // home - includes all front end files
 // admin -  includes all back end files
-
-require '../../models/table.php';
-include '../../models/investigation_table.php';
+//require '../../';
+// require '../../models/table.php';
+// require '../../framework/libraries/Model.php';
+// require '../models/investigations_table.php';
+//require_once '../../public/css/clinic style.css';
+//require '../controllers/investigation_controller.php';
 ?>
 
 <html>
@@ -11,8 +14,8 @@ include '../../models/investigation_table.php';
         <title>Investigations</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="public/css/clinic style.css">
-        <link rel="stylesheet" type="text/css" href="public/css/table.css">
+        <link rel="stylesheet" type="text/css" href="../../public/css/clinic style.css">
+        <link rel="stylesheet" type="text/css" href="../../public/css/table.css">
         
     </head>
     <body>

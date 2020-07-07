@@ -5,7 +5,7 @@
 <html>
     <head>
         <title>Home</title>
-
+        <link rel="stylesheet" type="text/css" href="public/css/clinic style.css">
     </head>
     <body>
         <div>

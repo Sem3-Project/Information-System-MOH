@@ -100,12 +100,23 @@ if (isset($_POST['login_user'])) {
             }
             else if($log->password == $passwordEnc && $log->id==$id && $log->catagory==$catagory ) {
                 
+                
+                $_SESSION['loggedin'] = true;
+                $_SESSION['id'] = $id;
+
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                    echo "Welcome to the member's area, " . $_SESSION['id'] . "!";
+                } else {
+                    echo "Please log in first to see this page.";
+                }
+
                 // $fold_proxy=new FolderProxy($user);
                 // $fold_proxy->permit($user);
                 $detail=new login($id,$passwordEnc,$catagory);
                 $c=new Client($detail); 
                 $c->folderAccess($detail);
-                
+
+
                 $message = "logged in successfully!";
                 //header("Location:../../index.php"); ----------------------------------//////////////uncomment this to redirect///////////-----
                 // header("Location:../../index.php?message=".$message);

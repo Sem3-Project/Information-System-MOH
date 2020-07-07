@@ -8,7 +8,7 @@ class Investigations_table extends table{
 
     var $respirEx = null;
     var $breastEx = null;
-    //---------------------------change var to int appropriately-------------------------------------------------------
+    //---------------------------all are written as var!!! may change later-------------------------------------------------------
     var $bs1 = 0;       var $bs1res = null;
     var $bs2 = 0;       var $bs2res = null;
 
