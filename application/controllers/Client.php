@@ -16,19 +16,19 @@ class Client{
     }
 
 }
-$john=new login('John','23','Patient-Child');
-$c=new Client($john);
-$c->folderAccess($john);
-echo'<br>';
+// $john=new login('John','23','Patient-Child');
+// $c=new Client($john);
+// $c->folderAccess($john);
+// echo'<br>';
 
-$jon=new login('Jon','23','Patient-Mother');
-$c=new Client($jon);
-$c->folderAccess($jon);
-echo'<br>';
+// $jon=new login('Jon','23','Patient-Mother');
+// $c=new Client($jon);
+// $c->folderAccess($jon);
+// echo'<br>';
 
-$johny=new login('Johny','23','Doctor');
-$c=new Client($johny);
-$c->folderAccess($johny);
+// $johny=new login('Johny','23','Doctor');
+// $c=new Client($johny);
+// $c->folderAccess($johny);
 
 
 ?>

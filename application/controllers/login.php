@@ -44,6 +44,11 @@ class Client{
     }
     public function folderAccess($user){
         //$john=new User_1('john','23','CEO');
+            // Storing id of the logged in user, in the session variable 
+        
+          
+            // Welcome message 
+        //$_SESSION['success'] = "You have logged in"; 
         $fold_proxy=new FolderProxy($user);
         $fold_proxy->permit($user);
         //return $t;
@@ -71,7 +76,7 @@ if (isset($_POST['login_user'])) {
         $message = "Username or password is invalid!";
     }
     else{
-        $id = $_POST['id'];
+        $_SESSION['id'] = $_POST['id'];
         $password = $_POST['password'];
         $catagory = $_POST['catagory'];
         $passwordEnc = md5("$password");
@@ -79,7 +84,9 @@ if (isset($_POST['login_user'])) {
 
         $sql = "Select * from users where id = '$id'";
         $result = $log->featuredLoad($dbObj, $sql);
-     
+        
+        //$_SESSION['id'] = $user_id; 
+
         $numOfRows = mysqli_num_rows($result);
         if ($numOfRows == 1) {
             foreach (mysqli_fetch_assoc($result) as $key => $value) {
@@ -101,14 +108,14 @@ if (isset($_POST['login_user'])) {
             else if($log->password == $passwordEnc && $log->id==$id && $log->catagory==$catagory ) {
                 
                 
-                $_SESSION['loggedin'] = true;
-                $_SESSION['id'] = $id;
+                // $_SESSION['loggedin'] = true;
+                // $_SESSION['id'] = $id;
 
-                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-                    echo "Welcome to the member's area, " . $_SESSION['id'] . "!";
-                } else {
-                    echo "Please log in first to see this page.";
-                }
+                // if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                //     echo "Welcome to the member's area, " . $_SESSION['id'] . "!";
+                // } else {
+                //     echo "Please log in first to see this page.";
+                // }
 
                 // $fold_proxy=new FolderProxy($user);
                 // $fold_proxy->permit($user);
@@ -117,7 +124,7 @@ if (isset($_POST['login_user'])) {
                 $c->folderAccess($detail);
 
 
-                $message = "logged in successfully!";
+               // $message = "logged in successfully!";
                 //header("Location:../../index.php"); ----------------------------------//////////////uncomment this to redirect///////////-----
                 // header("Location:../../index.php?message=".$message);
                 //header("Location:../../index.php?message=".$message);

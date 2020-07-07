@@ -1,18 +1,21 @@
 <?php
 
+session_start();
+
+//include 'application/controllers/login.php';
 //require 'application/controllers/login.php';
 
 // if(isset($_GET['message'])){
 //     echo $_GET['message'];
 // }
-session_start();
+
 //echo $id;
 //entry-point file
 // $john=new login($id,$passwordEnc,$catagory);
 // $c=new Client($john); 
 // $c->folderAccess($john);
 echo '<br><br>';
-echo "Welcome";
+//echo "Welcome";
 //home page should be here
 //require 'application/views/login_page.php';
 if(isset($_POST['edit'])){
