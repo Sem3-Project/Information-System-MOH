@@ -1,14 +1,6 @@
 <?php
-// home - includes all front end files
-// admin -  includes all back end files
-//require '../../';
-// require '../../models/table.php';
-// require '../../framework/libraries/Model.php';
-// require '../models/investigations_table.php';
-//require_once '../../public/css/clinic style.css';
-//require '../controllers/investigation_controller.php';
+require '../models/investigation_model.php';
 ?>
-
 <html>
     <head>
         <title>Investigations</title>
@@ -19,7 +11,7 @@
         
     </head>
     <body>
-        <form action="investigations.php" method="post">
+        <form action="investigations_page.php" method="post">
         <h2 class="title">පරීක්ෂණ(Investigations)</h2>
           
             <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here"  value="<?php echo $id;?>"><br>

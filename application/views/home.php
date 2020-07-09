@@ -13,6 +13,10 @@
             <form method="POST">
                 
                 <button type="submit" name="edit" value="edit">Edit clinic details</button><br><br>
+
+
+                <button type="submit" name="inves" value="inves">Edit Investigations details</button><br><br>
+
                 <button type="submit" name="report" value="report">View Reports</button><br><br>
                 <button type="submit" name="date" value="date">Visit date confirmation</button><br><br>
             </form>

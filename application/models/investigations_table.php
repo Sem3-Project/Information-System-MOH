@@ -1,5 +1,5 @@
 <?php
-require_once 'table.php';
+//require_once 'table.php';
 class Investigations_table extends table{
     //---------------------------write all data fields in investigations form here----------------------------------------
     var $id = null;

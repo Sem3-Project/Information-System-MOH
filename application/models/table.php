@@ -1,15 +1,15 @@
 <?php
 
-abstract class table
+class table
 {
     
     public $id = null;
     public $tableName = null;
 
-    function __construct()
-    {
+    // function __construct()
+    // {
         
-    }
+    // }
 
     protected function buildQuery($task)
     {
