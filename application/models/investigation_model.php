@@ -1,12 +1,7 @@
 <?php
-//require '../../framework/libraries/Controller.php';
-//require_once 'table.php';
-//require '../../framework/libraries/Model.php';
-//require_once 'table.php';
-//require_once 'investigations_table.php';
 require '../../framework/libraries/Model.php';
-//require_once 'table.php';
 require '../models/table.php';
+
 $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
 session_start();

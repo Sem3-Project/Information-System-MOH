@@ -15,8 +15,7 @@ require '../models/investigation_model.php';
         <h2 class="title">පරීක්ෂණ(Investigations)</h2>
           
             <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here"  value="<?php echo $id;?>"><br>
-            <button type="submit" name="search" value="Find">Search</button>&nbsp; &nbsp;
-            <button type="submit" name="insert" value="Insert">Add Patient</button><br><br>
+            <button type="submit" name="search" value="Find">Search</button>&nbsp; &nbsp;<br><br>
 
             <h5><b>හෘද පරීක්ෂාව(Auscutation)</b></h5>
             <div class="input-group"><input class="input--style-2" type="text" name="ausT1" placeholder="T1" value="<?php echo $ausT1;?>"></div>
