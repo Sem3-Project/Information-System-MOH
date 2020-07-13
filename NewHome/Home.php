@@ -112,18 +112,19 @@
             </script>
 </article>
 
-<div class="para1"><h2 class="heading">Our Mission</h2>
+<!-- <div class="para1"><h2 class="heading">Our Mission</h2>
     To contribute to the social and economic development of the province by achieving the highest attainable health status through promotive, preventive, curative and rehabilitative services of high quality made available and accessible to the people of the Western Province.
 </div>
 <div class="para2"><h2 class="heading">Our Vision</h2>
         Ensuring a healthier population that contributes to the economic, social, mental and spiritual development of the Western Province.<br /><br />
+</div> -->
+
+<div class="para1"><h2 class="heading">අපගේ මෙහෙවර(Our Mission)</h2>
+කායික මානසික සමාජයීය හා ආධ්‍යාත්මික වශයෙන් සෞඛ්‍ය සම්පන්න වූ මාතෘ, ළදරු, ළමා ප්‍රමුඛ පවුලේ මෙන්ම සමාජයේ සෞඛ්‍ය සංරක්ෂණය සිදු කරමින් සුවදායක වූ පරිසරයක් තුල යහපත් ජීවන තත්ත්වයක් පවත්වා ගැනීම සඳහා වෙහෙසීම හා කැපවීම.         <br /><br />
 </div>
-<!-- <div class="para1"><h2 class="heading">අපගේ දැක්ම</h2><h2 class="heading">Our Mission</h2>
+<div class="para2"><h2 class="heading">අපගේ දැක්ම (Our Vision)</h2>
 පරිසර හිතකාමී සෞඛ්‍ය සම්පන්න වූ ජනතාවක් ප්‍රදේශයෙන් බිහි කිරීම 
 </div>
-<div class="para2"><h2 class="heading">අපගේ මෙහෙවර(Our Vision)</h2>
-කායික මානසික සමාජයීය හා ආධ්‍යාත්මික වශයෙන් සෞඛ්‍ය සම්පන්න වූ මාතෘ, ළදරු, ළමා ප්‍රමුඛ පවුලේ මෙන්ම සමාජයේ සෞඛ්‍ය සංරක්ෂණය සිදු කරමින් සුවදායක වූ පරිසරයක් තුල යහපත් ජීවන තත්ත්වයක් පවත්වා ගැනීම සඳහා වෙහෙසීම හා කැපවීම.         <br /><br />
-</div> -->
 
 <footer>
     <p style="text-align: center;">Copyright @ 2020 MOH, Gampaha, Sri Lanka</br>tele: 033-2222278</br>fax: 033-2222278</br>email: gampahamoh@yahoo.com </p>
