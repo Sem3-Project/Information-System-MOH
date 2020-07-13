@@ -5,7 +5,7 @@ $user = "root";
 $password = "";
 $database = "moh";
 
-$NIC="";
+$id="";
 $Companion="";
 $Intended_Hospital_Delivery="";
 $Intended_Hospital_Emergency="";
@@ -74,7 +74,7 @@ try{
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=$_POST['NIC'];
+    $data[0]=$_POST['id'];
     $data[1]=$_POST['Companion'];
     $data[2]=$_POST['Intended_Hospital_Delivery'];
     $data[3]=$_POST['Intended_Hospital_Emergency'];
@@ -136,14 +136,14 @@ function getData(){
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM `data2` WHERE NIC='$info[0]'";
+    $search_query="SELECT * FROM `data2` WHERE id='$info[0]'";
     $search_result=mysqli_query($connect,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
         
-                        $NIC=$row['NIC'];
+                        $id=$row['id'];
                         $Companion=$row['Companion'];
                         $Intended_Hospital_Delivery=$row['Intended_Hospital_Delivery'];
                         $Intended_Hospital_Emergency=$row['Intended_Hospital_Emergency'];
@@ -214,7 +214,7 @@ if(isset($_POST['Search'])){
 //insert
 if(isset($_POST['Insert'])){
     $info=getData();
-    $insert_query="INSERT INTO `data2`(`NIC`, `Companion`, `Intended_Hospital_Delivery`,
+    $insert_query="INSERT INTO `data2`(`id`, `Companion`, `Intended_Hospital_Delivery`,
      `Intended_Hospital_Emergency`, `Mode_of_Transport_Delivery`, `Mode_of_Transport_Emergency`, `Average_cost_Delivery`, 
      `Average_cost_Emergency`, `Distance_from_Home_Delivery`, `Distance_from_Home_Emergency`, `Time_taken_to_reach_Delivery`,
       `Time_taken_to_reach_Emergency`, `first_date`, `first_Husband`, `first_wife`, `first_Other`, `sec_date`, `sec_Husband`, 
@@ -245,7 +245,7 @@ if(isset($_POST['Insert'])){
 //update
 if(isset($_POST['Update'])){
     $info=getData();
-    $update_query="UPDATE `data2` SET `NIC`='$info[0]',`Companion`='$info[1]',`Intended_Hospital_Delivery`='$info[2]',
+    $update_query="UPDATE `data2` SET `id`='$info[0]',`Companion`='$info[1]',`Intended_Hospital_Delivery`='$info[2]',
     `Intended_Hospital_Emergency`='$info[3]',`Mode_of_Transport_Delivery`='$info[4]',`Mode_of_Transport_Emergency`='$info[5]',
     `Average_cost_Delivery`='$info[6]',`Average_cost_Emergency`='$info[7]',`Distance_from_Home_Delivery`='$info[8]',
     `Distance_from_Home_Emergency`='$info[9]',`Time_taken_to_reach_Delivery`='$info[10]',`Time_taken_to_reach_Emergency`='$info[11]',
@@ -256,7 +256,7 @@ if(isset($_POST['Update'])){
     `d5`='$info[32]',`d6`='$info[33]',`d7`='$info[34]',`d8`='$info[35]',`d9`='$info[36]',`d10`='$info[37]',`d11`='$info[38]',`d12`='$info[39]',
     `cd1`='$info[40]',`cd2`='$info[41]',`cd3`='$info[42]',`cd4`='$info[43]',`cd5`='$info[44]',`cd6`='$info[45]',`cd7`='$info[46]',`cd8`='$info[47]',
     `cd9`='$info[48]',`cd10`='$info[49]',`cd11`='$info[50]',`cd12`='$info[51]',`Conselling_date`='$info[52]',`chosen_method`='$info[53]',
-    `reson_not_method`='$info[54]',`Consent_form_date`='$info[55]' WHERE NIC='$info[0]'";
+    `reson_not_method`='$info[54]',`Consent_form_date`='$info[55]' WHERE id='$info[0]'";
 
     try{
         $pdate_result=mysqli_query($connect,$update_query);
@@ -292,7 +292,7 @@ th, td {
 
 <body>
 <form method="POST" action="IECMaterial.php">
-<input type="text" name="NIC" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($NIC);?>"><br><br>
+<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
 <input type="submit" name="Update" value="Update"><br><br>

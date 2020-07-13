@@ -5,7 +5,7 @@ $user = "root";
 $password = "";
 $database = "moh";
 
-$NIC="";
+$id="";
 $BloodGroup="";
 $BMI="";
 $height="";
@@ -52,7 +52,7 @@ try{
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=$_POST['NIC'];
+    $data[0]=$_POST['id'];
     $data[1]=$_POST['BloodGroup'];
     $data[2]=$_POST['BMI'];
     $data[3]=$_POST['height'];
@@ -93,14 +93,14 @@ function getData(){
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM `data` WHERE NIC='$info[0]'";
+    $search_query="SELECT * FROM `data` WHERE id='$info[0]'";
     $search_result=mysqli_query($connect,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
         
-                        $NIC=$row['NIC'];
+                        $id=$row['id'];
                         $BloodGroup=$row['BloodGroup'];
                         $BMI=$row['BMI'];
                         $height=$row['height'];
@@ -149,7 +149,7 @@ if(isset($_POST['Search'])){
 //insert
 if(isset($_POST['Insert'])){
     $info=getData();
-    $insert_query="INSERT INTO `data`(`NIC`, `BloodGroup`, `BMI`, `height`, `allergies`, `Name_of_the_mother`, `Name_of_the_Hospital_Clinic`,
+    $insert_query="INSERT INTO `data`(`id`, `BloodGroup`, `BMI`, `height`, `allergies`, `Name_of_the_mother`, `Name_of_the_Hospital_Clinic`,
      `age`, `Name_of_the_Consultant_Obstetrician`, `Name_of_the_field_Clinic`, `GramaNiladariDivision`, `RegistrationNoEligibleFamilyRegister`, 
      `RegistrationDateEligibleFamilyRegister`, `RegistrationNoPregnantmothersRegister`, `RegistrationDatePregnantmothersRegister`, 
      `IdentifiedAntenatalRiskConditionsModifiers`, `consanguinity`, `RubellaImmunization`, `PrePregnancyScreeningDone`, `PreconceptionalFolicAcid`, 
@@ -176,7 +176,7 @@ if(isset($_POST['Insert'])){
 //update
 if(isset($_POST['Update'])){
     $info=getData();
-    $update_query="UPDATE `data` SET `NIC`='$info[0]',`BloodGroup`='$info[1]',`BMI`='$info[2]',`height`='$info[3]',`allergies`='$info[4]',
+    $update_query="UPDATE `data` SET `id`='$info[0]',`BloodGroup`='$info[1]',`BMI`='$info[2]',`height`='$info[3]',`allergies`='$info[4]',
     `Name_of_the_mother`='$info[5]',`Name_of_the_Hospital_Clinic`='$info[6]',`age`='$info[7]',`Name_of_the_Consultant_Obstetrician`='$info[8]',
     `Name_of_the_field_Clinic`='$info[9]',`GramaNiladariDivision`='$info[10]',`RegistrationNoEligibleFamilyRegister`='$info[11]',
     `RegistrationDateEligibleFamilyRegister`='$info[12]',`RegistrationNoPregnantmothersRegister`='$info[13]',
@@ -185,7 +185,7 @@ if(isset($_POST['Update'])){
     `Planed_pregnancy_or_not`='$info[20]',`Historyofsubfertility`='$info[21]',`Family_planing_method_last_used`='$info[22]',
     `G`='$info[23]',`P`='$info[24]',`C`='$info[25]',`AgeOfYoungestChild`='$info[26]',`LRMP`='$info[27]',`EDD`='$info[28]',
     `US_corrected_EDD`='$info[29]',`POA_at_dating_Scan`='$info[30]',`Date_of_Quickening`='$info[31]',`POA_at_Registration`='$info[32]', `tele`='$info[33]'  
-    WHERE NIC='$info[0]'";
+    WHERE id='$info[0]'";
 
     try{
         $pdate_result=mysqli_query($connect,$update_query);
@@ -215,7 +215,7 @@ if(isset($_POST['Update'])){
 <h1>ගර්භණී සටහන් පත/Pregnancy Record</h1>
 
 <form method="POST" action="BasicDetails.php">
-<input type="text" name="NIC" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($NIC);?>"><br><br>
+<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
 <input type="submit" name="Update" value="Update"><br><br>
