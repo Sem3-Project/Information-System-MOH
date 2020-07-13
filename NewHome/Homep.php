@@ -11,7 +11,7 @@
 <header>
 <div class="header"><img class="logo" src="images/logo.jpg"/>
 <div class="logo">
-		<h1>Medical Officer of Health</h1>
+		<h1>Medical Officer of Health Office</h1>
 		<h3>Gampaha</h3>
 	</div>
 	</div>

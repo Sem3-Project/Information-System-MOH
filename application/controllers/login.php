@@ -76,7 +76,8 @@ if (isset($_POST['login_user'])) {
         $message = "Username or password is invalid!";
     }
     else{
-        $_SESSION['id'] = $_POST['id'];
+        $id = $_POST['id'];
+        //$_SESSION['id'] = $id;
         $password = $_POST['password'];
         $catagory = $_POST['catagory'];
         $passwordEnc = md5("$password");
@@ -122,12 +123,6 @@ if (isset($_POST['login_user'])) {
                 $detail=new login($id,$passwordEnc,$catagory);
                 $c=new Client($detail); 
                 $c->folderAccess($detail);
-
-
-               // $message = "logged in successfully!";
-                //header("Location:../../index.php"); ----------------------------------//////////////uncomment this to redirect///////////-----
-                // header("Location:../../index.php?message=".$message);
-                //header("Location:../../index.php?message=".$message);
 
                 die;
             }
