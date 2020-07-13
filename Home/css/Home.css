@@ -38,9 +38,14 @@ div.linkbox{
 div.linkbox:hover{background:rgba(135,206,250,0.4);}
 
 div.linkbox img{width:70px; height:70px; }
-div#ViewReport{float:left; display:block;margin-left:50px; margin-top:50px;}
+div#Registration{float:left; display:block;margin-left:50px; margin-top:50px;}
+/* div#ClinicDate{float:right; display:inline-block; margin-right:60px; position:relative; margin-top:70px;}
+div#ViewReport{display:inline-block; float:right; margin-right:60px; position:relative; margin-top:70px;} */
+/* div#Delete{float:left; display:inline-block; clear:both; position:relative; margin-left:50px; margin-top:50px;} */
+div#Delete{float:left; display:inline-block; clear:left; margin-left:50px; position: relative; margin-top:50px;}
+div#Edit{float:left; display:inline-block; clear:both; position:relative; margin-left:50px; margin-top:50px;}
 div#ClinicDate{float:left; display:inline-block; clear:both; position:relative; margin-left:50px; margin-top:50px;}
-
+div#ViewReport{float:left; display:inline-block; clear:both; position:relative; margin-left:50px; margin-top:50px;}
 
 /*for slide show*/
 * {box-sizing:border-box}
@@ -132,7 +137,7 @@ div.para1 , div.para2{
 div.para1{clear: both; display:inline-block;  transform: translate(400px,-500px);}
 div.para2{clear: both; display: inline-block;  transform: translate(500px,-540px); }
 
-h2.heading{color:rgb(249,112,7); text-shadow: 2px 2px 2px grey ; text-align: center;}
+h2.heading{color:rgb(218, 68, 9); text-shadow: 4px 4px 4px grey ; text-align: center;}
 
 
 footer{position:absolute; display:block; padding:1px; width:100%; color:black; background-image:url("../images/footer.jpg");}
