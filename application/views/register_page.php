@@ -15,7 +15,7 @@
   	<h2>Register</h2>
   </div>
 	
-  <form method="post" action=""> <!--previous: action="the page name "----------------------------------------------------------->
+  <form method="post" action="register_page.php"> <!--previous: action="the page name "----------------------------------------------------------->
   	
 	  <div class="input-group">
   	  <label>Username</label>
@@ -41,13 +41,16 @@
   	  <input type="password" name="password_2" placeholder="Enter password again">
   	</div>
   	<div class="input-group">
-  	  <button type="submit" class="btn" name="reg_user">Register</button>
+  	  <button type="submit" class="btn" name="save">Register</button>
+	  <button onclick="window.location='home.php'" class="cancelbtn" type="button">Cancel</button>
+
   	</div>
-  	<p>
+	
+  	<!-- <p>
 		  Already registered? 
 		  <button><a href="login_page.php">Sign in</a></button>
 		  
-  	</p>
+  	</p> -->
   </form>
 </body>
 </html>

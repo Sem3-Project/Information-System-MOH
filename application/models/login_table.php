@@ -47,38 +47,3 @@ class login extends table
 
 ?>
 
-<!--?php
-class User_1{
-    var $name;
-    var $id;
-    var $catagory;
-
-    function __construct($name, $id, $catagory) {
-        $this->name = $name;
-        $this->id = $id;
-        $this->catagory = $catagory;
-    }
-
-    function set_name($name) {
-        $this->name = $name;
-    }
-    function get_name() {
-        return $this->name;
-    }
-
-    function set_id($id) {
-        $this->id = $id;
-    }
-    function get_id() {
-        return $this->id;
-    }
-
-    function set_catagory($catagory) {
-        $this->catagory = $catagory;
-    }
-    function get_catagory() {
-        return $this->catagory;
-    }
-}
-
-?-->

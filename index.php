@@ -1,43 +1,49 @@
 <?php
-
-session_start();
-
-//include 'application/controllers/login.php';
-//require 'application/controllers/login.php';
-
-// if(isset($_GET['message'])){
-//     echo $_GET['message'];
-// }
-
-//echo $id;
-//entry-point file
-// $john=new login($id,$passwordEnc,$catagory);
-// $c=new Client($john); 
-// $c->folderAccess($john);
-echo '<br><br>';
-//echo "Welcome";
-//home page should be here
-//require 'application/views/login_page.php';
-if(isset($_POST['edit'])){
-    
-    //<a href="configure_id_for_usersettings.php" onclick="return allowLibrarianOnly()">
-}
+//require_once (__DIR__ .'../controllers/login.php'); 
+require '../application/controllers/login.php';
 ?>
 
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Home</title>
+<head>
+  <title>User Login Page</title>
+  	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/new.css">
+</head>
+<body>
+  <div class="header">
+  	<h2>Login</h2>
+  </div>
+	 
+  <form method="post" action=""><!--check again... something is wrong with action------------------------------------------------>
+  
+  	<div class="input-group"> 
+  		<label>Username</label>
+  		<input type="text" name="id" >
+  	</div>
+  	<div class="input-group">
+  		<label>Password</label>
+  		<input type="password" name="password">
+    </div>
+    
+    </div>
+	  <div class="input-group">
+		<label>Select category</label>
+		<select name="catagory">
+                <option value="Patient-Mother" >Patient-Mother</option>
+				<option value="Patient-Child" >Patient-Child</option>
+				<option value="Medical officer" >Medical officer</option>
+                <option value="Midwife" >Midwife</option>
+				<option value="Receptionist" >Receptionist</option>
+		</select>
+  	</div>
 
-    </head>
-    <body>
-        <div>
-            <br><br>
-            <form action="">
-                
-                <button type="submit" name="edit" value="edit">Edit clinic details</button><br><br>
-                <button type="submit" name="report" value="report">View Reports</button><br><br>
-                <button type="submit" name="date" value="date">Visit date confirmation</button><br><br>
-            </form>
-        </div>
-    </body>
+  	<div class="input-group">
+  		<button type="submit" class="btn" name="login_user">Login</button>
+  	
+
+  </form>
+  
+</body>
 </html>

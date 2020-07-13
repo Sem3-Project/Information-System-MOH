@@ -6,12 +6,13 @@ class table
     public $id = null;
     public $tableName = null;
 
-    // function __construct()
-    // {
+    function __construct()
+    {
         
-    // }
+    }
+    //protected function buildQuery($task)
 
-    protected function buildQuery($task)
+    protected function buildQuery($task) //protected was there--------------------------
     {
         $sql = '';
         if ($task == 'load') {
