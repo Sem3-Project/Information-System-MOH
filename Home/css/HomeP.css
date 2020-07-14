@@ -1,7 +1,7 @@
 body{ width:100%; background-color:#ffffff;}
 
 .header {
-    font-family:cursive, Arial, "Sans-serif", "Times New Roman"; height:285px ; padding:5px; color:white; background: linear-gradient(
+    font-family:cursive, Arial, "Sans-serif", "Times New Roman"; height:190px ; padding:5px; color:white; background: linear-gradient(
     to left,
     rgba(73,4,4, 0),
     rgba(73,4,4, 100)

@@ -1,6 +1,7 @@
 <?php
 require '../controllers/login.php';
-//echo'You have logged in with user id: '.($_SESSION['id']);
+//echo $_SESSION['success']; 
+echo'You have logged in with user id: '.($_SESSION['id']);
 ?>
 
 <!DOCTYPE html>
@@ -117,11 +118,11 @@ require '../controllers/login.php';
             </script>
 </article>
 
-<div class="para1"><h2 class="heading">අපගේ දැක්ම</h2><h2 class="heading">Our Mission</h2>
-පරිසර හිතකාමී සෞඛ්‍ය සම්පන්න වූ ජනතාවක් ප්‍රදේශයෙන් බිහි කිරීම 
-</div>
-<div class="para2"><h2 class="heading">අපගේ මෙහෙවර(Our Vision)</h2>
+<div class="para1"><h2 class="heading">අපගේ මෙහෙවර(Our Mission)</h2>
 කායික මානසික සමාජයීය හා ආධ්‍යාත්මික වශයෙන් සෞඛ්‍ය සම්පන්න වූ මාතෘ, ළදරු, ළමා ප්‍රමුඛ පවුලේ මෙන්ම සමාජයේ සෞඛ්‍ය සංරක්ෂණය සිදු කරමින් සුවදායක වූ පරිසරයක් තුල යහපත් ජීවන තත්ත්වයක් පවත්වා ගැනීම සඳහා වෙහෙසීම හා කැපවීම.         <br /><br />
+</div>
+<div class="para2"><h2 class="heading">අපගේ දැක්ම (Our Vision)</h2>
+පරිසර හිතකාමී සෞඛ්‍ය සම්පන්න වූ ජනතාවක් ප්‍රදේශයෙන් බිහි කිරීම 
 </div>
 
 

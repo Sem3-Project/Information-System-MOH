@@ -1,5 +1,6 @@
 <?php
 //https://jeroensormani.com/hiding-the-admin-bar/---------------------------must see---------------------------
+
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
 //require_once 'login_table.php';
@@ -137,7 +138,10 @@ if (isset($_POST['login_user'])) {
         // $access = new Access();
         //permit($catagory);
     }
-  echo $message;  
+    ?>
+    <script>alert($message)</script>
+  
+  <?php  
 }$dbObj->closeConnection(); 
 
 /*require '../../framework/libraries/Model.php';

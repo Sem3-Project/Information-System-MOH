@@ -1,6 +1,6 @@
 <?php
 //require_once (__DIR__ .'../controllers/login.php'); 
-require '../application/controllers/login.php';
+require 'application/controllers/login.php';
 ?>
 
 <!DOCTYPE html>

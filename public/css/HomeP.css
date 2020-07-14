@@ -1,7 +1,7 @@
-body{ width:100%; background-color:#DCDCDC;}
+body{ width:100%; background-color:#ffffff;}
 
 .header {
-    font-family:cursive, Arial, "Sans-serif", "Times New Roman"; height:285px ; padding:5px; color:white; background: linear-gradient(
+    font-family:cursive, Arial, "Sans-serif", "Times New Roman"; height:190px ; padding:5px; color:white; background: linear-gradient(
     to left,
     rgba(73,4,4, 0),
     rgba(73,4,4, 100)
@@ -18,7 +18,7 @@ nav{
 
 
 article{margin-left:100px; margin-right:100px;box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-    background:-webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
+    background:-webkit-gradient(linear, left top, left 25, from(#b6b3b3), color-stop(4%, #EEEEEE), to(#b6b3b3)); 
     height:1000px; position:relative;}
 
 
@@ -30,7 +30,7 @@ div.linkbox{
     border-radius:2px;
     width:110px;
     height:120px;
-    background:-webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+    background:-webkit-gradient(linear, left top, left 25, from(#ffd6d6), color-stop(4%, #ffd6d6), to(#ffd6d6));
     padding:8px 8px;
     box-sizing:border-box;
     box-shadow: rgba(0,0,0, 0.5) 0px 0px 8px;
@@ -127,6 +127,7 @@ div.para1 , div.para2{
 	display:inline-block;
 	padding:10px;
 	position: relative;
+	font-weight: bolder;
 }
 div.para1{clear: both; display:inline-block;  transform: translate(400px,-500px);}
 div.para2{clear: both; display: inline-block;  transform: translate(500px,-540px); }

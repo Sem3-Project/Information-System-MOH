@@ -1,84 +1,116 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="../../public/css/login_test.css"></link>
-<!------ Include the above in your HEAD tag ---------->
+<?php
+require '../controllers/login.php'; //-----------------------to be deleted=====================================================
+?>
 
-<section class="login-block">
-    <div class="container">
-	<div class="row">
-		<div class="col-md-4 login-sec">
-		    <h2 class="text-center">Login Now</h2>
-		    <form class="login-form">
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="text-uppercase">Username</label>
-    <input type="text" class="form-control" placeholder="Your NIC number Ex:--------V">
-    
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="text-uppercase">Password</label>
-    <input type="password" class="form-control" placeholder="Enter password">
-  </div>
-  <div class="form-group">
-  <label class="text-uppercase">Select category</label><br>
-		<select name="catagory" class="form-control" >
-                <option value="Patient-Mother" >Patient-Mother</option>
-				<option value="Patient-Child" >Patient-Child</option>
-				<option value="Medical officer" >Medical officer</option>
-                <option value="Midwife" >Midwife</option>
-				<option value="Receptionist" >Receptionist</option>
-		</select>
-  </div>
-  
-    <div class="form-check">
-    <!--label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      <small>Remember Me</small>
-    </label-->
-    <button type="submit" class="btn btn-login float-right">Submit</button>
-  </div>
-  
-</form>
-<div class="copy-text">Created with <i class="fa fa-heart"></i> by Grafreez</div>
-		</div>
-		<div class="col-md-8 banner-sec">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  </ol>
-            <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <img class="d-block img-fluid" src="https://static.pexels.com/photos/33972/pexels-photo.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <div class="banner-text">
-            <h2>This is Heaven</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-        </div>	
-  </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <div class="banner-text">
-            <h2>This is Heaven</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-        </div>	
-    </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <div class="banner-text">
-            <h2>This is Heaven</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-        </div>	
-    </div>
-  </div>
-            </div>	   
-		    
-		</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+  <!-- <link rel="stylesheet" type="text/css" href="../../public/css/style.css"> -->
+  <link rel="stylesheet" href="../../public/js/login.js">
+  <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+  <link rel = "stylesheet" href ="../../public/css/login.css"/>
+  <link rel="stylesheet" href="../../public/css/tether.min.css">
+	<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/swag.css">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<header>
+<div class="header">
+<div class="logo">
+    <img class="logo" src="../../public/images/logo.jpg"/> 
+		<h2>සෞඛ්‍ය වෛද්‍ය නිලධාරී කාර්යාලය (Medical Officer of Health Office)</h2>
+		<h3>ගම්පහ (Gampaha)</h3>
 	</div>
 </div>
-</section>
+</header>
+<body>
+
+  <div style="color:red; opacity: 0.8 font-style:bold" >
+      <marquee behavior="scroll" direction="right" onmouseover="this.stop();" onmouseout="this.start();">Please send your comments to gampahamoh@yahoo.com</marquee>
+  </div>
+	<img class="wave" src="../../public/images/wave_new.png">
+	<div class="container">
+		<div class="img">
+			<img src="../../public/images/login_new.png">
+		</div>
+		<div class="login-content">
+			<form method="post" action="" autocomplete="off">
+        <img src="../../public/images/sign.jpg">
+        <!-- <div class="blink_me">BLINK ME</div> -->
+        <div class="blink_me"><h3 class="title"><b><blink>ආයුබෝවන්</blink></b></h3></div><br>
+        
+        <div class="form-group"> 
+  		      <label><b>පරිශීලක නාමය(Username)</b></label>
+  		      <input type="text" class="form-control" name="id" >
+  	    </div>
+  	    <div class="form-group">
+  		      <label for= "exampleInputPassword1"><b>මුරපදය(Password)</b></label>
+  		      <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+        </div>
+    
+        <!-- </div> -->
+	      <div class="form-group">
+		        <label><b>කාණ්ඩය(Category)</b></label>
+		        <select name="catagory" class="form-control">
+                <option value="Patient-Mother" >මාතෘ-Mother</option>
+				        <option value="Patient-Child" >ළමා-Child</option>
+				        <option value="Medical officer" >වෛද්‍ය-Medical officer</option>
+                <option value="Midwife" >වින්නඹු මාතා-Midwife</option>
+				        <option value="Receptionist">පිළිගැනීමේ නිලධාරි-Receptionist</option>
+		        </select>
+  	    </div>
+
+
+        <button type="submit" class="btn btn-primary" name="login_user">පිවිසෙන්න (Login)</button>
+
+           		<!-- <div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>පරිශීලක නාමය(Username)</h5>
+           		   		<input type="text" class="input" name="id">
+                  </div>
+              </div>
+
+
+              <div class="input-div one">
+                  <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+                  <div class="div">
+                      <h5>කාණ්ඩය(Category)</h5>
+                     
+                  
+                      <select name="catagory" class = "input">
+                          <option value="Patient-Mother">Patient-Mother</option>
+				                  <option value="Patient-Child">Patient-Child</option>
+				                  <option value="Medical officer" >Medical officer</option>
+                          <option value="Midwife" >Midwife</option>
+				                  <option value="Receptionist" >Receptionist</option>
+		                  </select> 
+                  </div>
+                  
+               </div>
+               
+
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>මුරපදය(Password)</h5>
+           		    	<input type="password" class="input" name="password">
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login" name="login_user"> -->
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../public/js/main.js"></script>
+</body>
+</html>

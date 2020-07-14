@@ -1,4 +1,4 @@
-body{ width:100%; background-color:#ffffff;}
+body{ width:100%; background-color:white;}
 
 .header {
     font-family:cursive, Arial, "Sans-serif", "Times New Roman"; height:190px ; padding:5px; color:white; background: linear-gradient(
@@ -18,7 +18,7 @@ nav{
 
 
 article{margin-left:100px; margin-right:100px;box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-    background:-webkit-gradient(linear, left top, left 25, from(#b6b3b3), color-stop(4%, #EEEEEE), to(#b6b3b3)); 
+    background:-webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
     height:1000px; position:relative;}
 
 
@@ -132,12 +132,11 @@ div.para1 , div.para2{
 	display:inline-block;
 	padding:10px;
 	position: relative;
-	font-weight: bolder;
 }
 div.para1{clear: both; display:inline-block;  transform: translate(400px,-500px);}
 div.para2{clear: both; display: inline-block;  transform: translate(500px,-540px); }
 
-h2.heading{color:rgb(218, 68, 9); text-shadow: 4px 4px 4px grey ; text-align: center;}
+h2.heading{color:rgb(249,112,7); text-shadow: 2px 2px 2px grey ; text-align: center;}
 
 
 footer{position:absolute; display:block; padding:1px; width:100%; color:black; background-image:url("../images/footer.jpg");}
