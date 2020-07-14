@@ -80,11 +80,6 @@
 
   	</div>
 	
-  	<!-- <p>
-		  Already registered? 
-		  <button><a href="login_page.php">Sign in</a></button>
-		  
-  	</p> -->
   </form>
 </body>
 </html>
