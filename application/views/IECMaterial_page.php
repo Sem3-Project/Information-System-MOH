@@ -1,5 +1,5 @@
 <?php
-require '../models/IECMaterial_page.php';
+require '../models/IECMaterial_model.php';
 ?>
 
 <html>
