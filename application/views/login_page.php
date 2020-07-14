@@ -20,10 +20,9 @@ require '../controllers/login.php';
 		<div class="header">
 			<div class="logo">
     			<img class="logo" src="../../public/images/logo.jpg"/> 
-				<h2>සෞඛ්‍ය වෛද්‍ය නිලධාරී කාර්යාලය</h2>
-				<h3>ගම්පහ</h3>
-				<h4>Medical Officer of Health Office</h4>
-				<h5>Gampaha</h5>
+				<h3>සෞඛ්‍ය වෛද්‍ය නිලධාරී කාර්යාලය - ගම්පහ</h3>
+				<h4>Medical Officer of Health Office - Gampaha</h4>
+
 			</div>
 		</div>
 	</header>
@@ -58,12 +57,12 @@ require '../controllers/login.php';
                 					<option value="Patient-Mother" >මාතෘ-Mother</option>
 				        			<option value="Patient-Child" >ළමා-Child</option>
 				        			<option value="Medical officer" >වෛද්‍ය නිලධාරි-Medical officer</option>
-                					<option value="Midwife" >වින්නඹු-Midwife</option>
+                					<option value="Midwife" >පවුල් සෞඛ්‍ය සේවා නිලධාරී-Midwife</option>
 				        			<option value="Receptionist">පිළිගැනීමේ නිලධාරි-Receptionist</option>
 		        				</select>
   	    					</div>
 
-						<button type="submit" class="btn btn-primary" name="login_user">පිවිසෙන්න (Login)</button>
+						<button type="submit" class="btn btn-primary" name="login_user">පිවිසෙන්න (Log in)</button>
 
            			</form>
         		</div>

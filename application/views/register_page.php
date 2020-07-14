@@ -40,7 +40,7 @@
 					<img src="../../public/images/login_new.png">
 				</div>
 				<div class="login-content">
-  <form method="post" action="register_page.php"> <!--previous: action="the page name "----------------------------------------------------------->
+  <form method="post" action="register_page.php" autocomplete="off"> <!--previous: action="the page name "----------------------------------------------------------->
   <img src="../../public/images/Registration.png">
 							<div class="blink_me">
 								<h3 class="title"><b><blink>Register</blink></b></h3>
@@ -56,7 +56,7 @@
                 					<option value="Patient-Mother" >මාතෘ-Mother</option>
 				        			<option value="Patient-Child" >ළමා-Child</option>
 				        			<option value="Medical officer" >වෛද්‍ය නිලධාරි-Medical officer</option>
-                					<option value="Midwife" >වින්නඹු-Midwife</option>
+                					<option value="Midwife" >පවුල් සෞඛ්‍ය සේවා නිලධාරී-Midwife</option>
 				        			<option value="Receptionist">පිළිගැනීමේ නිලධාරි-Receptionist</option>
 		        				</select>
 							  </div>
@@ -69,14 +69,14 @@
   	  <label><b>Confirm password<b></label>
   	  <input type="password" class="form-control" id="exampleInputPassword1" name="password_2" placeholder="Enter password again">
   	</div>
-  	<div class="input-group">
+  	<!-- <div class="input-group"> -->
 
 		<!-- <button type="submit" class="btn btn-primary" name="save">Register</button> -->
 	<div class="login-content">
 		<button type="submit" class="btn" name="save">Register</button>
 	  <button onclick="window.location='home.php'" class="btn" type="button">Cancel</button>
 	  <!-- <button onclick="window.location='home.php'" class="cancelbtn" type="button">Cancel</button> -->
-</div>
+<!-- </div> -->
 
   	</div>
 	
