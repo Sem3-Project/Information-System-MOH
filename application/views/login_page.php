@@ -61,7 +61,7 @@ require '../controllers/login.php';
 				        			<option value="Receptionist">පිළිගැනීමේ නිලධාරි-Receptionist</option>
 		        				</select>
   	    					</div>
-
+						<a href="ChangePW_page.php">මුරපදය වෙනස් කිරීම සඳහා</a>
 						<button type="submit" class="btn btn-primary" name="login_user">පිවිසෙන්න (Log in)</button>
 
            			</form>
