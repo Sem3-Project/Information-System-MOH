@@ -6,13 +6,29 @@ require '../models/BasicDetails_model.php';
 <head>
 <meta charset="UTF-8">
 <title>Basic Details</title>
+<link rel = "stylesheet" href ="../../public/css/BasicDetails.css">
 </head>
 
+<header>
+<div class="header"><img class="logo" src="../../public/images/logo.jpg"/>
+<div class="logo">
+		<h1>Medical Officer of Health Office</h1>
+		<h3>Gampaha</h3>
+	</div>
+    <div class="topnav">
+  <a href="home.php">Log out</a>
+  <a href="home.php">Home</a>
+  
+</div>
+	</div>
+</header>
 
 <body>
-<h1>ගර්භණී සටහන් පත/Pregnancy Record</h1>
+
 
 <form method="POST" action="BasicDetails.php">
+<h2>ගර්භණී සටහන් පත/Pregnancy Record</h2></br>
+
 <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
@@ -21,7 +37,7 @@ require '../models/BasicDetails_model.php';
 <table >
         <tr>
             <td>
-            රුධිර ඝනය/Blood Group:
+            <label>රුධිර ඝනය/Blood Group:</label>
                 <select name="BloodGroup">
                     <option  selected hidden value=""></option>
                     <option value="O-" <?php if($BloodGroup=="O-") echo 'selected="selected"'; ?>>O-</option>
@@ -37,18 +53,19 @@ require '../models/BasicDetails_model.php';
             </td>
             <td><br><br></td>
             <td>
-            ශරීර ස්කන්ධ  දර්ශකය/BMI:
+            <label>ශරීර ස්කන්ධ  දර්ශකය/BMI:</label>
                 <input type="text" name="BMI" maxlength="10" value="<?php echo($BMI);?>">
             </td>
             </tr>
             <tr>
             <td>
-            උස(සෙ.මී.)/Height(cm):
+            <label>උස(සෙ.මී.)/Height(cm):</label>
                 <input type="text" name="height" maxlength="10" value="<?php echo($height);?>">
             </td>
             <td><br><br></td>
             <td>
-            ආසාත්මිකතා /Allergies:
+            <label>ආසාත්මිකතා /Allergies:</label>
+            
                 <input type="text" name="allergies" value="<?php echo($allergies);?>">
             </td>
 
@@ -62,12 +79,14 @@ require '../models/BasicDetails_model.php';
         <tr>
             
             <td>
-            මවගේ නම/Name of the mother:
+            <label>මවගේ නම/Name of the mother:</label>
+            
                 <input type="text" name="Name_of_the_mother" size="50" value="<?php echo($Name_of_the_mother);?>">
             </td>
 
             <td>
-            රෝහල් සයනයේ නම/Name of the Hospital Clinic:
+            <label>රෝහල් සයනයේ නම/Name of the Hospital Clinic:</label>
+            
                 <input type="text" name="Name_of_the_Hospital_Clinic" size="50" value="<?php echo($Name_of_the_Hospital_Clinic);?>">
             </td>
             
@@ -75,17 +94,20 @@ require '../models/BasicDetails_model.php';
   
         <tr>
             <td>
-            වයස/Age:
+            <label>වයස/Age:</label>
+            
                 <input type="text" name="age" size="10" value="<?php echo($age);?>">
             </td>
             <td>
-            ප්‍රසව හා නරිවේධ විශේෂඥ වෛද්‍යවරයාගේ නම/<br>Name of the Consultant Obstetrician:
+            <label>ප්‍රසව හා නරිවේධ විශේෂඥ වෛද්‍යවරයාගේ නම/<br>Name of the Consultant Obstetrician:</label>
+            
                 <input type="text" name="Name_of_the_Consultant_Obstetrician" size="50" value="<?php echo($Name_of_the_Consultant_Obstetrician);?>">
             </td>
         </tr>
 
         <tr>
-        <td>දුරකථන අංකය /TelePhone:
+        <td>
+        <label>දුරකථන අංකය /TelePhone:</label>
         <input type="text" name="tele" size="10" value="<?php echo($tele);?>"></td>
         </tr>
         
@@ -136,7 +158,7 @@ require '../models/BasicDetails_model.php';
     </table>
     <table>
         <tr>
-        <td>රුබෙල්ලා ප්‍රතිශක්තිකරණය/Rubella Immunization:</td>
+        <td><label>රුබෙල්ලා ප්‍රතිශක්තිකරණය/Rubella Immunization:</label></td>
             <td>
                 
                 <input type="text" name="RubellaImmunization"  value="<?php echo($RubellaImmunization);?>">
