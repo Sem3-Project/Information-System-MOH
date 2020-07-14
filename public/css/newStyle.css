@@ -1,0 +1,36 @@
+table, th, td{
+    border:1px solid black;
+    border-collapse: collapse;
+    
+}
+
+th, td{
+    padding:15px;
+}
+
+textarea{
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize:none;
+}
+div{
+    margin-top:40px;
+    margin-left: 40px;
+    margin-right:40px;
+
+}
+
+input[type=text], select {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input.largerCheckbox { 
+width: 20px; 
+height: 20px; 
+
+} 
