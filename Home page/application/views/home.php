@@ -20,6 +20,11 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 		<h1>Medical Officer of Health Office</h1>
 		<h3>Gampaha</h3>
 	</div>
+    <div class="topnav">
+    <div class="LogOut">
+    <button class="LogOut">Log Out
+    </button></div>
+	</div>
 	</div>
 </header>
 
