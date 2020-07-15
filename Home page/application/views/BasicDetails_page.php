@@ -7,6 +7,16 @@ require '../models/BasicDetails_model.php';
 <meta charset="UTF-8">
 <title>Basic Details</title>
 <link rel = "stylesheet" href ="../../public/css/BasicDetails.css">
+<style>
+    .idClass{
+        width: 10cm;
+        /* background-color:yellow; */
+        padding: 6px 52px;
+        /* size="25"; */
+    }
+
+
+</style>
 </head>
 
 <header>
@@ -30,9 +40,9 @@ require '../models/BasicDetails_model.php';
 
 <form method="POST" action="BasicDetails_page.php">
 <h2>ගර්භණී සටහන් පත/Pregnancy Record</h2></br>
-
-<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
-
+<div class="idClass">
+<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
+</div>
 <input type="submit" name="Search" value="Search">
 <input type="submit" name="Update" value="Update"><br><br>
 

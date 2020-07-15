@@ -1,7 +1,7 @@
 <?php
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
-require '../controllers/logout.php';
+//require '../controllers/logout.php';
 
 $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');

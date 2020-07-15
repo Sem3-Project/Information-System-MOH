@@ -19,13 +19,21 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 <div class="logo">
 		<h1>Medical Officer of Health Office</h1>
 		<h3>Gampaha</h3>
+    </div>
+
+<div class="topnav">
+  
+  <a href="login_page.php">Log out</a>
+  
+  
+</div>
 	</div>
-    <div class="topnav">
+<!-- <div class="topnav">
     <div class="LogOut">
     <button class="LogOut">Log Out
-    </button></div>
+    </button>
 	</div>
-	</div>
+	</div> -->
 </header>
 
 

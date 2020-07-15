@@ -48,6 +48,8 @@ body{
     background-color: #4CAF50;
     color: white;
   }
+
+
   h2{font-family:Arial,Suns-serif;text-align: center;font-weight: bold; color: rgb(155, 67, 67);}
   label{font-family:Arial,Suns-serif;text-align: center;font-weight: bold;}
   form{	z-index:7; position: relative;; display: inline-block; 

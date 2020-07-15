@@ -39,11 +39,18 @@ body{ width:100%; background-color:#ffffff;}
   background-color: #4CAF50;
   color: white;
 }
-.LogOut .LogOut {
+.navbar a:hover, .LogOut:hover .LogOut:hover {
+	background-color: red;
+  }
+
+.topnav button{
+float: right;
   font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
+  border: #141414;
+  outline: black;
+  border-radius: 2%;
+  outline-width: 0.5cm;
+  color: rgb(133, 124, 124);
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
