@@ -11,7 +11,7 @@ require '../models/personalInfo_model.php';
         <link rel ="stylesheet" type="text/css" href="../../public/css/newStyle.css">
     </head>
     <body>
-    <form action="moh.php" method="post" >
+    <form action="personalInfo_page.php" method="post" >
         <div>
             <h3>Search NIC :</h3>
             <input type="text" placeholder="Type patient's NIC here" style="width: 50%; height: 30px; padding:5px;" name="id" value="<?php echo $id;?>"><br><br>

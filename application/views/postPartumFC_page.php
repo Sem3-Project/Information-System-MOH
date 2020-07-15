@@ -9,7 +9,7 @@ require '../models/postPartumFC_model.php';
         <link rel ="stylesheet" type="text/css" href="../../public/css/newStyle.css">
     </head>
     <body>
-    <form action="mohNew.php" method="post" >
+    <form action="postPartumFC_page.php" method="post" >
         <div>
         <h3>Search NIC :</h3>
             <input type="text"  name="idNew" placeholder="Type patient's NIC here" style="width: 50%; height: 30px; padding:5px;"  value="<?php echo $idNew;?>"><br><br>

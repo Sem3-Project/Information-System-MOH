@@ -20,7 +20,7 @@ td, th {
     
 </head>
 <body>
-<form method="POST" action="page7.php">
+<form method="POST" action="DelivPostnatalCare_page.php">
 <input type="text" name="patient_id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($patient_id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
