@@ -45,7 +45,7 @@ div#ViewReport{display:inline-block; float:right; margin-right:60px; position:re
 div#Delete{float:left; display:inline-block; clear:left; margin-left:50px; position: relative; margin-top:50px;}
 div#Edit{float:left; display:inline-block; clear:both; position:relative; margin-left:50px; margin-top:50px;}
 div#ClinicDate{float:left; display:inline-block; clear:both; position:relative; margin-left:50px; margin-top:50px;}
-div#ViewReport{float:left; display:inline-block; clear:both; position:relative; margin-left:50px; margin-top:50px;}
+div#bmi{float:left; display:inline-block; clear:both; position:relative; margin-left:50px; margin-top:50px;}
 
 /*for slide show*/
 * {box-sizing:border-box}

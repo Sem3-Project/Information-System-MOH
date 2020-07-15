@@ -33,8 +33,8 @@ echo'You have logged in with user id: '.($_SESSION['id']);
         <a href="BasicDetails.php"><img src="../../public/images/delete.jpg" align="center"/></a></div><br />
     <div class="linkbox" id="Edit"><span><strong>Edit details</strong><br /></br></span>
         <a href="BasicDetails.php"><img src="../../public/images/edit.jpg" align="center"/></a></div><br />
-    <div class="linkbox" id="ViewReport"><span><strong>View Report</strong><br /><br /></span>
-        <a href="BasicDetails.php"><img src="../../public/images/report.png" align="center"/></a></div><br />
+    <div class="linkbox" id="bmi"><span><strong>BMI Calculator</strong><br /></span>
+        <a href="BasicDetails.php"><img src="../../public/images/bmi.jpg" align="center"/></a></div><br />
     <div class="linkbox" id="ClinicDate"><span><strong>Clinic Date</strong><br /><br /></span>
         <a href="BasicDetails.php"><img src="../../public/images/clinicdate.jpg" align="center"/></a></div><br />
     <!-- <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
