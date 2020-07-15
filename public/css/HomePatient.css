@@ -16,7 +16,46 @@ nav{
 	min-width:500px;
 }
 
-
+.topnav {
+	overflow: hidden;
+	background-color: rgb(77, 75, 75);
+  }
+  
+  .topnav a {
+	float: right;
+	color: #f1eeee;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 19px;
+  }
+  
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+  
+  .topnav a.active {
+	background-color: #4CAF50;
+	color: white;
+  }
+  .navbar a:hover, .LogOut:hover .LogOut:hover {
+	  background-color: red;
+	}
+  
+  .topnav button{
+  float: right;
+	font-size: 16px;
+	border: #141414;
+	outline: black;
+	border-radius: 2%;
+	outline-width: 0.5cm;
+	color: rgb(133, 124, 124);
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit; /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+  }
 article{margin-left:100px; margin-right:100px;box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
     background:-webkit-gradient(linear, left top, left 25, from(#b6b3b3), color-stop(4%, #EEEEEE), to(#b6b3b3)); 
     height:1000px; position:relative;}

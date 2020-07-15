@@ -1,5 +1,4 @@
-<!doctype html>
-<!-- <?php
+<?php
 $host="localhost";
 $user = "root";
 $password = "";
@@ -17,7 +16,8 @@ try{
     $connect = mysqli_connect($host, $user, $password, $database);
     
 }catch(Exception $ex){
-    echo 'Error in connecting';
+    echo("<p style='color:black; font-size: 30px; background-color:white;'>"."Error in connecting"."</p>");
+    // echo 'Error in connecting';
 }
 
 //get data from the form
@@ -32,50 +32,101 @@ function getData(){
     return $data;
 }
 
-//search
-
-
 
 //insert
+// if(isset($_POST['Insert'])){
+//     $info=getData();
+//     //$insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`, `confirmedDate`)
+//     //VALUES ('$info[0]','$info[1]','$info[2]','$info[3]')";
+//     $insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`)
+//     VALUES ('$info[0]','$info[1]','$info[2]')";
+//     try{
+//         $insert_result=mysqli_query($connect,$insert_query);
+//         if($insert_result){
+//             if(mysqli_affected_rows($connect)>0){
+//                 echo("data inserted successfully");
+
+//             }else{
+//                 echo("data are not inserted");
+//             }
+//         }
+//     }catch(Exception $ex){
+//         echo("error inserted".$ex->getMessage());
+//     }
+// }
+
+
 if(isset($_POST['Insert'])){
     $info=getData();
-    //$insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`, `confirmedDate`)
-    //VALUES ('$info[0]','$info[1]','$info[2]','$info[3]')";
-    $insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`)
-    VALUES ('$info[0]','$info[1]','$info[2]')";
-    try{
-        $insert_result=mysqli_query($connect,$insert_query);
-        if($insert_result){
-            if(mysqli_affected_rows($connect)>0){
-                echo("data inserted successfully");
+    $update_query="UPDATE `optionaldate` SET `id`='$info[0]',`date1`='$info[1]',`date2`='$info[2]'    
+    WHERE id='$info[0]'";
 
+    try{
+        $pdate_result=mysqli_query($connect,$update_query);
+        if($pdate_result){
+            if(mysqli_affected_rows($connect)>0){
+                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is updated"."</p>");
+                // echo("date is updated");
             }else{
-                echo("data are not inserted");
+                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is not updated"."</p>");
+                // echo("date is not updated");
             }
         }
     }catch(Exception $ex){
-        echo("error inserted".$ex->getMessage());
+        echo("<p style='color:black; font-size: 30px; background-color:white;'>"."error in update".$ex->getMessage()."</p>");
+        // echo("error in update".$ex->getMessage());
     }
 }
 
 
 
 
-?> -->
+
+?>
 
 <html>
 <head>
 <meta charset="UTF-8">
 <title>ClinicDate</title>
-</head>
+<link rel = "stylesheet" href ="../public/css/MidWifeViewdate.css">
 
+<style>
+    .content{
+        width: 10cm;
+        /* background-color:yellow; */
+        padding: 6px 52px;
+        /* size="25"; */
+        font-size: 20px;
+    }
+
+
+</style>
+
+</head>
+<header>
+<div class="header"><img class="logo" src="../public/images/logo.jpg"/>
+<div class="logo">
+		<h1>Medical Officer of Health Office</h1>
+		<h3>Gampaha</h3>
+	</div>
+    <div class="topnav">
+  
+  <a href="login_page.php">Log out</a>
+  <a href="home.php">Home</a>
+  
+  
+</div>
+	</div>
+</header>
 
 <body>
-<h1>Clinic Date</h1>
 
-<form method="POST" action="MidWifeLogic.php">
-<div class>
-<input type="text" name="id" placeholder="Enter patient's NIC here" value="<?php echo($id);?>"><br><br>
+
+<form method="POST" action="MidWifeView.php">
+<h2>Clinic Date</h2>
+<div class="content">
+<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
+<!-- <input type="text" name="id" placeholder="Enter patient's NIC here" value="<?php echo($id);?>"><br><br> -->
 <br><br>
 
 <label>Date 1:</label>

@@ -48,9 +48,7 @@ nav{
   background-color: #4CAF50;
   color: white;
 }
-
-
-h2{font-family:Arial,Suns-serif;text-align: center;font-weight: bold; color: rgb(155, 67, 67);}
+h2{font-family:Arial,Suns-serif;text-align: center;font-weight: bolder; color: rgb(155, 67, 67);}
 label{font-family:Arial,Suns-serif;text-align: center;font-weight: bold;}
 form{	z-index:7; position: relative;; display: inline-block; 
   background:linear-gradient(0deg,rgba(188,189,146,0.8),rgba(204,206,154,0.8),rgba(178,179,136,0.9));
@@ -72,11 +70,18 @@ form{	z-index:7; position: relative;; display: inline-block;
   text-align: center;
 }
 input[type=submit]{
-background-color: #4CAF50;
-text-align: center;
-text-transform: uppercase;
-font-weight: 900;
-padding: 0.5cm;
-/* box-shadow: #4CAF50; */
-margin: 0.5cm;
+  background-color: #4CAF50;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 0.5cm;
+  /* box-shadow: #4CAF50; */
+  margin: 0.5cm;
+}
+table{
+  text-align: center;
+  transform: translate(50px);
+  /* transform-origin: center; */
+  margin: 1cm;
+  outline-style: double;
 }

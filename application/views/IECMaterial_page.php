@@ -6,7 +6,17 @@ require '../models/IECMaterial_model.php';
 <head>
 <meta charset="UTF-8">
 <title>IEC Material</title>
-<link rel = "stylesheet" href ="../../public/css/IECMaterial.css">
+<link rel = "stylesheet" href ="../../public/css/IECMaterial_page.css">
+<style>
+    .idClass{
+        width: 10cm;
+        /* background-color:yellow; */
+        padding: 50px 52px;
+        /* size="25"; */
+    }
+
+
+</style>
 </head>
 
 
@@ -36,7 +46,10 @@ th, td {
 
 <body>
 <form method="POST" action="IECMaterial_page.php">
-<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
+
+<div class="idClass">
+<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
+</div>
 
 <input type="submit" name="Search" value="Search">
 <input type="submit" name="Update" value="Update"><br><br>
