@@ -1,6 +1,7 @@
 <?php
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
+require '../controllers/logout.php';
 
 $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
@@ -89,7 +90,7 @@ $bDetails = new table();
 if(isset($_POST['Search'])){
     $info=getData();
     $search_query="SELECT * FROM `data` WHERE id='$info[0]'";
-    $search_result=$bDetails->featuredLoad($dbObj,$search_Query);
+    $search_result=$bDetails->featuredLoad($dbObj,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
@@ -158,14 +159,15 @@ if(isset($_POST['Update'])){
     try{
         $pdate_result=$bDetails->featuredLoad($dbObj,$update_query);
         if($pdate_result){
-            if(mysqli_affected_rows($connect)>0){
-                echo("data updated");
-            }else{
-                echo("data not updated");
-            }
+            // if(mysqli_affected_rows($connect)>0){
+            //     echo("data updated");
+            // }else{
+            //     echo("data not updated");
+            // }
         }
     }catch(Exception $ex){
         echo("error in update".$ex->getMessage());
     }
 }
+
 ?>

@@ -16,8 +16,10 @@ require '../models/BasicDetails_model.php';
 		<h3>Gampaha</h3>
 	</div>
     <div class="topnav">
-  <a href="home.php">Log out</a>
+  
+  <a href="login_page.php">Log out</a>
   <a href="home.php">Home</a>
+  
   
 </div>
 	</div>
@@ -26,7 +28,7 @@ require '../models/BasicDetails_model.php';
 <body>
 
 
-<form method="POST" action="BasicDetails.php">
+<form method="POST" action="BasicDetails_page.php">
 <h2>ගර්භණී සටහන් පත/Pregnancy Record</h2></br>
 
 <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
@@ -276,7 +278,7 @@ require '../models/BasicDetails_model.php';
     <br><br>
 
     <div>
-        <input type="submit" name="Insert" value="Save"> 
+        <input type="submit" name="Update" value="Update"> 
          
     </div>
 

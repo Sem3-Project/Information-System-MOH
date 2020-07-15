@@ -35,7 +35,7 @@ th, td {
 </style>
 
 <body>
-<form method="POST" action="IECMaterial.php">
+<form method="POST" action="IECMaterial_page.php">
 <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
@@ -137,13 +137,13 @@ th, td {
         <td><input type="Date" name="pre_childhood_book" value="<?php echo($pre_childhood_book);?>"></td>
     </tr>
     <tr>
-        <td><label>පව්ල් සැලසුම් ක්‍රම පිළිබධ පත්‍රිකාව</label></td>
+        <td><label>පවුල් සැලසුම් ක්‍රම පිළිබධ පත්‍රිකාව</label></td>
         <td><input type="Date" name="family_planing_book" value="<?php echo($family_planing_book);?>"></td>
     </tr>
     </table>
     <br><br>
 
-    <h2>පව්ල් සෞඛ්‍ය නිලධාරිනිය පැමිණෙන දිනය</h2>
+    <h2>පවුල් සෞඛ්‍ය නිලධාරිනිය පැමිණෙන දිනය</h2>
     <table style="width:80%">
     <tr>
         <td><input type="Date" name="d1" value="<?php echo($d1);?>"></td> 
@@ -188,7 +188,7 @@ th, td {
     </tr>
     </table>
 
-    <h2>පව්ල් සැලසුම්/Family Planning</h2>
+    <h2>පවුල් සැලසුම්/Family Planning</h2>
 
     <table>
 
@@ -225,7 +225,7 @@ th, td {
     <br><br>
 
     <div>
-        <input type="submit" name="Insert" value="Save"> 
+        <input type="submit" name="Update" value="Update"> 
          
     </div>
 
