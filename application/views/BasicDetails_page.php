@@ -7,6 +7,7 @@ require '../models/BasicDetails_model.php';
 <meta charset="UTF-8">
 <title>Basic Details</title>
 <link rel = "stylesheet" href ="../../public/css/BasicDetails.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
 <header>

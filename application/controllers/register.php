@@ -62,6 +62,9 @@ if (isset($_POST['save'])) {
 
             $sql= "INSERT INTO users (id, catagory, password) VALUES('$id', '$catagory', '$passwordEnc')";
             $dbObj->doQuery($sql);
+            if ($catagory == 'Patient-Mother'){
+            $sql2 = "INSERT INTO investigations (id) VALUES ('$id')";
+            $dbObj->doQuery($sql2);}
     //         $query = "INSERT INTO users (id, catagory, password) 
   	// 		  VALUES('$id', '$catagory', '$passwordEnc')";
   	// mysqli_query($db, $query);

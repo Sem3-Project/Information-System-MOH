@@ -1,13 +1,13 @@
 <?php
 
 $BMI;
-
-if(isset($_POST['calculate'])){
-  if (!isset($_POST['weight'])) {
+//if(isset($_POST['calculate'])){
+if(empty($_POST['calculate'])){
+  if (empty($_POST['weight'])) {
     return 'Please enter your weight';
     exit();
   }
-  if (!isset($_POST['height'])) {
+  if (empty($_POST['height'])) {
     return 'Please enter your height';
     exit();
   }

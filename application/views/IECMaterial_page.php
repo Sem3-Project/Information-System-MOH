@@ -7,6 +7,7 @@ require '../models/IECMaterial_model.php';
 <meta charset="UTF-8">
 <title>IEC Material</title>
 <link rel = "stylesheet" href ="../../public/css/IECMaterial.css">
+
 </head>
 
 

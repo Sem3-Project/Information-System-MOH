@@ -31,16 +31,14 @@
   <!-- <div class="">
   	<h2>Register</h2>
   </div> -->
-  <div style="color:red; opacity: 0.8 font-style:bold" >
-      		<marquee behavior="scroll" direction="right" onmouseover="this.stop();" onmouseout="this.start();">Please send your comments to gampahamoh@yahoo.com</marquee>
-		  </div>
+  
 		  <img class="wave" src="../../public/images/wave_new.png">
 		  <div class="container">
 				<div class="img">
 					<img src="../../public/images/login_new.png">
 				</div>
 				<div class="login-content">
-  <form method="post" action="register_page.php" autocomplete="off"> <!--previous: action="the page name "----------------------------------------------------------->
+  <form method="post" action="register_page.php" autocomplete="off"> 
   <img src="../../public/images/Registration.png">
 							<div class="blink_me">
 								<h3 class="title"><b><blink>Register</blink></b></h3>
@@ -73,8 +71,10 @@
 
 		<!-- <button type="submit" class="btn btn-primary" name="save">Register</button> -->
 	<div class="login-content">
-		<button type="submit" class="btn" name="save">Register</button>
-	  <button onclick="window.location='home.php'" class="btn" type="button">Cancel</button>
+		<button type="submit" class="btn" name="save">Register</button>&nbsp;&nbsp;
+		<button onclick="window.location='home.php'" class="btn" style="vertical-align:middle" type="button"><span>Cancel</span></button>
+
+	  <!-- <button onclick="window.location='home.php'" class="button" style="vertical-align:middle" type="button"><span>Cancel</span></button> -->
 	  <!-- <button onclick="window.location='home.php'" class="cancelbtn" type="button">Cancel</button> -->
 <!-- </div> -->
 

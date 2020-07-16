@@ -16,7 +16,7 @@ nav{
 	min-width:500px;
 }
 
-
+/* 
 article{margin-left:100px; margin-right:100px;box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
     background:-webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
     height:1000px; position:relative;}
@@ -139,4 +139,4 @@ div.para2{clear: both; display: inline-block;  transform: translate(500px,-540px
 h2.heading{color:rgb(249,112,7); text-shadow: 2px 2px 2px grey ; text-align: center;}
 
 
-footer{position:absolute; display:block; padding:1px; width:100%; color:black; background-image:url("../images/footer.jpg");}
+footer{position:absolute; display:block; padding:1px; width:100%; color:black; background-image:url("../images/footer.jpg");} */

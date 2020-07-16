@@ -6,7 +6,9 @@ require '../controllers/login.php';
 <html>
 	<head>
 		<title>Login</title>
-  			<link rel="stylesheet" href="../../public/js/login.js">
+			  <link rel="stylesheet" href="../../public/js/login.js">
+			  <!-- <link rel="stylesheet" type="text/css" href="../../public/css/swag.css"> -->
+
   			<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
   			<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
   			<link rel="stylesheet" href ="../../public/css/login.css"/>
@@ -62,7 +64,9 @@ require '../controllers/login.php';
 		        				</select>
   	    					</div>
 						<a href="ChangePW_page.php">මුරපදය වෙනස් කිරීම සඳහා</a>
-						<button type="submit" class="btn btn-primary" name="login_user">පිවිසෙන්න (Log in)</button>
+						<!-- <button type="submit" class="btn btn-primary" name="login_user">පිවිසෙන්න (Log in)</button> -->
+						<button type="submit" class="button" name="login_user">පිවිසෙන්න (Log in)</button>
+
 
            			</form>
         		</div>

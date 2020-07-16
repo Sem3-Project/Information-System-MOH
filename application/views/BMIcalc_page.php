@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 </head>
-<body style="background-color:maroon;">
+<!-- <body style="background-color:maroon;" > -->
+<body style="background-color:maroon;" >
   <header class="mt-3 text-center row">
   
     <div class="col-sm-10 align-right">

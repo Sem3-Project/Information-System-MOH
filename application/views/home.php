@@ -27,7 +27,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 
 <article>
 
-    <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
+<div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
         <a href="register_page.php"><img src="../../public/images/Registration.png" align="center"/></a></div><br />
     <div class="linkbox" id="Delete"><span><strong>Delete Account</strong><br /></span>
         <a href="BasicDetails.php"><img src="../../public/images/delete.jpg" align="center"/></a></div><br />
@@ -36,7 +36,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
     <div class="linkbox" id="bmi"><span><strong>BMI Calculator</strong><br /></span>
         <a href="BasicDetails.php"><img src="../../public/images/bmi.jpg" align="center"/></a></div><br />
     <div class="linkbox" id="ClinicDate"><span><strong>Clinic Date</strong><br /><br /></span>
-        <a href="BasicDetails.php"><img src="../../public/images/clinicdate.jpg" align="center"/></a></div><br />
+        <a href="../../OptionalDate/MidWifeView.php"><img src="../../public/images/clinicdate.jpg" align="center"/></a></div><br />
     <!-- <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
         <a href="BasicDetails.php"><img src="images/Registration.png" align="center"/></a></div><br />
     <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
