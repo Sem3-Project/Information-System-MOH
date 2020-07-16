@@ -10,7 +10,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel = "stylesheet" href ="../../public/css/HomeP.css"/>
+    <link rel = "stylesheet" href ="../../public/css/HomePatient.css"/>
     
 </head>
 <body>
@@ -20,7 +20,19 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 		<h1>Medical Officer of Health Office</h1>
 		<h3>Gampaha</h3>
 	</div>
+    <div class="topnav">
+  
+  <a href="login_page.php">Log out</a>
+  
+  
+</div>
 	</div>
+<!-- <div class="topnav">
+    <div class="LogOut">
+    <button class="LogOut">Log Out
+    </button>
+	</div>
+	</div> -->
 </header>
 
 
@@ -30,7 +42,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
     <div class="linkbox" id="ViewReport"><span><strong>View Report</strong><br /><br /></span>
         <a href="BasicDetails.php"><img src="../../public/images/report.png" align="center"/></a></div><br />
     <div class="linkbox" id="ClinicDate"><span><strong>Clinic Date</strong><br /><br /></span>
-        <a href="BasicDetails.php"><img src="../../public/images/clinicdate.jpg" align="center"/></a></div><br />
+        <a href="../../OptionalDate/PatientVIew.php"><img src="../../public/images/clinicdate.jpg" align="center"/></a></div><br />
     <!-- <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
         <a href="BasicDetails.php"><img src="images/Registration.png" align="center"/></a></div><br />
     <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
