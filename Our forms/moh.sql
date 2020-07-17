@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2020 at 08:43 PM
+-- Generation Time: Jul 17, 2020 at 05:09 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -102,7 +102,8 @@ CREATE TABLE `table1` (
 INSERT INTO `table1` (`id`, `wAge`, `hAge`, `wEducation`, `hEducation`, `wOccupation`, `hOccupation`, `fhDiabetes`, `fhHypertension`, `fhHaematologic`, `fhTwin`, `fhOthers`, `shDiabetes`, `shHypertension`, `shCardiac`, `shRenal`, `shHepatic`, `shPsychiatric`, `shEpilepsy`, `shMalignancies`, `shHaematological`, `shTuberculosis`, `shThyroid`, `shBronchial`, `shDVT`, `shSurgeries`, `shOther`, `shScore`, `poGoneAc`, `poGonePm`, `poGoneOut`, `poGoneW`, `poGonePc`, `poGoneSa`, `poGtwoAc`, `poGtwoPm`, `poGtwoOut`, `poGtwoW`, `poGtwoPc`, `poGtwoSa`, `poGthAc`, `poGthPm`, `poGthOut`, `poGthW`, `poGthPc`, `poGthSa`, `poGfoAc`, `poGfoPm`, `poGfoOut`, `poGfoW`, `poGfoPc`, `poGfoSa`, `poGfiAc`, `poGfiPm`, `poGfiOut`, `poGfiW`, `poGfiPc`, `poGfiSa`, `poGsAc`, `poGsPm`, `poGsOut`, `poGsW`, `poGsPc`, `poGsSa`, `poText`) VALUES
 (1, 26, 29, 'degree', 'degree', 'teacher', 'teacher', 'No', 'Yes', 'No', 'No', 'no', 'No', 'Yes', 'Yes', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'no', 'no', 'no', 'no', 'ss', 'ss', 'ss', 200, 'no', 'no', 'no', 'no', 'no', 0, 'no', 'no', 'no', 'no', 'no', 0, 'no', 'no', 'no', 'no', 'no', 0, 'no', 'no', 'no', 'no', 'no', 0, 'no', '', 'no', 'on', 'no', 0, 'no', 'no', 'nothing'),
 (1, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', ''),
-(1, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '');
+(1, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', ''),
+(2, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '', '', '', 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -626,6 +627,360 @@ CREATE TABLE `table6` (
 
 INSERT INTO `table6` (`id`, `day6`, `day7`, `day8`, `day9`, `attack6`, `attack7`, `attack8`, `attack9`, `eye6`, `eye7`, `eye8`, `eye9`, `left6`, `left7`, `left8`, `left9`, `right6`, `right7`, `right8`, `right9`, `blind1`, `blind2`, `blind3`, `bito1`, `bito2`, `bito3`, `hleft6`, `hleft7`, `hleft8`, `hleft9`, `hright6`, `hright7`, `hright8`, `hright9`, `tooth3`, `tooth4`, `tooth5`, `tooth6`, `fault3`, `fault4`, `fault5`, `fault6`, `weight6`, `weight7`, `weight8`, `weight9`, `height6`, `height7`, `height8`, `height9`, `develop6`, `develop7`, `develop8`, `develop9`, `heart6`, `heart7`, `heart8`, `heart9`, `joint6`, `joint7`, `joint8`, `joint9`, `disease6`, `disease7`, `disease8`, `disease9`, `adisease6`, `adisease7`, `adisease8`, `adisease9`, `bdisease6`, `bdisease7`, `bdisease8`, `bdisease9`, `cdisease6`, `cdisease7`, `cdisease8`, `cdisease9`, `ddisease6`, `ddisease7`, `ddisease8`, `ddisease9`, `edisease6`, `edisease7`, `edisease8`, `edisease9`, `fdisease6`, `fdisease7`, `fdisease8`, `fdisease9`, `name6`, `name7`, `name8`, `name9`, `position6`, `position7`, `position8`, `position9`) VALUES
 (1, '2020-07-10', '2020-07-06', '2020-07-22', '2020-07-06', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'no', 'no', 'no', 'no', 'no', 'no', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'non', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'nonn', 'no', 'no', 'no', 'john', 'john', 'john', 'john', 'nurse', 'nurse', 'nurse', 'nurse');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table7`
+--
+
+CREATE TABLE `table7` (
+  `id` int(10) NOT NULL,
+  `date1` date NOT NULL,
+  `date2` date NOT NULL,
+  `date3` date NOT NULL,
+  `age1` text NOT NULL,
+  `age2` text NOT NULL,
+  `age3` text NOT NULL,
+  `teacher1` text NOT NULL,
+  `teacher2` text NOT NULL,
+  `teacher3` text NOT NULL,
+  `attendance1` text NOT NULL,
+  `attendance2` text NOT NULL,
+  `attendance3` text NOT NULL,
+  `house1` text NOT NULL,
+  `house2` text NOT NULL,
+  `house3` text NOT NULL,
+  `clean1` text NOT NULL,
+  `clean2` text NOT NULL,
+  `clean3` text NOT NULL,
+  `activity1` text NOT NULL,
+  `activity2` text NOT NULL,
+  `activity3` text NOT NULL,
+  `behaviour1` text NOT NULL,
+  `behaviour2` text NOT NULL,
+  `behaviour3` text NOT NULL,
+  `speak1` text NOT NULL,
+  `speak2` text NOT NULL,
+  `speak3` text NOT NULL,
+  `hearing1` text NOT NULL,
+  `hearing2` text NOT NULL,
+  `hearing3` text NOT NULL,
+  `vees1` text NOT NULL,
+  `vees2` text NOT NULL,
+  `vees3` text NOT NULL,
+  `fit1` text NOT NULL,
+  `fit2` text NOT NULL,
+  `fit3` text NOT NULL,
+  `mental1` text NOT NULL,
+  `mental2` text NOT NULL,
+  `mental3` text NOT NULL,
+  `weight1` text NOT NULL,
+  `weight2` text NOT NULL,
+  `weight3` text NOT NULL,
+  `type1` text NOT NULL,
+  `type2` text NOT NULL,
+  `type3` text NOT NULL,
+  `interrupt1` text NOT NULL,
+  `interrupt2` text NOT NULL,
+  `interrupt3` text NOT NULL,
+  `height1` text NOT NULL,
+  `height2` text NOT NULL,
+  `height3` text NOT NULL,
+  `sheight1` text NOT NULL,
+  `sheight2` text NOT NULL,
+  `sheight3` text NOT NULL,
+  `night1` text NOT NULL,
+  `night2` text NOT NULL,
+  `night3` text NOT NULL,
+  `bito1` text NOT NULL,
+  `bito2` text NOT NULL,
+  `bito3` text NOT NULL,
+  `ni1` text NOT NULL,
+  `ni2` text NOT NULL,
+  `ni3` text NOT NULL,
+  `louse1` text NOT NULL,
+  `louse2` text NOT NULL,
+  `louse3` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `table7`
+--
+
+INSERT INTO `table7` (`id`, `date1`, `date2`, `date3`, `age1`, `age2`, `age3`, `teacher1`, `teacher2`, `teacher3`, `attendance1`, `attendance2`, `attendance3`, `house1`, `house2`, `house3`, `clean1`, `clean2`, `clean3`, `activity1`, `activity2`, `activity3`, `behaviour1`, `behaviour2`, `behaviour3`, `speak1`, `speak2`, `speak3`, `hearing1`, `hearing2`, `hearing3`, `vees1`, `vees2`, `vees3`, `fit1`, `fit2`, `fit3`, `mental1`, `mental2`, `mental3`, `weight1`, `weight2`, `weight3`, `type1`, `type2`, `type3`, `interrupt1`, `interrupt2`, `interrupt3`, `height1`, `height2`, `height3`, `sheight1`, `sheight2`, `sheight3`, `night1`, `night2`, `night3`, `bito1`, `bito2`, `bito3`, `ni1`, `ni2`, `ni3`, `louse1`, `louse2`, `louse3`) VALUES
+(1, '2020-07-01', '2020-06-28', '2020-07-09', '5', '6', '7', 'good', 'good', 'good', '4', '4', '3', '4', '4', '4', '4', '4', '4', '3', '4', '4', 'X', 'X', 'X', 'O', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'O', 'O', 'O', 'O', 'O', 'O', '20', '20', '20', 'perfect', 'perfect', 'perfect', 'no', 'no', 'no', '120', '120', '120', 'perfect', 'perfect', 'perfect', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'X', 'O');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table8`
+--
+
+CREATE TABLE `table8` (
+  `id` int(10) NOT NULL,
+  `lsquint1` text NOT NULL,
+  `lsquint2` text NOT NULL,
+  `lsquint3` text NOT NULL,
+  `rsquint1` text NOT NULL,
+  `rsquint2` text NOT NULL,
+  `rsquint3` text NOT NULL,
+  `lvision1` text NOT NULL,
+  `lvision2` text NOT NULL,
+  `lvision3` text NOT NULL,
+  `rvision1` text NOT NULL,
+  `rvision2` text NOT NULL,
+  `rvision3` text NOT NULL,
+  `lhearing1` text NOT NULL,
+  `lhearing2` text NOT NULL,
+  `lhearing3` text NOT NULL,
+  `rhearing1` text NOT NULL,
+  `rhearing2` text NOT NULL,
+  `rhearing3` text NOT NULL,
+  `speech1` text NOT NULL,
+  `speech2` text NOT NULL,
+  `speech3` text NOT NULL,
+  `tooth1` text NOT NULL,
+  `tooth2` text NOT NULL,
+  `tooth3` text NOT NULL,
+  `teeth1` text NOT NULL,
+  `teeth2` text NOT NULL,
+  `teeth3` text NOT NULL,
+  `ynt1` text NOT NULL,
+  `ynt2` text NOT NULL,
+  `ynt3` text NOT NULL,
+  `mark1` text NOT NULL,
+  `mark2` text NOT NULL,
+  `mark3` text NOT NULL,
+  `bone1` text NOT NULL,
+  `bone2` text NOT NULL,
+  `bone3` text NOT NULL,
+  `heart1` text NOT NULL,
+  `heart2` text NOT NULL,
+  `heart3` text NOT NULL,
+  `lungs1` text NOT NULL,
+  `lungs2` text NOT NULL,
+  `lungs3` text NOT NULL,
+  `ovarious1` text NOT NULL,
+  `ovarious2` text NOT NULL,
+  `ovarious3` text NOT NULL,
+  `ovarious4` text NOT NULL,
+  `tvarious1` text NOT NULL,
+  `tvarious2` text NOT NULL,
+  `tvarious3` text NOT NULL,
+  `tvarious4` text NOT NULL,
+  `thvarious1` text NOT NULL,
+  `thvarious2` text NOT NULL,
+  `thvarious3` text NOT NULL,
+  `thvarious4` text NOT NULL,
+  `fvarious1` text NOT NULL,
+  `fvarious2` text NOT NULL,
+  `fvarious3` text NOT NULL,
+  `fvarious4` text NOT NULL,
+  `tname1` text NOT NULL,
+  `tname2` text NOT NULL,
+  `tname3` text NOT NULL,
+  `tposition1` text NOT NULL,
+  `tposition2` text NOT NULL,
+  `tposition3` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `table8`
+--
+
+INSERT INTO `table8` (`id`, `lsquint1`, `lsquint2`, `lsquint3`, `rsquint1`, `rsquint2`, `rsquint3`, `lvision1`, `lvision2`, `lvision3`, `rvision1`, `rvision2`, `rvision3`, `lhearing1`, `lhearing2`, `lhearing3`, `rhearing1`, `rhearing2`, `rhearing3`, `speech1`, `speech2`, `speech3`, `tooth1`, `tooth2`, `tooth3`, `teeth1`, `teeth2`, `teeth3`, `ynt1`, `ynt2`, `ynt3`, `mark1`, `mark2`, `mark3`, `bone1`, `bone2`, `bone3`, `heart1`, `heart2`, `heart3`, `lungs1`, `lungs2`, `lungs3`, `ovarious1`, `ovarious2`, `ovarious3`, `ovarious4`, `tvarious1`, `tvarious2`, `tvarious3`, `tvarious4`, `thvarious1`, `thvarious2`, `thvarious3`, `thvarious4`, `fvarious1`, `fvarious2`, `fvarious3`, `fvarious4`, `tname1`, `tname2`, `tname3`, `tposition1`, `tposition2`, `tposition3`) VALUES
+(1, 'X', 'O', 'O', 'O', 'O', 'O', 'X', 'X', 'O', 'X', 'O', 'O', 'X', 'X', 'O', 'O', 'O', 'O', 'X', 'O', 'O', 'X', 'X', 'X', 'X', 'X', 'O', 'X', 'O', 'X', 'O', 'O', 'O', 'O', 'X', 'X', 'O', 'X', 'X', 'X', 'O', 'X', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'raawen', 'raawen', 'raawen', 'Doctor', 'Midwife', 'Doctor');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table9`
+--
+
+CREATE TABLE `table9` (
+  `id` int(10) NOT NULL,
+  `date1` date NOT NULL,
+  `reason1` text NOT NULL,
+  `place1` text NOT NULL,
+  `result1` text NOT NULL,
+  `date2` date NOT NULL,
+  `reason2` text NOT NULL,
+  `place2` text NOT NULL,
+  `result2` text NOT NULL,
+  `date3` date NOT NULL,
+  `reason3` text NOT NULL,
+  `place3` text NOT NULL,
+  `result3` text NOT NULL,
+  `date4` date NOT NULL,
+  `reason4` text NOT NULL,
+  `place4` text NOT NULL,
+  `result4` text NOT NULL,
+  `date5` date NOT NULL,
+  `reason5` text NOT NULL,
+  `place5` text NOT NULL,
+  `result5` text NOT NULL,
+  `date6` date NOT NULL,
+  `reason6` text NOT NULL,
+  `place6` text NOT NULL,
+  `result6` text NOT NULL,
+  `date7` date NOT NULL,
+  `reason7` text NOT NULL,
+  `place7` text NOT NULL,
+  `result7` text NOT NULL,
+  `date8` date NOT NULL,
+  `reason8` text NOT NULL,
+  `place8` text NOT NULL,
+  `result8` text NOT NULL,
+  `date9` date NOT NULL,
+  `reason9` text NOT NULL,
+  `place9` text NOT NULL,
+  `result9` text NOT NULL,
+  `date10` date NOT NULL,
+  `reason10` text NOT NULL,
+  `place10` text NOT NULL,
+  `result10` text NOT NULL,
+  `date11` date NOT NULL,
+  `reason11` text NOT NULL,
+  `place11` text NOT NULL,
+  `result11` text NOT NULL,
+  `date12` date NOT NULL,
+  `reason12` text NOT NULL,
+  `place12` text NOT NULL,
+  `result12` text NOT NULL,
+  `date13` date NOT NULL,
+  `reason13` text NOT NULL,
+  `place13` text NOT NULL,
+  `result13` text NOT NULL,
+  `date14` date NOT NULL,
+  `reason14` text NOT NULL,
+  `place14` text NOT NULL,
+  `result14` text NOT NULL,
+  `date15` date NOT NULL,
+  `reason15` text NOT NULL,
+  `place15` text NOT NULL,
+  `result15` text NOT NULL,
+  `date16` date NOT NULL,
+  `reason16` text NOT NULL,
+  `place16` text NOT NULL,
+  `result16` text NOT NULL,
+  `date17` date NOT NULL,
+  `reason17` text NOT NULL,
+  `place17` text NOT NULL,
+  `result17` text NOT NULL,
+  `date18` date NOT NULL,
+  `reason18` text NOT NULL,
+  `place18` text NOT NULL,
+  `result18` text NOT NULL,
+  `date19` date NOT NULL,
+  `reason19` text NOT NULL,
+  `place19` text NOT NULL,
+  `result19` text NOT NULL,
+  `date20` date NOT NULL,
+  `reason20` text NOT NULL,
+  `place20` text NOT NULL,
+  `result20` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `table9`
+--
+
+INSERT INTO `table9` (`id`, `date1`, `reason1`, `place1`, `result1`, `date2`, `reason2`, `place2`, `result2`, `date3`, `reason3`, `place3`, `result3`, `date4`, `reason4`, `place4`, `result4`, `date5`, `reason5`, `place5`, `result5`, `date6`, `reason6`, `place6`, `result6`, `date7`, `reason7`, `place7`, `result7`, `date8`, `reason8`, `place8`, `result8`, `date9`, `reason9`, `place9`, `result9`, `date10`, `reason10`, `place10`, `result10`, `date11`, `reason11`, `place11`, `result11`, `date12`, `reason12`, `place12`, `result12`, `date13`, `reason13`, `place13`, `result13`, `date14`, `reason14`, `place14`, `result14`, `date15`, `reason15`, `place15`, `result15`, `date16`, `reason16`, `place16`, `result16`, `date17`, `reason17`, `place17`, `result17`, `date18`, `reason18`, `place18`, `result18`, `date19`, `reason19`, `place19`, `result19`, `date20`, `reason20`, `place20`, `result20`) VALUES
+(1, '2020-07-01', 'reason', 'clinic', 'result', '2020-07-01', 'reason', 'clinic', 'result', '2020-07-08', 'reason', 'clinic', 'result', '2020-07-12', 'reason', 'clinic', 'result', '2020-06-30', 'reason', 'clinic', 'result', '2020-06-29', 'reason', 'clinic', 'result', '2020-07-16', 'reason', 'clinic', 'result', '2020-08-06', 'reason', 'clinic', 'result', '2020-07-17', 'reason', 'clinic', 'result', '2020-07-13', 'reason', 'clinic', 'result', '2020-06-08', 'reason', 'clinic', 'result', '2020-07-31', 'reason', 'clinic', 'result', '2020-06-29', 'reason', 'clinic', 'result', '2020-07-03', 'reason', 'clinic', 'result', '2020-06-29', 'reason', 'clinic', 'result', '2020-06-29', 'reason', 'clinic', 'result', '2020-06-28', 'reason', 'clinic', 'result', '2020-07-22', 'reason', 'clinic', 'result', '2020-07-20', 'reason', 'clinic', 'result', '2020-08-02', 'reason', 'clinic', 'result');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table10`
+--
+
+CREATE TABLE `table10` (
+  `id` int(10) NOT NULL,
+  `ndate1` date NOT NULL,
+  `nreason1` text NOT NULL,
+  `nplace1` text NOT NULL,
+  `nresult1` text NOT NULL,
+  `ndate2` date NOT NULL,
+  `nreason2` text NOT NULL,
+  `nplace2` text NOT NULL,
+  `nresult2` text NOT NULL,
+  `ndate3` date NOT NULL,
+  `nreason3` text NOT NULL,
+  `nplace3` text NOT NULL,
+  `nresult3` text NOT NULL,
+  `ndate4` date NOT NULL,
+  `nreason4` text NOT NULL,
+  `nplace4` text NOT NULL,
+  `nresult4` text NOT NULL,
+  `ndate5` date NOT NULL,
+  `nreason5` text NOT NULL,
+  `nplace5` text NOT NULL,
+  `nresult5` text NOT NULL,
+  `ndate6` date NOT NULL,
+  `nreason6` text NOT NULL,
+  `nplace6` text NOT NULL,
+  `nresult6` text NOT NULL,
+  `ndate7` date NOT NULL,
+  `nreason7` text NOT NULL,
+  `nplace7` text NOT NULL,
+  `nresult7` text NOT NULL,
+  `ndate8` date NOT NULL,
+  `nreason8` text NOT NULL,
+  `nplace8` text NOT NULL,
+  `nresult8` text NOT NULL,
+  `ndate9` date NOT NULL,
+  `nreason9` text NOT NULL,
+  `nplace9` text NOT NULL,
+  `nresult9` text NOT NULL,
+  `ndate10` date NOT NULL,
+  `nreason10` text NOT NULL,
+  `nplace10` text NOT NULL,
+  `nresult10` text NOT NULL,
+  `ndate11` date NOT NULL,
+  `nreason11` text NOT NULL,
+  `nplace11` text NOT NULL,
+  `nresult11` text NOT NULL,
+  `ndate12` date NOT NULL,
+  `nreason12` text NOT NULL,
+  `nplace12` text NOT NULL,
+  `nresult12` text NOT NULL,
+  `ndate13` date NOT NULL,
+  `nreason13` text NOT NULL,
+  `nplace13` text NOT NULL,
+  `nresult13` text NOT NULL,
+  `ndate14` date NOT NULL,
+  `nreason14` text NOT NULL,
+  `nplace14` text NOT NULL,
+  `nresult14` text NOT NULL,
+  `ndate15` date NOT NULL,
+  `nreason15` text NOT NULL,
+  `nplace15` text NOT NULL,
+  `nresult15` text NOT NULL,
+  `ndate16` date NOT NULL,
+  `nreason16` text NOT NULL,
+  `nplace16` text NOT NULL,
+  `nresult16` text NOT NULL,
+  `ndate17` date NOT NULL,
+  `nreason17` text NOT NULL,
+  `nplace17` text NOT NULL,
+  `nresult17` text NOT NULL,
+  `ndate18` date NOT NULL,
+  `nreason18` text NOT NULL,
+  `nplace18` text NOT NULL,
+  `nresult18` text NOT NULL,
+  `ndate19` date NOT NULL,
+  `nreason19` text NOT NULL,
+  `nplace19` text NOT NULL,
+  `nresult19` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `table10`
+--
+
+INSERT INTO `table10` (`id`, `ndate1`, `nreason1`, `nplace1`, `nresult1`, `ndate2`, `nreason2`, `nplace2`, `nresult2`, `ndate3`, `nreason3`, `nplace3`, `nresult3`, `ndate4`, `nreason4`, `nplace4`, `nresult4`, `ndate5`, `nreason5`, `nplace5`, `nresult5`, `ndate6`, `nreason6`, `nplace6`, `nresult6`, `ndate7`, `nreason7`, `nplace7`, `nresult7`, `ndate8`, `nreason8`, `nplace8`, `nresult8`, `ndate9`, `nreason9`, `nplace9`, `nresult9`, `ndate10`, `nreason10`, `nplace10`, `nresult10`, `ndate11`, `nreason11`, `nplace11`, `nresult11`, `ndate12`, `nreason12`, `nplace12`, `nresult12`, `ndate13`, `nreason13`, `nplace13`, `nresult13`, `ndate14`, `nreason14`, `nplace14`, `nresult14`, `ndate15`, `nreason15`, `nplace15`, `nresult15`, `ndate16`, `nreason16`, `nplace16`, `nresult16`, `ndate17`, `nreason17`, `nplace17`, `nresult17`, `ndate18`, `nreason18`, `nplace18`, `nresult18`, `ndate19`, `nreason19`, `nplace19`, `nresult19`) VALUES
+(1, '2020-06-29', 'reason', 'judge', 'result', '2020-06-29', 'reason', 'judge', 'result', '2020-07-14', 'reason', 'judge', 'result', '2020-07-05', 'reason', 'judge', 'result', '2020-07-21', 'reason', 'judge', 'result', '2020-07-06', 'reason', 'judge', 'result', '2020-06-28', 'reason', 'judge', 'result', '2020-07-08', 'reason', 'judge', 'result', '2020-06-28', 'reason', 'judge', 'result', '2020-07-01', 'reason', 'judge', 'result', '2020-07-04', 'reason', 'judge', 'result', '2020-07-20', 'reason', 'judge', 'result', '2020-07-27', 'reason', 'judge', 'result', '2020-07-23', 'reason', 'judge', 'result', '2020-06-15', 'reason', 'judge', 'result', '2020-08-01', 'reason', 'judge', 'result', '2020-06-29', 'reason', 'judge', 'result', '2020-08-06', 'reason', 'judge', 'result', '2020-08-03', 'reason', 'judge', 'result');
 
 --
 -- Indexes for dumped tables
