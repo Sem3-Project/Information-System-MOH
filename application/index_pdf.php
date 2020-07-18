@@ -1,8 +1,9 @@
 <?php
 require('fpdf181/fpdf.php');
-
+//ob_start();
 class myPDF extends FPDF{
     function header(){
+        //ob_start();
         $this->SetFont('Arial','',6);
         $this->Cell(0,10,'MOH, Gampaha',0,0,'L');
         // $this->Ln();

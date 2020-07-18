@@ -995,6 +995,7 @@ function Output($dest='', $name='', $isUTF8=false)
 	switch(strtoupper($dest))
 	{
 		case 'I':
+			ob_clean(); 
 			// Send to standard output
 			$this->_checkoutput();
 			if(PHP_SAPI!='cli')
