@@ -30,7 +30,7 @@ class myPDF extends FPDF{
         $this->Cell(0,10,'page'.$this->PageNo(),0,0,'C');
     }
 
-
+//===============================check in 1,2 $newid=============================================
     function ViewTable($db,$newid){//------------------------------this part should be change according to the form--------------------------------
         $this->SetFont('Arial','B',20);
         $this->Cell(0,10,'Pregnancy',0,0,'C');
