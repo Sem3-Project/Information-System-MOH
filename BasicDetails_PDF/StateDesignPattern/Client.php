@@ -64,16 +64,49 @@ if(isset($_POST["Generate"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BasicDetails_PDF</title>
+
+    <link rel = "stylesheet" href ="../../public/css/BPDF.css">
+<style>
+    .content{
+        width: 10cm;
+        /* background-color:yellow; */
+        padding: 6px 52px;
+        /* size="25"; */
+        font-size: 20px;
+        text-align:center;
+    }
+
+
+</style>
+
 </head>
+
+<header>
+<div class="header"><img class="logo" src="../../public/images/logo.jpg"/>
+<div class="logo">
+		<h1>Medical Officer of Health Office</h1>
+		<h3>Gampaha</h3>
+	</div>
+    <div class="topnav">
+  
+  <a href="login_page.php">Log out</a>
+  <a href="home.php">Home</a>
+  
+  
+</div>
+	</div>
+</header>
+
 <body>
+<div class="content">
 <form method="POST" action="Client.php">
-<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
+<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
 
 <!-- <input type="submit" name="Search" value="Search"> -->
-<input type="submit" name="Generate" value="Generate">
+<input type="submit" name="Generate" value="Generate the Report">
 <!-- <input type="submit" name="Generate" value="Generate"> -->
 
-
+</div>
 </form>
     
 </body>
