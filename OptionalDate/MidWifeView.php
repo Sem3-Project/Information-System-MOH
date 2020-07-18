@@ -34,49 +34,51 @@ function getData(){
 
 
 //insert
-// if(isset($_POST['Insert'])){
-//     $info=getData();
-//     //$insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`, `confirmedDate`)
-//     //VALUES ('$info[0]','$info[1]','$info[2]','$info[3]')";
-//     $insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`)
-//     VALUES ('$info[0]','$info[1]','$info[2]')";
-//     try{
-//         $insert_result=mysqli_query($connect,$insert_query);
-//         if($insert_result){
-//             if(mysqli_affected_rows($connect)>0){
-//                 echo("data inserted successfully");
-
-//             }else{
-//                 echo("data are not inserted");
-//             }
-//         }
-//     }catch(Exception $ex){
-//         echo("error inserted".$ex->getMessage());
-//     }
-// }
-
-
 if(isset($_POST['Insert'])){
     $info=getData();
-    $update_query="UPDATE `optionaldate` SET `id`='$info[0]',`date1`='$info[1]',`date2`='$info[2]'    
-    WHERE id='$info[0]'";
-
+    //$insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`, `confirmedDate`)
+    //VALUES ('$info[0]','$info[1]','$info[2]','$info[3]')";
+    $insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`) VALUES ('$info[0]','$info[1]','$info[2]')";
+    $delete_query="DELETE FROM `optionaldate` where id='$info[0]'";
     try{
-        $pdate_result=mysqli_query($connect,$update_query);
-        if($pdate_result){
+        $deleteResult=mysqli_query($connect,$delete_query);
+        $insert_result=mysqli_query($connect,$insert_query);
+        if($insert_result){
             if(mysqli_affected_rows($connect)>0){
-                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is updated"."</p>");
-                // echo("date is updated");
+                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."Date inserted successfully"."</p>");
+
             }else{
-                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is not updated"."</p>");
-                // echo("date is not updated");
+                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."Date hasn't inserted successfully"."</p>");
+                // echo("data are not inserted");
             }
         }
     }catch(Exception $ex){
-        echo("<p style='color:black; font-size: 30px; background-color:white;'>"."error in update".$ex->getMessage()."</p>");
-        // echo("error in update".$ex->getMessage());
+        echo("error inserted".$ex->getMessage());
     }
 }
+
+
+// if(isset($_POST['Insert'])){
+//     $info=getData();
+//     $update_query="UPDATE `optionaldate` SET `id`='$info[0]',`date1`='$info[1]',`date2`='$info[2]'    
+//     WHERE id='$info[0]'";
+
+//     try{
+//         $pdate_result=mysqli_query($connect,$update_query);
+//         if($pdate_result){
+//             if(mysqli_affected_rows($connect)>0){
+//                 echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is updated"."</p>");
+//                 // echo("date is updated");
+//             }else{
+//                 echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is not updated"."</p>");
+//                 // echo("date is not updated");
+//             }
+//         }
+//     }catch(Exception $ex){
+//         echo("<p style='color:black; font-size: 30px; background-color:white;'>"."error in update".$ex->getMessage()."</p>");
+//         // echo("error in update".$ex->getMessage());
+//     }
+// }
 
 
 

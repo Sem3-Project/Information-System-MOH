@@ -8,6 +8,7 @@ $id="";
 $date1="";
 $date2="";
 $confirmedDate="";
+$time="";
 
 
 //connect to mysql database
@@ -27,6 +28,7 @@ function getData(){
     // $data[1]=$_POST['date1'];
     // $data[2]=$_POST['date2'];
     $data[3]=$_POST['confirmedDate'];
+    $data[4]=$_POST['time'];
     
     
     return $data;
@@ -46,6 +48,7 @@ if(isset($_POST['Search'])){
                         $date1=$row['date1'];
                         $date2=$row['date2'];
                         $confirmedDate=$row['confirmedDate'];
+                        $time=$row['time'];
                 
                     }
                 }else{
@@ -62,7 +65,7 @@ if(isset($_POST['Search'])){
 //Confirmed
 if(isset($_POST['Confirmed'])){
     $info=getData();
-    $Confirmed_query="UPDATE `optionaldate` SET `id`='$info[0]',`confirmedDate`='$info[3]'  
+    $Confirmed_query="UPDATE `optionaldate` SET `id`='$info[0]',`confirmedDate`='$info[3]' ,`time`='$info[4]' 
     WHERE id='$info[0]'";
 
     try{
@@ -131,22 +134,33 @@ if(isset($_POST['Confirmed'])){
 <h2>Date Selection</h2>
 <div class="content">
 
-<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
+<!-- <input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br> -->
 <!-- <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($id);?>"><br><br> -->
+<input type="text" name="id" readonly style="width: 800px; height: 50px ;font-size: 20px; "  value="<?php echo($_SESSION['id'])?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
 <br><br>
 
+<p>Date/දිනය :</p>
 <select name="confirmedDate" style="width: 100px; height: 30px;">
     <option  selected hidden value=""></option>
     <option value="<?php echo($date1);?>" <?php if($confirmedDate==$date1) echo 'selected="selected"'; ?>><?php echo($date1);?></option>
     <option value="<?php echo($date2);?>" <?php if($confirmedDate==$date2) echo 'selected="selected"'; ?>><?php echo($date2);?></option>
 </select>
 <br><br>
+
+<p>Time/වේලාව:</p>
+
+<select name="time" style="width: 100px; height: 30px;">
+    <option  selected hidden value=""></option>
+    <option value="<?php echo("8.30 a.m.");?>" <?php if($time=="8.30 a.m.") echo 'selected="selected"'; ?>><?php echo("8.30 a.m.");?></option>
+    <option value="<?php echo("10.30 a.m.");?>" <?php if($time=="10.30 a.m.") echo 'selected="selected"'; ?>><?php echo("10.30 a.m.");?></option>
+</select>
+<br><br>
+  
 <input type="submit" name="Confirmed" value="Confirmed"><br><br>
 
 </div class>
-
 
 
 </form>
