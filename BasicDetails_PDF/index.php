@@ -13,6 +13,17 @@ class myPDF extends FPDF{
         
     }
 
+    // function getData(){
+    //     $data=array();
+    //     $data[0]=$_POST['id'];
+    //     // $data[1]=$_POST['date1'];
+    //     // $data[2]=$_POST['date2'];
+    //     //$data[3]=$_POST['confirmedDate'];
+        
+        
+    //     return $data;
+    // }
+
     function footer(){
         $this->SetY(-15);
         $this->SetFont('Arial','',8);
@@ -20,7 +31,7 @@ class myPDF extends FPDF{
     }
 
 
-    function ViewTable($db){//------------------------------this part should be change according to the form--------------------------------
+    function ViewTable($db,$newid){//------------------------------this part should be change according to the form--------------------------------
         $this->SetFont('Arial','B',20);
         $this->Cell(0,10,'Pregnancy',0,0,'C');
         $this->Ln();
@@ -28,7 +39,8 @@ class myPDF extends FPDF{
         $this->Ln(30);
 
         $this->SetFont('Times','',12);
-        $stmt=$db->query("SELECT * FROM `data` WHERE id='987211362v'");
+        // $info=getData();
+        $stmt=$db->query("SELECT * FROM `data` WHERE id='$newid'");
         $detail=$stmt->fetch(PDO::FETCH_OBJ);
         $this->Cell(20,10,'ID:',0,0,'L');
         $this->Cell(30,10,$detail->id,1,0,'C');
