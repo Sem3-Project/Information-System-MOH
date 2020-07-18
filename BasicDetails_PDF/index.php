@@ -30,8 +30,13 @@ class myPDF extends FPDF{
         $this->Cell(0,10,'page'.$this->PageNo(),0,0,'C');
     }
 
+<<<<<<< HEAD
 //===============================check in 1,2 $newid=============================================
     function ViewTable($db,$newid){//------------------------------this part should be change according to the form--------------------------------
+=======
+
+    function ViewTable($db,$id){//------------------------------this part should be change according to the form--------------------------------
+>>>>>>> 634a8367029aa2e2cee39d85a99e84966f237e28
         $this->SetFont('Arial','B',20);
         $this->Cell(0,10,'Pregnancy',0,0,'C');
         $this->Ln();
@@ -40,7 +45,7 @@ class myPDF extends FPDF{
 
         $this->SetFont('Times','',12);
         // $info=getData();
-        $stmt=$db->query("SELECT * FROM `data` WHERE id='$newid'");
+        $stmt=$db->query("SELECT * FROM `data` WHERE id='$id'");
         $detail=$stmt->fetch(PDO::FETCH_OBJ);
         $this->Cell(20,10,'ID:',0,0,'L');
         $this->Cell(30,10,$detail->id,1,0,'C');
