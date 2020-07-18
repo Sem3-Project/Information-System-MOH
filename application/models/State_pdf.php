@@ -1,0 +1,15 @@
+<?php
+require_once "context_pdf.php";
+abstract class State
+{
+    protected $context;
+
+    public function setContext(Context $context)
+    {
+        $this->context = $context;
+    }
+
+    abstract public function handle1($id): void;
+}
+
+?>

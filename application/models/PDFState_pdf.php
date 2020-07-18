@@ -1,6 +1,6 @@
 <?php
-require_once 'State.php';
-require_once '../index.php';
+require_once 'State_pdf.php';
+require_once '../index_pdf.php';
 class PDFState extends State
 {
     public function handle1($id): void//---------------------in here we connect database details to form. this is the processing part-------------------

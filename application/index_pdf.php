@@ -1,7 +1,6 @@
 <?php
 require('fpdf181/fpdf.php');
 
-
 class myPDF extends FPDF{
     function header(){
         $this->SetFont('Arial','',6);
