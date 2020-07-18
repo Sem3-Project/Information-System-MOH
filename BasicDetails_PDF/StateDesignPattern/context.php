@@ -18,9 +18,9 @@ class Context
         $this->state->setContext($this);
     }
 
-    public function request1(): void
+    public function request1($id): void
     {
-        $this->state->handle1();
+        $this->state->handle1($id);
     }
 
 }

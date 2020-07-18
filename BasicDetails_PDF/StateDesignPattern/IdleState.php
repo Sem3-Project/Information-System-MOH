@@ -6,7 +6,7 @@ require_once '../index.php';
 
 class IdleState extends State
 {
-    public function handle1(): void
+    public function handle1($id): void
     {
         $pdf=new myPDF();
         $pdf->AliasNbPages();

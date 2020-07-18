@@ -20,10 +20,10 @@ class myPDF extends FPDF{
     }
 
 
-    function ViewTable($db){//------------------------------this part should be change according to the form--------------------------------
+    function ViewTable($db,$newid){//------------------------------this part should be change according to the form--------------------------------
         
         $this->SetFont('Times','',12);
-        $stmt=$db->query("SELECT * FROM `data2` WHERE id='987211362v'");
+        $stmt=$db->query("SELECT * FROM `data2` WHERE id='$newid'");
         $detail=$stmt->fetch(PDO::FETCH_OBJ);
         $this->Cell(20,8,'ID:',0,0,'L');
         $this->Cell(30,8,$detail->id,1,0,'C');
