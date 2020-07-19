@@ -7,7 +7,7 @@ require '../models/adminOptionalD_model.php';
 <head>
 <meta charset="UTF-8">
 <title>ClinicDate</title>
-<link rel = "stylesheet" href ="../public/css/MidWifeViewdate.css">
+<link rel = "stylesheet" href ="../../public/css/MidWifeViewdate.css">
 
 <style>
     .content{
@@ -23,7 +23,7 @@ require '../models/adminOptionalD_model.php';
 
 </head>
 <header>
-<div class="header"><img class="logo" src="../public/images/logo.jpg"/>
+<div class="header"><img class="logo" src="../../public/images/logo.jpg"/>
 <div class="logo">
 		<h1>Medical Officer of Health Office</h1>
 		<h3>Gampaha</h3>

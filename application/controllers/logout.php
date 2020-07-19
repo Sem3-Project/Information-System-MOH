@@ -6,5 +6,4 @@ require 'login.php';
     unset($_SESSION['id']); 
     header("location: ../views/login_page.php"); 
 
-
 ?>
