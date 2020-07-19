@@ -6,10 +6,6 @@ require '../models/IECMaterial_model.php';
 <head>
 <meta charset="UTF-8">
 <title>IEC Material</title>
-<<<<<<< HEAD
-<link rel = "stylesheet" href ="../../public/css/IECMaterial.css">
-
-=======
 <link rel = "stylesheet" href ="../../public/css/IECMaterial_page.css">
 <style>
     .idClass{
@@ -21,7 +17,6 @@ require '../models/IECMaterial_model.php';
 
 
 </style>
->>>>>>> 21abfcb31962d30e5232c80f2f7da1bbcf0c13f9
 </head>
 
 

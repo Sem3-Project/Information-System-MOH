@@ -7,9 +7,6 @@ require '../models/BasicDetails_model.php';
 <meta charset="UTF-8">
 <title>Basic Details</title>
 <link rel = "stylesheet" href ="../../public/css/BasicDetails.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-=======
 <style>
     .idClass{
         width: 10cm;
@@ -20,7 +17,6 @@ require '../models/BasicDetails_model.php';
 
 
 </style>
->>>>>>> 21abfcb31962d30e5232c80f2f7da1bbcf0c13f9
 </head>
 
 <header>

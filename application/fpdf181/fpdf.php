@@ -995,7 +995,11 @@ function Output($dest='', $name='', $isUTF8=false)
 	switch(strtoupper($dest))
 	{
 		case 'I':
+<<<<<<< HEAD
 			ob_clean(); 
+=======
+			ob_clean(); //=======================================clean objects added by me ===================================
+>>>>>>> f5325faa95fc25daf0cb5f36118d72ccc2fdf900
 			// Send to standard output
 			$this->_checkoutput();
 			if(PHP_SAPI!='cli')
