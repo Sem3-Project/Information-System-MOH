@@ -1,6 +1,5 @@
 <?php
 require '../controllers/login.php';
-//echo $_SESSION['success']; 
 echo'You have logged in with user id: '.($_SESSION['id']);
 ?>
 
@@ -22,9 +21,8 @@ echo'You have logged in with user id: '.($_SESSION['id']);
     </div>
 
 <div class="topnav">
-  
-  <a href="login_page.php">Log out</a>
-  
+  <a href="../logout.php">Log out</a>
+
   
 </div>
 	</div>
@@ -42,8 +40,8 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 
     <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
         <a href="register_page.php"><img src="../../public/images/Registration.png" align="center"/></a></div><br />
-    <div class="linkbox" id="Delete"><span><strong>Delete Account</strong><br /></span>
-        <a href="BasicDetails.php"><img src="../../public/images/delete.jpg" align="center"/></a></div><br />
+    <div class="linkbox" id="Delete"><span><strong>Deactivate Account</strong><br /></span>
+        <a href="delete_page.php"><img src="../../public/images/delete.jpg" align="center"/></a></div><br />
     <div class="linkbox" id="Edit"><span><strong>Edit details</strong><br /></br></span>
         <a href="BasicDetails.php"><img src="../../public/images/edit.jpg" align="center"/></a></div><br />
     <div class="linkbox" id="bmi"><span><strong>BMI Calculator</strong><br /></span>
@@ -131,7 +129,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
             </script>
 </article>
 
-<div class="para1"><h2 class="heading">අපගේ මෙහෙවර(Our Mission)</h2>
+<div class="para1"><h2 class="heading" align="center">අපගේ මෙහෙවර &nbsp;&nbsp;&nbsp;&nbsp;(Our Mission)</h2>
 කායික මානසික සමාජයීය හා ආධ්‍යාත්මික වශයෙන් සෞඛ්‍ය සම්පන්න වූ මාතෘ, ළදරු, ළමා ප්‍රමුඛ පවුලේ මෙන්ම සමාජයේ සෞඛ්‍ය සංරක්ෂණය සිදු කරමින් සුවදායක වූ පරිසරයක් තුල යහපත් ජීවන තත්ත්වයක් පවත්වා ගැනීම සඳහා වෙහෙසීම හා කැපවීම.         <br /><br />
 </div>
 <div class="para2"><h2 class="heading">අපගේ දැක්ම (Our Vision)</h2>

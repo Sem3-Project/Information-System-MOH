@@ -47,6 +47,9 @@ echo'You have logged in with user id: '.($_SESSION['id']);
         <!-- <a href="BasicDetails_page.php"><img src="../../public/images/report.png" align="center"/></a></div><br /> -->
     <div class="linkbox" id="ClinicDate"><span><strong>Clinic Date</strong><br /><br /></span>
         <a href="userOptionalD_page.php"><img src="../../public/images/clinicdate.jpg" align="center"/></a></div><br />
+
+    <div class="linkbox" id="ClinicDate"><span><strong>Weight Gain</strong><br /><br /></span>
+        <a href="WeightGainChart.html"><img src="../../public/images/chart.jpg" align="center"/></a></div><br />
     <!-- <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
         <a href="BasicDetails.php"><img src="images/Registration.png" align="center"/></a></div><br />
     <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>

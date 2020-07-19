@@ -8,9 +8,9 @@ require '../models/login_table.php';
 //session_start();
 $dbObj = Model::getInstance();
 $dbObj->connect('localhost','root','','moh');
-//$db = mysqli_connect('localhost', 'root', '', 'moh');
 
 $message ="";
+$tableName = null;
 
 //Register user
 if (isset($_POST['save'])) {
@@ -21,7 +21,7 @@ if (isset($_POST['save'])) {
         $passwordEnc = md5("$password2");
         $message = "Registration completed successfully";
         $member_status = "active"; //useful in deactivation------------
-        
+
         $tempmember = new login();
         $result1 = $tempmember->load($dbObj, $id);
 
@@ -57,14 +57,57 @@ if (isset($_POST['save'])) {
         // if (mysqli_num_rows($result_1) > 0) {
         //     //  <style>div.alert{display:inline-block;}</style>
         //     $message = "This NIC number already exists. Please enter correct NIC number..!!";
-    
+        
         else{
+
+            function insert($tableName,$idname, $id){
+              $query_insert = "INSERT INTO $tableName ($idname) VALUES ('$id')";
+              return $query_insert;
+            }
 
             $sql= "INSERT INTO users (id, catagory, password) VALUES('$id', '$catagory', '$passwordEnc')";
             $dbObj->doQuery($sql);
             if ($catagory == 'Patient-Mother'){
-            $sql2 = "INSERT INTO investigations (id) VALUES ('$id')";
-            $dbObj->doQuery($sql2);}
+           
+            $dbObj->doQuery(insert('investigations','id',$id));
+            $dbObj->doQuery(insert('day1','id',$id));
+            $dbObj->doQuery(insert('day2','id',$id));
+            $dbObj->doQuery(insert('day3','id',$id));
+            $dbObj->doQuery(insert('day4','id',$id));
+            $dbObj->doQuery(insert('day5','id',$id));
+            $dbObj->doQuery(insert('day6','id',$id));
+            $dbObj->doQuery(insert('day7','id',$id));
+            $dbObj->doQuery(insert('day8','id',$id));
+            $dbObj->doQuery(insert('day9','id',$id));
+            $dbObj->doQuery(insert('day10','id',$id));
+            $dbObj->doQuery(insert('data','id',$id));
+            $dbObj->doQuery(insert('data2','id',$id));
+            $dbObj->doQuery(insert('hoscliniccare','patient_id',$id));
+            $dbObj->doQuery(insert('optionaldate','id',$id));
+            $dbObj->doQuery(insert('usscan','id',$id));
+            $dbObj->doQuery(insert('pg7','patient_id',$id));
+            $dbObj->doQuery(insert('table1','id',$id));
+            $dbObj->doQuery(insert('table2','idNew',$id));
+          
+          }
+            else{
+              $dbObj->doQuery(insert('childdata','patient_id',$id));
+              $dbObj->doQuery(insert('childdata1','patient_id',$id));
+              $dbObj->doQuery(insert('childdata2','patient_id',$id));
+              $dbObj->doQuery(insert('childdata3','patient_id',$id));
+              $dbObj->doQuery(insert('childdata4','patient_id',$id));
+              $dbObj->doQuery(insert('childdata5','patient_id',$id));
+              $dbObj->doQuery(insert('optionaldate','id',$id));
+              $dbObj->doQuery(insert('table3','idn',$id));
+              $dbObj->doQuery(insert('table4','id',$id));
+              $dbObj->doQuery(insert('table5','id',$id));
+              $dbObj->doQuery(insert('table6','id',$id));
+              $dbObj->doQuery(insert('table7','id',$id));
+              $dbObj->doQuery(insert('table8','id',$id));
+              $dbObj->doQuery(insert('table9','id',$id));
+              $dbObj->doQuery(insert('table10','id',$id));
+             
+            }
     //         $query = "INSERT INTO users (id, catagory, password) 
   	// 		  VALUES('$id', '$catagory', '$passwordEnc')";
   	// mysqli_query($db, $query);

@@ -27,7 +27,7 @@ require '../models/BasicDetails_model.php';
 	</div>
     <div class="topnav">
   
-  <a href="login_page.php">Log out</a>
+  <a href="../controllers/logout.php">Log out</a>
   <a href="home.php">Home</a>
   
   

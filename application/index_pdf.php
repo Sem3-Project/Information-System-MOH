@@ -249,7 +249,7 @@ class myPDF extends FPDF{
         $this->Ln(30);
 
         $this->SetFont('Arial','B',20);
-        $this->Cell(0,10,'Mid wife visit',0,0,'C');
+        $this->Cell(0,10,'Midwife visit',0,0,'C');
         $this->Ln();
         $this->Cell(0,10,'Dates',0,0,'C');
         $this->Ln(30);
