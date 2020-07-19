@@ -1,7 +1,13 @@
 <?php
-require_once "context.php";
-require_once "IdleState.php";
-require_once "PDFState.php";
+require_once "context_pdf.php";
+require_once "IdleState_pdf.php";
+require_once "PDFState_pdf.php";
+//require '../../../../framework/libraries/Model.php';
+//require '../../table.php';
+// require '../../../../framework/libraries/Model.php';
+require '../controllers/login.php';
+//echo $_SESSION['success'];
+echo'You have logged in with user id: '.($_SESSION['id']);
 
 //-------------------------this is the running part-------------------------------
 $host="localhost";
@@ -89,8 +95,8 @@ if(isset($_POST["Generate"])){
 	</div>
     <div class="topnav">
   
-  <a href="login_page.php">Log out</a>
-  <a href="home.php">Home</a>
+  <a href="../views/login_page.php">Log out</a>
+  <a href="../views/user_home.php">Home</a>
   
   
 </div>
@@ -99,8 +105,9 @@ if(isset($_POST["Generate"])){
 
 <body>
 <div class="content">
-<form method="POST" action="Client.php">
-<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
+<form method="POST" action="Client_pdf.php">
+<!-- <input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br> -->
+<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " readonly value="<?php echo($_SESSION['id'])?>"><br><br>
 
 <!-- <input type="submit" name="Search" value="Search"> -->
 <input type="submit" name="Generate" value="Generate the Report">

@@ -17,7 +17,6 @@ echo'You have logged in with user id: '.($_SESSION['id']);
         padding: 6px 52px;
         /* size="25"; */
         font-size: 20px;
-        /* text-align:center; */
     }
 
 
@@ -56,26 +55,16 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 <input type="submit" name="Search" value="Search">
 <br><br>
 
-<p>Date/දිනය :</p>
 <select name="confirmedDate" style="width: 100px; height: 30px;">
     <option  selected hidden value=""></option>
     <option value="<?php echo($date1);?>" <?php if($confirmedDate==$date1) echo 'selected="selected"'; ?>><?php echo($date1);?></option>
     <option value="<?php echo($date2);?>" <?php if($confirmedDate==$date2) echo 'selected="selected"'; ?>><?php echo($date2);?></option>
 </select>
 <br><br>
-
-<p>Time/වේලාව:</p>
-
-<select name="time" style="width: 100px; height: 30px;">
-    <option  selected hidden value=""></option>
-    <option value="<?php echo("8.30 a.m.");?>" <?php if($time=="8.30 a.m.") echo 'selected="selected"'; ?>><?php echo("8.30 a.m.");?></option>
-    <option value="<?php echo("10.30 a.m.");?>" <?php if($time=="10.30 a.m.") echo 'selected="selected"'; ?>><?php echo("10.30 a.m.");?></option>
-</select>
-<br><br>
-  
 <input type="submit" name="Confirmed" value="Confirmed"><br><br>
 
 </div class>
+
 
 
 </form>

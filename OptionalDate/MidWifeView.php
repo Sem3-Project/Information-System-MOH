@@ -34,51 +34,49 @@ function getData(){
 
 
 //insert
-if(isset($_POST['Insert'])){
-    $info=getData();
-    //$insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`, `confirmedDate`)
-    //VALUES ('$info[0]','$info[1]','$info[2]','$info[3]')";
-    $insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`) VALUES ('$info[0]','$info[1]','$info[2]')";
-    $delete_query="DELETE FROM `optionaldate` where id='$info[0]'";
-    try{
-        $deleteResult=mysqli_query($connect,$delete_query);
-        $insert_result=mysqli_query($connect,$insert_query);
-        if($insert_result){
-            if(mysqli_affected_rows($connect)>0){
-                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."Date inserted successfully"."</p>");
-
-            }else{
-                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."Date hasn't inserted successfully"."</p>");
-                // echo("data are not inserted");
-            }
-        }
-    }catch(Exception $ex){
-        echo("error inserted".$ex->getMessage());
-    }
-}
-
-
 // if(isset($_POST['Insert'])){
 //     $info=getData();
-//     $update_query="UPDATE `optionaldate` SET `id`='$info[0]',`date1`='$info[1]',`date2`='$info[2]'    
-//     WHERE id='$info[0]'";
-
+//     //$insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`, `confirmedDate`)
+//     //VALUES ('$info[0]','$info[1]','$info[2]','$info[3]')";
+//     $insert_query="INSERT INTO `optionaldate`(`id`, `date1`, `date2`)
+//     VALUES ('$info[0]','$info[1]','$info[2]')";
 //     try{
-//         $pdate_result=mysqli_query($connect,$update_query);
-//         if($pdate_result){
+//         $insert_result=mysqli_query($connect,$insert_query);
+//         if($insert_result){
 //             if(mysqli_affected_rows($connect)>0){
-//                 echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is updated"."</p>");
-//                 // echo("date is updated");
+//                 echo("data inserted successfully");
+
 //             }else{
-//                 echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is not updated"."</p>");
-//                 // echo("date is not updated");
+//                 echo("data are not inserted");
 //             }
 //         }
 //     }catch(Exception $ex){
-//         echo("<p style='color:black; font-size: 30px; background-color:white;'>"."error in update".$ex->getMessage()."</p>");
-//         // echo("error in update".$ex->getMessage());
+//         echo("error inserted".$ex->getMessage());
 //     }
 // }
+
+
+if(isset($_POST['Insert'])){
+    $info=getData();
+    $update_query="UPDATE `optionaldate` SET `id`='$info[0]',`date1`='$info[1]',`date2`='$info[2]'    
+    WHERE id='$info[0]'";
+
+    try{
+        $pdate_result=mysqli_query($connect,$update_query);
+        if($pdate_result){
+            if(mysqli_affected_rows($connect)>0){
+                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is updated"."</p>");
+                // echo("date is updated");
+            }else{
+                echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date is not updated"."</p>");
+                // echo("date is not updated");
+            }
+        }
+    }catch(Exception $ex){
+        echo("<p style='color:black; font-size: 30px; background-color:white;'>"."error in update".$ex->getMessage()."</p>");
+        // echo("error in update".$ex->getMessage());
+    }
+}
 
 
 
@@ -114,7 +112,7 @@ if(isset($_POST['Insert'])){
     <div class="topnav">
   
   <a href="login_page.php">Log out</a>
-  <a href="home.php">Home</a>
+  <a href="../application/views/home.php">Home</a>
   
   
 </div>
@@ -125,8 +123,14 @@ if(isset($_POST['Insert'])){
 
 
 <form method="POST" action="MidWifeView.php">
+
+
+
 <h2>Clinic Date</h2>
 <div class="content">
+<a href="../Our forms/DailyClinic.php" style='font-size:15px; color: rgb(155, 67, 67); font-family:Arial,Suns-serif;text-align: center;font-weight: bold;'>List of Attendees</a>
+<br><br>
+<p style='font-size:15px; color: rgb(155, 67, 67); font-family:Arial,Suns-serif;font-weight: bold;'>Giving a New Clinic Date: </p>
 <input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
 <!-- <input type="text" name="id" placeholder="Enter patient's NIC here" value="<?php echo($id);?>"><br><br> -->
 <br><br>
