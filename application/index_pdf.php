@@ -1,11 +1,8 @@
 <?php
 require('fpdf181/fpdf.php');
-<<<<<<< HEAD
 
 
-=======
 //ob_start();
->>>>>>> f5325faa95fc25daf0cb5f36118d72ccc2fdf900
 class myPDF extends FPDF{
     function header(){
         //ob_start();

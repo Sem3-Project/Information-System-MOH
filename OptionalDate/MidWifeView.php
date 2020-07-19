@@ -111,7 +111,7 @@ if(isset($_POST['Insert'])){
 	</div>
     <div class="topnav">
   
-  <a href="login_page.php">Log out</a>
+  <a href="../application/views/login_page.php">Log out</a>
   <a href="../application/views/home.php">Home</a>
   
   

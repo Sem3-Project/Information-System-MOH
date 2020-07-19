@@ -37,7 +37,7 @@
 	</div>
     <div class="topnav">
   <a href="home.php">Log out</a>
-  <a href="home.php">Home</a>
+  <a href="../application/views/home.php">Home</a>
   
 </div>
 	</div>

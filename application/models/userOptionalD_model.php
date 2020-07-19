@@ -19,7 +19,7 @@ $id="";
 $date1="";
 $date2="";
 $confirmedDate="";
-
+$time="";
 
 // //connect to mysql database
 // mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
@@ -38,6 +38,7 @@ function getData(){
     // $data[1]=$_POST['date1'];
     // $data[2]=$_POST['date2'];
     $data[3]=$_POST['confirmedDate'];
+    $data[4]=$_POST['time'];
     
     
     return $data;
@@ -85,6 +86,7 @@ if(isset($_POST['Search'])){
                         $date1=$row['date1'];
                         $date2=$row['date2'];
                         $confirmedDate=$row['confirmedDate'];
+                        $time=$row['time'];
                 
                     }
                 }else{
@@ -101,7 +103,7 @@ if(isset($_POST['Search'])){
 //Confirmed
 if(isset($_POST['Confirmed'])){
     $info=getData();
-    $Confirmed_query="UPDATE `optionaldate` SET `id`='$info[0]',`confirmedDate`='$info[3]'  WHERE id='$info[0]'";
+    $Confirmed_query="UPDATE `optionaldate` SET `id`='$info[0]',`confirmedDate`='$info[3]',`time`='$info[4]'  WHERE id='$info[0]'";
 
     //$Confirmed_query="UPDATE `optionaldate` SET `id`='.$user.',`confirmedDate`='$info[3]'  WHERE id=". $_SESSION['id'];
 
