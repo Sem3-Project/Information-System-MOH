@@ -5,11 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calculate your BMI</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+  <link rel = "stylesheet" href ="../../public/css/BasicDetails.css"/>
 
 </head>
 <!-- <body style="background-color:maroon;" > -->
-<body style="background-color:maroon;" >
+<body>
+<header>
+<div class="header"><img class="logo" src="../../public/images/logo.jpg"/>
+<div class="logo">
+		<h1>Medical Officer of Health Office</h1>
+		<h3>Gampaha</h3>
+    </div>
+
+<div class="topnav">
+  <a href="../controllers/logout.php">Log out</a>
+
+  
+</div>
+	</div>
+<!-- </header>
   <header class="mt-3 text-center row">
   
     <div class="col-sm-10 align-right">
@@ -18,9 +33,18 @@
 	  <hr>
     </div>
 	
-  </header>
+  </header> -->
   <div class="container mt-3">
-    <form method="POST">
+    <form method="POST" align="center">
+    <header class="mt-3 text-center row">
+  
+  <div class="col-sm-10 align-right">
+<hr>
+    <h1 class="text-secondary">Calculate Body Mass Index</h1>
+  <hr>
+  </div>
+
+</header>
       <div class="form-group row">
         <label class="col-sm-2 col-form-label" for="weight" style="color:white">Weight in kg.</label>
         <div class="col-sm-10">
