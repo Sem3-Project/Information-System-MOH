@@ -21,7 +21,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
     </div>
 
 <div class="topnav">
-  <a href="../logout.php">Log out</a>
+  <a href="../controllers/logout.php">Log out</a>
 
   
 </div>
