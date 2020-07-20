@@ -41,8 +41,9 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 <article>
 
     <div class="linkbox" id="ViewReport"><span><strong>View Report</strong><br /><br /></span>
+    <a href="../../PDF_selection/PDF_Selecting.php"><img src="../../public/images/report.png" align="center"/></a></div><br />
     <!-- <a href="../models/BasicDetails_PDF/StateDesignPattern/Client.php"><img src="../../public/images/report.png" align="center"/></a></div><br /> -->
-    <a href="../models/Client_pdf.php"><img src="../../public/images/report.png" align="center"/></a></div><br />
+    <!-- <a href="../models/Client_pdf.php"><img src="../../public/images/report.png" align="center"/></a></div><br /> -->
 
         <!-- <a href="BasicDetails_page.php"><img src="../../public/images/report.png" align="center"/></a></div><br /> -->
     <div class="linkbox" id="ClinicDate"><span><strong>Clinic Date</strong><br /><br /></span>

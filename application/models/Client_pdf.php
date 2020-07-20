@@ -111,7 +111,9 @@ if(isset($_POST["Generate"])){
 
 <!-- <input type="submit" name="Search" value="Search"> -->
 <input type="submit" name="Generate" value="Generate the Report">
+<!-- <input type="submit" name="Generate" value="Generate the Report"> -->
 <!-- <input type="submit" name="Generate" value="Generate"> -->
+<!-- <button class="mother">Generate Mother's</button> -->
 
 </div>
 </form>
