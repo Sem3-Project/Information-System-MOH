@@ -43,7 +43,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
     <div class="linkbox" id="Delete"><span><strong>Deactivate Account</strong><br /></span>
         <a href="delete_page.php"><img src="../../public/images/delete.jpg" align="center"/></a></div><br />
     <div class="linkbox" id="Edit"><span><strong>Edit details</strong><br /></br></span>
-        <a href="BasicDetails.php"><img src="../../public/images/edit.jpg" align="center"/></a></div><br />
+        <a href="contents_page.php"><img src="../../public/images/edit.jpg" align="center"/></a></div><br />
     <div class="linkbox" id="bmi"><span><strong>BMI Calculator</strong><br /></span>
         <a href="BMIcalc_page.php"><img src="../../public/images/bmi.jpg" align="center"/></a></div><br />
     <div class="linkbox" id="ClinicDate"><span><strong>Clinic Date</strong><br /><br /></span>

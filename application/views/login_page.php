@@ -65,7 +65,7 @@ require '../controllers/login.php';
   	    					</div>
 						<a href="ChangePW_page.php">මුරපදය වෙනස් කිරීම සඳහා</a>
 						<!-- <button type="submit" class="btn btn-primary" name="login_user">පිවිසෙන්න (Log in)</button> -->
-						<button type="submit" class="button" name="login_user">පිවිසෙන්න (Log in)</button>
+						<button type="submit" class="btn" style="vertical-align:middle"name="login_user">පිවිසෙන්න</button>
 
 
            			</form>
