@@ -6,7 +6,7 @@ Class Selection{
         
         }
         else{
-            echo("<p style='color:black; font-size: 30px; background-color:white;'>"."<a href='Client_pdf.php'>Child's Report</a>"."</p>");
+            echo("<p style='color:black; font-size: 30px; background-color:white;'>"."<a href='Client.php'>Child's Report</a>"."</p>");
         }}
 }
 

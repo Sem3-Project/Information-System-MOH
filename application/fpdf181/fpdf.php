@@ -995,7 +995,7 @@ function Output($dest='', $name='', $isUTF8=false)
 	switch(strtoupper($dest))
 	{
 		case 'I':
-			ob_clean(); 
+			//ob_clean(); 
 			ob_clean(); //=======================================clean objects added by me ===================================
 			// Send to standard output
 			$this->_checkoutput();

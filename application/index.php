@@ -29,6 +29,7 @@ class myPDF extends FPDF{
         $stmt=$db->query("SELECT * FROM `data` WHERE id='$id'");
         $detail=$stmt->fetch(PDO::FETCH_OBJ);
 
+
         //------------------------------Basic Details.1st page in pregnancy Report------------------------------------
 
         $this->Cell(20,10,'ID:',0,0,'L');

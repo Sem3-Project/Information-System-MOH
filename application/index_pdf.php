@@ -31,6 +31,8 @@ class myPDF extends FPDF{
         $stmt=$db->query("SELECT * FROM `data` WHERE id='$id'");
         $detail=$stmt->fetch(PDO::FETCH_OBJ);
 
+       
+
         //------------------------------Basic Details.1st page in pregnancy Report------------------------------------
 
         $this->Cell(20,10,'ID:',0,0,'L');
@@ -314,6 +316,139 @@ class myPDF extends FPDF{
         $this->Cell(50,10,$detail->Consent_form_date,1,0,'C');
         $this->Ln(30);
 
+        //-----------------investigations----------------------------------
+
+        
+
+        $this->SetFont('Times','',20);
+        $stmt=$db->query("SELECT * FROM `investigations` WHERE id='$id'");
+        $detail1=$stmt->fetch(PDO::FETCH_OBJ);
+
+        $this->SetFont('Arial','B',15);
+        $this->Cell(0,10,'Investigations Record',0,0,'C');
+        $this->Ln(20);
+
+        $this->SetFont('Arial','B',15);
+        $this->Cell(0,10,'Auscutation',0,0,'L');
+        $this->Ln(20);
+
+        $this->SetFont('Times','',12);
+        $this->Cell(80,10,'T1',1,0,'C');
+        $this->Cell(50,10,$detail1->ausT1,1,0,'C');
+        $this->Ln();
+        $this->Cell(80,10,'T2',1,0,'C');
+        $this->Cell(50,10,$detail1->ausT2,1,0,'C');
+        $this->Ln();
+        $this->Cell(80,10,'T3',1,0,'C');
+        $this->Cell(50,10,$detail1->ausT3,1,0,'C');
+        $this->Ln(20);
+
+        $this->SetFont('Arial','B',15);
+        $this->Cell(0,10,'Mental Health',0,0,'L');
+        $this->Ln(20);
+
+        $this->SetFont('Times','',12);
+        $this->Cell(80,10,'T1',1,0,'C');
+        $this->Cell(50,10,$detail1->menT1,1,0,'C');
+        $this->Ln();
+        $this->Cell(80,10,'T2',1,0,'C');
+        $this->Cell(50,10,$detail1->menT2,1,0,'C');
+        $this->Ln();
+        $this->Cell(80,10,'T3',1,0,'C');
+        $this->Cell(50,10,$detail1->menT3,1,0,'C');
+        $this->Ln(20);
+
+        $this->SetFont('Arial','B',15);
+        $this->Cell(60,8,'Respiratory System',0,0,'L');
+        $this->SetFont('Times','',12);
+        $this->Cell(80,8,$detail1->respirEx,1,0,'C');
+        $this->Ln(20);
+        $this->SetFont('Arial','B',15);
+        $this->Cell(60,8,'Breast Examination  ',0,0,'L');
+        $this->SetFont('Times','',12);
+        $this->Cell(80,8,$detail1->breastEx,1,0,'C');
+        $this->Ln(20);
+       
+        $this->SetFont('Arial','B',15);
+        $this->Cell(0,10,'Blood Sugar',0,0,'L');
+        $this->Ln(20);
+
+        $this->SetFont('Times','',12);
+        $this->Cell(80,10,'POA',1,0,'C');
+        $this->Cell(80,10,'Result',1,0,'C');
+        $this->Ln();
+        $this->Cell(80,10,$detail1->bs1,1,0,'C');
+        $this->Cell(80,10,$detail1->bs1res,1,0,'C');
+        $this->Ln();
+        $this->Cell(80,10,$detail1->bs2,1,0,'C');
+        $this->Cell(80,10,$detail1->bs2res,1,0,'C');
+        $this->Ln(30);
+
+        $this->SetFont('Arial','B',15);
+        $this->Cell(0,10,'Haemoglobin',0,0,'L');
+        $this->Ln(20);
+
+        $this->SetFont('Times','',12);
+        $this->Cell(80,10,'POA',1,0,'C');
+        $this->Cell(80,10,'Result',1,0,'C');
+        $this->Ln();
+        $this->Cell(80,10,$detail1->heam1,1,0,'C');
+        $this->Cell(80,10,$detail1->heam1res,1,0,'C');
+        $this->Ln();
+        $this->Cell(80,10,$detail1->heam2,1,0,'C');
+        $this->Cell(80,10,$detail1->heam2res,1,0,'C');
+        $this->Ln(20);
+
+        $this->SetFont('Arial','B',15);
+        $this->Cell(60,8,'Dental Care-Treatments',0,0,'C');
+        $this->Ln(10);
+        $this->SetFont('Times','',12);
+        $this->Cell(160,40,$detail1->denttreat,1,0,'C');
+        $this->Ln(50);
+
+        $this->SetFont('Arial','B',15);
+        $this->Cell(60,8,'Syphilis Screening',0,0,'C');
+        $this->Ln(10);
+        $this->SetFont('Times','',12);
+        $this->Cell(160,20,$detail1->denttreat,1,0,'C');
+        $this->Ln(30);
+
+        $this->SetFont('Arial','B',15);
+        $this->Cell(0,10,' Tetanus Toxoid Immunization',0,0,'C');
+        $this->Ln(10);
+
+        $this->SetFont('Times','',12);
+        $this->Cell(26,10,'Dose',1,0,'C');
+        $this->Cell(26,10,'1',1,0,'C');
+        $this->Cell(26,10,'2',1,0,'C');
+        $this->Cell(26,10,'3',1,0,'C');
+        $this->Cell(26,10,'4',1,0,'C');
+        $this->Cell(26,10,'5',1,0,'C');
+        $this->Cell(26,10,'NE',1,0,'C');
+        $this->Ln();
+        $this->Cell(26,10,'Date',1,0,'C');
+        $this->Cell(26,10,$detail1->tdate1,1,0,'C');
+        $this->Cell(26,10,$detail1->tdate2,1,0,'C');
+        $this->Cell(26,10,$detail1->tdate3,1,0,'C');
+        $this->Cell(26,10,$detail1->tdate4,1,0,'C');
+        $this->Cell(26,10,$detail1->tdate5,1,0,'C');
+        $this->Cell(26,10,$detail1->tne,1,0,'C');
+        $this->Ln();
+        $this->Cell(26,10,'Batch No.',1,0,'C');
+        $this->Cell(26,10,$detail1->tbatch1,1,0,'C');
+        $this->Cell(26,10,$detail1->tbatch2,1,0,'C');
+        $this->Cell(26,10,$detail1->tbatch3,1,0,'C');
+        $this->Cell(26,10,$detail1->tbatch4,1,0,'C');
+        $this->Cell(26,10,$detail1->tbatch5,1,0,'C');
+        $this->Cell(26,10,$detail1->tnebatch,1,0,'C');
+        $this->Ln(20);
+
+        $this->SetFont('Arial','B',15);
+        $this->Cell(60,8,'Other Investigations',0,0,'C');
+        $this->Ln(10);
+        $this->SetFont('Times','',12);
+        $this->Cell(160,30,$detail1->other,1,0,'C');
+        $this->Ln(30);
 
     }
 }
