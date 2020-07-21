@@ -7,7 +7,7 @@ require '../models/Birthto18_model.php';
     <head>
         <meta charset ="UTF-8">
         <meta name="viewpoint" content="width-device-width initial-scale=1.0">
-        <link rel ="stylesheet" type="text/css" href="cssClinic/newStyle.css">
+        <link rel ="stylesheet" type="text/css" href="../../public/css/newStyle.css">
     </head>
     <body>
         <form action="Birthto18_page.php" method="post" >
