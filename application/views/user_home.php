@@ -1,7 +1,6 @@
 <?php
 require '../controllers/login.php';
-//echo $_SESSION['success'];
-echo'You have logged in with user id: '.($_SESSION['id']);
+echo'You have logged in with user id: '.($_SESSION['id']); 
 
 ?>
 
@@ -12,7 +11,14 @@ echo'You have logged in with user id: '.($_SESSION['id']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel = "stylesheet" href ="../../public/css/HomePatient.css"/>
-    
+    <!-- <script type = "text/javascript">
+     
+            function Redirect() {
+            if($_SESSION['catagory']=='Patient-Mother'){window.location = "WeightGainChart.html";}
+               else if($_SESSION['catagory']=='Patient-Child') {window.location = "BMIcalc_page"};
+            }
+         
+      </script> -->
 </head>
 <body>
 <header>
@@ -51,8 +57,25 @@ echo'You have logged in with user id: '.($_SESSION['id']);
     <div class="linkbox" id="ClinicDate"><span><strong>Clinic Date</strong><br /><br /></span>
         <a href="userOptionalD_page.php"><img src="../../public/images/clinicdate.jpg" align="center"/></a></div><br />
 
-    <div class="linkbox" id="ClinicDate"><span><strong>Weight Gain</strong><br /><br /></span>
-        <a href="WeightGainChart.html"><img src="../../public/images/chart.jpg" align="center"/></a></div><br />
+    <div class="linkbox" id="ClinicDate"><span><strong>Weight Index</strong><br /><br /></span>
+        <?php if(($_SESSION['catagory']) =='Patient-Child' ) 
+            {
+        ?>
+            <a href="BMIcalc_page.php"><img src="../../public/images/chart.jpg" align="center"/></a>
+        <?php
+            }
+            else{ 
+        ?>
+            <a href="WeightGainChart.html"><img src="../../public/images/chart.jpg" align="center"/></a>
+        <?php
+            }
+        ?>
+    </div><br/>
+        <!-- <a onclick = "Redirect();"><img src="../../public/images/chart.jpg" align="center"/></a></div><br /> -->
+
+        <!-- <a href="WeightGainChart.html"><img src="../../public/images/chart.jpg" align="center"/></a></div><br /> -->
+
+
     <!-- <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>
         <a href="BasicDetails.php"><img src="images/Registration.png" align="center"/></a></div><br />
     <div class="linkbox" id="Registration"><span><strong>Add Account</strong><br /><br /></span>

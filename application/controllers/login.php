@@ -97,6 +97,7 @@ if (isset($_POST['login_user'])) {
             
             if($id != $log->id ){
                 $message = "Incorrect username..!";
+                //echo '<script type="text/javascript">alert($message)</script>';
                
 //-----------------------very imp. select cat-------------------------
             }
@@ -139,7 +140,8 @@ if (isset($_POST['login_user'])) {
         //permit($catagory);
     }
     ?>
-    <script>alert($message)</script>
+    <!-- <script>alert($message)</script> -->
+    <!-- //echo '<script type="text/javascript">alert($message)</script>'; -->
   
   <?php  
 }$dbObj->closeConnection(); 

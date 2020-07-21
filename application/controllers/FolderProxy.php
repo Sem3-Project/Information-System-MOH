@@ -27,7 +27,9 @@ class FolderProxy implements IOperation{
         try{
             $name_of_user_1=$user->get_designation();
             $user_id = $user->get_id();
+          
             $_SESSION['id'] = $user_id;      // Storing id of the logged in user, in the session variable 
+            $_SESSION['catagory']=$name_of_user_1;//===clear if errors occur==
             $_SESSION['success'] = "You have logged in"; //welcome message
         
             if ($name_of_user_1=='Patient-Mother'|| $name_of_user_1=='Patient-Child'){
