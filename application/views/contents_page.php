@@ -19,7 +19,7 @@
             </div>
             <fieldset>
                 <legend height="100%;"><img src="../../public/images/content.png" class="content-image"/></legend>
-                <fieldset>
+                <fieldset class="mom">
                     <legend height="80%;" ><img src="../../public/images/mom.gif" class="mom-image"/></legend>
                     <a href="BasicDetails_page.php"><img src="../../public/images/ac1.gif" class="button-image"></a>
                     <a href="personalInfo_page.php"><img src="../../public/images/ac2.gif" class="button-image"></a>
@@ -32,7 +32,7 @@
                     <a href="DelivPostnatalCare_page.php"><img src="../../public/images/ac9.gif" class="button-image"></a>
                     <a href="postPartumFC_page.php"><img src="../../public/images/ac10.gif" class="button-image"></a>
                 </fieldset>
-                <fieldset>
+                <fieldset class="child">
                 <legend height="80%;"><img src="../../public/images/child.gif" class="child-image" /></legend>
                 <a href="childDetails_page.php"><img src="../../public/images/pc1.gif" class="button-image"></a>
                 <a href="childDetails2_page.php"><img src="../../public/images/pc2.gif" class="button-image"></a>
