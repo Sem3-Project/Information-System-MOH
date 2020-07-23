@@ -26,7 +26,7 @@ require '../controllers/ChangePW.php';
 		</div>
 		<div class="form-group">
             <button type="submit" name="new_password" class="login-btn">Submit</button>
-            <button type="submit" name="login" class="lohin-btn">Login</button>
+            <button type="submit" name="login" class="login-btn">Login</button>
 		</div>
 	</form>
 </body>
