@@ -119,15 +119,16 @@
       </div>
 
       <div class="layer">
-      <fieldset>
+      <fieldset class="mission">
                 <legend height="100%;"><h2 class="heading">අපගේ මෙහෙවර(Our Mission)</h2></legend>
                 කායික මානසික සමාජයීය හා ආධ්‍යාත්මික වශයෙන් සෞඛ්‍ය සම්පන්න වූ මාතෘ, ළදරු, ළමා ප්‍රමුඛ පවුලේ මෙන්ම සමාජයේ සෞඛ්‍ය සංරක්ෂණය සිදු කරමින් සුවදායක වූ පරිසරයක් තුල යහපත් ජීවන තත්ත්වයක් පවත්වා ගැනීම සඳහා වෙහෙසීම හා කැපවීම.         <br /><br />
-                
-            </fieldset>
-            <fieldset>
+                </fieldset>       
+            
+            <fieldset class="vission">
                 <legend height="100%;"><h2 class="heading" >අපගේ දැක්ම (Our Vision)</h2></legend>
                 පරිසර හිතකාමී සෞඛ්‍ය සම්පන්න වූ ජනතාවක් ප්‍රදේශයෙන් බිහි කිරීම.
             </fieldset>
+           
       </div>
 
   <footer>
