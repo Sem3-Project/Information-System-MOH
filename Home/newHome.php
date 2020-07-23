@@ -12,10 +12,9 @@
                 <img src="images/line.jpg" class="line-image"/>
                
                 <div class="hero-text">
-                    <h1 style="font-size:25px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Office of the Medical Officer of Health</h1>
-                    <!-- <h1 style="font-size:25px">Medical Officer of Health Office</h1> -->
+                    <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
 
-                    <h3 style="font-size:25px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gampaha</h3>
+                    <h3 style="font-size:25px">Gampaha</h3>
                 </div>
             </div>
             
@@ -27,7 +26,7 @@
       <p id="caption"></p>
       <div class="slideshow-container">
 
-        <div class="mySlides fade">
+         <div class="mySlides fade">
           <div class="numbertext">1 / 7</div>
           <img src="images/slider1.png" style="width:100%">  
         </div>
@@ -39,12 +38,12 @@
 
       <div class="mySlides fade">
         <div class="numbertext">3 / 7</div>
-        <img src="images/slider3.jpg" style="width:100%"> 
+        <img src="images/newmoh2.jpg" style="width:100%"> 
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">4 / 7</div>
-        <img src="images/slider4.jpg" style="width:100%">        
+        <img src="images/newmoh1.jpg" style="width:100%">        
       </div>
 
       <div class="mySlides fade">
@@ -54,12 +53,12 @@
 
       <div class="mySlides fade">
         <div class="numbertext">6 / 7</div>
-        <img src="images/slider6.jpg" style="width:100%">       
+        <img src="images/newmoh3.jpg" style="width:100%">       
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">7 / 7</div>
-        <img src="images/slider7.jpeg" style="width:100%">  
+        <img src="images/newmoh4.jpg" style="width:100%">  
       </div>
 
     </div>
