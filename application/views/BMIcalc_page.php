@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calculate your BMI</title>
   <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
-  <link rel = "stylesheet" href ="../../public/css/BasicDetails.css"/>
+  <!-- <link rel = "stylesheet" href ="../../public/css/BasicDetails.css"/> -->
 
 </head>
 <!-- <body style="background-color:maroon;" > -->

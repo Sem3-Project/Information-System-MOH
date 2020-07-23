@@ -10,9 +10,12 @@
             <div class="hero-image">
                 <img src="images/logo.png" class="logo-image"/>
                 <img src="images/line.jpg" class="line-image"/>
+               
                 <div class="hero-text">
-                    <h1 style="font-size:25px">Medical Officer of Health Office</h1>
-                    <h3 style="font-size:25px">Gampaha</h3>
+                    <h1 style="font-size:25px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Office of the Medical Officer of Health</h1>
+                    <!-- <h1 style="font-size:25px">Medical Officer of Health Office</h1> -->
+
+                    <h3 style="font-size:25px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gampaha</h3>
                 </div>
             </div>
             

@@ -30,8 +30,8 @@ require '../models/adminOptionalD_model.php';
 	</div>
     <div class="topnav">
   
-  <a href="../application/views/login_page.php">Log out</a>
-  <a href="../application/views/home.php">Home</a>
+  <a href="../controllers/logout.php">Log out</a>
+  <a href="home.php">Home</a>
   
   
 </div>

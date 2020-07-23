@@ -6,16 +6,26 @@ require '../models/investigation_model.php';
         <title>Investigations</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../public/css/formsCommon.css">
         <link rel="stylesheet" type="text/css" href="../../public/css/clinic style.css">
         <link rel="stylesheet" type="text/css" href="../../public/css/table.css">
+
+
+        
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
         
     </head>
     <body>
         <form action="investigations_page.php" method="post">
         <h2 class="title">පරීක්ෂණ(Investigations)</h2>
-          
-            <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here"  value="<?php echo $id;?>"><br>
-            <button type="submit" name="search" value="Find">Search</button>&nbsp; &nbsp;<br><br>
+        <!-- <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here"  value="<?php echo $id;?>"><br> -->
+
+            <input type="text" name="id" placeholder="Search NIC"  value="<?php echo $id;?>"><br>
+            <button class="buttton" type="submit" name="search" value="Find" style="vertical-align:middle" id="search"><span>Search</span></button>&nbsp; &nbsp;<br><br>
+            <a href="#update">Scroll to bottom</a>
 
             <h5><b>හෘද පරීක්ෂාව(Auscutation)</b></h5>
             <div class="input-group"><input class="input--style-2" type="text" name="ausT1" placeholder="T1" value="<?php echo $ausT1;?>"></div>
@@ -176,7 +186,9 @@ require '../models/investigation_model.php';
                 </table><br><br><br>
            
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button type="submit" name="update" >Update</button>
+            <button type="submit" name="update" class="" id="update">Update</button>
+
+            <a href="#search"><img class="up-icon" src="https://www.startutorial.com/img/up.png" /></a>
         </form>
     </body>
 </html>
