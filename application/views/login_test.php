@@ -14,12 +14,6 @@ require '../controllers/login.php';
         <!-- <link rel = "stylesheet" href ="../../public/css/style.css"> -->
 
         <style>
-            body {
-            background-image: url('../../public/images/wave.png');
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-            }
 
             input[type=text], select, [type=password] {
             width: 100%;
@@ -33,7 +27,7 @@ require '../controllers/login.php';
 
             input[type=submit] {
             width: 100%;
-            background-color: #4CAF50;
+            background-color: rgb(10, 214, 146);
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -43,7 +37,7 @@ require '../controllers/login.php';
             }
 
             input[type=submit]:hover {
-            background-color: #45a049;
+                background-color: rgb(8, 148, 101);
             }
         </style>
     </head>
@@ -64,20 +58,22 @@ require '../controllers/login.php';
        
     </head>
     <body>
-        <div style="color:red; opacity: 0.8 font-style:bold" >
+        <div class="wave-image">
+        <p id="caption"></p>
+        <div style="color:rgb(10, 214, 146); opacity: 0.8 font-style:bold" >
       		<marquee behavior="scroll" direction="right" onmouseover="this.stop();" onmouseout="this.start();">Please send your comments to gampahamoh@yahoo.com</marquee>
         </div>
             <div class="row">
                 <div class="column">
                     <div class="image" align="center">
-                        <img src="../../public/images/login_new.png" alt="login" width="500px" height="500px" >
+                        <img src="../../public/images/momIcon1.png" alt="login" width="500px" height="500px" >
                     </div>
                 </div>
 
                 <div class="column1">
                     <div class="login_content">
                         <form method="post" action="" autocomplete="off" align="center">
-                            <img src="../../public/images/sign.jpg">
+                            <img src="../../public/images/sign1.gif">
                             <div class="blink_me">
                                 <h2 class="blink"><b><blink>ආයුබෝවන්</blink></b></h2>
                             </div>
@@ -107,7 +103,8 @@ require '../controllers/login.php';
                     </div>
                 </div>
             </div>
-        
+        </div>
+        </div>
         
     </body>
   
