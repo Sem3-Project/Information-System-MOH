@@ -8,7 +8,7 @@ require '../controllers/login.php';
         <title>Log In</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href=:../../public/css/bootstrap.min.css">
-        <link rel = "stylesheet" href ="../../public/css/newLogin.css">
+        <link rel = "stylesheet" href ="../../public/css/loging.css">
        
         <link rel = "stylesheet" href ="../../public/css/split.css">
         <!-- <link rel = "stylesheet" href ="../../public/css/style.css"> -->
