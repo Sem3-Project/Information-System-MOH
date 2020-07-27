@@ -8,7 +8,7 @@ require '../models/personalInfo_model.php';
         <title>Personal Information</title>
         <meta charset ="UTF-8">
         <meta name="viewpoint" content="width-device-width initial-scale=1.0">
-        <link rel ="stylesheet" type="text/css" href="../../public/css/newStyle.css">
+        <link rel ="stylesheet" type="text/css" href="../../public/css/form.css">
     </head>
 <head>
         <body>
