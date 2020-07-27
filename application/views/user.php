@@ -107,6 +107,9 @@
       <a href="BasicDetails.php">
         <img src="../../public/images/newdate.png" onmouseover ="src='../../public/images/newdate1.png'" onmouseout ="src='../../public/images/newdate.png'" style="width:15%;height:200%;"/>
       </a>
+      <a href="BasicDetails.php">
+        <img src="../../public/images/newweight2.png" onmouseover ="src='../../public/images/newweight4.png'" onmouseout ="src='../../public/images/newweight2.png'" style="width:15%;height:200%;"/>
+      </a>
     </div>   
       </div>
 
