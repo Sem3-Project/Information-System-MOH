@@ -73,7 +73,7 @@ require '../controllers/login.php';
                 <div class="column1">
                     <div class="login_content">
                         <form method="post" action="" autocomplete="off" align="center">
-                            <img src="../../public/images/sign1.gif">
+                            <img src="../../public/images/sign.jpg">
                             <div class="blink_me">
                                 <h2 class="blink"><b><blink>ආයුබෝවන්</blink></b></h2>
                             </div>
