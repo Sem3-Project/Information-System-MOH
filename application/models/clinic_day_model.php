@@ -91,10 +91,12 @@ if(isset($_POST['save'])){
         $update_Result = $inves->featuredLoad($dbObj,$update_Query);
         //$update_Result = mysqli_query($connect,$update_Query);
         if($update_Result){
-            echo "Data updated successfully";
+            //echo "Data updated successfully";
+            echo '<script type="text/javascript">alert("Updated successfully!");</script>';
                 }
     }catch(Exception $ex){
-        echo 'Error Update '.$ex->getMessage();
+        echo '<script type="text/javascript">alert("Error!");</script>';
+       // echo 'Error Update '.$ex->getMessage();
     }
 }
 ?>

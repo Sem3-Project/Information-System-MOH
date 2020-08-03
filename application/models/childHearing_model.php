@@ -74,14 +74,16 @@ $update_query="UPDATE childdata5 SET patient_id='$info[0]',sound='$info[1]',high
 try{
 $pdate_result=$childHearing->featuredLoad($dbObj,$update_query);
 if($pdate_result){
-if(mysqli_affected_rows($connect)>0){
- echo("data updated");
-}else{
- echo("data not updated");
-}
+    echo '<script type="text/javascript">alert("Updated successfully!");</script>';
+// if(mysqli_affected_rows($connect)>0){
+//  echo("data updated");
+// }else{
+//  echo("data not updated");
+// }
 }
 }catch(Exception $ex){
-echo("error in update".$ex->getMessage());
+    echo '<script type="text/javascript">alert("Error!");</script>';
+//echo("error in update".$ex->getMessage());
 }
 }
 

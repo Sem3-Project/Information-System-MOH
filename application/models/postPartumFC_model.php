@@ -104,14 +104,16 @@ if(isset($_POST['update'])){
         $update_Result = $postPFC->featuredLoad($dbObj, $update_Query);
 
         if($update_Result){
-            if(mysqli_affected_rows($connect)>0){
-               echo 'data updated';
-            }else{
-                echo 'data not updated';
-            }
+            echo '<script type="text/javascript">alert("Updated successfully!");</script>';
+            // if(mysqli_affected_rows($connect)>0){
+            //    echo 'data updated';
+            // }else{
+            //     echo 'data not updated';
+            // }
         }
     }catch (Exception $ex){
-        echo 'Error update' .$ex->getMessage();
+        echo '<script type="text/javascript">alert("Error!");</script>';
+       // echo 'Error update' .$ex->getMessage();
     }
 }
 ?>

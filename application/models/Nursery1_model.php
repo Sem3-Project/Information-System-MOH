@@ -103,6 +103,7 @@ if(isset($_POST['update'])){
         $update_Result = $nursery1->featuredLoad($dbObj, $update_Query);
 
         if($update_Result){
+            echo '<script type="text/javascript">alert("Updated successfully!");</script>';
             // if(mysqli_affected_rows($connect)>0){
             //    echo 'data updated';
             // }else{
@@ -110,7 +111,8 @@ if(isset($_POST['update'])){
             // }
         }
     }catch (Exception $ex){
-        echo 'Error update' .$ex->getMessage();
+        echo '<script type="text/javascript">alert("Error!");</script>';
+        //echo 'Error update' .$ex->getMessage();
     }
 }
 ?>

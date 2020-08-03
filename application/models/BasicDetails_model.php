@@ -159,6 +159,7 @@ if(isset($_POST['Update'])){
     try{
         $pdate_result=$bDetails->featuredLoad($dbObj,$update_query);
         if($pdate_result){
+            echo '<script type="text/javascript">alert("Updated successfully!");</script>';
             // if(mysqli_affected_rows($connect)>0){
             //     echo("data updated");
             // }else{
@@ -166,7 +167,8 @@ if(isset($_POST['Update'])){
             // }
         }
     }catch(Exception $ex){
-        echo("error in update".$ex->getMessage());
+        //echo("error in update".$ex->getMessage());
+        echo '<script type="text/javascript">alert("Error!");</script>';
     }
 }
 

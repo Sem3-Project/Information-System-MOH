@@ -130,7 +130,8 @@ if(isset($_POST['update'])){
             // }
         }
     }catch(Exception $ex){
-        echo 'Error Update '.$ex->getMessage();
+        // echo 'Error Update '.$ex->getMessage();
+        echo '<script type="text/javascript">alert("Error!");</script>';
     }
 }
 ?>
