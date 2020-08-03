@@ -103,19 +103,19 @@
       <p id="caption"></p>
       <div class="icon-image">
       <a href="BasicDetails.php">
-        <img src="images/newadd.png" onmouseover ="src='images/newadd1.png'" onmouseout ="src='images/newadd.png'" style="width:12%;height:200%;" />
+        <img src="images/newadd1.png" style="width:12%;height:200%;" />
       </a>
       <a href="BasicDetails.php">
-        <img src="images/newedit.png" onmouseover ="src='images/newedit1.png'" onmouseout ="src='images/newedit.png'" style="width:12%;height:200%;"/>
+        <img src="images/newedit1.png" style="width:12%;height:200%;"/>
       </a>
       <a href="BasicDetails.php">
-        <img src="images/newdelete.png" onmouseover ="src='images/newdelete1.png'" onmouseout ="src='images/newdelete.png'" style="width:12%;height:200%;"/>
+        <img src="images/newdelete1.png" style="width:12%;height:200%;"/>
       </a>
       <a href="BasicDetails.php">
-        <img src="images/newview.png" onmouseover ="src='images/newview1.png'" onmouseout ="src='images/newview.png'" style="width:12%;height:200%;"/>
+        <img src="images/newview1.png" style="width:12%;height:200%;"/>
       </a>
       <a href="BasicDetails.php">
-        <img src="images/newdate.png" onmouseover ="src='images/newdate1.png'" onmouseout ="src='images/newdate.png'" style="width:12%;height:200%;"/>
+        <img src="images/newdate1.png" style="width:12%;height:200%;"/>
       </a>
     </div>   
       </div>
