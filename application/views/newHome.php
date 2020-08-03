@@ -107,19 +107,19 @@ require '../controllers/login.php';
   <div class="caption-container">
       <p id="caption"></p>
       <div class="icon-image">
-      <a href="BasicDetails.php">
+      <a href="register_test.php">
         <img src="../../public/images/newadd1.png" style="width:12%;height:200%;" />
       </a>
       <a href="contents_page.php">
         <img src="../../public/images/newedit1.png" style="width:12%;height:200%;"/>
       </a>
-      <a href="BasicDetails.php">
+      <a href="deactivate.php">
         <img src="../../public/images/newdelete1.png" style="width:12%;height:200%;"/>
       </a>
-      <a href="BasicDetails.php">
+      <!-- <a href="BasicDetails.php">
         <img src="../../public/images/newview1.png" style="width:12%;height:200%;"/>
-      </a>
-      <a href="BasicDetails.php">
+      </a> -->
+      <a href="adminOptionalD_page.php">
         <img src="../../public/images/newdate1.png" style="width:12%;height:200%;"/>
       </a>
     </div>   

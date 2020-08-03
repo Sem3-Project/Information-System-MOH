@@ -1,27 +1,21 @@
 <?php
-    require '../controllers/register.php';
+require '../controllers/delete.php';
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Registration</title>
+        <title>Deactivate Account</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href=:../../public/css/bootstrap.min.css">
-        <link rel = "stylesheet" href ="../../public/css/newLogin.css">
+        <link rel = "stylesheet" href ="../../public/css/loging.css">
        
         <link rel = "stylesheet" href ="../../public/css/split.css">
         <!-- <link rel = "stylesheet" href ="../../public/css/style.css"> -->
 
         <style>
-            body {
-            background-image: url('../../public/images/wave.png');
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-            }
 
-            input[type=text], select, [type=password]{
+            input[type=text], select, [type=password] {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -33,7 +27,7 @@
 
             input[type=submit] {
             width: 100%;
-            background-color: #4CAF50;
+            background-color: rgb(10, 214, 146);
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -43,7 +37,7 @@
             }
 
             input[type=submit]:hover {
-            background-color: #45a049;
+                background-color: rgb(8, 148, 101);
             }
         </style>
     </head>
@@ -52,8 +46,7 @@
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
                 <img src="../../public/images/line.jpg" class="line-image"/>
-                <!-- <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
-                <a href="home.php"><img src="../../public/images/home.png" class="home-image"></a> -->
+               
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
 
@@ -64,36 +57,34 @@
             
        
     </head>
-
-
     <body>
-        <!-- <div style="color:red; opacity: 0.8 font-style:bold" >
+        <div class="wave-image">
+        <p id="caption"></p>
+        <!-- <div style="color:rgb(10, 214, 146); opacity: 0.8 font-style:bold" >
       		<marquee behavior="scroll" direction="right" onmouseover="this.stop();" onmouseout="this.start();">Please send your comments to gampahamoh@yahoo.com</marquee>
         </div> -->
             <div class="row">
                 <div class="column">
                     <div class="image" align="center">
-                        <img src="../../public/images/login_new.png" alt="login" width="500px" height="500px" >
+                        <img src="../../public/images/momIcon1.png" alt="login" width="500px" height="500px" >
                     </div>
                 </div>
 
                 <div class="column1">
                     <div class="login_content">
                         <form method="post" action="" autocomplete="off" align="center">
-                            <img src="../../public/images/Registration.png">
+                            <img src="../../public/images/delete.png" sizes="50%">
                             <div class="blink_me">
-                                <h2 class="blink"><b><blink>User Registration</blink></b></h2>
+                                <h2 class="blink"><b><blink>ගිණුම් අවලංගු කිරීම</blink></b></h2>
                             </div>
                             <br>
                             <div> 
-                                <label><b>පරිශීලක නාමය</b></label>
-                                <input type="text" class="form-control" name="id" placeholder="Enter username" >
+                                <label><b>පරිශීලක නාමය(Username)</b></label>
+                                <input type="text" class="form-control" name="id" >
                             </div>
-                            
                             <div>
-                                <label><b>කාණ්ඩය</b></label>
+                                <label><b>කාණ්ඩය(Category)</b></label>
                                 <select name="catagory" class="form-control">
-                                    <option >Enter category</option>
                                     <option value="Patient-Mother" >මාතෘ-Mother</option>
                                     <option value="Patient-Child" >ළමා-Child</option>
                                     <option value="Medical officer" >වෛද්‍ය නිලධාරි-Medical officer</option>
@@ -101,23 +92,15 @@
                                     <option value="Receptionist">පිළිගැනීමේ නිලධාරි-Receptionist</option>
                                 </select>
                             </div>
-                            <div>
-                                <label for= "exampleInputPassword1"><b>මුරපදය</b></label><br>
-                                <input type="password" class="form-control" id="exampleInputPassword1" name="password_1" placeholder="Enter password">
-                            </div>
-                            <div>
-                            <label for= "exampleInputPassword1"><b>මුරපදය තහවුරු කරන්න</b></label><br>
-  	                        <input type="password" class="form-control" id="exampleInputPassword1" name="password_2" placeholder="Confirm password">
-  	                        </div>
-                        
-                            <input type="submit" class="btn" style="vertical-align:middle"name="save" value="Register">
-
+                      
+                            <input type="submit" class="btn" style="vertical-align:middle"name="deactivate" value="Deactivate Account">
 
                         </form>
                     </div>
                 </div>
             </div>
-        
+        </div>
+        </div>
         
     </body>
   

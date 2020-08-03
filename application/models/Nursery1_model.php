@@ -48,7 +48,7 @@ $nursery1 = new table();
 
 if(isset($_POST['search'])){
     $data = getPosts();
-    $search_Query = "SELECT * FROM table7 WHERE id = $data[0]";
+    $search_Query = "SELECT * FROM table7 WHERE id = '$data[0]'";
     $search_Result = $nursery1->featuredLoad($dbObj, $search_Query);
 
     if($search_Result){
@@ -97,17 +97,17 @@ if(isset($_POST['update'])){
     `night1`='$data[55]', `night2`='$data[56]',`night3`='$data[57]', `bito1`='$data[58]', `bito2`='$data[59]',
     `bito3`='$data[60]',`ni1`='$data[61]',`ni2`='$data[62]', `ni3`='$data[63]', 
     `louse1`='$data[64]',`louse2`='$data[65]',`louse3`='$data[66]'
-     WHERE `id` = $data[0]";
+     WHERE `id` = '$data[0]'";
 
     try{
         $update_Result = $nursery1->featuredLoad($dbObj, $update_Query);
 
         if($update_Result){
-            if(mysqli_affected_rows($connect)>0){
-               echo 'data updated';
-            }else{
-                echo 'data not updated';
-            }
+            // if(mysqli_affected_rows($connect)>0){
+            //    echo 'data updated';
+            // }else{
+            //     echo 'data not updated';
+            // }
         }
     }catch (Exception $ex){
         echo 'Error update' .$ex->getMessage();

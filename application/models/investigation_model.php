@@ -122,7 +122,7 @@ if(isset($_POST['update'])){
     try{
         $update_Result = $inves->featuredLoad($dbObj,$update_Query);
         if($update_Result){
-            echo "data updaeted successfully";
+            echo '<script type="text/javascript">alert("Updated successfully!");</script>';
             // if(mysqli_affected_rows($dbObj) > 0){
             //     echo 'Data updated successfully';
             // }else{

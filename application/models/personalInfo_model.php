@@ -6,7 +6,7 @@ $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
 session_start();
 
-$id = ""; $wAge = ""; $hAge = ""; $wEducation = ""; $hEducation = ""; $wOccupation = ""; $hOccupation = ""; 
+$id = null; $wAge = ""; $hAge = ""; $wEducation = ""; $hEducation = ""; $wOccupation = ""; $hOccupation = ""; 
 $fhDiabetes = null; $fhHypertension = null; $fhHaematologic = null; $fhTwin = null; $fhOthers = ""; 
 $shDiabetes = null; $shHypertension = null; $shCardiac = null; $shRenal = null; $shHepatic = null; $shPsychiatric = null; 
 $shEpilepsy = null; $shMalignancies = null; $shHaematological = null; $shTuberculosis = null; $shThyroid = null; $shBronchial = null; 
@@ -60,7 +60,7 @@ $personalInfo = new table();
 
 if(isset($_POST['search'])){
     $data = getPosts();
-    $search_Query = "SELECT * FROM table1 WHERE id = $data[0]";
+    $search_Query = "SELECT * FROM table1 WHERE id = '$data[0]'";
     $search_Result = $personalInfo->featuredLoad($dbObj, $search_Query);
 
     if($search_Result){
@@ -100,17 +100,17 @@ if(isset($_POST['update'])){
     `poGfoAc`='$data[46]',`poGfoPm`='$data[47]', `poGfoOut`='$data[48]', `poGfoW`='$data[49]',`poGfoPc`='$data[50]',`poGfoSa`='$data[51]', 
     `poGfiAc`='$data[52]', `poGfiPm`='$data[53]',`poGfiOut`='$data[54]', `poGfiW`='$data[55]', `poGfiPc`='$data[56]',`poGfiSa`='$data[57]', 
     `poGsAc`='$data[58]', `poGsPm`='$data[59]',`poGsOut`='$data[60]',`poGsW`='$data[61]',`poGsPc`='$data[62]', `poGsSa`='$data[63]', `poText`='$data[64]'
-     WHERE `id` = $data[0]";
+     WHERE `id` = '$data[0]'";
 
     try{
         $update_Result = $personalInfo->featuredLoad($dbObj, $update_Query);
 
         if($update_Result){
-            if(mysqli_affected_rows($connect)>0){
-               echo 'data updated';
-            }else{
-                echo 'data not updated';
-            }
+            // if(mysqli_affected_rows($connect)>0){
+            //    echo 'data updated';
+            // }else{
+            //     echo 'data not updated';
+            // }
         }
     }catch (Exception $ex){
         echo 'Error update' .$ex->getMessage();
