@@ -8,8 +8,8 @@ require '../controllers/delete.php';
         <title>Deactivate Account</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href=:../../public/css/bootstrap.min.css">
-        <link rel = "stylesheet" href ="../../public/css/loging.css">
-       
+        <!-- <link rel = "stylesheet" href ="../../public/css/loging.css"> -->
+        <link rel = "stylesheet" href ="../../public/css/changepw.css">
         <link rel = "stylesheet" href ="../../public/css/split.css">
         <!-- <link rel = "stylesheet" href ="../../public/css/style.css"> -->
 
@@ -46,7 +46,8 @@ require '../controllers/delete.php';
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
                 <img src="../../public/images/line.jpg" class="line-image"/>
-               
+                <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
 

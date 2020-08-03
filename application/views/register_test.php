@@ -8,7 +8,7 @@
         <title>Registration</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href=:../../public/css/bootstrap.min.css">
-        <link rel = "stylesheet" href ="../../public/css/newLogin.css">
+        <link rel = "stylesheet" href ="../../public/css/changepw.css">
        
         <link rel = "stylesheet" href ="../../public/css/split.css">
         <!-- <link rel = "stylesheet" href ="../../public/css/style.css"> -->
@@ -52,8 +52,8 @@
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
                 <img src="../../public/images/line.jpg" class="line-image"/>
-                <!-- <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
-                <a href="home.php"><img src="../../public/images/home.png" class="home-image"></a> -->
+                <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
 
@@ -73,7 +73,9 @@
             <div class="row">
                 <div class="column">
                     <div class="image" align="center">
-                        <img src="../../public/images/login_new.png" alt="login" width="500px" height="500px" >
+                        <!-- <img src="../../public/images/login_new.png" alt="login" width="500px" height="500px" > -->
+                        <img src="../../public/images/momIcon1.png" alt="login" width="500px" height="500px" >
+                 
                     </div>
                 </div>
 
