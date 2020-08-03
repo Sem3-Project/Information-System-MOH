@@ -1,0 +1,148 @@
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  .hero-image {
+    background-image:  url("../../public/images/header_new.jpg");
+    height: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 70px;
+    
+  }
+  .logo-image{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 70%;
+  }
+  .logout-image{
+    position: absolute;
+    top: 75%;
+    right: 36px;
+    height: 17%;
+  }
+  .logout-image:hover{
+    opacity:0.5;
+  }
+  .home-image{
+    position: absolute;
+    top: 75%;
+    right: 175px;
+    height: 17%;
+  }
+  .home-image:hover{
+    opacity:0.5;
+  }
+  .line-image{
+    position: absolute;
+    height: 17%;
+    width: 95%;
+    top: 75%;
+    left: 30px;
+    /*blur effect*/
+    filter: blur(1px);
+    -webkit-filter: blur(1px);    
+  }
+  
+  
+  .hero-text {
+    text-align: left;
+    position: absolute;
+    top: 40%;
+    left: 450px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family:cursive, Arial, "Sans-serif", "Times New Roman";
+    line-height: 0.5;
+  }
+table, th, td{
+    border:1px solid black;
+    width:100% ;
+    height: 100px;
+    border-collapse: collapse;
+    background-color:white;
+    margin-bottom: 50px;
+    margin-top: 50px; 
+}
+
+ /* .details{
+    /* border:1px solid black; */
+    /* border-collapse: collapse; */
+    /* background-color:white;
+    margin-bottom: 50px;
+    margin-top: 50px;  }*/
+th, td{
+    width:50%;
+    padding-top:2%;
+    padding-bottom:2%;
+    padding-left:1%;
+    padding-right:1%;
+}
+
+textarea{
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize:none;
+    width:100%;
+}
+div{
+    margin-top:0;
+    margin-left: 0;
+    margin-right:0;
+
+}
+
+input[type=text], select {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+input.largerCheckbox { 
+width: 20px; 
+height: 20px; 
+
+} 
+
+
+.caption-container {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    background-color:rgb(223, 223, 223);
+    padding: 2px 16px;
+    color:rgb(8, 184, 125);
+    text-align: center;
+}
+
+.caption-container1 {
+  
+  background-color:rgb(241, 241, 241);
+  padding: 2px 16px;
+  
+}
+
+.link {
+    background-color: rgb(10, 214, 146);
+    text-decoration: none;
+    cursor: pointer;
+    width:50%;
+    height:40px;
+    font-size:17px;
+    
+  }
+  
+  .link:hover {
+    background-color: rgb(20, 131, 79);
+    text-decoration: none;
+  }

@@ -6,8 +6,9 @@ require '../models/IECMaterial_model.php';
 <head>
 <meta charset="UTF-8">
 <title>IEC Material</title>
-<link rel = "stylesheet" href ="../../public/css/IECMaterial_page.css">
-<style>
+<meta name="viewpoint" content="width-device-width initial-scale=1.0">
+<link rel = "stylesheet" href ="../../public/css/IEC.css">
+<!-- <style>
     .idClass{
         width: 10cm;
         /* background-color:yellow; */
@@ -16,11 +17,25 @@ require '../models/IECMaterial_model.php';
     }
 
 
-</style>
+</style> -->
+</head>
+<head>
+        <body>
+            <div class="hero-image">
+                <img src="../../public/images/logo.png" class="logo-image"/>
+                <img src="../../public/images/line.jpg" class="line-image"/>
+                <a href="login_page.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
+                <div class="hero-text">
+                    <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
+                    <h3 style="font-size:25px">Gampaha</h3>
+                </div>
+            </div>
+</body>
 </head>
 
 
-<header>
+<!-- <header>
 <div class="header"><img class="logo" src="../../public/images/logo.jpg"/>
 <div class="logo">
 		<h1>Medical Officer of Health Office</h1>
@@ -32,7 +47,7 @@ require '../models/IECMaterial_model.php';
   
 </div>
 	</div>
-</header>
+</header> -->
 
 <style> 
     table, th, td {
@@ -46,52 +61,56 @@ th, td {
 
 <body>
 <form method="POST" action="IECMaterial_page.php">
-
-<div class="idClass">
-<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
+<div>
+        <div class="caption-container1">
+        <div class="caption-container">
+            <h3 >Search NIC :</h3>
 </div>
+            <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+            style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>"><br><br>
 
-<input type="submit" name="Search" value="Search">
-<input type="submit" name="Update" value="Update"><br><br>
+<input type="submit" class="link" name="Search" value="Search"><br><br>
+<!-- <input type="submit" name="Update" value="Update"><br><br> -->
+<!-- <div class="caption-container"><h3 >ගර්භණී සටහන් පත/Pregnancy Record</h3></div> -->
 
-<label>ප්‍රසූත සහයිකාව පිළිබද දැනුවත් කිරීම/Companion of Choice at Labour Discussed:</label>
-<input type="Date" name="Companion"  value="<?php echo $Companion;?>"><br><br>
+<table style="width:80%"><tr><td><label>ප්‍රසූත සහයිකාව පිළිබද දැනුවත් කිරීම/Companion of Choice at Labour Discussed:</label>
+<input type="Date" name="Companion"  value="<?php echo $Companion;?>"><br><br></td></tr></table>
 
-<table style="width:80%">
+<table style="width:100%">
     <tr> 
-        <td><label>උපත සහ හදිසි අවස්ථාවන් සදහා සුදන්වීමේ සැලැස්ම /Birth and Emergency prepared plan</label></td>
-        <td><label>ප්‍රසුතියේදී /Delivery</label></td>
-        <td><label>හදිසි අවස්ථාවකදී /In an emergency</label></td>
+        <td style="width:40%;"><label>උපත සහ හදිසි අවස්ථාවන් සදහා සුදන්වීමේ සැලැස්ම /Birth and Emergency prepared plan</label></td>
+        <td style="width:30%;"><label>ප්‍රසුතියේදී /Delivery</label></td>
+        <td style="width:30%;"><label>හදිසි අවස්ථාවකදී /In an emergency</label></td>
     </tr>
 
     <tr> 
-        <td><label>යාමට බලාපොරොත්තුවන රෝහල/Intended Hospital</label></td>
-        <td><input type="text" name="Intended_Hospital_Delivery" value="<?php echo($Intended_Hospital_Delivery);?>"></td>
-        <td><input type="text" name="Intended_Hospital_Emergency" value="<?php echo($Intended_Hospital_Emergency);?>"></td>
+        <td style="width:40%;"><label>යාමට බලාපොරොත්තුවන රෝහල/Intended Hospital</label></td>
+        <td style="width:30%;"><input type="text" name="Intended_Hospital_Delivery" value="<?php echo($Intended_Hospital_Delivery);?>"></td>
+        <td style="width:30%;"><input type="text" name="Intended_Hospital_Emergency" value="<?php echo($Intended_Hospital_Emergency);?>"></td>
     </tr>
 
     <tr> 
-        <td><label>ප්‍රවාහන ආකාරය/Mode of Transport</label></td>
-        <td><input type="text" name="Mode_of_Transport_Delivery" value="<?php echo($Mode_of_Transport_Delivery);?>"></td>
-        <td><input type="text" name="Mode_of_Transport_Emergency" value="<?php echo($Mode_of_Transport_Emergency);?>"></td>
+        <td style="width:40%;"><label>ප්‍රවාහන ආකාරය/Mode of Transport</label></td>
+        <td style="width:30%;"><input type="text" name="Mode_of_Transport_Delivery" value="<?php echo($Mode_of_Transport_Delivery);?>"></td>
+        <td style="width:30%;"><input type="text" name="Mode_of_Transport_Emergency" value="<?php echo($Mode_of_Transport_Emergency);?>"></td>
     </tr>
 
     <tr> 
-        <td><label>ඒ සදහා දළ වියදම්/Average cost</label></td>
-        <td><input type="text" name="Average_cost_Delivery" value="<?php echo($Average_cost_Delivery);?>"></td>
-        <td><input type="text" name="Average_cost_Emergency" value="<?php echo($Average_cost_Emergency);?>"></td>
+        <td style="width:40%;"><label>ඒ සදහා දළ වියදම්/Average cost</label></td>
+        <td style="width:30%;"><input type="text" name="Average_cost_Delivery" value="<?php echo($Average_cost_Delivery);?>"></td>
+        <td style="width:30%;"><input type="text" name="Average_cost_Emergency" value="<?php echo($Average_cost_Emergency);?>"></td>
     </tr>
 
     <tr> 
-        <td><label>නිවසේ සිට ඇති දුර/Distance from Home</label></td>
-        <td><input type="text" name="Distance_from_Home_Delivery" value="<?php echo($Distance_from_Home_Delivery);?>"></td>
-        <td><input type="text" name="Distance_from_Home_Emergency" value="<?php echo($Distance_from_Home_Emergency);?>"></td>
+        <td style="width:40%;"><label>නිවසේ සිට ඇති දුර/Distance from Home</label></td>
+        <td style="width:30%;"><input type="text" name="Distance_from_Home_Delivery" value="<?php echo($Distance_from_Home_Delivery);?>"></td>
+        <td style="width:30%;"><input type="text" name="Distance_from_Home_Emergency" value="<?php echo($Distance_from_Home_Emergency);?>"></td>
     </tr>
 
     <tr> 
-        <td><label>ලග වීමට ගතවන කාලය/Time taken to reach</label></td>
-        <td><input type="text" name="Time_taken_to_reach_Delivery" value="<?php echo($Time_taken_to_reach_Delivery);?>"></td>
-        <td><input type="text" name="Time_taken_to_reach_Emergency" value="<?php echo($Time_taken_to_reach_Emergency);?>"></td>
+        <td style="width:40%;"><label>ලග වීමට ගතවන කාලය/Time taken to reach</label></td>
+        <td style="width:30%;"><input type="text" name="Time_taken_to_reach_Delivery" value="<?php echo($Time_taken_to_reach_Delivery);?>"></td>
+        <td style="width:30%;"><input type="text" name="Time_taken_to_reach_Emergency" value="<?php echo($Time_taken_to_reach_Emergency);?>"></td>
     </tr>
     
     </table>
@@ -133,8 +152,8 @@ th, td {
     <br><br>
 
     </table>
-
-    <h2>තොරතුරු අධ්‍යාපනය සහ සන්නිවෙධනය සදහා වූ පොත්/IEC material</h2>
+    <div class="caption-container"><h3 >තොරතුරු අධ්‍යාපනය සහ සන්නිවෙධනය සදහා වූ පොත්/IEC material</h3></div>
+    <!-- <h2>තොරතුරු අධ්‍යාපනය සහ සන්නිවෙධනය සදහා වූ පොත්/IEC material</h2> -->
     <table>
     <tr>
         <td><label>පුර්ව ප්‍රසව සමය පිළිබද පොත්</label></td>
@@ -155,53 +174,54 @@ th, td {
     </tr>
     </table>
     <br><br>
-
-    <h2>පවුල් සෞඛ්‍ය නිලධාරිනිය පැමිණෙන දිනය</h2>
-    <table style="width:80%">
+    <div class="caption-container"><h3 >පවුල් සෞඛ්‍ය නිලධාරිනිය පැමිණෙන දිනය</h3></div>
+    <!-- <h2>පවුල් සෞඛ්‍ය නිලධාරිනිය පැමිණෙන දිනය</h2> -->
+    <table style="width:90%">
     <tr>
-        <td><input type="Date" name="d1" value="<?php echo($d1);?>"></td> 
-        <td><input type="Date" name="d2" value="<?php echo($d2);?>"></td>
-        <td><input type="Date" name="d3" value="<?php echo($d3);?>"></td></tr>
-        <tr><td><input type="Date" name="d4" value="<?php echo($d4);?>"></td>
-        <td><input type="Date" name="d5" value="<?php echo($d5);?>"></td>
-        <td><input type="Date" name="d6" value="<?php echo($d6);?>"></td>
+        <td style="width:30%"><input type="Date" name="d1" value="<?php echo($d1);?>"></td> 
+        <td style="width:30%"><input type="Date" name="d2" value="<?php echo($d2);?>"></td>
+        <td style="width:30%"><input type="Date" name="d3" value="<?php echo($d3);?>"></td></tr>
+        <tr><td style="width:30%"><input type="Date" name="d4" value="<?php echo($d4);?>"></td>
+        <td style="width:30%"><input type="Date" name="d5" value="<?php echo($d5);?>"></td>
+        <td style="width:30%"><input type="Date" name="d6" value="<?php echo($d6);?>"></td>
     </tr>
 
     <tr>
-        <td><input type="Date" name="d7" value="<?php echo($d7);?>"></td> 
-        <td><input type="Date" name="d8" value="<?php echo($d8);?>"></td>
-        <td><input type="Date" name="d9" value="<?php echo($d9);?>"></td></tr>
-        <tr><td><input type="Date" name="d10" value="<?php echo($d10);?>"></td>
-        <td><input type="Date" name="d11" value="<?php echo($d11);?>"></td>
-        <td><input type="Date" name="d12" value="<?php echo($d12);?>"></td>
+        <td style="width:30%"><input type="Date" name="d7" value="<?php echo($d7);?>"></td> 
+        <td style="width:30%"><input type="Date" name="d8" value="<?php echo($d8);?>"></td>
+        <td style="width:30%"><input type="Date" name="d9" value="<?php echo($d9);?>"></td></tr>
+        <tr><td style="width:30%"><input type="Date" name="d10" value="<?php echo($d10);?>"></td>
+        <td style="width:30%"><input type="Date" name="d11" value="<?php echo($d11);?>"></td>
+        <td style="width:30%"><input type="Date" name="d12" value="<?php echo($d12);?>"></td>
     </tr>
 
     
     </table>
+    <div class="caption-container"><h3 >සායනයට පැමිණිය යුතු දිනය</h3></div>
 
-    <h2>සායනයට පැමිණිය යුතු දිනය</h2>
-    <table>
+    <!-- <h2>සායනයට පැමිණිය යුතු දිනය</h2> -->
+    <table style="width:90%">
     
     <tr>
-        <td><input type="Date" name="cd1" value="<?php echo($cd1);?>"></td> 
-        <td><input type="Date" name="cd2" value="<?php echo($cd2);?>"></td>
-        <td><input type="Date" name="cd3" value="<?php echo($cd3);?>"></td></tr>
-        <tr><td><input type="Date" name="cd4" value="<?php echo($cd4);?>"></td>
-        <td><input type="Date" name="cd5" value="<?php echo($cd5);?>"></td>
-        <td><input type="Date" name="cd6" value="<?php echo($cd6);?>"></td>
+        <td style="width:30%"><input type="Date" name="cd1" value="<?php echo($cd1);?>"></td> 
+        <td style="width:30%"><input type="Date" name="cd2" value="<?php echo($cd2);?>"></td>
+        <td style="width:30%"><input type="Date" name="cd3" value="<?php echo($cd3);?>"></td></tr>
+        <tr><td style="width:30%"><input type="Date" name="cd4" value="<?php echo($cd4);?>"></td>
+        <td style="width:30%"><input type="Date" name="cd5" value="<?php echo($cd5);?>"></td>
+        <td style="width:30%"><input type="Date" name="cd6" value="<?php echo($cd6);?>"></td>
     </tr>
 
     <tr>
-        <td><input type="Date" name="cd7" value="<?php echo($cd7);?>"></td> 
-        <td><input type="Date" name="cd8" value="<?php echo($cd8);?>"></td>
-        <td><input type="Date" name="cd9" value="<?php echo($cd9);?>"></td></tr>
-        <tr><td><input type="Date" name="cd10" value="<?php echo($cd10);?>"></td>
-        <td><input type="Date" name="cd11" value="<?php echo($cd11);?>"></td>
-        <td><input type="Date" name="cd12" value="<?php echo($cd12);?>"></td>
+        <td style="width:30%"><input type="Date" name="cd7" value="<?php echo($cd7);?>"></td> 
+        <td style="width:30%"><input type="Date" name="cd8" value="<?php echo($cd8);?>"></td>
+        <td style="width:30%"><input type="Date" name="cd9" value="<?php echo($cd9);?>"></td></tr>
+        <tr><td style="width:30%"><input type="Date" name="cd10" value="<?php echo($cd10);?>"></td>
+        <td style="width:30%"><input type="Date" name="cd11" value="<?php echo($cd11);?>"></td>
+        <td style="width:30%"><input type="Date" name="cd12" value="<?php echo($cd12);?>"></td>
     </tr>
     </table>
-
-    <h2>පවුල් සැලසුම්/Family Planning</h2>
+    <div class="caption-container"><h3 >පවුල් සැලසුම්/Family Planning</h3></div>
+    <!-- <h2>පවුල් සැලසුම්/Family Planning</h2> -->
 
     <table>
 
@@ -238,7 +258,7 @@ th, td {
     <br><br>
 
     <div>
-        <input type="submit" name="Update" value="Update"> 
+        <input type="submit" class="link" name="Update" value="Update"> 
          
     </div>
 

@@ -4,22 +4,38 @@ require '../models/BasicDetails_model.php';
 
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Basic Details</title>
-<link rel = "stylesheet" href ="../../public/css/BasicDetails.css">
-<style>
-    .idClass{
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width-device-width initial-scale=1.0">
+    <title>Basic Details</title>
+<link rel = "stylesheet" href ="../../public/css/BasicDetail.css">
+<!-- <style>
+    /* .idClass{
         width: 10cm;
         /* background-color:yellow; */
-        padding: 6px 52px;
+        /* padding: 6px 52px; */
         /* size="25"; */
-    }
+    } 
+ 
 
 
-</style>
+</style> -->
+</head>
+<head>
+        <body>
+            <div class="hero-image">
+                <img src="../../public/images/logo.png" class="logo-image"/>
+                <img src="../../public/images/line.jpg" class="line-image"/>
+                <a href="login_page.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
+                <div class="hero-text">
+                    <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
+                    <h3 style="font-size:25px">Gampaha</h3>
+                </div>
+            </div>
+</body>
 </head>
 
-<header>
+<!-- <header>
 <div class="header"><img class="logo" src="../../public/images/logo.jpg"/>
 <div class="logo">
 		<h1>Medical Officer of Health Office</h1>
@@ -33,18 +49,24 @@ require '../models/BasicDetails_model.php';
   
 </div>
 	</div>
-</header>
+</header> -->
 
 <body>
 
 
 <form method="POST" action="BasicDetails_page.php">
-<h2>ගර්භණී සටහන් පත/Pregnancy Record</h2></br>
-<div class="idClass">
-<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
+<!-- <h2>ගර්භණී සටහන් පත/Pregnancy Record</h2></br> -->
+<div>
+        <div class="caption-container1">
+        <div class="caption-container">
+            <h3 >Search NIC :</h3>
 </div>
-<input type="submit" name="Search" value="Search">
-<input type="submit" name="Update" value="Update"><br><br>
+            <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+            style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>"><br><br>
+
+<input type="submit" class="link" name="Search" value="Search"><br><br>
+<!-- <input type="submit" name="Update" value="Update"><br><br> -->
+<div class="caption-container"><h3 >ගර්භණී සටහන් පත/Pregnancy Record</h3></div>
 
 <table >
         <tr>
@@ -63,7 +85,7 @@ require '../models/BasicDetails_model.php';
                 </select>
                 
             </td>
-            <td><br><br></td>
+            <!-- <td><br><br></td> -->
             <td>
             <label>ශරීර ස්කන්ධ  දර්ශකය/BMI:</label>
                 <input type="text" name="BMI" maxlength="10" value="<?php echo($BMI);?>">
@@ -74,7 +96,7 @@ require '../models/BasicDetails_model.php';
             <label>උස(සෙ.මී.)/Height(cm):</label>
                 <input type="text" name="height" maxlength="10" value="<?php echo($height);?>">
             </td>
-            <td><br><br></td>
+            <!-- <td><br><br></td> -->
             <td>
             <label>ආසාත්මිකතා /Allergies:</label>
             
@@ -93,13 +115,13 @@ require '../models/BasicDetails_model.php';
             <td>
             <label>මවගේ නම/Name of the mother:</label>
             
-                <input type="text" name="Name_of_the_mother" size="50" value="<?php echo($Name_of_the_mother);?>">
+                <input type="text" name="Name_of_the_mother"  value="<?php echo($Name_of_the_mother);?>">
             </td>
 
             <td>
             <label>රෝහල් සයනයේ නම/Name of the Hospital Clinic:</label>
             
-                <input type="text" name="Name_of_the_Hospital_Clinic" size="50" value="<?php echo($Name_of_the_Hospital_Clinic);?>">
+                <input type="text" name="Name_of_the_Hospital_Clinic"  value="<?php echo($Name_of_the_Hospital_Clinic);?>">
             </td>
             
         </tr>
@@ -108,29 +130,29 @@ require '../models/BasicDetails_model.php';
             <td>
             <label>වයස/Age:</label>
             
-                <input type="text" name="age" size="10" value="<?php echo($age);?>">
+                <input type="text" name="age" value="<?php echo($age);?>">
             </td>
             <td>
             <label>ප්‍රසව හා නරිවේධ විශේෂඥ වෛද්‍යවරයාගේ නම/<br>Name of the Consultant Obstetrician:</label>
             
-                <input type="text" name="Name_of_the_Consultant_Obstetrician" size="50" value="<?php echo($Name_of_the_Consultant_Obstetrician);?>">
+                <input type="text" name="Name_of_the_Consultant_Obstetrician"  value="<?php echo($Name_of_the_Consultant_Obstetrician);?>">
             </td>
         </tr>
 
         <tr>
         <td>
         <label>දුරකථන අංකය /TelePhone:</label>
-        <input type="text" name="tele" size="10" value="<?php echo($tele);?>"></td>
+        <input type="text" name="tele"  value="<?php echo($tele);?>"></td>
         </tr>
         
         <tr>
             <td>
                 <label>පවුල් සෞඛ්‍ය සේවා නිලධාරී කොට්ඨාශය/Name of the field Clinic:</label>
-                <input type="text" name="Name_of_the_field_Clinic" size=50 value="<?php echo($Name_of_the_field_Clinic);?>">
+                <input type="text" name="Name_of_the_field_Clinic"  value="<?php echo($Name_of_the_field_Clinic);?>">
             </td>
             <td>
                 <label>ග්‍රාම නිලධාරී කොට්ඨාශය/Grama Niladari Division:</label>
-                <input type="text" name="GramaNiladariDivision" size=50 value="<?php echo($GramaNiladariDivision);?>">
+                <input type="text" name="GramaNiladariDivision"  value="<?php echo($GramaNiladariDivision);?>">
             </td>
         </tr>
 </table>
@@ -140,26 +162,27 @@ require '../models/BasicDetails_model.php';
             <td>
                 <label>ලියාපදිංචි අංකය සහ දිනය/Registration No. and Date<br>(යෝග්‍යත පවුල් ලේඛනය/Eligible Family Register):</label>
 
-                <input type="text" name="RegistrationNoEligibleFamilyRegister" size=10 value="<?php echo($RegistrationNoEligibleFamilyRegister);?>">
+                <input type="text" name="RegistrationNoEligibleFamilyRegister" value="<?php echo($RegistrationNoEligibleFamilyRegister);?>">
                 <input type="date" name="RegistrationDateEligibleFamilyRegister" value="<?php echo($RegistrationDateEligibleFamilyRegister);?>">
             </td>
+            <!-- <td><br><br></td>
             <td><br><br></td>
             <td><br><br></td>
-            <td><br><br></td>
-            <td><br><br></td>
+            <td><br><br></td> -->
             <td>
                 <label>ලියාපදිංචි අංකය සහ දිනය/Registration No. and Date<br>(ගර්භනී මව්වරුන්ගේ ලේඛනය/Pregnant mother's Register):</label>
-                <input type="text" name="RegistrationNoPregnantmothersRegister" size=10 value="<?php echo($RegistrationNoPregnantmothersRegister);?>">
+                <input type="text" name="RegistrationNoPregnantmothersRegister"  value="<?php echo($RegistrationNoPregnantmothersRegister);?>">
                 <input type="date" name="RegistrationDatePregnantmothersRegister" value="<?php echo($RegistrationDatePregnantmothersRegister);?>">
             </td>
         </tr>
     </table>
     <br><br>
-
-    <label>හදුනාගත් පුර්ව ප්‍රසව අවදානම් තත්ව/ රෝගී තත්ව/<br>Identified antenatal risk conditions & modifiers:</label><br>
-    <input type="text" name="IdentifiedAntenatalRiskConditionsModifiers" size=100 value="<?php echo($IdentifiedAntenatalRiskConditionsModifiers);?>">
-<br><br>
-    <table>
+<table>
+    <tr><td><label>හදුනාගත් පුර්ව ප්‍රසව අවදානම් තත්ව/ රෝගී තත්ව/<br>Identified antenatal risk conditions & modifiers:</label></td></tr>
+    <tr><td><input type="text" size=100% name="IdentifiedAntenatalRiskConditionsModifiers"  value="<?php echo($IdentifiedAntenatalRiskConditionsModifiers);?>"></td></tr>
+</table>
+    <br><br>
+    <table style="width:80%;">
         <tr>
             <td>
                 <label>ලේ ඥාතින් අතර විවාහය/Consanguinity:</label>
@@ -167,43 +190,36 @@ require '../models/BasicDetails_model.php';
 
             </td>
         </tr>
-    </table>
-    <table>
+    
         <tr>
-        <td><label>රුබෙල්ලා ප්‍රතිශක්තිකරණය/Rubella Immunization:</label></td>
-            <td>
+        <td><label>රුබෙල්ලා ප්‍රතිශක්තිකරණය/Rubella Immunization:</label>
                 
                 <input type="text" name="RubellaImmunization"  value="<?php echo($RubellaImmunization);?>">
 
             </td>
         </tr>
-</table>
 
-<table>
         <tr>
             <td>
                 <label>පෙර ගර්භ සුව පිරික්සුම කලේද යන වග/Pre-pregnancy screening done:</label>
                 <input type="text" name="PrePregnancyScreeningDone"  value="<?php echo($PrePregnancyScreeningDone);?>">
             </td>
         </tr>
-</table>
-<table>
+
         <tr>
             <td>
                 <label>පෙර ගර්භ සුව පිරික්සුම කලේද යන වග/Pre conceptional Folic Acid:</label>
                 <input type="text" name="PreconceptionalFolicAcid"  value="<?php echo($PreconceptionalFolicAcid);?>">
             </td>
         </tr>
-</table>
-<table>
+
         <tr>
             <td>
                 <label>සැලසුම් කල ගර්භනීභාවයක්ද යන වග/Planed pregnancy or not:</label>
                 <input type="text" name="Planed_pregnancy_or_not"  value="<?php echo($Planed_pregnancy_or_not);?>">
             </td>
         </tr>
-</table>
-<table>
+
         <tr>
             <td>
                 <label>මඳසරුභාවය පිළිබද ඉතිහාසය/History of subfertility:</label>
@@ -222,25 +238,25 @@ require '../models/BasicDetails_model.php';
     </table>
     <br><br>
     
-
-    <h2>වර්තමාන ගර්භ ඉතිහාසය/Present obstetric history</h2>
-    <table>
+    <div class="caption-container"><h3>වර්තමාන ගර්භ ඉතිහාසය/Present obstetric history</h3></div>
+    <!-- <h2>වර්තමාන ගර්භ ඉතිහාසය/Present obstetric history</h2> -->
+    <table style="width:80%;">
         <tr>
             <td>
                 <labeL>කීවෙනි ගර්භයද/Gravidity:</labeL>
                 <label>G:</label>
-                <input type="text" name="G" size=10 value="<?php echo($G);?>">
+                <input type="text" name="G"  value="<?php echo($G);?>">
                 <label>P:</label>
-                <input type="text" name="P" size=10 value="<?php echo($P);?>">
+                <input type="text" name="P" value="<?php echo($P);?>">
                 <label>C:</label>
-                <input type="text" name="C" size=10 value="<?php echo($C);?>">
+                <input type="text" name="C" value="<?php echo($C);?>">
             </td>
         </tr>
 
         <tr>
             <td>
                 <label>බාලම  ළමයාගේ වයස/Age of youngest Child</label>
-                <input type="text" name="AgeOfYoungestChild" size=10 value="<?php echo($AgeOfYoungestChild);?>">
+                <input type="text" name="AgeOfYoungestChild"  value="<?php echo($AgeOfYoungestChild);?>">
             </td>
         </tr>
         <tr>
@@ -266,21 +282,21 @@ require '../models/BasicDetails_model.php';
         <tr>
             <td>
                 <label>POA at dating Scan:</label>
-                <input type="text" name="POA_at_dating_Scan" size=10 value="<?php echo($POA_at_dating_Scan);?>">
+                <input type="text" name="POA_at_dating_Scan" value="<?php echo($POA_at_dating_Scan);?>">
             </td>
         </tr>
         
         <tr>
             <td>
                 <label>භ්‍රැණ චලන පළමුවෙන් දැණුනු දිනය/Date of Quickening:</label>
-                <input type="text" name="Date_of_Quickening" size=10 value="<?php echo($Date_of_Quickening);?>">
+                <input type="text" name="Date_of_Quickening"  value="<?php echo($Date_of_Quickening);?>">
             </td>
         </tr>
 
         <tr>
             <td>
                 <label>ලියාපදිංචි කරන විට ගර්භයට සති ගණන/POA at Registration:</label>
-                <input type="text" name="POA_at_Registration" size=10 value="<?php echo($POA_at_Registration);?>">
+                <input type="text" name="POA_at_Registration"  value="<?php echo($POA_at_Registration);?>">
             </td>
         </tr>
 
@@ -288,7 +304,7 @@ require '../models/BasicDetails_model.php';
     <br><br>
 
     <div>
-        <input type="submit" name="Update" value="Update"> 
+        <input type="submit" class="link" name="Update" value="Update"> 
          
     </div>
 
