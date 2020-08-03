@@ -8,7 +8,7 @@ require '../models/personalInfo_model.php';
         <title>Personal Information</title>
         <meta charset ="UTF-8">
         <meta name="viewpoint" content="width-device-width initial-scale=1.0">
-        <link rel ="stylesheet" type="text/css" href="../../public/css/form.css">
+        <link rel ="stylesheet" type="text/css" href="../../public/css/newForm.css">
     </head>
 <head>
         <body>
@@ -31,6 +31,7 @@ require '../models/personalInfo_model.php';
       
     
         <div>
+        <div class="caption-container1">
         <div class="caption-container">
             <h3 >Search NIC :</h3>
 </div>
@@ -38,10 +39,11 @@ require '../models/personalInfo_model.php';
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>"><br><br>
 
                 <input type="submit" class="link" name="search" value="Search"></center>
-
+        
         <!--table for personal information-->
         <div class="caption-container"><h3 >පෞද්ගලික තොරතුරු / Personal Information</h3></div>
-        <table style="width:100% ;margin-bottom: 50px;" >
+        
+        <table style="width:100% ;" >
         
         <tr>
             <th></th>
@@ -66,9 +68,10 @@ require '../models/personalInfo_model.php';
         </tr>
    
     </table>
+    
         <!--table for Family History-->
         <div class="caption-container"><h3>පවුලේ රෝග ඉතිහාසය / Family History</h3></div>
-        <table style="width:100%;margin-bottom: 50px;"   >
+        <table style="width:100%;"   >
         <tr>
             <th colspan="2">රෝග තත්වය / Condition</th>
             
@@ -125,8 +128,8 @@ require '../models/personalInfo_model.php';
 
     <!--tables for Medical/Surgical History -->
     <div class="caption-container"><h3>කායික/ශල්‍ය රෝග ඉතිහාසය / Medical/Surgical History</h3></div>
-    
-    <table style="float:left; width:47%; margin-bottom:30px;">
+
+    <table style="float:left; width:47%; ">
        
         
         <tr>
@@ -190,6 +193,7 @@ require '../models/personalInfo_model.php';
         </tr>
     </table>
     
+  
     <table style="float:right; width:47%; margin-bottom:30px;">
         
         <tr>
@@ -253,7 +257,9 @@ require '../models/personalInfo_model.php';
         </tr>
     </table>
 
-    <table style="float:right; width:100%; margin-bottom:50px;">
+
+    <table style="float:right; width:100%; ">
+    
         <tr>
             <th colspan="2">රෝග තත්වය / Condition</th>
         </tr>
@@ -348,10 +354,11 @@ require '../models/personalInfo_model.php';
     </table>
 
     <textarea name="poText" rows="4" style="margin-bottom: 20px; width: 100%;" ><?php echo $poText;?></textarea>
+
     <!--<input type="submit" name="insert" style="height: 30px; width: 150px; margin-bottom: 50px; margin-right: 50px;" value="Add">-->
     <center><input type="submit" class="link" name="update" style="margin-bottom: 50px; margin-right: 50px;" value="Update"></center>
    <!-- <input type="submit" name="delete" style="height: 30px; width: 150px; margin-bottom: 50px ;" value="Delete">-->
-    
+   </div>
 </div>
 
 
@@ -359,4 +366,4 @@ require '../models/personalInfo_model.php';
     </body>
 </html>
    
-       
+    
