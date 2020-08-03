@@ -1,3 +1,8 @@
+<?php
+require '../controllers/login.php';
+//echo'You have logged in with user id: '.($_SESSION['id']); 
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +15,7 @@
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
                 <img src="../../public/images/line.jpg" class="line-image"/>
-                <a href="login_page.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="../controllers/logout.php"><img src="../../public/images/logout.png" class="logout-image"></a>
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
 
@@ -105,7 +110,7 @@
       <a href="BasicDetails.php">
         <img src="../../public/images/newadd1.png" style="width:12%;height:200%;" />
       </a>
-      <a href="BasicDetails.php">
+      <a href="contents_page.php">
         <img src="../../public/images/newedit1.png" style="width:12%;height:200%;"/>
       </a>
       <a href="BasicDetails.php">

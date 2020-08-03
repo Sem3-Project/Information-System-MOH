@@ -34,7 +34,7 @@ class FolderProxy implements IOperation{
         
             if ($name_of_user_1=='Patient-Mother'|| $name_of_user_1=='Patient-Child'){
 
-                header("Location:../views/user_home.php");
+                header("Location:../views/user.php");
                 //$this-> folder=new Folder();
                 $folder=new Operation();
                 echo "Not granted for editing.<br>";
@@ -44,7 +44,7 @@ class FolderProxy implements IOperation{
             }
             else{
                  //$_SESSION['id'] = $user_id; 
-                header("Location:../views/home.php");
+                header("Location:../views/newHome.php");
                // $session_value = "admin";
                 echo 'Access granted.<br>';
             }

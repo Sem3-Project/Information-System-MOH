@@ -15,7 +15,7 @@ require '../models/personalInfo_model.php';
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
                 <img src="../../public/images/line.jpg" class="line-image"/>
-                <a href="login_page.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
                 <a href="home.php"><img src="../../public/images/home.png" class="home-image"></a>
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
@@ -34,7 +34,7 @@ require '../models/personalInfo_model.php';
         <div class="caption-container1">
         <div class="caption-container">
             <h3 >Search NIC :</h3>
-</div>
+        </div>
             <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>"><br><br>
 

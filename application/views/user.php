@@ -1,3 +1,8 @@
+<?php
+require '../controllers/login.php';
+//echo'You have logged in with user id: '.($_SESSION['id']); 
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
