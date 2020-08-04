@@ -116,9 +116,9 @@ require '../controllers/login.php';
       <a href="deactivate.php">
         <img src="../../public/images/newdelete1.png" style="width:12%;height:200%;"/>
       </a>
-      <!-- <a href="BasicDetails.php">
-        <img src="../../public/images/newview1.png" style="width:12%;height:200%;"/>
-      </a> -->
+      <a href="WeightGainChart.html">
+        <img src="../../public/images/newweight4.png" style="width:12%;height:200%;"/>
+      </a>
       <a href="adminOptionalD_page.php">
         <img src="../../public/images/newdate1.png" style="width:12%;height:200%;"/>
       </a>

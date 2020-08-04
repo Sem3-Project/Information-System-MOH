@@ -106,15 +106,29 @@ require '../controllers/login.php';
   <div class="caption-container">
       <p id="caption"></p>
       <div class="icon-image">
-      <a href="BasicDetails.php">
+      <a href="../models/PDF_Selecting.php">
         <img src="../../public/images/newview1.png"  style="width:15%;height:200%;"/>
       </a>
-      <a href="BasicDetails.php">
+      <a href="userOptionalD_page.php">
         <img src="../../public/images/newdate1.png"  style="width:15%;height:200%;"/>
       </a>
-      <a href="BasicDetails.php">
+      
+      <?php if(($_SESSION['catagory']) =='Patient-Child' ) 
+            {
+        ?>
+            <a href="BMIcalc_page.php"> <img src="../../public/images/newweight4.png"  style="width:15%;height:200%;"/></a>
+        <?php
+            }
+            else{ 
+        ?>
+            <a href="WeightGainChart.html"> <img src="../../public/images/newweight4.png"  style="width:15%;height:200%;"/></a>
+        <?php
+            }
+        ?>
+
+      <!-- <a href="BasicDetails.php">
         <img src="../../public/images/newweight4.png"  style="width:15%;height:200%;"/>
-      </a>
+      </a> -->
     </div>   
       </div>
 
