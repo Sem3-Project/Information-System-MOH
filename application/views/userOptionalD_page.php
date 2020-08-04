@@ -32,8 +32,8 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 	</div>
     <div class="topnav">
   
-  <a href="login_page.php">Log out</a>
-  <a href="user_home.php">Home</a>
+  <a href="login_test.php">Log out</a>
+  <a href="newHome.php">Home</a>
   
   
 </div>

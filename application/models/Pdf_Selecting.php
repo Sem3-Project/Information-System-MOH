@@ -75,7 +75,7 @@ if(isset($_POST["Generate"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF_Selecting</title>
 
-    <link rel = "stylesheet" href ="../../public/css/Report.css">
+    <link rel = "stylesheet" href ="../../public/css/PDF.css">
 <style>
     .content{
         width: 10cm;
@@ -90,8 +90,21 @@ if(isset($_POST["Generate"])){
 </style>
 
 </head>
-
-<header>
+<head>
+        <body>
+            <div class="hero-image">
+                <img src="../../public/images/logo.png" class="logo-image"/>
+                <img src="../../public/images/line.jpg" class="line-image"/>
+                <a href="../views/login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="../views/user.php"><img src="../../public/images/home.png" class="home-image"></a>
+                <div class="hero-text">
+                    <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
+                    <h3 style="font-size:25px">Gampaha</h3>
+                </div>
+            </div>
+</body>
+</head>
+<!-- <header>
 <div class="header"><img class="logo" src="../../public/images/logo.jpg"/>
 <div class="logo">
 		<h1>Medical Officer of Health Office</h1>
@@ -105,21 +118,26 @@ if(isset($_POST["Generate"])){
   
 </div>
 	</div>
-</header>
+</header> -->
 
 <body>
-<div class="content">
 <form method="POST" action="PDF_Selecting.php">
 
-<input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " readonly placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($_SESSION['id'])?>"><br><br>
+<div>
+        <div class="caption-container1">
+        <div class="caption-container">
+            <h3 >Search NIC :</h3>
+        </div>
+            <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+            style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br>
 
 <!-- <input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br> -->
 <!-- <input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " readonly value="<--?php echo($_SESSION['id'])?>"><br><br> -->
 
 <!-- <input type="submit" name="Search" value="Search"> -->
-<input type="submit" name="Generate" value="Select Report">
+<input type="submit" class="link" name="Generate" value="Select Report"></center>
 
-</div>
+</div></div>
 </form>
     
 </body>

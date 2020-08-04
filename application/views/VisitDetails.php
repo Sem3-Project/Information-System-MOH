@@ -36,8 +36,8 @@
 		<h3>Gampaha</h3>
 	</div>
     <div class="topnav">
-  <a href="login_page.php">Log out</a>
-  <a href="home.php">Home</a>
+  <a href="login_test.php">Log out</a>
+  <a href="newHome.php">Home</a>
   
 </div>
 	</div>
