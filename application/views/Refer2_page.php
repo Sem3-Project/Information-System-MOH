@@ -161,7 +161,7 @@ require '../models/Refer2_model.php';
                         </tr>
                     </table>
                     <!-- <input type="submit" name="insert" style="height: 30px; width: 150px; margin-bottom: 50px; margin-right: 50px;" value="Add"> -->
-                    <center><input type="submit" class="link" name="update" style="margin-bottom: 50px; margin-right: 50px;" value="Update"></center>
+                    <center><input type="submit" class="link" name="update" style="margin-bottom: 50px; " value="Update"></center>
                     <!-- <input type="submit" name="delete" style="height: 30px; width: 150px; margin-bottom: 50px ;" value="Delete"> -->
                 </div>
             </div>
