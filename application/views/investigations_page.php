@@ -169,8 +169,8 @@ require '../models/investigation_model.php';
             <div class="caption-container"><h3>පිටගැස්ම ධුලකාභ ප්‍රතිශක්තිකරණය / Tetanus Toxoid Immunization</h3></div>
                 <table style="width:100%">
                     <tr>
-                        <td>මාත්‍රාව/Dose</td>
-                        <th>1</th>
+                        <td style="width:15%">මාත්‍රාව / Dose</td>
+                        <th >1</th>
                         <th>2</th>
                         <th>3</th>
                         <th>4</th>
@@ -178,27 +178,27 @@ require '../models/investigation_model.php';
                         <th>NE</th>
                     </tr>
                     <tr>
-                        <td>දිනය/Date</td>
-                        <td><input type="date" name="tdate1" value="<?php echo $tdate1;?>"></td>
-                        <td><input type="date" name="tdate2" value="<?php echo $tdate2;?>"></td>
-                        <td><input type="date" name="tdate3" value="<?php echo $tdate3;?>"></td>
-                        <td><input type="date" name="tdate4" value="<?php echo $tdate4;?>"></td>
-                        <td><input type="date" name="tdate5" value="<?php echo $tdate5;?>"></td>
-                        <td><input type="date" name="tne" value="<?php echo $tne;?>"></td>
+                        <td>දිනය / Date</td>
+                        <td><input type="date" name="tdate1" style="width:100%;" value="<?php echo $tdate1;?>"></td>
+                        <td><input type="date" name="tdate2" style="width:100%;" value="<?php echo $tdate2;?>"></td>
+                        <td><input type="date" name="tdate3" style="width:100%;" value="<?php echo $tdate3;?>"></td>
+                        <td><input type="date" name="tdate4" style="width:100%;" value="<?php echo $tdate4;?>"></td>
+                        <td><input type="date" name="tdate5" style="width:100%;" value="<?php echo $tdate5;?>"></td>
+                        <td><input type="date" name="tne" style="width:100%;" value="<?php echo $tne;?>"></td>
                     </tr>
                     <tr>
-                        <td>ඛාණ්ඩ අංකය/Batch No.</td>
-                        <td><input type="text" name="tbatch1" value="<?php echo $tbatch1;?>"></td>
-                        <td><input type="text" name="tbatch2" value="<?php echo $tbatch2;?>"></td>
-                        <td><input type="text" name="tbatch3" value="<?php echo $tbatch3;?>"></td>
-                        <td><input type="text" name="tbatch4" value="<?php echo $tbatch4;?>"></td>
-                        <td><input type="text" name="tbatch5" value="<?php echo $tbatch5;?>"></td>
-                        <td><input type="text" name="tnebatch" value="<?php echo $tnebatch;?>"></td>
+                        <td>ඛාණ්ඩ අංකය / Batch No.</td>
+                        <td><input type="text" style="width:100%;" name="tbatch1" value="<?php echo $tbatch1;?>"></td>
+                        <td><input type="text" style="width:100%;" name="tbatch2" value="<?php echo $tbatch2;?>"></td>
+                        <td><input type="text" style="width:100%;" name="tbatch3" value="<?php echo $tbatch3;?>"></td>
+                        <td><input type="text"  style="width:100%;" name="tbatch4" value="<?php echo $tbatch4;?>"></td>
+                        <td><input type="text"  style="width:100%;" name="tbatch5" value="<?php echo $tbatch5;?>"></td>
+                        <td><input type="text"  style="width:100%;" name="tnebatch" value="<?php echo $tnebatch;?>"></td>
                         </tr>
                 </table>
           
             <!-- <button type="submit" name="update" class="" id="update">Update</button> -->
-            <center><input type="submit" class="link" name="update" style="margin-bottom: 50px; margin-right: 50px;" id="update" value="Update"></center>
+            <center><input type="submit" class="link" name="update" style="margin-bottom: 50px;" id="update" value="Update"></center>
             <!-- <a href="#search"><img class="up-icon" src="https://www.startutorial.com/img/up.png" /></a> -->
 </div>
 </div>
