@@ -356,7 +356,7 @@ require '../models/personalInfo_model.php';
     <textarea name="poText" rows="4" style="margin-bottom: 20px; width: 100%;" ><?php echo $poText;?></textarea>
 
     <!--<input type="submit" name="insert" style="height: 30px; width: 150px; margin-bottom: 50px; margin-right: 50px;" value="Add">-->
-    <center><input type="submit" class="link" name="update" style="margin-bottom: 50px; margin-right: 50px;" value="Update"></center>
+    <center><input type="submit" class="link" name="update" style="margin-bottom: 50px;" value="Update"></center>
    <!-- <input type="submit" name="delete" style="height: 30px; width: 150px; margin-bottom: 50px ;" value="Delete">-->
    </div>
 </div>
