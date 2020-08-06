@@ -15,7 +15,7 @@ require '../controllers/login.php';
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
                 <img src="../../public/images/line.jpg" class="line-image"/>
-                <a href="login_page.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
                     <h3 style="font-size:25px">Gampaha</h3>
