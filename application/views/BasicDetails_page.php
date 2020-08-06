@@ -304,7 +304,7 @@ require '../models/BasicDetails_model.php';
     <br><br>
 
     <div>
-        <input type="submit" class="link" name="Update" value="Update"> 
+        <input type="submit" class="link" style="margin-bottom: 50px; margin-right: 50px;" name="Update" value="Update"> 
          
     </div>
 
