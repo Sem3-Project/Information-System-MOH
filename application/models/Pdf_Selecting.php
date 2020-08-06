@@ -135,7 +135,7 @@ if(isset($_POST["Generate"])){
 <!-- <input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " readonly value="<--?php echo($_SESSION['id'])?>"><br><br> -->
 
 <!-- <input type="submit" name="Search" value="Search"> -->
-<input type="submit" class="link" name="Generate" value="Select Report"></center>
+<input type="submit" class="link" name="Generate" style="margin-bottom: 110px;" value="Select Report"></center>
 
 </div></div>
 </form>
