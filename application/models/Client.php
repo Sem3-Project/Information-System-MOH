@@ -123,7 +123,7 @@ if(isset($_POST["Generate"])){
 <!-- <input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " readonly value="<--?php echo($id);?>"><br><br> -->
 
 <!-- <input type="submit" name="Search" value="Search"> -->
-<center><input type="submit" class="link" name="Generate" style="margin-bottom: 110px;" value="Generate the Report"></center>
+<input type="submit" class="link" name="Generate" style="margin-bottom: 110px;" value="Generate the Report"></center>
 <!-- <input type="submit" name="Generate" value="Generate"> -->
 
 </div></div>
