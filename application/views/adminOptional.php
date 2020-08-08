@@ -15,7 +15,7 @@ require '../models/adminOptionalD_model.php';
                     <img src="../../public/images/logo.png" class="logo-image"/>
                     <img src="../../public/images/line.jpg" class="line-image"/>
                     <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
-                    <a href="home.php"><img src="../../public/images/home.png" class="home-image"></a>
+                    <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
                     <div class="hero-text">
                         <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
                         <h3 style="font-size:25px">Gampaha</h3>
@@ -33,12 +33,13 @@ require '../models/adminOptionalD_model.php';
         </div>
         <div class="caption-container">
         <br>
-        <a href="visit.php" style='font-size:20px; color: rgb(8, 184, 125); font-family:Arial,Suns-serif;text-align: center;font-weight: bold;'>List of Attendees</a>
+        <a href="visitDetails.php" style='font-size:20px; color: rgb(8, 184, 125); font-family:Arial,Suns-serif;text-align: center;font-weight: bold;'>List of Attendees</a>
         <br><br>
     </div>
     <br>
-            <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
-            style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br>
+            <!-- <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+            style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br> -->
+            <center><input type="text" text-align="center" name="id" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br>
 
             <p ><b>Date 1 :</b></p>
             <input type="date" name="date1"style="width:42%; height: 30px; " value="<?php echo($date1);?>">

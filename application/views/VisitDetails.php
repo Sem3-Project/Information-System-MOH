@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
-    <link rel = "stylesheet" href ="../../public/css/DailyClinic.css">
+    <link rel = "stylesheet" href ="../../public/css/visitDetails.css">
     <script src="../../public/js/jquery.min.js"></script>
     <script src="../../public/js/bootstrap.min.css"></script>
-
-  <style>
+    
+  <!-- <style>
     .button1{
     background-color: #4CAF50; /* Green */
     border: none;
@@ -24,12 +24,35 @@
     }
 
 
+</style> -->
+<style> 
+    table, th, td {
+  border: 1px solid black;
+  border-top: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
 </style>
     <title>Clinic Days</title>
 </head>
+<head>
+            <body>
+                <div class="hero-image">
+                    <img src="../../public/images/logo.png" class="logo-image"/>
+                    <img src="../../public/images/line.jpg" class="line-image"/>
+                    <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                    <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
+                    <div class="hero-text">
+                        <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
+                        <h3 style="font-size:25px">Gampaha</h3>
+                    </div>
+                </div>
+    </body>
+    </head>
 
-
-<header>
+<!-- <header>
 <div class="header"><img class="logo" src="../../public/images/logo.jpg"/>
 <div class="logo">
 		<h1>Medical Officer of Health Office</h1>
@@ -41,15 +64,19 @@
   
 </div>
 	</div>
-</header>
+</header> -->
 
 <body>
 
-<div class="container">
+<!-- <div class="container"> -->
+<div class="caption-container1">
+<div class="caption-container">
 <h2>Clinic Days</h2><br><br>
-
-<table class="table table-striped table-bordered table-hover table-condensed" id="Clinic" style="font-size:20px;">
-        <thead>
+</div>
+<table class="table-striped table-hover" id="Clinic" style="font-size:20px;width:50%;transform:translate(400px,0px);">
+<!-- <table id="Clinic" style="border: 1px solid black;border-collapse: collapse;font-size:20px;width:50%;transform:translate(400px,0px);"> -->
+        
+<thead>
         <tr>
             <th>ID</th>
             <th>Date</th>
@@ -82,9 +109,12 @@
     </tbody>
     </table>
     <br><br>
-    <button class="button1">Sort By Date</button>
+    <button class="button1"><b>Sort By Date</b></button>
     </div>
-   
+   <br><br>
+   <br><br>
+   <br><br>
+        </div>
     <script>
     function convertDate(d) {
     var p = d.split("-");

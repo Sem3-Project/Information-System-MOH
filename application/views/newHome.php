@@ -119,7 +119,7 @@ require '../controllers/login.php';
       <a href="WeightGainChart.html">
         <img src="../../public/images/newweight4.png" style="width:12%;height:200%;"/>
       </a>
-      <a href="adminOptionalD_page.php">
+      <a href="adminOptional.php">
         <img src="../../public/images/newdate1.png" style="width:12%;height:200%;"/>
       </a>
     </div>   

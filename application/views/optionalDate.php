@@ -17,7 +17,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
                     <img src="../../public/images/logo.png" class="logo-image"/>
                     <img src="../../public/images/line.jpg" class="line-image"/>
                     <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
-                    <a href="home.php"><img src="../../public/images/home.png" class="home-image"></a>
+                    <a href="user.php"><img src="../../public/images/home.png" class="home-image"></a>
                     <div class="hero-text">
                         <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
                         <h3 style="font-size:25px">Gampaha</h3>
@@ -39,7 +39,8 @@ echo'You have logged in with user id: '.($_SESSION['id']);
             <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br>
 
-                <input type="submit" class="link" name="search" value="Search">
+                <!-- <input type="submit" class="link" name="search" value="Search"> -->
+                <input type="submit" class="link" name="Search" value="Search">
                 <p ><b>Date/දිනය :</b></p>
                 <select name="confirmedDate" style="width:42%; height: 30px; ">
                     <option  selected hidden value=""></option>
@@ -57,7 +58,8 @@ echo'You have logged in with user id: '.($_SESSION['id']);
                 </select>
                 <br><br><br><br>
 
-                <input type="submit" class="link" name="update" style="margin-bottom: 50px;" value="Confirmed"></center>
+                <!-- <input type="submit" class="link" name="update" style="margin-bottom: 50px;" value="Confirmed"></center> -->
+                <input type="submit" class="link" name="Confirmed" style="margin-bottom: 50px;" value="Confirmed"></center>
    
    </div>
 </div>
