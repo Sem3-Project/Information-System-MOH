@@ -46,11 +46,11 @@ require '../models/adminOptionalD_model.php';
             <br><br>
 
             <p ><b>Date 2 :</b></p>
-            <input type="date" name="date1"style="width:42%; height: 30px; " value="<?php echo($date1);?>">
+            <input type="date" name="date2"style="width:42%; height: 30px; " value="<?php echo($date2);?>">
             <br><br><br><br>
 
-            <input type="submit" class="link" name="update" style="margin-bottom: 50px;" value="Save"></center>
-   
+            <!-- <input type="submit" class="link" name="update" style="margin-bottom: 50px;" value="Save"></center> -->
+            <input type="submit" class="link" name="Insert" style="margin-bottom: 50px;" value="Save"> </center>
         </div>
     </div>
 
