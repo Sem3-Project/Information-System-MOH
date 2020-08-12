@@ -4,7 +4,7 @@ $user = "root";
 $password ="123456";
 $database="moh";
 
-$patient_id = '';
+$id = '';
 $hosptal='';
 $birth_weight='';
 $poa='';
@@ -48,7 +48,7 @@ try{
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=$_POST['patient_id'];
+    $data[0]=$_POST['id'];
     $data[1]=(isset($_POST['hosptal']) ? $_POST['hosptal'] : ''); 
     $data[2]=$_POST['birth_weight'];
     $data[3]=$_POST['poa'];
@@ -83,7 +83,7 @@ function getData(){
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM `pg7` WHERE patient_id='$info[0]'";
+    $search_query="SELECT * FROM `pg7` WHERE id='$info[0]'";
     $search_result=mysqli_query($connect,$search_query);
         if($search_result){
             if($search_result){
@@ -132,7 +132,7 @@ if(isset($_POST['Search'])){
 //insert
 if(isset($_POST['Insert'])){
     $info=getData();
-    $insert_query="INSERT INTO pg7 (patient_id,
+    $insert_query="INSERT INTO pg7 (id,
 				hosptal,
 				birth_weight,
 				poa,
@@ -184,7 +184,7 @@ if(isset($_POST['Insert'])){
     //update
     if(isset($_POST['Update'])){
         $info=getData();
-        $update_query="UPDATE `pg7` SET patient_id='$info[0]',hosptal='$info[1]',birth_weight= '$info[2]',poa='$info[3]',live_birth='$info[4]',still_birth='$info[5]',abs='$info[6]',del_dt='$info[7]',sex='$info[8]',del_mod='$info[9]',ep='$info[10]',bt='$info[11]',ve='$info[12]',mc='$info[13]',infect='$info[14]',fpm='$info[15]'
+        $update_query="UPDATE `pg7` SET id='$info[0]',hosptal='$info[1]',birth_weight= '$info[2]',poa='$info[3]',live_birth='$info[4]',still_birth='$info[5]',abs='$info[6]',del_dt='$info[7]',sex='$info[8]',del_mod='$info[9]',ep='$info[10]',bt='$info[11]',ve='$info[12]',mc='$info[13]',infect='$info[14]',fpm='$info[15]'
         ,cm='$info[16]',reason='$info[17]',danger= '$info[18]',bf='$info[19]',bp='$info[20]',vita='$info[21]',rubella='$info[22]',antid='$info[23]',chdr='$info[24]',presc= '$info[25]',reff='$info[26]',other='$info[27]',notes='$info[28]'  WHERE patient_id='$info[0]'";
 
 try{
@@ -222,7 +222,7 @@ td, th {
 </head>
 <body>
 <form method="POST" action="page7.php">
-<input type="text" name="patient_id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($patient_id);?>"><br><br>
+<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($patient_id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
 <input type="submit" name="Update" value="Update"><br><br>
