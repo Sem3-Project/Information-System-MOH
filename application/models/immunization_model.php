@@ -6,7 +6,7 @@ $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
 session_start();
 
-$patient_id='';
+$id='';
 $bcg='';
 $date1='';
 $date2='';
@@ -87,7 +87,7 @@ $text25='';
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=(isset($_POST['patient_id']) ? $_POST['patient_id'] : '');
+    $data[0]=(isset($_POST['id']) ? $_POST['id'] : '');
     $data[1]=(isset($_POST['bcg']) ? $_POST['bcg'] : '');
     $data[2]=(isset($_POST['date1']) ? $_POST['date1'] : '');
     $data[3]=(isset($_POST['date2']) ? $_POST['date2'] : '');
@@ -171,13 +171,13 @@ $immun = new table();
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM childdata WHERE patient_id='$info[0]'";
+    $search_query="SELECT * FROM childdata WHERE id='$info[0]'";
     $search_result=$immun->featuredLoad($dbObj,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
-                        $patient_id=$row['patient_id'];
+                        $id=$row['id'];
                         $bcg=$row['bcg'];
                         $date1=$row['date1'];
                         $date2=$row['date2'];
@@ -237,13 +237,13 @@ if(isset($_POST['Search'])){
             echo("result error");
         }
     }
-    $search_query1="SELECT * FROM childdata3 WHERE patient_id='$info[0]'";
+    $search_query1="SELECT * FROM childdata3 WHERE id='$info[0]'";
     $search_result1=$immun->featuredLoad($dbObj,$search_query1);
         if($search_result1){
             if($search_result1){
                 if(mysqli_num_rows($search_result1)){
                     while($row = mysqli_fetch_array($search_result1)){
-                        $patient_id=$row['patient_id'];
+                        $id=$row['id'];
                         $text1=$row['text1'];
                         $text2=$row['text2'];
                         $text3=$row['text3'];
@@ -284,12 +284,12 @@ if(isset($_POST['Search'])){
  //update
  if(isset($_POST['Update'])){
     $info=getData();
-    $update_query="UPDATE `childdata` SET `patient_id`='$info[0]',`bcg`='$info[1]',`date1`='$info[2]',`date2`='$info[3]',`date3`='$info[4]',`date4`='$info[5]',`date5`='$info[6]',`date6`='$info[7]',
+    $update_query="UPDATE `childdata` SET `id`='$info[0]',`bcg`='$info[1]',`date1`='$info[2]',`date2`='$info[3]',`date3`='$info[4]',`date4`='$info[5]',`date5`='$info[6]',`date6`='$info[7]',
     `date7`='$info[8]',`date8`='$info[9]',`date9`='$info[10]',`date10`='$info[11]',`date11`='$info[12]',`date12`='$info[13]',`date13`='$info[14]',`date14`='$info[15]',`date15`='$info[16]',`date16`='$info[17]',
     `date17`='$info[18]',`date18`='$info[19]',`date19`='$info[20]',`date20`='$info[21]',`date21`='$info[22]',`date22`='$info[23]',`date23`='$info[24]',`date24`='$info[25]',`date25`='$info[26]',`num1`='$info[27]',
     `num2`='$info[28]',`num3`='$info[29]',`num4`='$info[30]',`num5`='$info[31]',`num6`='$info[32]',`num7`='$info[33]',`num8`='$info[34]',`num9`='$info[35]',`num10`='$info[36]',`num11`='$info[37]',`num12`='$info[38]',
     `num13`='$info[39]',`num14`='$info[40]',`num15`='$info[41]',`num16`='$info[42]',`num17`='$info[43]',`num18`='$info[44]',`num19`='$info[45]',`num20`='$info[46]',`num21`='$info[47]',`num22`='$info[48]',`num23`='$info[49]',
-    `num24`='$info[50]',`num25`='$info[51]' WHERE  patient_id='$info[0]'";
+    `num24`='$info[50]',`num25`='$info[51]' WHERE  id='$info[0]'";
     
     
 try{
@@ -310,9 +310,9 @@ try{
  if(isset($_POST['Update'])){
     $info=getData();
 
-    $update_query= "UPDATE `childdata3` SET `patient_id`='$info[0]',`text1`='$info[52]',`text2`='$info[53]',`text3`='$info[54]',`text4`='$info[55]',`text5`='$info[56]',`text6`='$info[57]',`text7`='$info[58]',`text8`='$info[59]',`text9`='$info[60]',
+    $update_query= "UPDATE `childdata3` SET `id`='$info[0]',`text1`='$info[52]',`text2`='$info[53]',`text3`='$info[54]',`text4`='$info[55]',`text5`='$info[56]',`text6`='$info[57]',`text7`='$info[58]',`text8`='$info[59]',`text9`='$info[60]',
     `text10`='$info[61]',`text11`='$info[62]',`text12`='$info[63]',`text13`='$info[64]',`text14`='$info[65]',`text15`='$info[66]',`text16`='$info[67]',`text17`='$info[68]',`text18`='$info[69]',`text19`='$info[70]',`text20`='$info[71]',
-    `text21`='$info[72]',`text22`='$info[73]',`text23`='$info[74]',`text24`='$info[75]',`text25`='$info[76]' WHERE patient_id='$info[0]'";
+    `text21`='$info[72]',`text22`='$info[73]',`text23`='$info[74]',`text24`='$info[75]',`text25`='$info[76]' WHERE id='$info[0]'";
                         
 
                      try{
