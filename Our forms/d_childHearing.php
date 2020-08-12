@@ -106,7 +106,7 @@ try{
 //update
 if(isset($_POST['Update'])){
 $info=getData();
-$update_query="UPDATE childdata5 SET id='$info[0]',sound='$info[1]',highsound= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',hear='$info[6]',search='$info[7]',song='$info[8]',name='$info[9]',respond='$info[10]'  WHERE patient_id='$info[0]'";
+$update_query="UPDATE childdata5 SET id='$info[0]',sound='$info[1]',highsound= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',hear='$info[6]',search='$info[7]',song='$info[8]',name='$info[9]',respond='$info[10]'  WHERE id='$info[0]'";
 
 try{
 $pdate_result=mysqli_query($connect,$update_query);
