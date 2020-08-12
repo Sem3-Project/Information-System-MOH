@@ -68,7 +68,7 @@ if(isset($_POST['Search'])){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
-                        $patient_id=$row['id'];
+                        $id=$row['id'];
                         $date1=$row['date1'];
                         $poa=$row['poa'];   
                         $weight1=$row['weight1'];
