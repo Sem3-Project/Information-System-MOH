@@ -6,7 +6,7 @@ $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
 session_start();
 
-$patient_id='';
+$id='';
 $dat1='';
 $dat2='';
 $dat3='';
@@ -59,7 +59,7 @@ $date20='';
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=(isset($_POST['patient_id']) ? $_POST['patient_id'] : '');
+    $data[0]=(isset($_POST['id']) ? $_POST['id'] : '');
     $data[1]=(isset($_POST['dat1']) ? $_POST['dat1'] : '');
     $data[2]=(isset($_POST['dat2']) ? $_POST['dat2'] : '');
     $data[3]=(isset($_POST['dat3']) ? $_POST['dat3'] : '');
@@ -117,13 +117,13 @@ $childD2 = new table();
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM childdata2 WHERE patient_id='$info[0]'";
+    $search_query="SELECT * FROM childdata2 WHERE id='$info[0]'";
     $search_result=$childD2->featuredLoad($dbObj,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
-                        $patient_id=$row['patient_id'];
+                        $id=$row['id'];
                         $dat1=$row['dat1'];
                         $dat2=$row['dat2'];
                         $dat3=$row['dat3'];
@@ -186,11 +186,11 @@ if(isset($_POST['Search'])){
   //update
   if(isset($_POST['Update'])){
       $info=getData();
-      $update_query="UPDATE `childdata2` SET `patient_id`='$info[0]',`dat1`='$info[1]',`dat2`='$info[2]',`dat3`='$info[3]',`dat4`='$info[4]',`scolor1`='$info[5]',`scolor2`='$info[6]',`scolor3`='$info[7]',
+      $update_query="UPDATE `childdata2` SET `id`='$info[0]',`dat1`='$info[1]',`dat2`='$info[2]',`dat3`='$info[3]',`dat4`='$info[4]',`scolor1`='$info[5]',`scolor2`='$info[6]',`scolor3`='$info[7]',
       `scolor4`='$info[8]',`eye1`='$info[9]',`eye2`='$info[10]',`eye3`='$info[11]',`eye4`='$info[12]',`sc1`='$info[13]',`sc2`='$info[14]',`sc3`='$info[15]',`sc4`='$info[16]',`m1`='$info[17]',`m2`='$info[18]',
       `m3`='$info[19]',`m4`='$info[20]',`rel1`='$info[21]',`rel2`='$info[22]',`rel3`='$info[23]',`rel4`='$info[24]',`other1`='$info[25]',`other2`='$info[26]',`other3`='$info[27]',`other4`='$info[28]',`date1`='$info[29]',
       `date2`='$info[30]',`date3`='$info[31]',`date4`='$info[32]',`date5`='$info[33]',`date6`='$info[34]',`date7`='$info[35]',`date8`='$info[36]',`date9`='$info[37]',`date10`='$info[38]',`date11`='$info[39]',`date12`='$info[40]',
-      `date13`='$info[41]',`date14`='$info[42]',`date15`='$info[43]',`date16`='$info[44]',`date17`='$info[45]',`date18`='$info[46]',`date19`='$info[47]',`date20`='$info[48]'  WHERE patient_id='$info[0]'";
+      `date13`='$info[41]',`date14`='$info[42]',`date15`='$info[43]',`date16`='$info[44]',`date17`='$info[45]',`date18`='$info[46]',`date19`='$info[47]',`date20`='$info[48]'  WHERE id='$info[0]'";
 try{
   $pdate_result=$childD2->featuredLoad($dbObj,$update_query);
   if($pdate_result){
