@@ -4,7 +4,7 @@ $user = "root";
 $password = "123456";
 $database = "moh";
 
-$patient_id='';
+$id='';
 $doctor='';
 $moh='';
 $idnum='';
@@ -46,7 +46,7 @@ try{
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=(isset($_POST['patient_id']) ? $_POST['patient_id'] : '');
+    $data[0]=(isset($_POST['id']) ? $_POST['id'] : '');
     $data[1]=(isset($_POST['doctor']) ? $_POST['doctor'] : '');
     $data[2]=(isset($_POST['moh']) ? $_POST['moh'] : '');  
     $data[3]=(isset($_POST['idnum']) ? $_POST['idnum'] : '');
@@ -81,7 +81,7 @@ function getData(){
   //search
   if(isset($_POST['Search'])){
       $info=getData();
-      $search_query="SELECT * FROM childdata1 WHERE patient_id='$info[0]'";
+      $search_query="SELECT * FROM childdata1 WHERE id='$info[0]'";
       $search_result=mysqli_query($connect,$search_query);
           if($search_result){
               if($search_result){
@@ -128,7 +128,7 @@ function getData(){
       //insert
       if(isset($_POST['Insert'])){
           $info=getData();
-          $insert_query="INSERT INTO childdata1 (patient_id,
+          $insert_query="INSERT INTO childdata1 (id,
                                                 doctor;
                                                 moh;
                                                 idnum;
@@ -179,7 +179,7 @@ function getData(){
     //update
     if(isset($_POST['Update'])){
         $info=getData();
-        $update_query="UPDATE childdata1 SET patient_id='$info[0]',doctor='$info[1]',moh= '$info[2]',idnum='$info[3]',childname='$info[4]',regno='$info[5]',childbday='$info[6]',regdate='$info[7]',momname='$info[8]',momage='$info[9]',num1='$info[10]',weight1='$info[11]',headperi='$info[12]',length='$info[13]',health='$info[14]',vitk='$info[15]'
+        $update_query="UPDATE childdata1 SET id='$info[0]',doctor='$info[1]',moh= '$info[2]',idnum='$info[3]',childname='$info[4]',regno='$info[5]',childbday='$info[6]',regdate='$info[7]',momname='$info[8]',momage='$info[9]',num1='$info[10]',weight1='$info[11]',headperi='$info[12]',length='$info[13]',health='$info[14]',vitk='$info[15]'
         ,posture='$info[16]',rel='$info[17]',date1= '$info[18]',date2='$info[19]',date3='$info[20]',date4='$info[21]',date5='$info[22]',date6='$info[23]',date7='$info[24]',date8= '$info[25]',date9='$info[26]',date0='$info[27]',date110='$info[28]'  WHERE patient_id='$info[0]'";
 
 try{
@@ -219,7 +219,7 @@ td, th {
 </head>
 <body>
 <form method="POST" action="child1.php">
-<input type="text" name="patient_id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($patient_id);?>"><br><br>
+<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
 <input type="submit" name="Update" value="Update"><br><br>
