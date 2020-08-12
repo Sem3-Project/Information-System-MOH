@@ -128,7 +128,7 @@ if(isset($_POST['Search'])){
     if(isset($_POST['Update'])){
         $info=getData();
         $update_query="UPDATE `pg7` SET id='$info[0]',hosptal='$info[1]',birth_weight= '$info[2]',poa='$info[3]',live_birth='$info[4]',still_birth='$info[5]',abs='$info[6]',del_dt='$info[7]',sex='$info[8]',del_mod='$info[9]',ep='$info[10]',bt='$info[11]',ve='$info[12]',mc='$info[13]',infect='$info[14]',fpm='$info[15]'
-        ,cm='$info[16]',reason='$info[17]',danger= '$info[18]',bf='$info[19]',bp='$info[20]',vita='$info[21]',rubella='$info[22]',antid='$info[23]',chdr='$info[24]',presc= '$info[25]',reff='$info[26]',other='$info[27]',notes='$info[28]'  WHERE patient_id='$info[0]'";
+        ,cm='$info[16]',reason='$info[17]',danger= '$info[18]',bf='$info[19]',bp='$info[20]',vita='$info[21]',rubella='$info[22]',antid='$info[23]',chdr='$info[24]',presc= '$info[25]',reff='$info[26]',other='$info[27]',notes='$info[28]'  WHERE id='$info[0]'";
 
 try{
     $pdate_result=$delipost->featuredLoad($dbObj,$update_query);
