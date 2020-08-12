@@ -4,7 +4,7 @@ $user = "root";
 $password ="123456";
 $database="moh";
 
-$patient_id='';
+$id='';
 $sound='';
 $highsound='';
 $smile='';
@@ -29,7 +29,7 @@ try{
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=(isset($_POST['patient_id']) ? $_POST['patient_id'] : '');
+    $data[0]=(isset($_POST['id']) ? $_POST['id'] : '');
     $data[1]=(isset($_POST['sound']) ? $_POST['sound'] : '');
     $data[2]=(isset($_POST['highsound']) ? $_POST['highsound'] : '');  
     $data[3]=(isset($_POST['smile']) ? $_POST['smile'] : '');
@@ -46,13 +46,13 @@ function getData(){
   //search
   if(isset($_POST['Search'])){
       $info=getData();
-      $search_query="SELECT * FROM childdata5 WHERE patient_id='$info[0]'";
+      $search_query="SELECT * FROM childdata5 WHERE id='$info[0]'";
       $search_result=mysqli_query($connect,$search_query);
           if($search_result){
               if($search_result){
                   if(mysqli_num_rows($search_result)){
                       while($row = mysqli_fetch_array($search_result)){
-                          $patient_id=$row['patient_id'];
+                          $id=$row['id'];
                           $sound=$row['sound'];
                           $highsound=$row['highsound'];
                           $smile=$row['smile'];
@@ -75,7 +75,7 @@ function getData(){
       //insert
       if(isset($_POST['Insert'])){
           $info=getData();
-          $insert_query="INSERT INTO childdata5 (patient_id,
+          $insert_query="INSERT INTO childdata5 (id,
                                                  sound;
                                                  highsound;
                                                  smile;
@@ -106,7 +106,7 @@ try{
 //update
 if(isset($_POST['Update'])){
 $info=getData();
-$update_query="UPDATE childdata5 SET patient_id='$info[0]',sound='$info[1]',highsound= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',hear='$info[6]',search='$info[7]',song='$info[8]',name='$info[9]',respond='$info[10]'  WHERE patient_id='$info[0]'";
+$update_query="UPDATE childdata5 SET id='$info[0]',sound='$info[1]',highsound= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',hear='$info[6]',search='$info[7]',song='$info[8]',name='$info[9]',respond='$info[10]'  WHERE patient_id='$info[0]'";
 
 try{
 $pdate_result=mysqli_query($connect,$update_query);
@@ -133,7 +133,7 @@ echo("error in update".$ex->getMessage());
 </head>
 <body>
 <form method="POST" action="child9.php">
-<input type="text" name="patient_id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($patient_id);?>"><br><br>
+<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
 <input type="submit" name="Update" value="Update"><br><br>
