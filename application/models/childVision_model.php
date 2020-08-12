@@ -6,7 +6,7 @@ $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
 session_start();
 
-$patient_id='';
+$id='';
 $light='';
 $watch='';
 $smile='';
@@ -21,7 +21,7 @@ $recognize='';
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=(isset($_POST['patient_id']) ? $_POST['patient_id'] : '');
+    $data[0]=(isset($_POST['id']) ? $_POST['id'] : '');
     $data[1]=(isset($_POST['light']) ? $_POST['light'] : '');
     $data[2]=(isset($_POST['watch']) ? $_POST['watch'] : '');  
     $data[3]=(isset($_POST['smile']) ? $_POST['smile'] : '');
@@ -40,13 +40,13 @@ $vision = new table();
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM childdata4 WHERE patient_id='$info[0]'";
+    $search_query="SELECT * FROM childdata4 WHERE id='$info[0]'";
     $search_result=$vision->featuredLoad($dbObj,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
-                        $patient_id=$row['patient_id'];
+                        $id=$row['id'];
                         $light=$row['light'];
                         $watch=$row['watch'];
                         $smile=$row['smile'];
@@ -70,7 +70,7 @@ if(isset($_POST['Search'])){
 //update
 if(isset($_POST['Update'])){
 $info=getData();
-$update_query="UPDATE childdata4 SET patient_id='$info[0]',light='$info[1]',watch= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',touch='$info[6]',eyeerror='$info[7]',pick='$info[8]',touch2='$info[9]',recognize='$info[10]'  WHERE patient_id='$info[0]'";
+$update_query="UPDATE childdata4 SET id='$info[0]',light='$info[1]',watch= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',touch='$info[6]',eyeerror='$info[7]',pick='$info[8]',touch2='$info[9]',recognize='$info[10]'  WHERE id='$info[0]'";
 
 try{
 $pdate_result=$vision->featuredLoad($dbObj,$update_query);
