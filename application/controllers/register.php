@@ -82,21 +82,21 @@ if (isset($_POST['save'])) {
             $dbObj->doQuery(insert('day10','id',$id));
             $dbObj->doQuery(insert('data','id',$id));
             $dbObj->doQuery(insert('data2','id',$id));
-            $dbObj->doQuery(insert('hoscliniccare','patient_id',$id));
+            $dbObj->doQuery(insert('hoscliniccare','id',$id));
             $dbObj->doQuery(insert('optionaldate','id',$id));
             $dbObj->doQuery(insert('usscan','id',$id));
-            $dbObj->doQuery(insert('pg7','patient_id',$id));
+            $dbObj->doQuery(insert('pg7','id',$id));
             $dbObj->doQuery(insert('table1','id',$id));
             $dbObj->doQuery(insert('table2','idNew',$id));
           
           }
             else{
-              $dbObj->doQuery(insert('childdata','patient_id',$id));
-              $dbObj->doQuery(insert('childdata1','patient_id',$id));
-              $dbObj->doQuery(insert('childdata2','patient_id',$id));
-              $dbObj->doQuery(insert('childdata3','patient_id',$id));
-              $dbObj->doQuery(insert('childdata4','patient_id',$id));
-              $dbObj->doQuery(insert('childdata5','patient_id',$id));
+              $dbObj->doQuery(insert('childdata','id',$id));
+              $dbObj->doQuery(insert('childdata1','id',$id));
+              $dbObj->doQuery(insert('childdata2','id',$id));
+              $dbObj->doQuery(insert('childdata3','id',$id));
+              $dbObj->doQuery(insert('childdata4','id',$id));
+              $dbObj->doQuery(insert('childdata5','id',$id));
               $dbObj->doQuery(insert('optionaldate','id',$id));
               $dbObj->doQuery(insert('table3','idn',$id));
               $dbObj->doQuery(insert('table4','id',$id));
