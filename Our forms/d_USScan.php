@@ -4,7 +4,7 @@ $user = "root";
 $password ="123456";
 $database="moh";
 
-$patient_id="";
+$id="";
 $date1="";
 $poa="";   
 $ebw="";
@@ -33,7 +33,7 @@ try{
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=(isset($_POST['patient_id']) ? $_POST['patient_id'] : '');
+    $data[0]=(isset($_POST['id']) ? $_POST['id'] : '');
     $data[1]=(isset($_POST['date1']) ? $_POST['date1'] : '');
     $data[2]=(isset($_POST['poa']) ? $_POST['poa'] : '');  
     $data[3]=(isset($_POST['ebw']) ? $_POST['ebw'] : '');
@@ -54,13 +54,13 @@ function getData(){
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM usscan WHERE patient_id='$info[0]'";
+    $search_query="SELECT * FROM usscan WHERE id='$info[0]'";
     $search_result=mysqli_query($connect,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
-                        $patient_id=$row['patient_id'];
+                        $patient_id=$row['id'];
                         $date1=$row['date1'];
                         $poa=$row['poa'];   
                         $ebw=$row['ebw'];
@@ -89,7 +89,7 @@ if(isset($_POST['Search'])){
 //insert
 if(isset($_POST['Insert'])){
     $info=getData();
-    $insert_query="INSERT INTO usscan (patient_id,
+    $insert_query="INSERT INTO usscan (id,
     date1,
     poa,
     ebw,
@@ -124,7 +124,7 @@ if(isset($_POST['Insert'])){
 //update
 if(isset($_POST['Update'])){
     $info=getData();
-    $update_query="UPDATE usscan SET patient_id='$info[0]',date1='$info[1]',poa= '$info[2]',ebw='$info[3]',crl='$info[4]',gest_sac='$info[5]',bpd='$info[6]',hc='$info[7]',ac='$info[8]',fl='$info[9]',liquor='$info[10]',placenta='$info[11]',average_poa='$info[12]', any_other='$info[13]',,designation='$info[14]'
+    $update_query="UPDATE usscan SET id='$info[0]',date1='$info[1]',poa= '$info[2]',ebw='$info[3]',crl='$info[4]',gest_sac='$info[5]',bpd='$info[6]',hc='$info[7]',ac='$info[8]',fl='$info[9]',liquor='$info[10]',placenta='$info[11]',average_poa='$info[12]', any_other='$info[13]',,designation='$info[14]'
      WHERE patient_id='$info[0]'";
 
 try{
@@ -166,7 +166,7 @@ td, th {
 <body>
 
 <form method="POST" action="page5-part2.php">
-<input type="text" name="patient_id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($patient_id);?>"><br><br>
+<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
 <input type="submit" name="Update" value="Update"><br><br>
