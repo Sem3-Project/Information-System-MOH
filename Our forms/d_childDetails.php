@@ -87,7 +87,7 @@ function getData(){
               if($search_result){
                   if(mysqli_num_rows($search_result)){
                       while($row = mysqli_fetch_array($search_result)){
-                          $patient_id=$row['patient_id'];
+                          $id=$row['id'];
                           $doctor=$row['doctor'];
                           $moh=$row['moh'];
                           $idnum=$row['idnum'];
