@@ -33,7 +33,7 @@ td, th {
 
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css"> 
-<tr width=100%><td  width="15%" align="left">වයස​<br> Age </td><td width="15%" align="left">එන්නත් වර්ගය​<br>Type of vaccine​ </td><td width="15%" align="left">දිනය​<br>Date </td><td  width="15%" align="left">ඛාණ්ඩ අංකය​<br>Batch No</td><td  width="15%" align="left">Adverse effects following immunization </td><td  width="15%" align="left">B.C.G.Scar​ </td></tr>
+<tr width=100%><td  width="15%" align="left">වයස​<br> Age </td><td width="15%" align="left">එන්නත් වර්ගය​<br>Type of vaccine​ </td><td width="15%" align="left">දිනය​<br>Date </td><td  width="15%" align="left">ඛාණ්ඩ අංකය​<br>Batch No</td><td  width="15%" align="left">ප්‍රතිශක්තිකරණයේ අතුරු ආබාධ<br>Adverse effects following immunization </td><td  width="15%" align="left">බීසීජී කැළල<br>B.C.G.Scar​ </td></tr>
 <tr width=100%><td  width="15%">උපතේදී<br> At Birth </td><td width="15%" >බී.සී.ජී.<br>B.C.G.​ </td><td width="15%">​<input type="date" name="date1" value="<?=$date1?>"> </td><td  width="15%">​<input type="num" name="num1" value="<?=$num1?>"></td><td  width="15%" >​<input type="text" name="text1" value="<?=$text1?>"></td><td  width="15%"><select name="bcg">
             <option value="yes">ඇත/Present ​</option>
             <option value="no">නැත/Absent </option>
