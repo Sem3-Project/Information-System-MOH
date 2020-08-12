@@ -6,7 +6,7 @@ $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
 session_start();
 
-$patient_id='';
+$id='';
 $sound='';
 $highsound='';
 $smile='';
@@ -21,7 +21,7 @@ $respond='';
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=(isset($_POST['patient_id']) ? $_POST['patient_id'] : '');
+    $data[0]=(isset($_POST['id']) ? $_POST['id'] : '');
     $data[1]=(isset($_POST['sound']) ? $_POST['sound'] : '');
     $data[2]=(isset($_POST['highsound']) ? $_POST['highsound'] : '');  
     $data[3]=(isset($_POST['smile']) ? $_POST['smile'] : '');
@@ -39,13 +39,13 @@ $childHearing = new table();
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM childdata5 WHERE patient_id='$info[0]'";
+    $search_query="SELECT * FROM childdata5 WHERE id='$info[0]'";
     $search_result=$childHearing->featuredLoad($dbObj,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
-                        $patient_id=$row['patient_id'];
+                        $id=$row['id'];
                         $sound=$row['sound'];
                         $highsound=$row['highsound'];
                         $smile=$row['smile'];
@@ -69,7 +69,7 @@ if(isset($_POST['Search'])){
 //update
 if(isset($_POST['Update'])){
 $info=getData();
-$update_query="UPDATE childdata5 SET patient_id='$info[0]',sound='$info[1]',highsound= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',hear='$info[6]',search='$info[7]',song='$info[8]',name='$info[9]',respond='$info[10]'  WHERE patient_id='$info[0]'";
+$update_query="UPDATE childdata5 SET id='$info[0]',sound='$info[1]',highsound= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',hear='$info[6]',search='$info[7]',song='$info[8]',name='$info[9]',respond='$info[10]'  WHERE id='$info[0]'";
 
 try{
 $pdate_result=$childHearing->featuredLoad($dbObj,$update_query);
