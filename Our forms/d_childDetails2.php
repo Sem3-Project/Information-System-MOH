@@ -128,7 +128,7 @@ function getData(){
               if($search_result){
                   if(mysqli_num_rows($search_result)){
                       while($row = mysqli_fetch_array($search_result)){
-                          $patient_id=$row['patient_id'];
+                          $id=$row['id'];
                           $dat1=$row['dat1'];
                           $dat2=$row['dat2'];
                           $dat3=$row['dat3'];
