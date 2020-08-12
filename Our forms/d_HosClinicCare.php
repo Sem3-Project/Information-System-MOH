@@ -123,7 +123,7 @@ try{
 if(isset($_POST['Update'])){
     $info=getData();
     $update_query="UPDATE hoscliniccare SET id='$info[0]',date1='$info[1]',poa= '$info[2]',weight1='$info[3]',sugar='$info[4]',albumin='$info[5]',oedema='$info[6]',systolic='$info[7]',diastolic='$info[8]',fundalheight='$info[9]',fundalheight1='$info[10]',lie='$info[11]',presentation='$info[12]',fm='$info[13]',fhs='$info[14]',designation='$info[15]'
-    ,donext='$info[16]'  WHERE patient_id='$info[0]'";
+    ,donext='$info[16]'  WHERE id='$info[0]'";
 
 try{
     $pdate_result=mysqli_query($connect,$update_query);
