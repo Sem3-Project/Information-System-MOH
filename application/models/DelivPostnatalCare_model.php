@@ -6,7 +6,7 @@ $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
 session_start();
 
-$patient_id = '';
+$id = '';
 $hosptal='';
 $birth_weight='';
 $poa='';
@@ -41,7 +41,7 @@ $notes='';
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=$_POST['patient_id'];
+    $data[0]=$_POST['id'];
     $data[1]=(isset($_POST['hosptal']) ? $_POST['hosptal'] : ''); 
     $data[2]=$_POST['birth_weight'];
     $data[3]=$_POST['poa'];
@@ -77,13 +77,13 @@ $delipost = new table();
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM `pg7` WHERE patient_id='$info[0]'";
+    $search_query="SELECT * FROM `pg7` WHERE id='$info[0]'";
     $search_result=$delipost->featuredLoad($dbObj,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
-                        $patient_id=$row['patient_id'];
+                        $id=$row['id'];
                         $hosptal=$row['hosptal'];
                         $birth_weight=$row['birth_weight'];
                         $poa=$row['poa'];
@@ -127,7 +127,7 @@ if(isset($_POST['Search'])){
     //update
     if(isset($_POST['Update'])){
         $info=getData();
-        $update_query="UPDATE `pg7` SET patient_id='$info[0]',hosptal='$info[1]',birth_weight= '$info[2]',poa='$info[3]',live_birth='$info[4]',still_birth='$info[5]',abs='$info[6]',del_dt='$info[7]',sex='$info[8]',del_mod='$info[9]',ep='$info[10]',bt='$info[11]',ve='$info[12]',mc='$info[13]',infect='$info[14]',fpm='$info[15]'
+        $update_query="UPDATE `pg7` SET id='$info[0]',hosptal='$info[1]',birth_weight= '$info[2]',poa='$info[3]',live_birth='$info[4]',still_birth='$info[5]',abs='$info[6]',del_dt='$info[7]',sex='$info[8]',del_mod='$info[9]',ep='$info[10]',bt='$info[11]',ve='$info[12]',mc='$info[13]',infect='$info[14]',fpm='$info[15]'
         ,cm='$info[16]',reason='$info[17]',danger= '$info[18]',bf='$info[19]',bp='$info[20]',vita='$info[21]',rubella='$info[22]',antid='$info[23]',chdr='$info[24]',presc= '$info[25]',reff='$info[26]',other='$info[27]',notes='$info[28]'  WHERE patient_id='$info[0]'";
 
 try{
