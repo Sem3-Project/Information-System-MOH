@@ -296,7 +296,7 @@ if(isset($_POST['Search'])){
     `date17`='$info[18]',`date18`='$info[19]',`date19`='$info[20]',`date20`='$info[21]',`date21`='$info[22]',`date22`='$info[23]',`date23`='$info[24]',`date24`='$info[25]',`date25`='$info[26]',`num1`='$info[27]',
     `num2`='$info[28]',`num3`='$info[29]',`num4`='$info[30]',`num5`='$info[31]',`num6`='$info[32]',`num7`='$info[33]',`num8`='$info[34]',`num9`='$info[35]',`num10`='$info[36]',`num11`='$info[37]',`num12`='$info[38]',
     `num13`='$info[39]',`num14`='$info[40]',`num15`='$info[41]',`num16`='$info[42]',`num17`='$info[43]',`num18`='$info[44]',`num19`='$info[45]',`num20`='$info[46]',`num21`='$info[47]',`num22`='$info[48]',`num23`='$info[49]',
-    `num24`='$info[50]',`num25`='$info[51]' WHERE  patient_id='$info[0]'";
+    `num24`='$info[50]',`num25`='$info[51]' WHERE  id='$info[0]'";
     
     
 try{
