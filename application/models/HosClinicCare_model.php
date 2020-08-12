@@ -6,7 +6,7 @@ $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
 session_start();
 
-$patient_id = "";
+$id = "";
 $date1="";
 $poa="";
 $weight1="";
@@ -27,7 +27,7 @@ $donext="";
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=(isset($_POST['patient_id']) ? $_POST['patient_id'] : '');
+    $data[0]=(isset($_POST['id']) ? $_POST['id'] : '');
     $data[1]=(isset($_POST['date1']) ? $_POST['date1'] : '');
     $data[2]=(isset($_POST['poa']) ? $_POST['poa'] : '');  
     $data[3]=(isset($_POST['weight1']) ? $_POST['weight1'] : '');
@@ -53,7 +53,7 @@ $hosCC = new table();
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM `hoscliniccare` WHERE patient_id='$info[0]'";
+    $search_query="SELECT * FROM `hoscliniccare` WHERE id='$info[0]'";
 
     $search_result=$hosCC->featuredLoad($dbObj,$search_query);
 
@@ -61,7 +61,7 @@ if(isset($_POST['Search'])){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
-                        $patient_id=$row['patient_id'];
+                        $id=$row['id'];
                         $date1=$row['date1'];
                         $poa=$row['poa'];   
                         $weight1=$row['weight1'];
@@ -94,8 +94,8 @@ if(isset($_POST['Search'])){
 //update
 if(isset($_POST['Update'])){
     $info=getData();
-    $update_query="UPDATE hoscliniccare SET patient_id='$info[0]',date1='$info[1]',poa= '$info[2]',weight1='$info[3]',sugar='$info[4]',albumin='$info[5]',oedema='$info[6]',systolic='$info[7]',diastolic='$info[8]',fundalheight='$info[9]',fundalheight1='$info[10]',lie='$info[11]',presentation='$info[12]',fm='$info[13]',fhs='$info[14]',designation='$info[15]'
-    ,donext='$info[16]'  WHERE patient_id='$info[0]'";
+    $update_query="UPDATE hoscliniccare SET id='$info[0]',date1='$info[1]',poa= '$info[2]',weight1='$info[3]',sugar='$info[4]',albumin='$info[5]',oedema='$info[6]',systolic='$info[7]',diastolic='$info[8]',fundalheight='$info[9]',fundalheight1='$info[10]',lie='$info[11]',presentation='$info[12]',fm='$info[13]',fhs='$info[14]',designation='$info[15]'
+    ,donext='$info[16]'  WHERE id='$info[0]'";
 
 try{
     $pdate_result=$hosCC->featuredLoad($dbObj,$update_query);
