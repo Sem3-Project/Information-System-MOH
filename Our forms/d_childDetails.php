@@ -180,7 +180,7 @@ function getData(){
     if(isset($_POST['Update'])){
         $info=getData();
         $update_query="UPDATE childdata1 SET id='$info[0]',doctor='$info[1]',moh= '$info[2]',idnum='$info[3]',childname='$info[4]',regno='$info[5]',childbday='$info[6]',regdate='$info[7]',momname='$info[8]',momage='$info[9]',num1='$info[10]',weight1='$info[11]',headperi='$info[12]',length='$info[13]',health='$info[14]',vitk='$info[15]'
-        ,posture='$info[16]',rel='$info[17]',date1= '$info[18]',date2='$info[19]',date3='$info[20]',date4='$info[21]',date5='$info[22]',date6='$info[23]',date7='$info[24]',date8= '$info[25]',date9='$info[26]',date0='$info[27]',date110='$info[28]'  WHERE patient_id='$info[0]'";
+        ,posture='$info[16]',rel='$info[17]',date1= '$info[18]',date2='$info[19]',date3='$info[20]',date4='$info[21]',date5='$info[22]',date6='$info[23]',date7='$info[24]',date8= '$info[25]',date9='$info[26]',date0='$info[27]',date110='$info[28]'  WHERE id='$info[0]'";
 
 try{
     $pdate_result=mysqli_query($connect,$update_query);
