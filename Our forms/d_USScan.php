@@ -125,7 +125,7 @@ if(isset($_POST['Insert'])){
 if(isset($_POST['Update'])){
     $info=getData();
     $update_query="UPDATE usscan SET id='$info[0]',date1='$info[1]',poa= '$info[2]',ebw='$info[3]',crl='$info[4]',gest_sac='$info[5]',bpd='$info[6]',hc='$info[7]',ac='$info[8]',fl='$info[9]',liquor='$info[10]',placenta='$info[11]',average_poa='$info[12]', any_other='$info[13]',,designation='$info[14]'
-     WHERE patient_id='$info[0]'";
+     WHERE id='$info[0]'";
 
 try{
     $pdate_result=mysqli_query($connect,$update_query);
