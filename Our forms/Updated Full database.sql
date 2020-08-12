@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `childdata` (
-  `patient_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `bcg` varchar(30) NOT NULL,
   `date1` date NOT NULL,
   `date2` date NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE `childdata` (
 --
 
 CREATE TABLE `childdata1` (
-  `patient_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `doctor` text NOT NULL,
   `moh` text NOT NULL,
   `idnum` int(11) NOT NULL,
@@ -128,7 +128,7 @@ CREATE TABLE `childdata1` (
 --
 
 CREATE TABLE `childdata2` (
-  `patient_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `dat1` date NOT NULL,
   `dat2` date NOT NULL,
   `dat3` date NOT NULL,
@@ -183,7 +183,7 @@ CREATE TABLE `childdata2` (
 -- Dumping data for table `childdata2`
 --
 
-INSERT INTO `childdata2` (`patient_id`, `dat1`, `dat2`, `dat3`, `dat4`, `scolor1`, `scolor2`, `scolor3`, `scolor4`, `eye1`, `eye2`, `eye3`, `eye4`, `sc1`, `sc2`, `sc3`, `sc4`, `m1`, `m2`, `m3`, `m4`, `rel1`, `rel2`, `rel3`, `rel4`, `other1`, `other2`, `other3`, `other4`, `date1`, `date2`, `date3`, `date4`, `date5`, `date6`, `date7`, `date8`, `date9`, `date10`, `date11`, `date12`, `date13`, `date14`, `date15`, `date16`, `date17`, `date18`, `date19`, `date20`) VALUES
+INSERT INTO `childdata2` (`id`, `dat1`, `dat2`, `dat3`, `dat4`, `scolor1`, `scolor2`, `scolor3`, `scolor4`, `eye1`, `eye2`, `eye3`, `eye4`, `sc1`, `sc2`, `sc3`, `sc4`, `m1`, `m2`, `m3`, `m4`, `rel1`, `rel2`, `rel3`, `rel4`, `other1`, `other2`, `other3`, `other4`, `date1`, `date2`, `date3`, `date4`, `date5`, `date6`, `date7`, `date8`, `date9`, `date10`, `date11`, `date12`, `date13`, `date14`, `date15`, `date16`, `date17`, `date18`, `date19`, `date20`) VALUES
 (985791910, '2020-07-15', '2020-07-15', '2020-07-07', '0000-00-00', '', '', '', '', '', '<br /><b>Notice</b>:  Undefined variable: seye2 in <b>C:xampphtdocsHOSchild2.php</b> on line <b>260</b><br />', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
@@ -193,7 +193,7 @@ INSERT INTO `childdata2` (`patient_id`, `dat1`, `dat2`, `dat3`, `dat4`, `scolor1
 --
 
 CREATE TABLE `childdata3` (
-  `patient_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `text1` text NOT NULL,
   `text2` text NOT NULL,
   `text3` text NOT NULL,
@@ -228,7 +228,7 @@ CREATE TABLE `childdata3` (
 --
 
 CREATE TABLE `childdata4` (
-  `patient_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `light` varchar(30) NOT NULL,
   `watch` varchar(30) NOT NULL,
   `smile` varchar(30) NOT NULL,
@@ -245,7 +245,7 @@ CREATE TABLE `childdata4` (
 -- Dumping data for table `childdata4`
 --
 
-INSERT INTO `childdata4` (`patient_id`, `light`, `watch`, `smile`, `eye`, `look`, `touch`, `eyeerror`, `pick`, `touch2`, `recognize`) VALUES
+INSERT INTO `childdata4` (`id`, `light`, `watch`, `smile`, `eye`, `look`, `touch`, `eyeerror`, `pick`, `touch2`, `recognize`) VALUES
 (985791910, 'Yes', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes');
 
 -- --------------------------------------------------------
@@ -255,7 +255,7 @@ INSERT INTO `childdata4` (`patient_id`, `light`, `watch`, `smile`, `eye`, `look`
 --
 
 CREATE TABLE `childdata5` (
-  `patient_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `sound` varchar(30) NOT NULL,
   `highsound` varchar(30) NOT NULL,
   `smile` varchar(30) NOT NULL,
@@ -272,7 +272,7 @@ CREATE TABLE `childdata5` (
 -- Dumping data for table `childdata5`
 --
 
-INSERT INTO `childdata5` (`patient_id`, `sound`, `highsound`, `smile`, `eye`, `hear`, `search`, `song`, `name`, `respond`, `look`) VALUES
+INSERT INTO `childdata5` (`id`, `sound`, `highsound`, `smile`, `eye`, `hear`, `search`, `song`, `name`, `respond`, `look`) VALUES
 (985791910, 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes');
 
 -- --------------------------------------------------------
@@ -807,7 +807,7 @@ INSERT INTO `day10` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `fac
 --
 
 CREATE TABLE `hoscliniccare` (
-  `patient_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `date1` date NOT NULL,
   `poa` text NOT NULL,
   `weight1` text NOT NULL,
@@ -830,7 +830,7 @@ CREATE TABLE `hoscliniccare` (
 -- Dumping data for table `hoscliniccare`
 --
 
-INSERT INTO `hoscliniccare` (`patient_id`, `date1`, `poa`, `weight1`, `sugar`, `albumin`, `oedema`, `systolic`, `diastolic`, `fundalheight`, `fundalheight1`, `lie`, `presentation`, `fm`, `fhs`, `designation`, `donext`) VALUES
+INSERT INTO `hoscliniccare` (`id`, `date1`, `poa`, `weight1`, `sugar`, `albumin`, `oedema`, `systolic`, `diastolic`, `fundalheight`, `fundalheight1`, `lie`, `presentation`, `fm`, `fhs`, `designation`, `donext`) VALUES
 (2, '0000-00-00', '35', '', 'Green', 'NIL', '+', '', '', '', '', 'LL', 'Cephalic', '+', '+', '', '0000-00-00');
 
 -- --------------------------------------------------------
@@ -930,7 +930,7 @@ INSERT INTO `optionaldate` (`id`, `date1`, `date2`, `confirmedDate`, `time`) VAL
 --
 
 CREATE TABLE `pg7` (
-  `patient_id` int(11) DEFAULT NULL,
+  `id` int(11) DEFAULT NULL,
   `hosptal` varchar(255) DEFAULT NULL,
   `birth_weight` double DEFAULT NULL,
   `poa` varchar(255) DEFAULT NULL,
@@ -967,7 +967,7 @@ CREATE TABLE `pg7` (
 -- Dumping data for table `pg7`
 --
 
-INSERT INTO `pg7` (`patient_id`, `hosptal`, `birth_weight`, `poa`, `live_birth`, `still_birth`, `abs`, `del_dt`, `sex`, `del_mod`, `ep`, `bt`, `ve`, `mc`, `infect`, `fpm`, `cm`, `reason`, `danger`, `bf`, `bp`, `vita`, `rubella`, `antid`, `diags`, `chdr`, `presc`, `reff`, `other`, `dis_dt`, `notes`) VALUES
+INSERT INTO `pg7` (`id`, `hosptal`, `birth_weight`, `poa`, `live_birth`, `still_birth`, `abs`, `del_dt`, `sex`, `del_mod`, `ep`, `bt`, `ve`, `mc`, `infect`, `fpm`, `cm`, `reason`, `danger`, `bf`, `bp`, `vita`, `rubella`, `antid`, `diags`, `chdr`, `presc`, `reff`, `other`, `dis_dt`, `notes`) VALUES
 (2, '', 3, '3', 'dsdsf', 'fefefe', '', '2020-04-23', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'T', 'T', 'sadsd', 'Yes', 'Yes', '', 'Yes', 'Yes', 'Yes', 'Yes', '', 'Yes', 'Yes', 'Yes', 'dfasdasda', '', NULL, 'qweqweqweqwe');
 
 -- --------------------------------------------------------
@@ -2107,7 +2107,7 @@ ALTER TABLE `day10`
 -- Indexes for table `hoscliniccare`
 --
 ALTER TABLE `hoscliniccare`
-  ADD PRIMARY KEY (`patient_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `investigations`
