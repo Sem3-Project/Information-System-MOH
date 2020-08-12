@@ -5,7 +5,7 @@ $user = "root";
 $password ="123456";
 $database="moh";
 
-$patient_id = "";
+$id = "";
 $date1="";
 $poa="";
 $weight1="";
@@ -37,7 +37,7 @@ try{
 //get data from the form
 function getData(){
     $data=array();
-    $data[0]=(isset($_POST['patient_id']) ? $_POST['patient_id'] : '');
+    $data[0]=(isset($_POST['id']) ? $_POST['id'] : '');
     $data[1]=(isset($_POST['date1']) ? $_POST['date1'] : '');
     $data[2]=(isset($_POST['poa']) ? $_POST['poa'] : '');  
     $data[3]=(isset($_POST['weight1']) ? $_POST['weight1'] : '');
@@ -62,13 +62,13 @@ function getData(){
 //search
 if(isset($_POST['Search'])){
     $info=getData();
-    $search_query="SELECT * FROM `hoscliniccare` WHERE patient_id='$info[0]'";
+    $search_query="SELECT * FROM `hoscliniccare` WHERE id='$info[0]'";
     $search_result=mysqli_query($connect,$search_query);
         if($search_result){
             if($search_result){
                 if(mysqli_num_rows($search_result)){
                     while($row = mysqli_fetch_array($search_result)){
-                        $patient_id=$row['patient_id'];
+                        $patient_id=$row['id'];
                         $date1=$row['date1'];
                         $poa=$row['poa'];   
                         $weight1=$row['weight1'];
@@ -99,7 +99,7 @@ if(isset($_POST['Search'])){
 //insert
 if(isset($_POST['Insert'])){
     $info=getData();
-    $insert_query="INSERT INTO hoscliniccare (patient_id,date1,poa,weight1,	sugar,albumin,oedema,systolic,diastolic,fundalheight,fundalheight1,lie,presentation,fm,fhs,designation,donext) 
+    $insert_query="INSERT INTO hoscliniccare (id,date1,poa,weight1,	sugar,albumin,oedema,systolic,diastolic,fundalheight,fundalheight1,lie,presentation,fm,fhs,designation,donext) 
     VALUES  
     ('$info[0]','$info[1]','$info[2]','$info[3]','$info[4]','$info[5]','$info[6]','$info[7]','$info[8]','$info[9]','$info[10]','$info[11]','$info[12]'
     '$info[13]','$info[14]','$info[15]','$info[16]'   )";
@@ -122,7 +122,7 @@ try{
 //update
 if(isset($_POST['Update'])){
     $info=getData();
-    $update_query="UPDATE hoscliniccare SET patient_id='$info[0]',date1='$info[1]',poa= '$info[2]',weight1='$info[3]',sugar='$info[4]',albumin='$info[5]',oedema='$info[6]',systolic='$info[7]',diastolic='$info[8]',fundalheight='$info[9]',fundalheight1='$info[10]',lie='$info[11]',presentation='$info[12]',fm='$info[13]',fhs='$info[14]',designation='$info[15]'
+    $update_query="UPDATE hoscliniccare SET id='$info[0]',date1='$info[1]',poa= '$info[2]',weight1='$info[3]',sugar='$info[4]',albumin='$info[5]',oedema='$info[6]',systolic='$info[7]',diastolic='$info[8]',fundalheight='$info[9]',fundalheight1='$info[10]',lie='$info[11]',presentation='$info[12]',fm='$info[13]',fhs='$info[14]',designation='$info[15]'
     ,donext='$info[16]'  WHERE patient_id='$info[0]'";
 
 try{
@@ -170,7 +170,7 @@ td, th {
 <body>
 
 <form method="POST" action="page5.php">
-<input type="text" name="patient_id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($patient_id);?>"><br><br>
+<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($patient_id);?>"><br><br>
 
 <input type="submit" name="Search" value="Search">
 <input type="submit" name="Update" value="Update"><br><br>
