@@ -4,21 +4,25 @@ require '../models/DelivPostnatalCare_model.php';
 
 <!DOCTYPE html>
 <head>
+        <body>
+            <div class="hero-image">
+                <img src="../img/logo.png" class="logo-image"/>
+                <img src="../img/line.jpg" class="line-image"/>
+                
+                <div class="hero-text">
+                    <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
+                    <h3 style="font-size:25px">Gampaha</h3>
+                </div>
+            </div>
+        </body>
+    </head>
+<head>
+<link rel ="stylesheet" type="text/css" href="newForm4.css"> 
 <style type="text/css">
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
 </style>    
-    
 </head>
+
 <body>
 <form method="POST" action="DelivPostnatalCare_page.php">
 <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($id);?>"><br><br>
