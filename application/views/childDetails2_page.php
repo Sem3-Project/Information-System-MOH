@@ -18,7 +18,7 @@ require '../models/childDetails2_model.php';
         </body>
     </head>
 <head>
-<link rel ="stylesheet" type="text/css" href="../../public/css/newForm.css">
+<link rel ="stylesheet" type="text/css" href="../../public/css/newForm3.css">
 <h3 align="center">අලුත උපන් දරුවාගේ සටහන</h3>
 <h5 align="center">(පසු ප්‍රසව ගමන් වලදි පවුල් සෞඛ්‍ය සේවා නිලධාරිනිය විසින් සම්පූර්ණ කිරීම​ට)<h5>
     
