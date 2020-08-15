@@ -5,20 +5,22 @@ require '../models/USScan_model.php';
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
+        <body>
+            <div class="hero-image">
+                <img src="../img/logo.png" class="logo-image"/>
+                <img src="../img/line.jpg" class="line-image"/>
+                
+                <div class="hero-text">
+                    <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
+                    <h3 style="font-size:25px">Gampaha</h3>
+                </div>
+            </div>
+        </body>
+</head>
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 40%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-</style>  
+<head>
+<meta charset="UTF-8">
+<link rel ="stylesheet" type="text/css" href="newForm3.css">
 
     <h2>US Scan</h2>
     <link rel="stylesheet" href="../../public/css/table.css">
