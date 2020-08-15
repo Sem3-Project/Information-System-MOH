@@ -4,22 +4,22 @@ require '../models/HosClinicCare_model.php';
 
 <!DOCTYPE html>
 <head>
+        <body>
+            <div class="hero-image">
+                <img src="../img/logo.png" class="logo-image"/>
+                <img src="../img/line.jpg" class="line-image"/>
+                
+                <div class="hero-text">
+                    <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
+                    <h3 style="font-size:25px">Gampaha</h3>
+                </div>
+            </div>
+        </body>
+</head>
+
+<head>
 <meta charset="UTF-8">
-<style type="text/css">
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 40%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-</style>  
-
+<link rel ="stylesheet" type="text/css" href="newForm3.css">
 <h4>රෝහල් සායනික සංරක්‍ෂණය​</h4>
     <h2>Hospital Clinic Care</h2>
     <link rel="stylesheet" href="table.css">  
@@ -94,7 +94,7 @@ td, th {
     </table>
     <table width="100%" border="0">
     <tr>
-        <td width="40%" >Fundal Height</td>
+        <td width="37%" >Fundal Height</td>
         
         <td width="26%"><input type="text" name="fundalHeight"></td>
         </td>
