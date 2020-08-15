@@ -3,23 +3,22 @@ require '../models/immunization_model.php';
 ?>
 
 <!DOCTYPE html>
-
+ <head>
+        <body>
+            <div class="hero-image">
+                <img src="../../public/images/logo.png" class="logo-image"/>
+                <img src="../../public/images/line.jpg" class="line-image"/>
+                <a href="login_page.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="home.php"><img src="../../public/images/home.png" class="home-image"></a>
+                <div class="hero-text">
+                    <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
+                    <h3 style="font-size:25px">Gampaha</h3>
+                </div>
+            </div>
+        </body>
+    </head>
 <head>
-<style type="text/css">
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-</style>   
-    
+<link rel ="stylesheet" type="text/css" href="../../public/css/newForm3.css">
 </head>
 <body>
 <form method="POST" action="immunization_page.php">
