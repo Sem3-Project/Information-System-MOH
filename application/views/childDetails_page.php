@@ -18,7 +18,7 @@ require '../models/childDetails_model.php';
         </body>
     </head>
 <head>
-<link rel ="stylesheet" type="text/css" href="../../public/css/newForm.css">
+<link rel ="stylesheet" type="text/css" href="../../public/css/newForm3.css">
     
 </head>
 <body>
