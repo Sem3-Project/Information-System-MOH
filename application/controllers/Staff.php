@@ -13,10 +13,6 @@ abstract class Staff extends User_1{
     }
 }
 
-// $john=new Staff('John','23','CEO','15000');
-// echo $john->get_id();
-// echo $john->get_username();
-// echo $john->get_category();
 
 
 ?>
