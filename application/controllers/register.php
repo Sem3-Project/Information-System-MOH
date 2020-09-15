@@ -1,3 +1,6 @@
+<link rel="stylesheet" href=:../../public/css/sweetalert.min.css">
+<script type="text/javascript" src="../../public/js/sweetalert.min.js"></script>
+
 <?php
 
 require '../../framework/libraries/Model.php';
@@ -26,23 +29,26 @@ if (isset($_POST['save'])) {
         $result1 = $tempmember->load($dbObj, $id);
 
         if ($result1) {
-            ?> <style>div.alert{display:inline-block;}</style><?php
-            echo '<script type="text/javascript">alert("Username already exists. Please select another username..!")</script>';
+          echo '<script type="text/javascript">';
+          echo 'setTimeout(function () { swal("Error!","Username already exists. Please enter another username..!","error");';
+          echo '}, 200);</script>';
            
         }
 
     else if (empty($_POST['id']) || empty($_POST['password_1']) || empty($_POST['password_2']) || empty($_POST['catagory'])) {
-        echo '<script type="text/javascript">alert("Please fill all fields!")</script>';
+      echo '<script type="text/javascript">';
+      echo 'setTimeout(function () { swal("Error!","Please fill all required fields!","error");';
+      echo '}, 200);</script>';
 
     }
     else if ($_POST['password_1'] != $_POST['password_2']) {
-        echo '<script type="text/javascript">alert("The two passwords do not match!")</script>';
+      echo '<script type="text/javascript">';
+      echo 'setTimeout(function () { swal("Error!","The two passwords do not match!","error");';
+      echo '}, 200);</script>';
 
     }
         
         else{
-
-          echo '<script type="text/javascript">alert("Registration completed successfully!")</script>';
 
             function insert($tableName,$idname, $id){
               $query_insert = "INSERT INTO $tableName ($idname) VALUES ('$id')";
@@ -93,6 +99,9 @@ if (isset($_POST['save'])) {
              
             }
     
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Successful!","Registration completed successfully!","success");';
+            echo '}, 200);</script>';
         }
      
 }

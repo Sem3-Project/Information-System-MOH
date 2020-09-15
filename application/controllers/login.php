@@ -1,10 +1,14 @@
-<?php
+<link rel="stylesheet" href=:../../public/css/sweetalert.min.css">
+<script type="text/javascript" src="../../public/js/sweetalert.min.js"></script>
 
+<?php
+session_start(); //session started
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
 require 'FolderProxy.php';
 
-session_start(); //session started
+
+//require '../views/alert.html';
 
 class Client{
     protected $user;
@@ -28,7 +32,10 @@ $message ="";
 if (isset($_POST['login_user'])) {
 
     if (empty($_POST['id']) || empty($_POST['password'])) {
-        echo '<script type="text/javascript">alert("පරිශීලක නාමය හෝ මුරපදය වලංගු නැත / Username or password is invalid!")</script>';
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal("Error!","කරුණාකර අවශ්‍ය සියලු තොරතුරු ඇතුළත් කරන්න\nPlease enter all required details","error");';
+        echo '}, 200);</script>';
+       // echo '<script type="text/javascript">invalid();</script>';
     }
     else{
         $id = $_POST['id'];
@@ -48,16 +55,24 @@ if (isset($_POST['login_user'])) {
             }
             
             if($id != $log->id ){
-                echo '<script type="text/javascript">alert("කරුණාකර නිවැරදි පරිශීලක නාමය ඇතුළත් කරන්න / Please enter correct username")</script>';
-               
+                echo '<script type="text/javascript">';
+                echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි පරිශීලක නාමය ඇතුළත් කරන්න\nPlease enter correct username","error");';
+                echo '}, 200);</script>';
+
         //select category
             }
             else if($log->password != $passwordEnc ){ 
-                echo '<script type="text/javascript">alert("කරුණාකර නිවැරදි මුරපදය ඇතුළත් කරන්න / Please enter correct password")</script>';
-            }
+                echo '<script type="text/javascript">';
+                echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි මුරපදය ඇතුළත් කරන්න\nPlease enter correct password","error");';
+                echo '}, 200);</script>';
+                        }
+
             else if ($log->catagory != $catagory){
-                echo '<script type="text/javascript">alert("කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න / Please select correct category")</script>';
-            }
+                echo '<script type="text/javascript">';
+                echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න\nPlease select correct category","error");';
+                echo '}, 200);</script>'; 
+                       }
+
             else if($log->password == $passwordEnc && $log->id==$id && $log->catagory==$catagory ) {
                 
                 $detail=new login($id,$passwordEnc,$catagory);
@@ -67,7 +82,9 @@ if (isset($_POST['login_user'])) {
                 die;
             }
             else{
-                echo '<script type="text/javascript">alert("කරුණාකර වලංගු තොරතුරු ඇතුළත් කරන්න / Please enter correct details!")</script>';
+                echo '<script type="text/javascript">';
+                echo 'setTimeout(function () { swal("Error!","පරිශීලක නාමය හෝ මුරපදය වලංගු නැත\nUsername or password is invalid","error");';
+                echo '}, 200);</script>'; 
             }
         }
      

@@ -1,0 +1,73 @@
+<head>
+    <link rel="stylesheet" href=:../../public/css/sweetalert.min.css">
+    
+    <script type="text/javascript" src="../../public/js/sweetalert.min.js"></script>
+    <script type="text/javascript">
+    
+    function incomp(){
+        swal({ 
+              title: "Error",
+              text: "Please fill all details!",
+              type: "error" 
+        },
+             function(){
+        });
+    }
+    function mismatch(){
+        swal({ 
+              title: "Error",
+              text: "The two passwords do not match!!",
+              type: "error" 
+        },
+             function(){
+        });
+    }
+    function success(){
+        swal({ 
+              title: "Successful",
+              text: "Password updated successfully!",
+              type: "success" 
+        },
+             function(){
+               
+                header('location:../views/login_test.php');});
+    }
+    function usern(){
+        swal({ 
+              title: "Error",
+              text: "කරුණාකර නිවැරදි පරිශීලක නාමය ඇතුළත් කරන්න\nPlease enter correct username",
+              type: "error" 
+        },
+             function(){
+        });
+    }
+    function passw(){
+        swal({ 
+              title: "Error",
+              text: "කරුණාකර නිවැරදි මුරපදය ඇතුළත් කරන්න\nPlease enter correct password",
+              type: "error" 
+        },
+             function(){
+        });
+    }
+    function categ(){
+        swal({ 
+              title: "Error",
+              text: "කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න / Please select correct category",
+              type: "error" 
+        },
+             function(){
+        });
+    }
+    function invalid(){
+        swal({ 
+              title: "Error",
+              text: "පරිශීලක නාමය හෝ මුරපදය වලංගු නැත / Username or password is invalid",
+              type: "error" 
+        },
+             function(){
+        });
+    }
+    </script>
+    
+</head> 
