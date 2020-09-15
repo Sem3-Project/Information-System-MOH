@@ -105,8 +105,21 @@ body, html {
     margin-bottom: 20px;
     height:100px;
     width:30%;
+    /* transition: all 1s; */
+    transition: 0.5s all ease-in-out; 
+    /*transition:box-shadow 500ms , background 3s;
+    transition-delay: 5s;*/
+  
     
   }
+ 
+  .button-image:hover { 
+    transform: scale(1.5); 
+} 
+  /* a{
+    transition: 1s;
+  } */
+
   footer{
     margin-top:100px;
     margin-bottom: 20px;
