@@ -26,7 +26,7 @@ require '../controllers/delete.php';
 
                 <div class="topnav">
                     <a href="../controllers/logout.php">Log out</a>
-                    <a href="home.php">Home</a>
+                    <a href="newHome.php">Home</a>
                 </div>
 	        </div>
         </header>

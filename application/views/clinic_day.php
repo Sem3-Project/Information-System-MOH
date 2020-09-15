@@ -15,7 +15,7 @@ require '../models/clinic_day_model.php';
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
                 <img src="../../public/images/line.jpg" class="line-image"/>
-                <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="../controllers/logout.php"><img src="../../public/images/logout.png" class="logout-image"></a>
                 <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>

@@ -16,7 +16,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
                 <div class="hero-image">
                     <img src="../../public/images/logo.png" class="logo-image"/>
                     <img src="../../public/images/line.jpg" class="line-image"/>
-                    <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                    <a href="../controllers/logout.php"><img src="../../public/images/logout.png" class="logout-image"></a>
                     <a href="user.php"><img src="../../public/images/home.png" class="home-image"></a>
                     <div class="hero-text">
                         <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
