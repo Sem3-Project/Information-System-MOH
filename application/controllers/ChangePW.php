@@ -6,7 +6,6 @@ require '../models/login_table.php';
 $dbObj = Model::getInstance();
 $dbObj->connect('localhost','root','','moh');
 
-$message ="";
 
 //change password
 
@@ -20,13 +19,16 @@ if (isset($_POST['new_password'])) {
     $result1 = $pass->load($dbObj, $id);
 
     if (empty($_POST['id']) || empty($_POST['new_pass']) || empty($_POST['new_pass_c']) ) {
-        $message = "Please fill all fields";
+        echo '<script type="text/javascript">alert("Please fill all fields!")</script>';
     }
     else if ($_POST['new_pass'] != $_POST['new_pass_c']) {
-        $message = "The two passwords do not match";
+        echo '<script type="text/javascript">alert("The two passwords do not match!")</script>';
+
     }
 
     else{
+        echo '<script type="text/javascript">alert("Password updated successfully!")</script>';
+
         $sql_query = "UPDATE `users` SET `password`= '$passwordEnc' WHERE `id` ='$id'";
         $dbObj->doQuery($sql_query);
         header('location:../views/login_page.php');

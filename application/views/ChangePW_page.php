@@ -53,8 +53,8 @@ require '../controllers/ChangePW.php';
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
                 <img src="../../public/images/line.jpg" class="line-image"/>
-                <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
-                <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
+                <!-- <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a> -->
                
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
@@ -98,6 +98,7 @@ require '../controllers/ChangePW.php';
                                 <input type="password" class="form-control" id="exampleInputPassword1" name="new_pass_c" placeholder="Confirm new password">
                             </div>
                             <input type="submit" class="btn" style="vertical-align:middle"name="new_password" value="යොමු කරන්න">
+                    
 
                         </form>
                     </div>

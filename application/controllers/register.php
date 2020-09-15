@@ -1,11 +1,10 @@
 <?php
-//require 'errors.php'; 
 
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
 require '../models/login_table.php';
 
-//session_start();
+
 $dbObj = Model::getInstance();
 $dbObj->connect('localhost','root','','moh');
 
@@ -19,46 +18,31 @@ if (isset($_POST['save'])) {
         $password2 = $_POST['password_2'];
         $catagory = $_POST['catagory'];
         $passwordEnc = md5("$password2");
-        $message = "Registration completed successfully";
-        $member_status = "active"; //useful in deactivation------------
+        
+
+        $member_status = "active"; 
 
         $tempmember = new login();
         $result1 = $tempmember->load($dbObj, $id);
 
         if ($result1) {
             ?> <style>div.alert{display:inline-block;}</style><?php
-            $msg = "Username already exists. Please select another username..!!";
+            echo '<script type="text/javascript">alert("Username already exists. Please select another username..!")</script>';
+           
         }
-       // $log = new login(); //place where form value variables assigned to NULL
-
-          //checking the database to make sure a user does not already exist with the same username
-        //  $user_check_query = "SELECT * FROM users WHERE id='$id'LIMIT 1";
-
 
     else if (empty($_POST['id']) || empty($_POST['password_1']) || empty($_POST['password_2']) || empty($_POST['catagory'])) {
-        $message = "Please fill all fields";
+        echo '<script type="text/javascript">alert("Please fill all fields!")</script>';
+
     }
     else if ($_POST['password_1'] != $_POST['password_2']) {
-        $message = "The two passwords do not match";
-    }
-    //else{
-        // $id = $_POST['id'];
-        // $password1 = $_POST['password_1'];
-        // $password2 = $_POST['password_2'];
-        // $catagory = $_POST['catagory'];
-        // $passwordEnc = md5("$password2");
-      //  $log = new login(); //place where form value variables assigned to NULL
-       
+        echo '<script type="text/javascript">alert("The two passwords do not match!")</script>';
 
-        //checking the database to make sure a user does not already exist with the same username
-        //$user_check_query = "SELECT * FROM users WHERE id='$id'LIMIT 1";
-        //$result_1 = mysqli_query($dbObj, $user_check_query);
-        // $result_1 = $log -> featuredLoad($dbObj, $user_check_query);
-        // if (mysqli_num_rows($result_1) > 0) {
-        //     //  <style>div.alert{display:inline-block;}</style>
-        //     $message = "This NIC number already exists. Please enter correct NIC number..!!";
+    }
         
         else{
+
+          echo '<script type="text/javascript">alert("Registration completed successfully!")</script>';
 
             function insert($tableName,$idname, $id){
               $query_insert = "INSERT INTO $tableName ($idname) VALUES ('$id')";
@@ -108,53 +92,9 @@ if (isset($_POST['save'])) {
               $dbObj->doQuery(insert('table10','id',$id));
              
             }
-    //         $query = "INSERT INTO users (id, catagory, password) 
-  	// 		  VALUES('$id', '$catagory', '$passwordEnc')";
-  	// mysqli_query($db, $query);
-          
-            // $qr = mysql_query("INSERT INTO users(username, emailid, password) values('".$username."','".$emailid."','".$password."')") or die(mysql_error());  
-         //$sql = "INSERT INTO users (id, catagory, password) VALUES('$id', '$catagory', '$passwordEnc')";
-         //$result = $login->featuredLoad($dbObj, $sql);
-            //$member = new table();
-      
-        //$logindata=array("id"=>$id, "password"=>$passwordEnc);
-
-      /*  $login = new login();
-        $logindata = array("id" => $id, "password" => $passwordEnc, "catagory" => $catagory);
-       
-                $login->bind($logindata);
-                
-              
-                $login->insert($dbObj);
-                $msg = "Registered successfully.!";
-
-                  //$member->bind($data);
-                //$member->insert($dbObj);
-                
-               $_POST=array(); */
-                //header("Location:../views/home.php");
-        }
-      // $user = mysqli_fetch_assoc($result_1); //can expect an error
-  
-        // if ($user) { 
-        //     if ($user['id'] === $id) {
-        //         array_push($errors, "Username already exists");
-        //     }
-        // }
-
-        
-
-
-        // $sql = "INSERT INTO users (id, catagory, password) VALUES('$id', '$catagory', '$passwordEnc')";
-        // $result = $log->featuredLoad($dbObj, $sql);
-        
-        // $_SESSION['id'] = $id;
-        // $_SESSION['success'] = "You are now logged in";
-        //header("Location:../../index.php");
-        //header("Location:../../views/login_page.php");//--------------------------after registration completed, redirected to login-----------------
-        //header("Location:../../index.php");
     
-    //echo $message;
-}//$dbObj->closeConnection();
+        }
+     
+}
 
 ?>
