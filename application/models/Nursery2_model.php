@@ -102,7 +102,7 @@ if(isset($_POST['update'])){
     `fvarious1`='$data[55]', `fvarious2`='$data[56]',`fvarious3`='$data[57]', `fvarious4`='$data[58]', `tname1`='$data[59]',
     `tname2`='$data[60]',`tname3`='$data[61]',`tposition1`='$data[62]', `tposition2`='$data[63]', 
     `tposition3`='$data[64]'
-     WHERE `id` = $data[0]";
+     WHERE `id` = '$data[0]'";
 
     try{
         $update_Result = $nursery2->featuredLoad($dbObj, $update_Query);
