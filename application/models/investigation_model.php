@@ -1,3 +1,5 @@
+<link rel="stylesheet" href=:../../public/css/sweetalert.min.css">
+<script type="text/javascript" src="../../public/js/sweetalert.min.js"></script>
 <?php
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
@@ -90,10 +92,14 @@ if(isset($_POST['search'])){
         
             }
         }else{
-            echo 'No data found to the NIC';
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Error!","Please enter valid patient id","error");';
+            echo '}, 200);</script>';
         }
     }else{
-        echo 'Result Error';
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal("Error!","Result error!","error");';
+        echo '}, 200);</script>';
     }
 }
 
@@ -122,16 +128,14 @@ if(isset($_POST['update'])){
     try{
         $update_Result = $inves->featuredLoad($dbObj,$update_Query);
         if($update_Result){
-            echo '<script type="text/javascript">alert("Updated successfully!");</script>';
-            // if(mysqli_affected_rows($dbObj) > 0){
-            //     echo 'Data updated successfully';
-            // }else{
-            //     echo 'Data Not updated';
-            // }
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Success!","Data updated successfully!","success");';
+            echo '}, 200);</script>';
         }
     }catch(Exception $ex){
-        // echo 'Error Update '.$ex->getMessage();
-        echo '<script type="text/javascript">alert("Error!");</script>';
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal("Error!","Result error!","error");';
+        echo '}, 200);</script>';
     }
 }
 ?>

@@ -1,3 +1,6 @@
+<link rel="stylesheet" href=:../../public/css/sweetalert.min.css">
+<script type="text/javascript" src="../../public/js/sweetalert.min.js"></script>
+
 <?php
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
@@ -65,7 +68,7 @@ $childHealth2 = new table();
 
 if(isset($_POST['search'])){
     $data = getPosts();
-    $search_Query = "SELECT * FROM table6 WHERE id = $data[0]";
+    $search_Query = "SELECT * FROM table6 WHERE id = '$data[0]'";
     $search_Result = $childHealth2->featuredLoad($dbObj, $search_Query);
 
     if($search_Result){
@@ -96,10 +99,14 @@ if(isset($_POST['search'])){
                 $position7 = $row['position7']; $position8 = $row['position8']; $position9= $row['position9']; 
             }
         }else{
-            echo 'No data for this id';
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Error!","Please enter valid patient id","error");';
+            echo '}, 200);</script>';
         }
     }else{
-        echo 'Result Error';
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Error!","Result error!","error");';
+            echo '}, 200);</script>';
     }
 }
 
@@ -128,22 +135,20 @@ if(isset($_POST['update'])){
     `fdisease6`='$data[87]',`fdisease7`='$data[88]',`fdisease8`='$data[89]',`fdisease9`='$data[90]',
     `name6`='$data[91]',`name7`='$data[92]',`name8`='$data[93]',`name9`='$data[94]',`position6`='$data[95]',
     `position7`='$data[96]',`position8`='$data[97]',`position9`='$data[98]'
-     WHERE `id` = $data[0]";
+     WHERE `id` = '$data[0]'";
 
     try{
         $update_Result = $childHealth2->featuredLoad($dbObj, $update_Query);
 
         if($update_Result){
-            echo '<script type="text/javascript">alert("Updated successfully!");</script>';
-            // if(mysqli_affected_rows($connect)>0){
-            //    echo 'data updated';
-            // }else{
-            //     echo 'data not updated';
-            // }
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Success!","Data updated successfully!","success");';
+            echo '}, 200);</script>';
         }
     }catch (Exception $ex){
-        // echo 'Error update' .$ex->getMessage();
-        echo '<script type="text/javascript">alert("Error!");</script>';
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal("Error!","Result error!","error");';
+        echo '}, 200);</script>';
     }
 }
 ?>
