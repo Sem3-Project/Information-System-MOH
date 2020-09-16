@@ -129,7 +129,7 @@ if(isset($_POST['update'])){
     `sgive`='$data[82]',`cgive`='$data[83]',`csgive`='$data[84]',`sfamiliar`='$data[85]',`cfamiliar`='$data[86]',
     `csfamiliar`='$data[87]',`sball`='$data[88]',`cball`='$data[89]',`csball`='$data[90]',
     `spart`='$data[91]',`cpart`='$data[92]',`cspart`='$data[93]'
-     WHERE `idn` = $data[0]";
+     WHERE `idn` = '$data[0]'";
 
     try{
         $update_Result = $birthto18->featuredLoad($dbObj, $update_Query);
