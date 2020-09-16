@@ -114,7 +114,7 @@ if(isset($_POST['update'])){
     `date18`='$data[69]',`reason18`='$data[70]',`place18`='$data[71]',`result18`='$data[72]',
     `date19`='$data[73]',`reason19`='$data[74]',`place19`='$data[75]',`result19`='$data[76]',`date20`='$data[77]',
     `reason20`='$data[78]',`place20`='$data[79]',`result20`='$data[80]'
-     WHERE `id` = $data[0]";
+     WHERE `id` = '$data[0]'";
 
     try{
         $update_Result = $refer1->featuredLoad($dbObj, $update_Query);
