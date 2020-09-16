@@ -25,7 +25,7 @@ require '../models/ChildHealth1_model.php';
         </body>
     </head>
     <body>
-        <form action="ChildHealth1.php" method="post" >
+        <form action="ChildHealth1_page.php" method="post" >
             <div>
                 <div class="caption-container1">
                     <div class="caption-container"><h3>Search NIC :</h3></div>

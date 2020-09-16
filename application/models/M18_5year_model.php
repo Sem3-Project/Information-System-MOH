@@ -60,7 +60,7 @@ $m18to5year = new table();
 
 if(isset($_POST['search'])){
     $data = getPosts();
-    $search_Query = "SELECT * FROM table4 WHERE id = $data[0]";
+    $search_Query = "SELECT * FROM table4 WHERE id = '$data[0]'";
     $search_Result = $m18to5year->featuredLoad($dbObj, $search_Query);
 
     if($search_Result){

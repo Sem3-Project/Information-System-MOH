@@ -77,7 +77,7 @@ $childHealth1 = new table();
 
 if(isset($_POST['search'])){
     $data = getPosts();
-    $search_Query = "SELECT * FROM table5 WHERE id = $data[0]";
+    $search_Query = "SELECT * FROM table5 WHERE id = '$data[0]'";
     $search_Result = $childHealth1->featuredLoad($dbObj, $search_Query);
 
     if($search_Result){
