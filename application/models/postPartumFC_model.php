@@ -104,7 +104,7 @@ if(isset($_POST['update'])){
     `fpPlace`='$data[39]',`fpDate`='$data[40]',`fpTime`='$data[41]', `sNote`='$data[42]', 
     `oName`='$data[43]',`designation`='$data[44]', `cName`='$data[45]', 
     `cTel`='$data[46]',`phmTel`='$data[47]', `mohTel`='$data[48]'
-     WHERE `idNew` = $data[0]";
+     WHERE `idNew` = '$data[0]'";
 
     try{
         $update_Result = $postPFC->featuredLoad($dbObj, $update_Query);
