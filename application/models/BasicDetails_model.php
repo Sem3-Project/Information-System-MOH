@@ -1,3 +1,5 @@
+<link rel="stylesheet" href=:../../public/css/sweetalert.min.css">
+<script type="text/javascript" src="../../public/js/sweetalert.min.js"></script>
 <?php
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
@@ -88,6 +90,7 @@ $bDetails = new table();
 //search
 
 if(isset($_POST['Search'])){
+
     $info=getData();
     $search_query="SELECT * FROM `data` WHERE id='$info[0]'";
     $search_result=$bDetails->featuredLoad($dbObj,$search_query);
@@ -133,10 +136,14 @@ if(isset($_POST['Search'])){
                 
                     }
                 }else{
-                    echo("no data are available");
+                    echo '<script type="text/javascript">';
+                    echo 'setTimeout(function () { swal("Error!","Please enter valid patient id","error");';
+                    echo '}, 200);</script>';
                 }
         }else{
-            echo("result error");
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Error!","Result error!","error");';
+            echo '}, 200);</script>';
         }
     }
 }
@@ -159,16 +166,15 @@ if(isset($_POST['Update'])){
     try{
         $pdate_result=$bDetails->featuredLoad($dbObj,$update_query);
         if($pdate_result){
-            echo '<script type="text/javascript">alert("Updated successfully!");</script>';
-            // if(mysqli_affected_rows($connect)>0){
-            //     echo("data updated");
-            // }else{
-            //     echo("data not updated");
-            // }
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Success!","Data updated successfully!","success");';
+            echo '}, 200);</script>';
+           
         }
     }catch(Exception $ex){
-        //echo("error in update".$ex->getMessage());
-        echo '<script type="text/javascript">alert("Error!");</script>';
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal("Error!","Result error!","error");';
+        echo '}, 200);</script>';
     }
 }
 

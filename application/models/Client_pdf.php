@@ -6,8 +6,6 @@ require_once "PDFState_pdf.php";
 //require '../../table.php';
 // require '../../../../framework/libraries/Model.php';
 require '../controllers/login.php';
-//echo $_SESSION['success'];
-echo'You have logged in with user id: '.($_SESSION['id']);
 
 //-------------------------this is the running part-------------------------------
 $host="localhost";
