@@ -122,7 +122,7 @@ if(isset($_POST['update'])){
     `sfood`='$data[70]',`cfood`='$data[71]',`csfood`='$data[72]',`sskeleton`='$data[73]',`cskeleton`='$data[74]',
     `csskeleton`='$data[75]',`splay`='$data[76]',`cplay`='$data[77]',`csplay`='$data[78]',  
     `stime`='$data[79]',`ctime`='$data[80]',`cstime`='$data[81]',`sname`='$data[82]',`cname`='$data[83]',`csname`='$data[84]'
-    WHERE `id` = $data[0]";
+    WHERE `id` = '$data[0]'";
 
     try{
         $update_Result = $m18to5year->featuredLoad($dbObj, $update_Query);
