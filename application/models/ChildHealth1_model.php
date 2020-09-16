@@ -152,7 +152,7 @@ if(isset($_POST['update'])){
     `fdisease5`='$data[105]',`name1`='$data[106]',`name2`='$data[107]',`name3`='$data[108]',
     `name4`='$data[109]',`name5`='$data[110]',`position1`='$data[111]',`position2`='$data[112]',`position3`='$data[113]',
     `position4`='$data[114]',`position5`='$data[115]'
-     WHERE `id` = $data[0]";
+     WHERE `id` = '$data[0]'";
 
     try{
         $update_Result = $childHealth1->featuredLoad($dbObj, $update_Query);
