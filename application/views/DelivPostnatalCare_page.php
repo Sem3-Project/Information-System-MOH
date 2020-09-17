@@ -8,6 +8,8 @@ require '../models/DelivPostnatalCare_model.php';
             <div class="hero-image">
                 <img src="../img/logo.png" class="logo-image"/>
                 <img src="../img/line.jpg" class="line-image"/>
+		<a href="../controllers/logout.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
                 
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
