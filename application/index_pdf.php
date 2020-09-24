@@ -317,7 +317,6 @@ class myPDF extends FPDF{
         $this->Ln(30);
 
         //-----------------investigations----------------------------------
-
         
 
         $this->SetFont('Times','',20);

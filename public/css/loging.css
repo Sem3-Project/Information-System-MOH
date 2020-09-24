@@ -104,13 +104,13 @@ a:link {
   }
   
   a:visited {
-    color: pink;
+    color: rgb(20, 131, 79);
     background-color: transparent;
     text-decoration: none;
   }
   
   a:hover {
-    color: rgb(20, 131, 79);
+    color: rgba(255, 6, 47, 0.863);
     background-color: transparent;
     text-decoration: underline;
   }

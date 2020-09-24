@@ -53,7 +53,7 @@ $postPFC = new table();
 //search
 if(isset($_POST['search'])){
     $data = getPosts();
-    $search_Query = "SELECT * FROM table2 WHERE idNew = $data[0]";
+    $search_Query = "SELECT * FROM table2 WHERE idNew = '$data[0]'";
     $search_Result = $postPFC->featuredLoad($dbObj, $search_Query);
 
     if($search_Result){
