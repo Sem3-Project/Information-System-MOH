@@ -64,7 +64,7 @@ $birthto18 = new table();
 
 if(isset($_POST['search'])){
     $data = getPosts();
-    $search_Query = "SELECT * FROM table3 WHERE idn = $data[0]";
+    $search_Query = "SELECT * FROM table3 WHERE idn = '$data[0]'";
     $search_Result = $birthto18->featuredLoad($dbObj, $search_Query);
 
     if($search_Result){

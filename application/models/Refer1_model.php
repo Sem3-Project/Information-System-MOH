@@ -55,7 +55,7 @@ $refer1 = new table();
 
 if(isset($_POST['search'])){
     $data = getPosts();
-    $search_Query = "SELECT * FROM table9 WHERE id = $data[0]";
+    $search_Query = "SELECT * FROM table9 WHERE id = '$data[0]'";
     $search_Result = $refer1->featuredLoad($dbObj, $search_Query);
 
     if($search_Result){
