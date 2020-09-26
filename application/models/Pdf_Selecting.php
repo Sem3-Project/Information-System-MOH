@@ -1,16 +1,8 @@
 <?php
-// require_once "context_pdf.php";
-// require_once "IdleState_pdf.php";
-// require_once "PDFState_pdf.php";
-//require '../../../../framework/libraries/Model.php';
-//require '../../table.php';
-// require '../../../../framework/libraries/Model.php';
-// require '../controllers/login.php';
-//echo $_SESSION['success'];
+
 
 require_once "Selection.php";
 require '../controllers/login.php';
-//echo'You have logged in with user id: '.($_SESSION['id']);
 
 //-------------------------this is the running part-------------------------------
 $host="localhost";
@@ -46,26 +38,7 @@ if(isset($_POST["Generate"])){
     // $context_1->request1($info[0]);
 
 }
-//search
-// if(isset($_POST['Search'])){
-//     $info=getData();
-//     $search_query="SELECT * FROM `data` WHERE id='$info[0]'";
-//     $search_result=mysqli_query($connect,$search_query);
-//         if($search_result){
-//             if($search_result){
-//                 if(mysqli_num_rows($search_result)){
-//                     while($row = mysqli_fetch_array($search_result)){
-        
-//                         $id=$row['id'];
-//                         echo("File is ready");}
-//                 }else{
-//                     echo("no data are available");
-//                 }
-//         }else{
-//             echo("result error");
-//         }
-//     }
-// }
+
 
 ?>
 <!DOCTYPE html>
@@ -104,21 +77,7 @@ if(isset($_POST["Generate"])){
             </div>
 </body>
 </head>
-<!-- <header>
-<div class="header"><img class="logo" src="../../public/images/logo.jpg"/>
-<div class="logo">
-		<h1>Medical Officer of Health Office</h1>
-		<h3>Gampaha</h3>
-	</div>
-    <div class="topnav">
-  
-  <a href="../views/login_page.php">Log out</a>
-  <a href="../views/user_home.php">Home</a>
-  
-  
-</div>
-	</div>
-</header> -->
+
 
 <body>
 <form method="POST" action="PDF_Selecting.php">
@@ -128,13 +87,10 @@ if(isset($_POST["Generate"])){
         <div class="caption-container">
             <h3 >Search NIC :</h3>
         </div>
-            <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+            <center><input type="text" text-align="center" readonly placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br>
 
-<!-- <input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's id here" value="<?php echo($id);?>"><br><br> -->
-<!-- <input type="text" name="id" style="width: 800px; height: 50px ;font-size: 20px; " readonly value="<--?php echo($_SESSION['id'])?>"><br><br> -->
 
-<!-- <input type="submit" name="Search" value="Search"> -->
 <input type="submit" class="link" name="Generate" style="margin-bottom: 110px;" value="Select Report"></center>
 
 </div></div>
