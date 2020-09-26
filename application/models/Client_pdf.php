@@ -122,7 +122,7 @@ if(isset($_POST["Generate"])){
         <div class="caption-container">
             <h3 >Search NIC :</h3>
         </div>
-            <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+            <center><input type="text" text-align="center" readonly placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br>
 
 <!-- <input type="submit" name="Search" value="Search"> -->
