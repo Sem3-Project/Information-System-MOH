@@ -4,36 +4,41 @@ require '../models/HosClinicCare_model.php';
 
 <!DOCTYPE html>
 <head>
+        
+        <meta charset ="UTF-8">
+        <meta name="viewpoint" content="width-device-width initial-scale=1.0">
+        <link rel ="stylesheet" type="text/css" href="../../public/css/newForm1.css">
+    </head>
+    <head>
         <body>
             <div class="hero-image">
-                <img src="../img/logo.png" class="logo-image"/>
-                <img src="../img/line.jpg" class="line-image"/>
-		<a href="../controllers/logout.php"><img src="../../public/images/logout.png" class="logout-image"></a>
+                <img src="../../public/images/logo.png" class="logo-image"/>
+                <img src="../../public/images/line.jpg" class="line-image"/>
+                <a href="../controllers/logout.php"><img src="../../public/images/logout.png" class="logout-image"></a>
                 <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
-                
                 <div class="hero-text">
                     <h1 style="font-size:25px">Office of the Medical Officer of Health</h1>
                     <h3 style="font-size:25px">Gampaha</h3>
                 </div>
             </div>
         </body>
-</head>
+    </head>
 
-<head>
-<meta charset="UTF-8">
-<link rel ="stylesheet" type="text/css" href="newForm3.css">
-<h4>රෝහල් සායනික සංරක්‍ෂණය​</h4>
-    <h2>Hospital Clinic Care</h2>
-    <link rel="stylesheet" href="table.css">  
-    
-</head>
+
+
 <body>
-
-<form method="POST" action="HosClinicCare_page.php">
-<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($id);?>"><br><br>
-
-<input type="submit" name="Search" value="Search">
-<input type="submit" name="Update" value="Update"><br><br>
+<form action="HosClinicCare_page.php" method="post" >
+            <div>
+                <div class="caption-container1">
+                    <div class="caption-container"><h3>Search NIC :</h3></div>
+                    <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+                    style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>">
+                    <br><br>
+                    <input type="submit" name="search" class="link" value="Search">
+                    
+                    <div class="caption-container"><h4>රෝහල් සායනික සංරක්‍ෂණය​</h4>
+    <h2>Hospital Clinic Care</h2></div>
+                    
 
 	
 <table width="100%" border="0">
