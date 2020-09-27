@@ -4,6 +4,12 @@ require '../models/childHearing_model.php';
 
 <!DOCTYPE html>
 <head>
+        <title>Child Hearing</title>
+        <meta charset ="UTF-8">
+        <meta name="viewpoint" content="width-device-width initial-scale=1.0">
+        <link rel ="stylesheet" type="text/css" href="../../public/css/newForm2.css">
+    </head>
+    <head>
         <body>
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
@@ -17,20 +23,27 @@ require '../models/childHearing_model.php';
             </div>
         </body>
     </head>
-<head>
-	 <link rel ="stylesheet" type="text/css" href="../../public/css/newForm2.css">
-</head>
-<body>
-<form method="POST" action="childHearing_page.php">
-<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($id);?>"><br><br>
 
-<input type="submit" name="Search" value="Search">
-<input type="submit" name="Update" value="Update"><br><br>
-<table width="100%" border="0">
-<tr>
-    <td width="100%" align="center"><h3>දරුවාගේ ඇසීම​ පරික්‍ෂා කිරීම ​</h3></td></tr>
-    <tr><td width="100%" align="center"><h4> (මෙම කොටස මව/පියා/ රැකබලාගන්නන් විසින් පිරවීම සදහාය​)</h4></td>
-</tr></table>
+
+
+<body>
+<form action="childHearing_page.php" method="post" >
+            <div>
+                <div class="caption-container1">
+                    <div class="caption-container"><h3>Search NIC :</h3></div>
+                    <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+                    style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>">
+                    <br><br>
+                    <input type="submit" name="search" class="link" value="Search">
+                    <br><br>
+                    <div class="caption-container"><h3>දරුවාගේ ඇසීම​ පරික්‍ෂා කිරීම ​</h3><h4> (මෙම කොටස මව/පියා/ රැකබලාගන්නන් විසින් පිරවීම සදහාය​)</h4></div>
+                
+                    
+                   
+
+
+
+
 
   <table  width="80%" border="0">
  <tr width=80%><td width="50%" align="left"><h4>උපතෙන් සුලු වේලාවකට පසු </h4></td><td width="50%" align="center">​<h4>ඔව්/නැත​</h4></td></tr></table>
@@ -92,4 +105,9 @@ require '../models/childHearing_model.php';
 	</select></t</tr></table>
  
   <h4>ඔබේ දරුවාගේ ඇසීම​ පිලිබඳ යම් සැකයක් ඇත්නම් හෝ ඉහත ප්‍රශ්න වලින් එකකට හෝ ඔව් යැයි පිලිතුරු දීමට නොහැකි නම් ඔබේ ප්‍රදේශයේ පවුල් සෞඛ්‍ය සේවා නිළධාරිනිය​/ සෞඛ්‍ය වෛද්‍ය නිලධාරී/ වෙනත් වෛද්‍යවරයෙකු හමුවන්න​</h4>
+  <br><center><input type="submit" class="link" name="update" style="margin-bottom: 50px; " value="Update"></center>
+</div>
+ </div>
+
+
 </html>
