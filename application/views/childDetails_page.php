@@ -4,6 +4,12 @@ require '../models/childDetails_model.php';
 
 <!DOCTYPE html>
 <head>
+        <title>Child Details I</title>
+        <meta charset ="UTF-8">
+        <meta name="viewpoint" content="width-device-width initial-scale=1.0">
+        <link rel ="stylesheet" type="text/css" href="../../public/css/newForm1.css">
+    </head>
+    <head>
         <body>
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
@@ -17,16 +23,26 @@ require '../models/childDetails_model.php';
             </div>
         </body>
     </head>
-<head>
-<link rel ="stylesheet" type="text/css" href="../../public/css/newForm3.css">
-    
-</head>
-<body>
-<form method="POST" action="childDetails_page.php">
-<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($id);?>"><br><br>
 
-<input type="submit" name="Search" value="Search">
-<input type="submit" name="Update" value="Update"><br><br>
+
+
+<body>
+<form action="childDetails_page.php" method="post" >
+            <div>
+                <div class="caption-container1">
+                    <div class="caption-container"><h3>Search NIC :</h3></div>
+                    <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+                    style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>">
+                    <br><br>
+                    <input type="submit" name="search" class="link" value="Search">
+                    <br><br>
+                
+                    
+                   
+
+
+
+
 	
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
@@ -58,7 +74,7 @@ require '../models/childDetails_model.php';
 </table>
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
-  <tr><h3>අලුත උපන් ළදරුවගේ රැකවරණය​</h3>
+  <tr><div class="caption-container"><h3>අලුත උපන් ළදරුවගේ රැකවරණය​</h3></div>
   </tr>
 </table>
 <table width="100%" border="0">
@@ -105,7 +121,7 @@ require '../models/childDetails_model.php';
    </tr>
   </table>
 
-  <h3>විශේෂයෙන් රැකබලා ගැනීමට හේතු </h3>
+  <div class="caption-container"><h3>විශේෂයෙන් රැකබලා ගැනීමට හේතු </h3></div>
 
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
@@ -135,4 +151,7 @@ require '../models/childDetails_model.php';
  </tr>
  
 </table>
+<br><center><input type="submit" class="link" name="update" style="margin-bottom: 50px; " value="Update"></center>
+</div>
+ </div>
 </html>
