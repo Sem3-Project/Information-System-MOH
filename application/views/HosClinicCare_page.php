@@ -4,7 +4,7 @@ require '../models/HosClinicCare_model.php';
 
 <!DOCTYPE html>
 <head>
-        
+        <title>HosClinicCare</title>
         <meta charset ="UTF-8">
         <meta name="viewpoint" content="width-device-width initial-scale=1.0">
         <link rel ="stylesheet" type="text/css" href="../../public/css/newForm1.css">
@@ -168,6 +168,9 @@ require '../models/HosClinicCare_model.php';
         </tr>
         </table>
         <br>
+        <center><input type="submit" class="link" name="update" style="margin-bottom: 50px; " value="Update"></center>
+        </div>
+            </div>
 </form>
 </body>
 </html>
