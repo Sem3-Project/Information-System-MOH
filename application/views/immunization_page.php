@@ -3,7 +3,13 @@ require '../models/immunization_model.php';
 ?>
 
 <!DOCTYPE html>
- <head>
+<head>
+        <title>Immunization</title>
+        <meta charset ="UTF-8">
+        <meta name="viewpoint" content="width-device-width initial-scale=1.0">
+        <link rel ="stylesheet" type="text/css" href="../../public/css/newForm3.css">
+    </head>
+    <head>
         <body>
             <div class="hero-image">
                 <img src="../../public/images/logo.png" class="logo-image"/>
@@ -17,18 +23,26 @@ require '../models/immunization_model.php';
             </div>
         </body>
     </head>
-<head>
-<link rel ="stylesheet" type="text/css" href="../../public/css/newForm3.css">
-</head>
+
+
+
 <body>
-<form method="POST" action="immunization_page.php">
-<input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<?php echo($id);?>"><br><br>
+<form action="immunization_page.php" method="post" >
+            <div>
+                <div class="caption-container1">
+                    <div class="caption-container"><h3>Search NIC :</h3></div>
+                    <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+                    style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>">
+                    <br><br>
+                    <input type="submit" name="search" class="link" value="Search">
+                    <br><br>
+                    <div class="caption-container"><h4>ප්‍රතිශක්තීකරණය​ ​</h4><h5> ජීවිත කාලය තුලදී ලබාගන්නා සියලුම එන්නත් මෙහි ඇතුලත් කරගැනීමට කටයුතු කරන්න</h5></div>
+                
+                    
+                   
+ 
 
-<input type="submit" name="Search" value="Search">
-<input type="submit" name="Update" value="Update"><br><br>
 
-<h4 align="center">ප්‍රතිශක්තීකරණය​ ​</h4><h3 align="center">Immunization</h3>
-<h5 align="center">ජීවිත කාලය තුලදී ලබාගන්නා සියලුම එන්නත් මෙහි ඇතුලත් කරගැනීමට කටයුතු කරන්න​</h5>
 
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css"> 
@@ -82,5 +96,8 @@ require '../models/immunization_model.php';
 <tr><td width="15%" align="left">ජ​.නි.ප්‍ර​.3 J E 3</td><td width="15%" align="left"><input type="date" name="date24" value="<?=$date24?>"> </td><td  width="15%" align="left"><input type="num" name="num24" value="<?=$num24?>"></td><td  width="30%" align="left"><input type="text" name="text24" value="<?=$text24?>"></td></tr>
 <tr><td width="15%" align="left">ජ​.නි.ප්‍ර​.4 J E 4</td><td width="15%" align="left"><input type="date" name="date25" value="<?=$date25?>"> </td><td  width="15%" align="left"><input type="num" name="num25" value="<?=$num25?>"></td><td  width="30%" align="left"><input type="text" name="text25" value="<?=$text25?>"></td></tr>
 </table>
+<br><center><input type="submit" class="link" name="update" style="margin-bottom: 50px; " value="Update"></center>
+</div>
+ </div>
 </body>
 </html>
