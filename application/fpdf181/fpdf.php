@@ -74,6 +74,7 @@ protected $PDFVersion;         // PDF version number
 function __construct($orientation='P', $unit='mm', $size='A4')
 {
 	// Some checks
+	
 	$this->_dochecks();
 	// Initialization of properties
 	$this->state = 0;
@@ -265,11 +266,11 @@ function AliasNbPages($alias='{nb}')
 	$this->AliasNbPages = $alias;
 }
 
-function Error($msg)
-{
-	// Fatal error
-	throw new Exception('FPDF error: '.$msg);
-}
+// function Error($msg)
+// {
+// 	// Fatal error
+// 	throw new Exception('FPDF error: '.$msg);
+// }
 
 function Close()
 {

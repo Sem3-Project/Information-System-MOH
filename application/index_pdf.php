@@ -4,8 +4,29 @@ require('fpdf181/fpdf.php');
 
 //ob_start();
 class myPDF extends FPDF{
+    private $type;
+    public function _construct($orientation='P', $unit='mm', $size='A4',$type){
+        parent::_construct();
+        $this->type = $type;
+        // $this->SetFont('Arial','B',20);
+        // // $this->Cell(0,10,'Child',0,0,'C');
+        // // $this->Ln();
+        // $this->Cell(0,10,'Record',0,0,'C');
+        // $this->Ln(30);
+        
+    }
+    function set_type($type){
+        $this->type = $type;
+    }
+    function get_type(){
+        return $this->type;
+    }
+    function __clone() {
+    }
+
     function header(){
         //ob_start();
+        $this->Rect(5, 5, 200, 287, 'D');
         $this->SetFont('Arial','',6);
         $this->Cell(0,10,'MOH, Gampaha',0,0,'L');
         $this->Ln(10);
@@ -22,9 +43,18 @@ class myPDF extends FPDF{
 //------------------------------Following part should be change according to the form--------------------------------
     function ViewTable($db,$id){
         $this->SetFont('Arial','B',20);
-        $this->Cell(0,10,'Pregnancy',0,0,'C');
+        $this->Cell(0,10,'Office of the Medical Officer of health',0,0,'C');
         $this->Ln();
-        $this->Cell(0,10,'Record',0,0,'C');
+        $this->Cell(0,10,'Gampaha',0,0,'C');
+        $this->Ln();
+        $this->SetFont('Arial','B',18);
+        // $this->Cell(0,10,'Pregnancy',0,0,'C');
+        $this->Ln();
+        
+        $mother=new myPDF($orientation='P', $unit='mm', $size='A4','Pregnancy Record');
+        $mother->set_type('Pregnancy Record');
+        $ty=$mother->get_type();
+        $this->Cell(0,10,$ty,0,0,'C');
         $this->Ln(30);
 
         $this->SetFont('Times','',12);
@@ -81,14 +111,14 @@ class myPDF extends FPDF{
 
         $this->Cell(80,8,'Registration No.(Eligible Family Register) :',0,0,'L');
         $this->Cell(10,8,$detail->RegistrationNoEligibleFamilyRegister,1,0,'C');
-        $this->Cell(80,8,'Registration Date (Eligible Family Register) :',0,0,'R');
+        $this->Cell(80,8,'Registration Date(Eligible Family Register) :',0,0,'R');
         $this->Cell(23,8,$detail->RegistrationDateEligibleFamilyRegister,1,0,'C');
         $this->Ln(20);
 
         $this->Cell(80,8,'Registration No.(Pregnant mothers Register) :',0,0,'L');
         $this->Cell(10,8,$detail->RegistrationNoPregnantmothersRegister,1,0,'C');
-        $this->Cell(85,8,'Registration Date (Pregnant mothers Register) :',0,0,'R');
-        $this->Cell(23,8,$detail->RegistrationDatePregnantmothersRegister,1,0,'C');
+        $this->Cell(85,8,'Registration Date(Pregnant mothers Register) :',0,0,'R');
+        $this->Cell(19.5,8,$detail->RegistrationDatePregnantmothersRegister,1,0,'C');
         $this->Ln(20);
         
         $this->Cell(150,8,'Identified Antenatal Risk Conditions Modifiers :',0,0,'L');
@@ -355,6 +385,13 @@ class myPDF extends FPDF{
         $this->Ln();
         $this->Cell(80,10,'T3',1,0,'C');
         $this->Cell(50,10,$detail1->menT3,1,0,'C');
+        $this->Ln(20);
+
+        $this->Cell(100,10,'Signature:',0,0,'R');
+        $this->Cell(50,10,'.................................',0,0,'R');
+        $this->Ln(20);
+        $this->Cell(100,10,'Date:',0,0,'R');
+        $this->Cell(50,10,'.................................',0,0,'R');
         $this->Ln(20);
 
         // $this->SetFont('Arial','B',15);
