@@ -2,8 +2,33 @@
 require('fpdf181/fpdf.php');
 
 
-class myPDF extends FPDF{
+class myPDF_Child extends FPDF{
+    // $pageWidth = 210;
+    // $pageHeight = 297;
+    public function _construct(){
+        // $mother=new myPDF($orientation='P', $unit='mm', $size='A4','Record');
+        $prototype=new myPDF($orientation='P', $unit='mm', $size='A4','Record');
+        $baby=clone $prototype;
+        // $this->type = $baby->get_type();
+        // return ($baby);
+        // $this->SetFont('Arial','B',20);
+        // // $this->Cell(0,10,'Child',0,0,'C');
+        // // $this->Ln();
+        // $this->Cell(0,10,'Record',0,0,'C');
+        // $this->Ln(30);
+        
+    }
+
+    function set_type($type){
+        $this->type = $type;
+    }
+    function get_type(){
+        return $this->type;
+    }
     function header(){
+        $this->Rect(5, 5, 200, 287, 'D');
+        // $margin = 10;
+        // $this->Rect( $margin, $margin , $pageWidth - $margin , $pageHeight - margin);
         $this->SetFont('Arial','',6);
         $this->Cell(0,10,'MOH, Gampaha',0,0,'L');
         $this->Ln(10);
@@ -19,12 +44,20 @@ class myPDF extends FPDF{
 
 //------------------------------Following part should be change according to the form--------------------------------
     function ViewTable($db,$id){
+        
         $this->SetFont('Arial','B',20);
-        $this->Cell(0,10,'Child',0,0,'C');
+        $this->Cell(0,10,'Office of the Medical Officer of health',0,0,'C');
         $this->Ln();
-        $this->Cell(0,10,'Record',0,0,'C');
+        $this->Cell(0,10,'Gampaha',0,0,'C');
+        $this->Ln();
+        $this->SetFont('Arial','B',18);
+        // $this->Cell(0,10,'Pregnancy',0,0,'C');
+        $this->Ln();
+        $child=new myPDF_Child($orientation='P', $unit='mm', $size='A4','Baby Record');
+        $child->set_type('Baby Record');
+        $ty=$child->get_type();
+        $this->Cell(0,10,$ty,0,0,'C');
         $this->Ln(30);
-
         $this->SetFont('Times','',12);
         $stmt=$db->query("SELECT * FROM `childdata` WHERE id='$id'");
         $detail=$stmt->fetch(PDO::FETCH_OBJ);
@@ -484,6 +517,13 @@ class myPDF extends FPDF{
         $this->Cell(35,10,$detail->position9,1,0,'C');
         $this->Ln(20);
         
+
+        $this->Cell(100,10,'Signature:',0,0,'R');
+        $this->Cell(50,10,'.................................',0,0,'R');
+        $this->Ln(20);
+        $this->Cell(100,10,'Date:',0,0,'R');
+        $this->Cell(50,10,'.................................',0,0,'R');
+        $this->Ln(20);
         
         
         

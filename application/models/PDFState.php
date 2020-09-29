@@ -8,7 +8,7 @@ class PDFState extends State
         // $newid='987211362v';
         //echo "PDFState handles request1.\n";
         $db=new PDO('mysql:host=localhost;dbname=moh','root','');//---------------change into your database name here-------------------------
-        $pdf=new myPDF();
+        $pdf=new myPDF_Child();
         $pdf->AliasNbPages();
         $pdf->AddPage('P','A4',0);
         $pdf->ViewTable($db,$id);
