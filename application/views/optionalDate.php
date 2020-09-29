@@ -1,8 +1,6 @@
 <?php
 require '../models/userOptionalD_model.php';
-//require '../controllers/login.php';
-//echo $_SESSION['success'];
-echo'You have logged in with user id: '.($_SESSION['id']);
+
 ?>
 
 <html>
@@ -36,7 +34,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
         <div class="caption-container">
             <h3 >Search NIC :</h3>
         </div>
-            <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
+            <center><input type="text" text-align="center" readonly placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br>
 
                 <!-- <input type="submit" class="link" name="search" value="Search"> -->

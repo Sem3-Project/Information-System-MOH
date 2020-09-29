@@ -1,26 +1,26 @@
 <?php
 ob_start();
-require '../framework/libraries/Model.php';
-require '../application/models/table.php';
-require '../application/models/login_table.php';
+// require '../framework/libraries/Model.php';
+// require '../application/models/table.php';
+// require '../application/models/login_table.php';
 
-$dbObj = Model::getInstance();
-$dbObj->connect('localhost','root','','moh');
+// $dbObj = Model::getInstance();
+// $dbObj->connect('localhost','root','','moh');
 
-// $servername = "localhost:3307"; 
-// $username = "root";
-// $password ="123456";
-// $dbname="moh";
-// $conn = new mysqli($servername,$username,$password,$dbname);
+$servername = "localhost"; 
+$username = "root";
+$password ="";
+$dbname="moh";
+$conn = new mysqli($servername,$username,$password,$dbname);
 
-// if ($conn->connect_error){
-//     die("Connection failed: " . $conn->connect_error);
+if ($conn->connect_error){
+    die("Connection failed: " . $conn->connect_error);
 
-// }
+}
 
 $sql = "SELECT * FROM optionaldate"; 
-$dbObj->doQuery($sql);
-//$result=mysqli_query($conn,$sql);
+//$dbObj->doQuery($sql);
+$result=mysqli_query($conn,$sql);
 echo "<pre>";
 echo "NIC           Conf.Date        Chk.Date       Today <br>";
 while ($row=mysqli_fetch_array($result)){
@@ -44,7 +44,7 @@ while ($row=mysqli_fetch_array($result)){
 		
 		$txt=$ndate." -Clinic Date";
 		$session=createSession('','esmsusr_15q5','1a576oh','');
-		echo sendMessages($session,'UPDCS_Admin',$txt,array($phone),0);
+		echo sendMessages($session,'MOH Gampaha',$txt,array($phone),0);
 		closeSession($session);
 
 		echo "<br>";
