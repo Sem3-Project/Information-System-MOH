@@ -29,6 +29,10 @@ $m1='';
 $m2='';
 $m3='';
 $m4='';
+$pos1='';
+$pos2='';
+$pos3='';
+$pos4='';
 $rel1='';
 $rel2='';
 $rel3='';
@@ -110,6 +114,10 @@ function getData(){
     $data[46]=(isset($_POST['date18']) ? $_POST['date18'] : '');
     $data[47]=(isset($_POST['date19']) ? $_POST['date19'] : '');
     $data[48]=(isset($_POST['date20']) ? $_POST['date20'] : '');
+    $data[49]=(isset($_POST['pos1']) ? $_POST['pos1'] : '');
+    $data[50]=(isset($_POST['pos2']) ? $_POST['pos2'] : '');
+    $data[51]=(isset($_POST['pos3']) ? $_POST['pos3'] : '');
+    $data[52]=(isset($_POST['pos4']) ? $_POST['pos4'] : '');
 
   
     return $data;
@@ -146,6 +154,10 @@ if(isset($_POST['Search'])){
                         $m2=$row['m2'];
                         $m3=$row['m3'];
                         $m4=$row['m4'];
+                        $pos1=$row['pos1'];
+                        $pos2=$row['pos2'];
+                        $pos3=$row['pos3'];
+                        $pos4=$row['pos4'];
                         $rel1=$row['rel1'];
                         $rel2=$row['rel2'];
                         $rel3=$row['rel3'];
@@ -196,7 +208,7 @@ if(isset($_POST['Search'])){
       `scolor4`='$info[8]',`eye1`='$info[9]',`eye2`='$info[10]',`eye3`='$info[11]',`eye4`='$info[12]',`sc1`='$info[13]',`sc2`='$info[14]',`sc3`='$info[15]',`sc4`='$info[16]',`m1`='$info[17]',`m2`='$info[18]',
       `m3`='$info[19]',`m4`='$info[20]',`rel1`='$info[21]',`rel2`='$info[22]',`rel3`='$info[23]',`rel4`='$info[24]',`other1`='$info[25]',`other2`='$info[26]',`other3`='$info[27]',`other4`='$info[28]',`date1`='$info[29]',
       `date2`='$info[30]',`date3`='$info[31]',`date4`='$info[32]',`date5`='$info[33]',`date6`='$info[34]',`date7`='$info[35]',`date8`='$info[36]',`date9`='$info[37]',`date10`='$info[38]',`date11`='$info[39]',`date12`='$info[40]',
-      `date13`='$info[41]',`date14`='$info[42]',`date15`='$info[43]',`date16`='$info[44]',`date17`='$info[45]',`date18`='$info[46]',`date19`='$info[47]',`date20`='$info[48]'  WHERE id='$info[0]'";
+      `date13`='$info[41]',`date14`='$info[42]',`date15`='$info[43]',`date16`='$info[44]',`date17`='$info[45]',`date18`='$info[46]',`date19`='$info[47]',`date20`='$info[48]',`pos1`='$info[49]',`pos2`='$info[50]',`pos3`='$info[51]',`pos4`='$info[52]'  WHERE id='$info[0]'";
 try{
   $pdate_result=$childD2->featuredLoad($dbObj,$update_query);
   if($pdate_result){

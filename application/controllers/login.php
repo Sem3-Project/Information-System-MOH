@@ -7,9 +7,6 @@ require '../../framework/libraries/Model.php';
 require '../models/table.php';
 require 'FolderProxy.php';
 
-
-//require '../views/alert.html';
-
 class Client{
     protected $user;
     function _construct($user){
@@ -35,7 +32,6 @@ if (isset($_POST['login_user'])) {
         echo '<script type="text/javascript">';
         echo 'setTimeout(function () { swal("Error!","කරුණාකර අවශ්‍ය සියලු තොරතුරු ඇතුළත් කරන්න\nPlease enter all required details","error");';
         echo '}, 200);</script>';
-       // echo '<script type="text/javascript">invalid();</script>';
     }
     else{
         $id = $_POST['id'];

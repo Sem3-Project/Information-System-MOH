@@ -11,12 +11,6 @@ require '../models/investigation_model.php';
         <link rel="stylesheet" type="text/css" href="../../public/css/clinic style.css"> -->
         <link rel="stylesheet" type="text/css" href="../../public/css/table.css">
 
-
-        
-      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
         
     </head>
     <head>
@@ -38,21 +32,17 @@ require '../models/investigation_model.php';
         <div class="caption-container1">
         <form action="investigations_page.php" method="post">
         <h2 class="title" align="center">පරීක්ෂණ / Investigations</h2>
-        <!-- <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here"  value="<--?php echo $id;?>"><br> -->
         <div class="caption-container">
             <h3 >Search NIC :</h3>
         </div>
-            <!-- <input type="text" name="id" placeholder="Search NIC"  value="<--?php echo $id;?>"><br>
-            <button class="buttton" type="submit" name="search" value="Find" style="vertical-align:middle" id="search"><span>Search</span></button>&nbsp; &nbsp;<br><br> -->
-            <!-- <a href="#update">Scroll to bottom</a> -->
+           
 
             <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>"><br><br>
 
                 <input type="submit" class="link" name="search" value="Search"></center>
 
-<!-- 
-            <h5><b>හෘද පරීක්ෂාව(Auscutation)</b></h5> -->
+
             <div class="caption-container"><h3 >හෘද පරීක්ෂාව / Auscutation</h3></div>
             <input class="input--style-2" style="text-align:left; width: 100%; height: 50px; padding:10px; font-size:15px; " type="text" name="ausT1" placeholder="T1" value="<?php echo $ausT1;?>"><br><br>
             <input class="input--style-2" style="text-align:left; width: 100%; height: 50px; padding:10px; font-size:15px; " type="text" name="ausT2" placeholder="T2" value="<?php echo $ausT2;?>"><br><br>

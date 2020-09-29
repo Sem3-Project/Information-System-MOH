@@ -1,19 +1,26 @@
 <?php
 ob_start();
+require '../framework/libraries/Model.php';
+require '../application/models/table.php';
+require '../application/models/login_table.php';
 
-$servername = "localhost:3307"; 
-$username = "root";
-$password ="123456";
-$dbname="moh";
-$conn = new mysqli($servername,$username,$password,$dbname);
+$dbObj = Model::getInstance();
+$dbObj->connect('localhost','root','','moh');
 
-if ($conn->connect_error){
-    die("Connection failed: " . $conn->connect_error);
+// $servername = "localhost:3307"; 
+// $username = "root";
+// $password ="123456";
+// $dbname="moh";
+// $conn = new mysqli($servername,$username,$password,$dbname);
 
-}
+// if ($conn->connect_error){
+//     die("Connection failed: " . $conn->connect_error);
+
+// }
 
 $sql = "SELECT * FROM optionaldate"; 
-$result=mysqli_query($conn,$sql);
+$dbObj->doQuery($sql);
+//$result=mysqli_query($conn,$sql);
 echo "<pre>";
 echo "NIC           Conf.Date        Chk.Date       Today <br>";
 while ($row=mysqli_fetch_array($result)){
