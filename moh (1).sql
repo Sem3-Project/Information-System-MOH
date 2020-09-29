@@ -908,7 +908,7 @@ CREATE TABLE `table1` (
 --
 
 CREATE TABLE `table2` (
-  `idNew` int(50) NOT NULL,
+  `idNew` text NOT NULL,
   `ipp` text NOT NULL,
   `zscore` varchar(50) NOT NULL,
   `day1` date NOT NULL,
@@ -966,7 +966,7 @@ CREATE TABLE `table2` (
 --
 
 CREATE TABLE `table3` (
-  `idn` int(20) NOT NULL,
+  `idn` text NOT NULL,
   `sMonth` int(10) NOT NULL,
   `cMonth` int(10) NOT NULL,
   `cStatus` varchar(50) NOT NULL,
@@ -1069,7 +1069,7 @@ CREATE TABLE `table3` (
 --
 
 CREATE TABLE `table4` (
-  `id` int(10) NOT NULL,
+  `id` text NOT NULL,
   `seighteen` int(10) NOT NULL,
   `ceighteen` int(10) NOT NULL,
   `cseighteen` text NOT NULL,
@@ -1163,7 +1163,7 @@ CREATE TABLE `table4` (
 --
 
 CREATE TABLE `table5` (
-  `id` int(10) NOT NULL,
+  `id` text NOT NULL,
   `day1` date NOT NULL,
   `day2` date NOT NULL,
   `day3` date NOT NULL,
@@ -1288,7 +1288,7 @@ CREATE TABLE `table5` (
 --
 
 CREATE TABLE `table6` (
-  `id` int(10) NOT NULL,
+  `id` text NOT NULL,
   `day6` date NOT NULL,
   `day7` date NOT NULL,
   `day8` date NOT NULL,
@@ -1396,7 +1396,7 @@ CREATE TABLE `table6` (
 --
 
 CREATE TABLE `table7` (
-  `id` int(10) NOT NULL,
+  `id` text NOT NULL,
   `date1` date NOT NULL,
   `date2` date NOT NULL,
   `date3` date NOT NULL,
@@ -1472,7 +1472,7 @@ CREATE TABLE `table7` (
 --
 
 CREATE TABLE `table8` (
-  `id` int(10) NOT NULL,
+  `id` text NOT NULL,
   `lsquint1` text NOT NULL,
   `lsquint2` text NOT NULL,
   `lsquint3` text NOT NULL,
@@ -1546,7 +1546,7 @@ CREATE TABLE `table8` (
 --
 
 CREATE TABLE `table9` (
-  `id` int(10) NOT NULL,
+  `id` text NOT NULL,
   `date1` date NOT NULL,
   `reason1` text NOT NULL,
   `place1` text NOT NULL,
@@ -1636,7 +1636,7 @@ CREATE TABLE `table9` (
 --
 
 CREATE TABLE `table10` (
-  `id` int(10) NOT NULL,
+  `id` text NOT NULL,
   `ndate1` date NOT NULL,
   `nreason1` text NOT NULL,
   `nplace1` text NOT NULL,
