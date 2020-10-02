@@ -48,15 +48,15 @@ function getData(){
 $usscan = new table();
 
 //search
-if(isset($_POST['Search'])){
+if(isset($_POST['search'])){
     $info=getData();
-    $search_query="SELECT * FROM usscan WHERE id='$info[0]'";
-    $search_result=$usscan->featuredLoad($dbObj,$search_query);
+    $search_Query="SELECT * FROM usscan WHERE id='$info[0]'";
+    $search_Result=$usscan->featuredLoad($dbObj,$search_Query);
 
-        if($search_result){
-            if($search_result){
-                if(mysqli_num_rows($search_result)){
-                    while($row = mysqli_fetch_array($search_result)){
+        if($search_Result){
+            if($search_Result){
+                if(mysqli_num_rows($search_Result)){
+                    while($row = mysqli_fetch_array($search_Result)){
                         $id=$row['id'];
                         $date1=$row['date1'];
                         $poa=$row['poa'];   
@@ -87,14 +87,16 @@ if(isset($_POST['Search'])){
 }
 
 //update
-if(isset($_POST['Update'])){
+if(isset($_POST['update'])){
     $info=getData();
-    $update_query="UPDATE usscan SET id='$info[0]',date1='$info[1]',poa= '$info[2]',ebw='$info[3]',crl='$info[4]',gest_sac='$info[5]',bpd='$info[6]',hc='$info[7]',ac='$info[8]',fl='$info[9]',liquor='$info[10]',placenta='$info[11]',average_poa='$info[12]', any_other='$info[13]',,designation='$info[14]'
+    $update_Query="UPDATE usscan SET id='$info[0]',date1='$info[1]',poa= '$info[2]',ebw='$info[3]',crl='$info[4]',
+    gest_sac='$info[5]',bpd='$info[6]',hc='$info[7]',ac='$info[8]',fl='$info[9]',liquor='$info[10]',placenta='$info[11]',
+    average_poa='$info[12]', any_other='$info[13]',,designation='$info[14]'
      WHERE id='$info[0]'";
 
 try{
-    $pdate_result=$usscan->featuredLoad($dbObj,$update_query);
-    if($pdate_result){
+    $update_Result=$usscan->featuredLoad($dbObj,$update_Query);
+    if($update_Result){
         echo '<script type="text/javascript">';
             echo 'setTimeout(function () { swal("Success!","Data updated successfully!","success");';
             echo '}, 200);</script>';
