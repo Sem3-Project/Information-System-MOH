@@ -30,13 +30,14 @@ require '../models/immunization_model.php';
 <form action="immunization_page.php" method="post" >
             <div>
                 <div class="caption-container1">
+                    <div class="caption-container"><h3>ප්‍රතිශක්තීකරණය​ ​</h3><h5> ජීවිත කාලය තුලදී ලබාගන්නා සියලුම එන්නත් මෙහි ඇතුලත් කරගැනීමට කටයුතු කරන්න</h5></div>
                     <div class="caption-container"><h3>Search NIC :</h3></div>
                     <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
                     style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>">
                     <br><br>
                     <input type="submit" name="search" class="link" value="Search">
                     <br><br>
-                    <div class="caption-container"><h4>ප්‍රතිශක්තීකරණය​ ​</h4><h5> ජීවිත කාලය තුලදී ලබාගන්නා සියලුම එන්නත් මෙහි ඇතුලත් කරගැනීමට කටයුතු කරන්න</h5></div>
+                    
                 
                     
                    
