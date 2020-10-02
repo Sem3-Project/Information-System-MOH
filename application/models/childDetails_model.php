@@ -46,7 +46,7 @@ function getPosts(){
     $posts[2]=$_POST['moh'];  
     $posts[3]=$_POST['idnum'];
     $posts[4]=$_POST['childname'];
-    $posts[5]=$_POST['regno'];
+    $posts[5]=(isset($_POST['regno']) ? $_POST['regno'] : '');
     $posts[6]=$_POST['childbday'];
     $posts[7]=$_POST['regdate'];
     $posts[8]=$_POST['momname'];
@@ -150,4 +150,3 @@ try{
 }
 }
 ?>
-
