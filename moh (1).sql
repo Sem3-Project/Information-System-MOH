@@ -80,8 +80,37 @@ CREATE TABLE `childdata` (
   `num22` int(11) NOT NULL,
   `num23` int(11) NOT NULL,
   `num24` int(11) NOT NULL,
-  `num25` int(11) NOT NULL
+  `num25` int(11) NOT NULL,
+  `test1` text NOT NULL,
+  `test2` text NOT NULL,
+  `test3` text NOT NULL,
+  `test4` text NOT NULL,
+  `test5` text NOT NULL,
+  `test6` text NOT NULL,
+  `test7` text NOT NULL,
+  `test8` text NOT NULL,
+  `test9` text NOT NULL,
+  `test10` text NOT NULL,
+  `test11` text NOT NULL,
+  `test12` text NOT NULL,
+  `test13` text NOT NULL,
+  `test14` text NOT NULL,
+  `test15` text NOT NULL,
+  `test16` text NOT NULL,
+  `test17` text NOT NULL,
+  `test18` text NOT NULL,
+  `test19` text NOT NULL,
+  `test20` text NOT NULL,
+  `test21` text NOT NULL,
+  `test22` text NOT NULL,
+  `test23` text NOT NULL,
+  `test24` text NOT NULL,
+  `test25` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `childdata`
+--
 
 -- --------------------------------------------------------
 
