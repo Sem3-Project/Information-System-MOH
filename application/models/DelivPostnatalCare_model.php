@@ -78,14 +78,14 @@ function getData(){
 $delipost = new table();
 
 //search
-if(isset($_POST['Search'])){
+if(isset($_POST['search'])){
     $info=getData();
-    $search_query="SELECT * FROM `pg7` WHERE id='$info[0]'";
-    $search_result=$delipost->featuredLoad($dbObj,$search_query);
-        if($search_result){
-            if($search_result){
-                if(mysqli_num_rows($search_result)){
-                    while($row = mysqli_fetch_array($search_result)){
+    $search_Query="SELECT * FROM `pg7` WHERE id='$info[0]'";
+    $search_Result=$delipost->featuredLoad($dbObj,$search_Query);
+        if($search_Result){
+            if($search_Result){
+                if(mysqli_num_rows($search_Result)){
+                    while($row = mysqli_fetch_array($search_Result)){
                         $id=$row['id'];
                         $hosptal=$row['hosptal'];
                         $birth_weight=$row['birth_weight'];
@@ -132,14 +132,14 @@ if(isset($_POST['Search'])){
 }
 
     //update
-    if(isset($_POST['Update'])){
+    if(isset($_POST['update'])){
         $info=getData();
-        $update_query="UPDATE `pg7` SET id='$info[0]',hosptal='$info[1]',birth_weight= '$info[2]',poa='$info[3]',live_birth='$info[4]',still_birth='$info[5]',abs='$info[6]',del_dt='$info[7]',sex='$info[8]',del_mod='$info[9]',ep='$info[10]',bt='$info[11]',ve='$info[12]',mc='$info[13]',infect='$info[14]',fpm='$info[15]'
+        $update_Query="UPDATE `pg7` SET id='$info[0]',hosptal='$info[1]',birth_weight= '$info[2]',poa='$info[3]',live_birth='$info[4]',still_birth='$info[5]',abs='$info[6]',del_dt='$info[7]',sex='$info[8]',del_mod='$info[9]',ep='$info[10]',bt='$info[11]',ve='$info[12]',mc='$info[13]',infect='$info[14]',fpm='$info[15]'
         ,cm='$info[16]',reason='$info[17]',danger= '$info[18]',bf='$info[19]',bp='$info[20]',vita='$info[21]',rubella='$info[22]',antid='$info[23]',chdr='$info[24]',presc= '$info[25]',reff='$info[26]',other='$info[27]',notes='$info[28]'  WHERE id='$info[0]'";
 
 try{
-    $pdate_result=$delipost->featuredLoad($dbObj,$update_query);
-    if($pdate_result){
+    $update_Result=$delipost->featuredLoad($dbObj,$update_Query);
+    if($update_Result){
         echo '<script type="text/javascript">';
             echo 'setTimeout(function () { swal("Success!","Data updated successfully!","success");';
             echo '}, 200);</script>';
