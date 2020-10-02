@@ -53,16 +53,15 @@ function getData(){
 $hosCC = new table();
 
 //search
-if(isset($_POST['Search'])){
+if(isset($_POST['search'])){
     $info=getData();
-    $search_query="SELECT * FROM `hoscliniccare` WHERE id='$info[0]'";
+    $search_Query="SELECT * FROM `hoscliniccare` WHERE id='$info[0]'";
 
-    $search_result=$hosCC->featuredLoad($dbObj,$search_query);
+    $search_Result=$hosCC->featuredLoad($dbObj,$search_Query);
 
-        if($search_result){
-            if($search_result){
-                if(mysqli_num_rows($search_result)){
-                    while($row = mysqli_fetch_array($search_result)){
+        if($search_Result){
+                if(mysqli_num_rows($search_Result)){
+                    while($row = mysqli_fetch_array($search_Result)){
                         $id=$row['id'];
                         $date1=$row['date1'];
                         $poa=$row['poa'];   
@@ -94,18 +93,18 @@ if(isset($_POST['Search'])){
             echo '}, 200);</script>';
         }
     }
-}
+
 
 
 //update
-if(isset($_POST['Update'])){
+if(isset($_POST['update'])){
     $info=getData();
-    $update_query="UPDATE hoscliniccare SET id='$info[0]',date1='$info[1]',poa= '$info[2]',weight1='$info[3]',sugar='$info[4]',albumin='$info[5]',oedema='$info[6]',systolic='$info[7]',diastolic='$info[8]',fundalheight='$info[9]',fundalheight1='$info[10]',lie='$info[11]',presentation='$info[12]',fm='$info[13]',fhs='$info[14]',designation='$info[15]'
+    $update_Query="UPDATE hoscliniccare SET id='$info[0]',date1='$info[1]',poa= '$info[2]',weight1='$info[3]',sugar='$info[4]',albumin='$info[5]',oedema='$info[6]',systolic='$info[7]',diastolic='$info[8]',fundalheight='$info[9]',fundalheight1='$info[10]',lie='$info[11]',presentation='$info[12]',fm='$info[13]',fhs='$info[14]',designation='$info[15]'
     ,donext='$info[16]'  WHERE id='$info[0]'";
 
 try{
-    $pdate_result=$hosCC->featuredLoad($dbObj,$update_query);
-    if($pdate_result){
+    $update_Result=$hosCC->featuredLoad($dbObj,$update_Query);
+    if($update_Result){
         echo '<script type="text/javascript">';
         echo 'setTimeout(function () { swal("Success!","Data updated successfully!","success");';
         echo '}, 200);</script>';
