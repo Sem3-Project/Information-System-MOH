@@ -40,14 +40,13 @@ function getData(){
 $childHearing = new table();
 
 //search
-if(isset($_POST['Search'])){
+if(isset($_POST['search'])){
     $info=getData();
-    $search_query="SELECT * FROM childdata5 WHERE id='$info[0]'";
-    $search_result=$childHearing->featuredLoad($dbObj,$search_query);
-        if($search_result){
-            if($search_result){
-                if(mysqli_num_rows($search_result)){
-                    while($row = mysqli_fetch_array($search_result)){
+    $search_Query="SELECT * FROM childdata5 WHERE id='$info[0]'";
+    $search_Result=$childHearing->featuredLoad($dbObj,$search_Query);
+        if($search_Result){
+                if(mysqli_num_rows($search_Result)){
+                    while($row = mysqli_fetch_array($search_Result)){
                         $id=$row['id'];
                         $sound=$row['sound'];
                         $highsound=$row['highsound'];
@@ -71,16 +70,16 @@ if(isset($_POST['Search'])){
                 echo '}, 200);</script>';
             }
         }
-    }
+    
 
 //update
-if(isset($_POST['Update'])){
+if(isset($_POST['update'])){
 $info=getData();
-$update_query="UPDATE childdata5 SET id='$info[0]',sound='$info[1]',highsound= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',hear='$info[6]',search='$info[7]',song='$info[8]',name='$info[9]',respond='$info[10]'  WHERE id='$info[0]'";
+$update_Query="UPDATE childdata5 SET id='$info[0]',sound='$info[1]',highsound= '$info[2]',smile='$info[3]',eye='$info[4]',look='$info[5]',hear='$info[6]',search='$info[7]',song='$info[8]',name='$info[9]',respond='$info[10]'  WHERE id='$info[0]'";
 
 try{
-$pdate_result=$childHearing->featuredLoad($dbObj,$update_query);
-if($pdate_result){
+$update_Result=$childHearing->featuredLoad($dbObj,$update_Query);
+if($update_Result){
             echo '<script type="text/javascript">';
             echo 'setTimeout(function () { swal("Success!","Data updated successfully!","success");';
             echo '}, 200);</script>';
