@@ -54,7 +54,7 @@ require '../models/childDetails_model.php';
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
   <tr><td width="75%" align="left">දරුවාගේ නම ​<input type="text" name="childname" value="<?=$childname?>"></td>
-  <td width="25%" align="center">ලි:ප​ අංකය<input type="text" name="regn0" value="<?=$regno?>"></td>
+  <td width="25%" align="center">ලි:ප​ අංකය<input type="text" name="regno" value="<?=$regno?>"></td>
     </tr>
 </table>
 <table width="100%" border="0">
@@ -89,35 +89,47 @@ require '../models/childDetails_model.php';
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
   <tr><td width="25%" align="left">අලුත උපන් දරුවගේ සෞඛ්‍ය තත්වය​</td>
-  <td><select name="health">
-            <option value="normal"><h5>සමාන්‍යය​</h5></option>
-            <option value="needspec"><h5>විශේෂ රැකවරණයක් අවශ්‍ය වේ​</h5></option></td>
+  <td><select name="health" id="health">
+  <option value="not done">---Select---</option>
+                <option value="normal" <?php if($health=="normal") echo 'selected="selected"';?>><h5>සමාන්‍යය</h5>​</option>
+                <option value="needspec" <?php if($health=="needspec") echo 'selected="selected"';?>><h5>විශේෂ රැකවරණයක් අවශ්‍ය වේ​</h5></option>
 
+                </select></td>
+            
   
  </tr>
 </table>
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
   <tr><td width="25%" align="left">විටමින් K</td>
-  <td><select name="vitk">
-            <option value="Yes"><h5>ලබා දී ඇත​​</h5></option>
-            <option value="No"><h5>නැත​​</h5></option></td>
-  
-    
+  <td><select name="vitk" id="vitk">
+  <option value="not done">---Select---</option>
+                <option value="Yes" <?php if($vitk=="Yes") echo 'selected="selected"';?>><h5>ලබා දී ඇත​​</h5>​</option>
+                <option value="No" <?php if($vitk=="No") echo 'selected="selected"';?>><h5>නැත</h5></option>
+
+                </select></td>
+            
+          
  </tr>
 </table>
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
   <tr>
     <td rowspan="2" width="50%" align="center">මව් කිරි දීම   </td>
-    <td width="50" align="right">ඉරියව්ව  <select name="posture">
-            <option value="correct">නිවරදියි</option>
-            <option value="wrong">වැරදියි </option>
-            </select></td>
-    <tr><td width="80" align="left">සම්බන්ධය <select name="rel">
-            <option value="correct">නිවරදියි</option>
-            <option value="wrong">වැරදියි </option>
-            </select> </td></tr>
+    <td width="50" align="left">ඉරියව්ව  <select name="posture" id="posture">
+  <option value="not done">---Select---</option>
+                <option value="Correct" <?php if($posture=="Correct") echo 'selected="selected"';?>><h5>නිවරදියි​​</h5>​</option>
+                <option value="Wrong" <?php if($posture=="Wrong") echo 'selected="selected"';?>><h5>වැරදියි</h5></option>
+
+                </select></td>
+            
+    <tr><td width="80" align="left">සම්බන්ධය <select name="rel" id="rel">
+  <option value="not done">---Select---</option>
+                <option value="Correct" <?php if($rel=="Correct") echo 'selected="selected"';?>><h5>නිවරදියි​​</h5>​</option>
+                <option value="Wrong" <?php if($rel=="Wrong") echo 'selected="selected"';?>><h5>වැරදියි</h5></option>
+
+                </select></td>
+            
    </tr>
   </table>
 
@@ -155,3 +167,5 @@ require '../models/childDetails_model.php';
 </div>
  </div>
 </html>
+
+ 
