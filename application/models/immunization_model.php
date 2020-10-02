@@ -1,5 +1,6 @@
 <link rel="stylesheet" href=:../../public/css/sweetalert.min.css">
 <script type="text/javascript" src="../../public/js/sweetalert.min.js"></script>
+
 <?php
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
@@ -142,43 +143,42 @@ function getData(){
     $data[50]=(isset($_POST['num24']) ? $_POST['num24'] : '');
     $data[51]=(isset($_POST['num25']) ? $_POST['num25'] : '');
     $data[52]=(isset($_POST['text1']) ? $_POST['text1'] : '');
-    $data[53]=(isset($_POST['text2']) ? $_POST['text1'] : '');
-    $data[54]=(isset($_POST['text3']) ? $_POST['text1'] : '');
-    $data[55]=(isset($_POST['text4']) ? $_POST['text1'] : '');
-    $data[55]=(isset($_POST['text5']) ? $_POST['text1'] : '');
-    $data[57]=(isset($_POST['text6']) ? $_POST['text1'] : '');
-    $data[58]=(isset($_POST['text7']) ? $_POST['text1'] : '');
-    $data[59]=(isset($_POST['text8']) ? $_POST['text1'] : '');
-    $data[60]=(isset($_POST['text9']) ? $_POST['text1'] : '');
-    $data[61]=(isset($_POST['text10']) ? $_POST['text1'] : '');
-    $data[62]=(isset($_POST['text11']) ? $_POST['text1'] : '');
-    $data[63]=(isset($_POST['text12']) ? $_POST['text1'] : '');
-    $data[64]=(isset($_POST['text13']) ? $_POST['text1'] : '');
-    $data[65]=(isset($_POST['text14']) ? $_POST['text1'] : '');
-    $data[66]=(isset($_POST['text15']) ? $_POST['text1'] : '');
-    $data[67]=(isset($_POST['text16']) ? $_POST['text1'] : '');
-    $data[68]=(isset($_POST['text17']) ? $_POST['text1'] : '');
-    $data[69]=(isset($_POST['text18']) ? $_POST['text1'] : '');
-    $data[70]=(isset($_POST['text19']) ? $_POST['text1'] : '');
-    $data[71]=(isset($_POST['text20']) ? $_POST['text1'] : '');
-    $data[72]=(isset($_POST['text21']) ? $_POST['text1'] : '');
-    $data[73]=(isset($_POST['text22']) ? $_POST['text1'] : '');
-    $data[74]=(isset($_POST['text23']) ? $_POST['text1'] : '');
-    $data[75]=(isset($_POST['text24']) ? $_POST['text1'] : '');
-    $data[76]=(isset($_POST['text25']) ? $_POST['text1'] : '');
+    $data[53]=(isset($_POST['text2']) ? $_POST['text2'] : '');
+    $data[54]=(isset($_POST['text3']) ? $_POST['text3'] : '');
+    $data[55]=(isset($_POST['text4']) ? $_POST['text4'] : '');
+    $data[56]=(isset($_POST['text5']) ? $_POST['text5'] : '');
+    $data[57]=(isset($_POST['text6']) ? $_POST['text6'] : '');
+    $data[58]=(isset($_POST['text7']) ? $_POST['text7'] : '');
+    $data[59]=(isset($_POST['text8']) ? $_POST['text8'] : '');
+    $data[60]=(isset($_POST['text9']) ? $_POST['text9'] : '');
+    $data[61]=(isset($_POST['text10']) ? $_POST['text10'] : '');
+    $data[62]=(isset($_POST['text11']) ? $_POST['text11'] : '');
+    $data[63]=(isset($_POST['text12']) ? $_POST['text12'] : '');
+    $data[64]=(isset($_POST['text13']) ? $_POST['text13'] : '');
+    $data[65]=(isset($_POST['text14']) ? $_POST['text14'] : '');
+    $data[66]=(isset($_POST['text15']) ? $_POST['text15'] : '');
+    $data[67]=(isset($_POST['text16']) ? $_POST['text16'] : '');
+    $data[68]=(isset($_POST['text17']) ? $_POST['text17'] : '');
+    $data[69]=(isset($_POST['text18']) ? $_POST['text18'] : '');
+    $data[70]=(isset($_POST['text19']) ? $_POST['text19'] : '');
+    $data[71]=(isset($_POST['text20']) ? $_POST['text20'] : '');
+    $data[72]=(isset($_POST['text21']) ? $_POST['text21'] : '');
+    $data[73]=(isset($_POST['text22']) ? $_POST['text22'] : '');
+    $data[74]=(isset($_POST['text23']) ? $_POST['text23'] : '');
+    $data[75]=(isset($_POST['text24']) ? $_POST['text24'] : '');
+    $data[76]=(isset($_POST['text25']) ? $_POST['text25'] : '');
     return $data;
 }
 $immun = new table();
 
 //search
-if(isset($_POST['Search'])){
+if(isset($_POST['search'])){
     $info=getData();
-    $search_query="SELECT * FROM childdata WHERE id='$info[0]'";
-    $search_result=$immun->featuredLoad($dbObj,$search_query);
-        if($search_result){
-            if($search_result){
-                if(mysqli_num_rows($search_result)){
-                    while($row = mysqli_fetch_array($search_result)){
+    $search_Query="SELECT * FROM childdata WHERE id = '$info[0]'";
+    $search_Result=$immun->featuredLoad($dbObj,$search_Query);
+        if($search_Result){
+                if(mysqli_num_rows($search_Result)){
+                    while($row = mysqli_fetch_array($search_Result)){
                         $id=$row['id'];
                         $bcg=$row['bcg'];
                         $date1=$row['date1'];
@@ -231,25 +231,6 @@ if(isset($_POST['Search'])){
                         $num23=$row['num23'];
                         $num24=$row['num24'];
                         $num25=$row['num25'];
-                    }
-                }else{
-                    echo '<script type="text/javascript">';
-                    echo 'setTimeout(function () { swal("Error!","Please enter valid patient id","error");';
-                    echo '}, 200);</script>';
-                }
-        }else{
-            echo '<script type="text/javascript">';
-            echo 'setTimeout(function () { swal("Error!","Result error!","error");';
-            echo '}, 200);</script>';
-        }
-    }
-    $search_query1="SELECT * FROM childdata3 WHERE id='$info[0]'";
-    $search_result1=$immun->featuredLoad($dbObj,$search_query1);
-        if($search_result1){
-            if($search_result1){
-                if(mysqli_num_rows($search_result1)){
-                    while($row = mysqli_fetch_array($search_result1)){
-                        $id=$row['id'];
                         $text1=$row['text1'];
                         $text2=$row['text2'];
                         $text3=$row['text3'];
@@ -275,6 +256,7 @@ if(isset($_POST['Search'])){
                         $text23=$row['text23'];
                         $text24=$row['text24'];
                         $text25=$row['text25'];
+                        
                     }
                 }else{
                     echo '<script type="text/javascript">';
@@ -287,24 +269,25 @@ if(isset($_POST['Search'])){
             echo '}, 200);</script>';
         }
     }
-                        
-
-
-}
+    
+                    
  //update
- if(isset($_POST['Update'])){
+ if(isset($_POST['update'])){
     $info=getData();
-    $update_query="UPDATE `childdata` SET `id`='$info[0]',`bcg`='$info[1]',`date1`='$info[2]',`date2`='$info[3]',`date3`='$info[4]',`date4`='$info[5]',`date5`='$info[6]',`date6`='$info[7]',
+    $update_Query="UPDATE `childdata` SET `id`='$info[0]',`bcg`='$info[1]',`date1`='$info[2]',`date2`='$info[3]',`date3`='$info[4]',`date4`='$info[5]',`date5`='$info[6]',`date6`='$info[7]',
     `date7`='$info[8]',`date8`='$info[9]',`date9`='$info[10]',`date10`='$info[11]',`date11`='$info[12]',`date12`='$info[13]',`date13`='$info[14]',`date14`='$info[15]',`date15`='$info[16]',`date16`='$info[17]',
     `date17`='$info[18]',`date18`='$info[19]',`date19`='$info[20]',`date20`='$info[21]',`date21`='$info[22]',`date22`='$info[23]',`date23`='$info[24]',`date24`='$info[25]',`date25`='$info[26]',`num1`='$info[27]',
     `num2`='$info[28]',`num3`='$info[29]',`num4`='$info[30]',`num5`='$info[31]',`num6`='$info[32]',`num7`='$info[33]',`num8`='$info[34]',`num9`='$info[35]',`num10`='$info[36]',`num11`='$info[37]',`num12`='$info[38]',
     `num13`='$info[39]',`num14`='$info[40]',`num15`='$info[41]',`num16`='$info[42]',`num17`='$info[43]',`num18`='$info[44]',`num19`='$info[45]',`num20`='$info[46]',`num21`='$info[47]',`num22`='$info[48]',`num23`='$info[49]',
-    `num24`='$info[50]',`num25`='$info[51]' WHERE  id='$info[0]'";
+    `num24`='$info[50]',`num25`='$info[51]',`text1`='$info[52]',`text2`='$info[53]',`text3`='$info[54]',
+    `text4`='$info[55]',`text5`='$info[56]',`text6`='$info[57]',`text7`='$info[58]',`text8`='$info[59]',`text9`='$info[60]',
+    `text10`='$info[61]',`text11`='$info[62]',`text12`='$info[63]',`text13`='$info[64]',`text14`='$info[65]',`text15`='$info[66]',`text16`='$info[67]',`text17`='$info[68]',`text18`='$info[69]',`text19`='$info[70]',`text20`='$info[71]',
+    `text21`='$info[72]',`text22`='$info[73]',`text23`='$info[74]',`text24`='$info[75]',`text25`='$info[76]' WHERE  id='$info[0]'";
     
     
 try{
-        $pdate_result=$immun->featuredLoad($dbObj,$update_query);
-        if($pdate_result){
+        $update_Result=$immun->featuredLoad($dbObj,$update_Query);
+        if($update_Result){
                                 echo '<script type="text/javascript">';
                                 echo 'setTimeout(function () { swal("Success!","Data updated successfully!","success");';
                                 echo '}, 200);</script>';
@@ -316,26 +299,5 @@ try{
     }
 
     
- if(isset($_POST['Update'])){
-    $info=getData();
-
-    $update_query= "UPDATE `childdata3` SET `id`='$info[0]',`text1`='$info[52]',`text2`='$info[53]',`text3`='$info[54]',`text4`='$info[55]',`text5`='$info[56]',`text6`='$info[57]',`text7`='$info[58]',`text8`='$info[59]',`text9`='$info[60]',
-    `text10`='$info[61]',`text11`='$info[62]',`text12`='$info[63]',`text13`='$info[64]',`text14`='$info[65]',`text15`='$info[66]',`text16`='$info[67]',`text17`='$info[68]',`text18`='$info[69]',`text19`='$info[70]',`text20`='$info[71]',
-    `text21`='$info[72]',`text22`='$info[73]',`text23`='$info[74]',`text24`='$info[75]',`text25`='$info[76]' WHERE id='$info[0]'";
-                        
-
-                     try{
-                            $pdate_result=$immun->featuredLoad($dbObj,$update_query);
-                            if($pdate_result){
-                                echo '<script type="text/javascript">';
-                                echo 'setTimeout(function () { swal("Success!","Data updated successfully!","success");';
-                                echo '}, 200);</script>';
-                            }
-                        }catch(Exception $ex){
-                            echo '<script type="text/javascript">';
-                            echo 'setTimeout(function () { swal("Error!","Result error!","error");';
-                            echo '}, 200);</script>';
-                        }
-                        } 
-                
+ 
 ?>
