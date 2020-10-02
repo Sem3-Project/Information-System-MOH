@@ -46,19 +46,41 @@ require '../models/immunization_model.php';
 
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css"> 
-<tr width=100%><td  width="15%" align="left">වයස​<br> Age </td><td width="15%" align="left">එන්නත් වර්ගය​<br>Type of vaccine​ </td><td width="15%" align="left">දිනය​<br>Date </td><td  width="15%" align="left">ඛාණ්ඩ අංකය​<br>Batch No</td><td  width="15%" align="left">ප්‍රතිශක්තිකරණයේ අතුරු ආබාධ<br>Adverse effects following immunization </td><td  width="15%" align="left">බීසීජී කැළල<br>B.C.G.Scar​ </td></tr>
-<tr width=100%><td  width="15%">උපතේදී<br> At Birth </td><td width="15%" >බී.සී.ජී.<br>B.C.G.​ </td><td width="15%">​<input type="date" name="date1" value="<?=$date1?>"> </td><td  width="15%">​<input type="num" name="num1" value="<?=$num1?>"></td><td  width="15%" >​<input type="text" name="text1" value="<?=$text1?>"></td><td  width="15%"><select name="bcg">
+<tr width=100%>
+<td  width="15%" align="left">වයස​<br> Age </td>
+<td width="15%" align="left">එන්නත් වර්ගය​<br>Type of vaccine​ </td>
+<td width="15%" align="left">දිනය​<br>Date </td>
+<td  width="15%" align="left">ඛාණ්ඩ අංකය​<br>Batch No</td>
+<td  width="15%" align="left">ප්‍රතිශක්තිකරණයේ අතුරු ආබාධ<br>Adverse effects following immunization </td>
+<td  width="15%" align="left">බීසීජී කැළල<br>B.C.G.Scar​ </td></tr>
+<tr width=100%><td  width="15%">උපතේදී<br> At Birth </td>
+<td width="15%" >බී.සී.ජී.<br>B.C.G.​ </td>
+<td width="15%">​<input type="date" name="date1" value="<?=$date1?>"> </td>
+<td  width="15%">​<input type="num" name="num1" value="<?=$num1?>"></td>
+<td  width="15%" >​<input type="text" name="text1" value="<?=$text1?>"></td>
+<td  width="15%"><select name="bcg">
             <option value="yes">ඇත/Present ​</option>
             <option value="no">නැත/Absent </option>
             </select> </td></tr>
 </table>
+
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css"> 
-<tr width=100%><td  width="15%" align="left"></td><td width="15%" align="left">බී.සී.ජී. දෙවන මාත්‍රාව​(මාස 2 වන විටත් කැළලක් නැත්නම් පමණි)<br>B.C.G. 2nd dose(If no scar even at 6 months)</td><td width="15%" align="left"><input type="date" name="date2" value="<?=$date2?>"> </td><td  width="15%" align="left"><input type="num" name="num2" value="<?=$num2?>"></td><td  width="30%" align="left"><input type="text" name="text2" value="<?=$text2?>"></td></tr>
+<tr width=100%><td  width="15%" align="left"></td>
+<td width="15%" align="left">බී.සී.ජී. දෙවන මාත්‍රාව​(මාස 2 වන විටත් කැළලක් නැත්නම් පමණි)<br>B.C.G. 2nd dose(If no scar even at 6 months)</td>
+<td width="15%" align="left"><input type="date" name="date2" value="<?=$date2?>"> </td>
+<td  width="15%" align="left"><input type="num" name="num2" value="<?=$num2?>"></td>
+<td  width="30%" align="left"><input type="text" name="text2" value="<?=$text2?>"></td></tr>
 </table>
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css"> 
-<tr width=100%><td  rowspan="3" width="15%" align="left"><h1>2 </h1>මාසය සම්පූර්ණ වූ විට​<br> months completed</td><td width="15%" align="left">ත්‍රිත්ව I  DPT 1</td><td  width="15%" align="left"><input type="date" name="date3" value="<?=$date3?>"> </td><td  width="15%" align="left"><input type="num" name="num3" value="<?=$num3?>"></td><td  width="30%" align="left"><input type="text" name="text3" value="<?=$text3?>"></td></tr>
+<tr width=100%>
+<td  rowspan="3" width="15%" align="left"><h1>2 </h1>මාසය සම්පූර්ණ වූ විට​<br> months completed</td>
+<td width="15%" align="left">ත්‍රිත්ව I  DPT 1</td>
+<td  width="15%" align="left"><input type="date" name="date3" value="<?=$date3?>"> </td>
+<td  width="15%" align="left"><input type="num" name="num3" value="<?=$num3?>"></td>
+<td  width="30%" align="left"><input type="text" name="text3" value="<?=$text3?>"></td>
+</tr>
 <tr><td width="15%" align="left">පෝලියෝ 1 OPV 1</td><td width="15%" align="left"><input type="date" name="date4" value="<?=$date4?>"> </td><td  width="15%" align="left"><input type="num" name="num4" value="<?=$num4?>"></td><td  width="30%" align="left"><input type="text" name="text4" value="<?=$text4?>"></td></tr>
 <tr><td width="15%" align="left">හෙපටයිටිස් බී 1  Hepatitis B1</td><td width="15%" align="left"><input type="date" name="date5" value="<?=$date5?>"> </td><td  width="15%" align="left"><input type="num" name="num5" value="<?=$num5?>"></td><td  width="30%" align="left"><input type="text" name="text5" value="<?=$text5?>"></td></tr>
 <tr width=100%><td  rowspan="3" width="15%" align="left"><h1>4 </h1>මාසය සම්පූර්ණ වූ විට​<br> months completed</td><td width="15%" align="left">ත්‍රිත්ව 2  DPT 2</td><td  width="15%" align="left"><input type="date" name="date6" value="<?=$date6?>"> </td><td  width="15%" align="left"><input type="num" name="num6" value="<?=$num6?>"></td><td  width="30%" align="left"><input type="text" name="text6" value="<?=$text6?>"></td></tr>
