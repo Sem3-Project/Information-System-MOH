@@ -31,13 +31,14 @@ require '../models/USScan_model.php';
 <form action="USScan_page.php" method="post" >
             <div>
                 <div class="caption-container1">
+                         <div class="caption-container"><h3>US Scan</h3></div>
                     <div class="caption-container"><h3>Search NIC :</h3></div>
                     <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
                     style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo $id;?>">
                     <br><br>
                     <input type="submit" name="search" class="link" value="Search">
-                    
-                    <div class="caption-container"><h3>US Scan</h3></div>
+                    <br><br>
+                   
                     
 
 
