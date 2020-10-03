@@ -46,7 +46,7 @@ require '../models/childDetails_model.php';
 	
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
-  <tr><td width="34%" align="left">සෞ:වෛ:නි:<input type="text" name="doctor" value="<?=$doctor?>"></td>
+  <tr><td width="34%" align="left">සෞ:වෛ:නි:කො<input type="text" name="doctor" value="<?=$doctor?>"></td>
   <td width="33%" align="center">ප:සෞ:සේ:නි:කො<input type="text" name="moh" value="<?=$moh?>"></td>
     <td width="33%" align="right">හැ:අංකය​<input type="text" name="idnum" value="<?=$idnum?>"></td>
  </tr>
@@ -54,7 +54,7 @@ require '../models/childDetails_model.php';
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
   <tr><td width="75%" align="left">දරුවාගේ නම ​<input type="text" name="childname" value="<?=$childname?>"></td>
-  <td width="25%" align="center">ලි:ප​ අංකය<input type="text" name="regno" value="<?=$regno?>"></td>
+  <td width="25%" align="center">ලි:ප​ අංකය<input type="text" name="regn0" value="<?=$regno?>"></td>
     </tr>
 </table>
 <table width="100%" border="0">
@@ -62,7 +62,7 @@ require '../models/childDetails_model.php';
   <tr><td width="25%" align="left">දරුවගේ උපන් දිනය​</td>
   <td width="25%" align="center"><input type="date" name="childbday" value="<?=$childbday?>"></td>
     <td width="25%" align="right">ලි:ප කල දිනය</td>
-    <td width="25%" align="right">​<input type="text" name="regdate" value="<?=$regdate?>"></td>
+    <td width="25%" align="right">​<input type="date" name="regdate" value="<?=$regdate?>"></td>
  </tr>
 </table>
 <table width="100%" border="0">
@@ -89,47 +89,35 @@ require '../models/childDetails_model.php';
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
   <tr><td width="25%" align="left">අලුත උපන් දරුවගේ සෞඛ්‍ය තත්වය​</td>
-  <td><select name="health" id="health">
-  <option value="not done">---Select---</option>
-                <option value="normal" <?php if($health=="normal") echo 'selected="selected"';?>><h5>සමාන්‍යය</h5>​</option>
-                <option value="needspec" <?php if($health=="needspec") echo 'selected="selected"';?>><h5>විශේෂ රැකවරණයක් අවශ්‍ය වේ​</h5></option>
+  <td><select name="health">
+            <option value="normal"><h5>සමාන්‍යය​</h5></option>
+            <option value="needspec"><h5>විශේෂ රැකවරණයක් අවශ්‍ය වේ​</h5></option></td>
 
-                </select></td>
-            
   
  </tr>
 </table>
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
   <tr><td width="25%" align="left">විටමින් K</td>
-  <td><select name="vitk" id="vitk">
-  <option value="not done">---Select---</option>
-                <option value="Yes" <?php if($vitk=="Yes") echo 'selected="selected"';?>><h5>ලබා දී ඇත​​</h5>​</option>
-                <option value="No" <?php if($vitk=="No") echo 'selected="selected"';?>><h5>නැත</h5></option>
-
-                </select></td>
-            
-          
+  <td><select name="vitk">
+            <option value="Yes"><h5>ලබා දී ඇත​​</h5></option>
+            <option value="No"><h5>නැත​​</h5></option></td>
+  
+    
  </tr>
 </table>
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
   <tr>
     <td rowspan="2" width="50%" align="center">මව් කිරි දීම   </td>
-    <td width="50" align="left">ඉරියව්ව  <select name="posture" id="posture">
-  <option value="not done">---Select---</option>
-                <option value="Correct" <?php if($posture=="Correct") echo 'selected="selected"';?>><h5>නිවරදියි​​</h5>​</option>
-                <option value="Wrong" <?php if($posture=="Wrong") echo 'selected="selected"';?>><h5>වැරදියි</h5></option>
-
-                </select></td>
-            
-    <tr><td width="80" align="left">සම්බන්ධය <select name="rel" id="rel">
-  <option value="not done">---Select---</option>
-                <option value="Correct" <?php if($rel=="Correct") echo 'selected="selected"';?>><h5>නිවරදියි​​</h5>​</option>
-                <option value="Wrong" <?php if($rel=="Wrong") echo 'selected="selected"';?>><h5>වැරදියි</h5></option>
-
-                </select></td>
-            
+    <td width="80" align="left">ඉරියව්ව  <select name="posture">
+            <option value="correct">නිවරදියි</option>
+            <option value="wrong">වැරදියි </option>
+            </select></td>
+    <tr><td width="80" align="left">සම්බන්ධය <select name="rel">
+            <option value="correct">නිවරදියි</option>
+            <option value="wrong">වැරදියි </option>
+            </select> </td></tr>
    </tr>
   </table>
 
@@ -137,29 +125,29 @@ require '../models/childDetails_model.php';
 
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css">  
-  <tr><td width="70%"></td><td width="15%">සලකුණු කරන්න​​</td><td width="15%">දිනය</td>
+  <tr><td width="70%"></td><td width="30%">දිනය</td>
  </tr>
- <tr><td width="70%">නොමේරු දරු උපත් ​</td><td width="15%"><input type="checkbox" name="select" value="select"></td></td><td width="15%"><input type="date" name="date1" value="<?=$date1?>"></td>
+ <tr><td width="70%">නොමේරු දරු උපත් ​</td></td><td width="30%"><input type="date" name="date1" value="<?=$date1?>"></td>
  </tr>
- <tr><td width="70%">අඩු උපත් බර</td><td width="15%"><input type="checkbox" name="select" value="select">​</td><td width="15%"><input type="date" name="date2" value="<?=$date2?>"></td>
+ <tr><td width="70%">අඩු උපත් බර</td><td width="15%"><input type="date" name="date2" value="<?=$date2?>"></td>
  </tr>
- <tr><td width="70%">නවජ සංකූලතා</td><td width="15%"><input type="checkbox" name="select" value="select"> ​</td><td width="15%"><input type="date" name="date3" value="<?=$date3?>"></td>
+ <tr><td width="70%">නවජ සංකූලතා</td><td width="15%"><input type="date" name="date3" value="<?=$date3?>"></td>
  </tr>
- <tr><td width="70%">සංජානනීය ආබාධ</td><td width="15%"><input type="checkbox" name="select" value="select"> ​</td><td width="15%"><input type="date" name="date4" value="<?=$date4?>"></td>
+ <tr><td width="70%">සංජානනීය ආබාධ</td><td width="15%"><input type="date" name="date4" value="<?=$date4?>"></td>
  </tr>
- <tr><td width="70%">ප්‍රසුතියෙන් පසු මවගේ තදබල රෝග තත්වයන්</td><td width="15%"><input type="checkbox" name="select" value="select">​</td><td width="15%"><input type="date" name="date5" value="<?=$date5?>"></td>
+ <tr><td width="70%">ප්‍රසුතියෙන් පසු මවගේ තදබල රෝග තත්වයන්</td><td width="15%"><input type="date" name="date5" value="<?=$date5?>"></td>
  </tr>
- <tr><td width="70%">පලමු මාස 6 තුලදි පිටිකිරි දීම ​</td><td width="15%"><input type="checkbox" name="select" value="select"> ​</td><td width="15%"><input type="date" name="date6" value="<?=$date6?>"></td>
+ <tr><td width="70%">පලමු මාස 6 තුලදි පිටිකිරි දීම ​</td><td width="15%"><input type="date" name="date6" value="<?=$date6?>"></td>
  </tr>
- <tr><td width="70%">වර්ධනය අඩාල වීම</td> <td width="15%"><input type="checkbox" name="select" value="select"> ​</td><td width="15%"><input type="date" name="date7" value="<?=$date7?>"></td>
+ <tr><td width="70%">වර්ධනය අඩාල වීම</td> <td width="15%"><input type="date" name="date7" value="<?=$date7?>"></td>
  </tr>
- <tr><td width="70%">මව්කිරි/ ආහාර දීමේ අපහසුතා</td> <td width="15%"><input type="checkbox" name="select" value="select"> ​</td><td width="15%"><input type="date" name="date8" value="<?=$date8?>"></td>
+ <tr><td width="70%">මව්කිරි/ ආහාර දීමේ අපහසුතා</td> <td width="15%"><input type="date" name="date8" value="<?=$date8?>"></td>
  </tr>
- <tr><td width="70%">මවගේ/ පියාගේ මරණය</td><td width="15%"><input type="checkbox" name="select" value="select"> ​</td><td width="15%"><input type="date" name="date9" value="<?=$date9?>"></td>
+ <tr><td width="70%">මවගේ/ පියාගේ මරණය</td><td width="15%"><input type="date" name="date9" value="<?=$date9?>"></td>
  </tr>
- <tr><td width="70%">මවගේ/ පියාගේ වෙන්වීම​/විදේශගත වීම</td><td width="15%"><input type="checkbox" name="select" value="select"> ​</td><td width="15%"><input type="date" name="date0" value="<?=$date0?>"></td>
+ <tr><td width="70%">මවගේ/ පියාගේ වෙන්වීම​/විදේශගත වීම</td><td width="15%"><input type="date" name="date0" value="<?=$date0?>"></td>
  </tr>
- <tr><td width="70%">වෙනත්</td><td width="15%"><input type="checkbox" name="select" value="select">​</td><td width="15%"><input type="date" name="date10" value="<?=$date10?>"></td>
+ <tr><td width="70%">වෙනත්</td><td width="15%"><input type="date" name="date10" value="<?=$date10?>"></td>
  </tr>
  
 </table>
@@ -167,5 +155,3 @@ require '../models/childDetails_model.php';
 </div>
  </div>
 </html>
-
- 
