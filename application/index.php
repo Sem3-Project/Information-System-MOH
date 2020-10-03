@@ -70,71 +70,121 @@ class myPDF_Child extends FPDF{
         $this->Ln(20);
 
       
+        //-------------------Child Details------------------
+        $this->SetFont('Arial','B',16);
+        $this->Cell(200,8,'Child Details',0,0,'C');
+        $this->Ln(20);
+
+        $this->SetFont('Times','',12);
+        $stmt=$db->query("SELECT * FROM `childdata1` WHERE id='$id'");
+        $detail=$stmt->fetch(PDO::FETCH_OBJ);
+
+        $this->SetFont('Times','B',12);
+        $this->Cell(32,10,'MOH Division',1,0,'C');
+        $this->Cell(32,10,$detail->doctor,1,0,'C');
+        $this->Cell(32,10,'PHM Division',1,0,'C');
+        $this->Cell(32,10,$detail->moh,1,0,'C');
+        $this->Cell(32,10,'NIC',1,0,'C');
+        $this->Cell(32,10,$detail->idnum,1,0,'C');
+        $this->Ln();
+        $this->Cell(40,10,'Child Name',1,0,'C');
+        $this->Cell(88,10,$detail->childname,1,0,'C');
+        $this->Cell(32,10,'Reg.NO',1,0,'C');
+        $this->Cell(32,10,$detail->regno,1,0,'C');
+        $this->Ln();
+        $this->Cell(48,10,'Child Birthdate',1,0,'C');
+        $this->Cell(48,10,$detail->childname,1,0,'C');
+        $this->Cell(48,10,'Registation Date',1,0,'C');
+        $this->Cell(48,10,$detail->regno,1,0,'C');
+        $this->Ln();
+        $this->Cell(40,10,'Mother Name',1,0,'C');
+        $this->Cell(88,10,$detail->momname,1,0,'C');
+        $this->Cell(32,10,'Mother Age',1,0,'C');
+        $this->Cell(32,10,$detail->momage,1,0,'C');
+        $this->Ln(20);
+
+        //------------------Infant protection------------------
+       /* $this->SetFont('Arial','B',16);
+        $this->Cell(200,8,'Infant Protection',0,0,'C');
+        $this->Ln(20);
+
+        $this->SetFont('Times','',12);
+        $stmt=$db->query("SELECT * FROM `childdata1` WHERE id='$id'");
+        $detail=$stmt->fetch(PDO::FETCH_OBJ);
+
+        $this->Cell(24,10,'Apgar Score',1,0,'C');
+        $this->Cell(22,10,$detail->num1,1,0,'C');
+        $this->Cell(29,10,'Birth Weight(kg)',1,0,'C');
+        $this->Cell(21,10,$detail->weight1,1,0,'C');
+        $this->Cell(24,10,'CRL(cm)',1,0,'C');
+        $this->Cell(24,10,$detail->headperi,1,0,'C');
+        $this->Cell(24,10,'Birth Height',1,0,'C');
+        $this->Cell(24,10,$detail->length,1,0,'C');
+        $this->Ln(20);*/
+
 
         //-------------------Infant Record----------------------
-        /*$this->SetFont('Arial','B',16);
+        $this->SetFont('Arial','B',16);
         $this->Cell(200,8,'Infant Record',0,0,'C');
         $this->Ln(20);
 
         $this->SetFont('Times','',12);
-        $stmt=$db->query("SELECT * FROM `childata2` WHERE id='$id'");
+        $stmt=$db->query("SELECT * FROM `childdata2` WHERE id='$id'");
         $detail=$stmt->fetch(PDO::FETCH_OBJ);
-
-        $this->Cell(47,10,'',1,0,'C');
-        $this->Cell(30,10,'Within 1st 10 days',1,0,'C');
-        $this->Cell(30,10,'Within 1st 10 days',1,0,'C');
-        $this->Cell(30,10,'Days 11-28',1,0,'C');
-        $this->Cell(30,10,'Around 42 days',1,0,'C');
+        $this->Cell(53,10,'',1,0,'C');
+        $this->Cell(62,10,'Within 1st 10 days',1,0,'C');
+        $this->Cell(38,10,'Days 11-28',1,0,'C');
+        $this->Cell(38,10,'Around 42 days',1,0,'C');
         $this->Ln();
-        $this->Cell(47,10,'',1,0,'C');
-        $this->Cell(30,10,$detail->dat1,1,0,'C');
-        $this->Cell(30,10,$detail->dat2,1,0,'C');
-        $this->Cell(30,10,$detail->dat3,1,0,'C');
-        $this->Cell(30,10,$detail->dat4,1,0,'C');
+        $this->Cell(53,10,'',1,0,'C');
+        $this->Cell(31,10,$detail->dat1,1,0,'C');
+        $this->Cell(31,10,$detail->dat2,1,0,'C');
+        $this->Cell(38,10,$detail->dat3,1,0,'C');
+        $this->Cell(38,10,$detail->dat4,1,0,'C');
         $this->Ln();
-        $this->Cell(47,10,'Color of Skin',1,0,'C');
-        $this->Cell(30,10,$detail->scolor1,1,0,'C');
-        $this->Cell(30,10,$detail->scolor2,1,0,'C');
-        $this->Cell(30,10,$detail->scolor3,1,0,'C');
-        $this->Cell(30,10,$detail->scolor4,1,0,'C');
+        $this->Cell(53,10,'Color of Skin',1,0,'C');
+        $this->Cell(31,10,$detail->scolor1,1,0,'C');
+        $this->Cell(31,10,$detail->scolor2,1,0,'C');
+        $this->Cell(38,10,$detail->scolor3,1,0,'C');
+        $this->Cell(38,10,$detail->scolor4,1,0,'C');
         $this->Ln();
-        $this->Cell(47,10,'Eyes',1,0,'C');
-        $this->Cell(30,10,$detail->eye1,1,0,'C');
-        $this->Cell(30,10,$detail->eye2,1,0,'C');
-        $this->Cell(30,10,$detail->eye3,1,0,'C');
-        $this->Cell(30,10,$detail->eye4,1,0,'C');
+        $this->Cell(53,10,'Eyes',1,0,'C');
+        $this->Cell(31,10,$detail->eye1,1,0,'C');
+        $this->Cell(31,10,$detail->eye2,1,0,'C');
+        $this->Cell(38,10,$detail->eye3,1,0,'C');
+        $this->Cell(38,10,$detail->eye4,1,0,'C');
         $this->Ln();
-        $this->Cell(47,10,'Duration of Lactation',1,0,'C');
-        $this->Cell(30,10,$detail->sc1,1,0,'C');
-        $this->Cell(30,10,$detail->sc2,1,0,'C');
-        $this->Cell(30,10,$detail->sc3,1,0,'C');
-        $this->Cell(30,10,$detail->sc4,1,0,'C');
+        $this->Cell(53,10,'Duration of Lactation',1,0,'C');
+        $this->Cell(31,10,$detail->sc1,1,0,'C');
+        $this->Cell(31,10,$detail->sc2,1,0,'C');
+        $this->Cell(38,10,$detail->sc3,1,0,'C');
+        $this->Cell(38,10,$detail->sc4,1,0,'C');
         $this->Ln();
-        $this->Cell(47,10,'Position of Lactation',1,0,'C');
-        $this->Cell(30,10,$detail->m1,1,0,'C');
-        $this->Cell(30,10,$detail->m2,1,0,'C');
-        $this->Cell(30,10,$detail->m3,1,0,'C');
-        $this->Cell(30,10,$detail->m4,1,0,'C');
+        $this->Cell(53,10,'Position of Lactation',1,0,'C');
+        $this->Cell(31,10,$detail->m1,1,0,'C');
+        $this->Cell(31,10,$detail->m2,1,0,'C');
+        $this->Cell(38,10,$detail->m3,1,0,'C');
+        $this->Cell(38,10,$detail->m4,1,0,'C');
         $this->Ln();
-        $this->Cell(47,10,'Connection of Lactation',1,0,'C');
-        $this->Cell(30,10,$detail->rel1,1,0,'C');
-        $this->Cell(30,10,$detail->rel2,1,0,'C');
-        $this->Cell(30,10,$detail->rel3,1,0,'C');
-        $this->Cell(30,10,$detail->rel4,1,0,'C');
+        $this->Cell(53,10,'Connection of Lactation',1,0,'C');
+        $this->Cell(31,10,$detail->rel1,1,0,'C');
+        $this->Cell(31,10,$detail->rel2,1,0,'C');
+        $this->Cell(38,10,$detail->rel3,1,0,'C');
+        $this->Cell(38,10,$detail->rel4,1,0,'C');
         $this->Ln();
-        $this->Cell(47,10,'Others',1,0,'C');
-        $this->Cell(30,10,$detail->other1,1,0,'C');
-        $this->Cell(30,10,$detail->other2,1,0,'C');
-        $this->Cell(30,10,$detail->other3,1,0,'C');
-        $this->Cell(30,10,$detail->other4,1,0,'C');
+        $this->Cell(53,10,'Others',1,0,'C');
+        $this->Cell(31,10,$detail->other1,1,0,'C');
+        $this->Cell(31,10,$detail->other2,1,0,'C');
+        $this->Cell(38,10,$detail->other3,1,0,'C');
+        $this->Cell(38,10,$detail->other4,1,0,'C');
         $this->Ln(20);
+
+
         
         //---------Clinic Dates-------------
-
-        $this->SetFont('Arial','B',16);
+       /* $this->SetFont('Arial','B',16);
         $this->Cell(200,8,'Clinic Dates',0,0,'C');
         $this->Ln(20);
-
         $this->Cell(30,10,$detail->date1,1,0,'C');
         $this->Cell(30,10,$detail->date2,1,0,'C');
         $this->Cell(30,10,$detail->date3,1,0,'C');
@@ -158,9 +208,8 @@ class myPDF_Child extends FPDF{
         $this->Cell(30,10,$detail->date18,1,0,'C');
         $this->Cell(30,10,$detail->date19,1,0,'C');
         $this->Cell(30,10,$detail->date20,1,0,'C');
-        $this->Ln();
-
-        */
+        $this->Ln();*/
+        
 
 
 
