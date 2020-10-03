@@ -16,8 +16,6 @@ require '../models/BasicDetails_model.php';
         /* size="25"; */
     } 
  
-
-
 </style> -->
 </head>
 <head>
