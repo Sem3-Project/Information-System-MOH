@@ -37,7 +37,7 @@ while ($row=mysqli_fetch_array($result)){
 		echo "    Valid   ".$phone."  ".$phone."  -";
 		
 		
-        $txt="Clinic Date- ".$ndate." Time- ".$ntime;
+        $txt="Clinic Date- ".$ndate."\n"." Time- ".$ntime."\n"."-MOH Gampaha-";
         //$txt=$ndate." Clinic date";
 		$session=createSession('','esmsusr_15q5','1a576oh','');
 		echo sendMessages($session,'UPDCS_Admin',$txt,array($phone),0);
