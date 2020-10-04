@@ -40,7 +40,7 @@ while ($row=mysqli_fetch_array($result)){
         $txt="Clinic Date- ".$ndate." Time- ".$ntime;
         //$txt=$ndate." Clinic date";
 		$session=createSession('','esmsusr_15q5','1a576oh','');
-		echo sendMessages($session,'MOH Gampaha',$txt,array($phone),0);
+		echo sendMessages($session,'UPDCS_Admin',$txt,array($phone),0);
 		closeSession($session);
 
 		echo "<br>";
