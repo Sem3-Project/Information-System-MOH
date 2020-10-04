@@ -1,11 +1,5 @@
 <?php
 ob_start();
-// require '../framework/libraries/Model.php';
-// require '../application/models/table.php';
-// require '../application/models/login_table.php';
-
-// $dbObj = Model::getInstance();
-// $dbObj->connect('localhost','root','','moh');
 
 $servername = "localhost"; 
 $username = "root";
@@ -19,18 +13,19 @@ if ($conn->connect_error){
 }
 
 $sql = "SELECT * FROM optionaldate"; 
-//$dbObj->doQuery($sql);
 $result=mysqli_query($conn,$sql);
 echo "<pre>";
-echo "NIC           Conf.Date        Chk.Date       Today <br>";
+echo "NIC           Conf.Date        Chk.Date       Time       Today <br>";
 while ($row=mysqli_fetch_array($result)){
 	$id=$row['id'];
-	$ndate=$row['confirmedDate'];
+    $ndate=$row['confirmedDate'];
+    $ntime=$row['time'];
 	echo $id."    ";
 	echo $row['confirmedDate']."       ";
 	$con_dt=date('Y-m-d', strtotime('-1 day', strtotime($row['confirmedDate'])));
 	$dt=date('Y-m-d');
-	echo $con_dt."     ";
+    echo $con_dt."     ";
+    echo $ntime."     ";
 	echo $dt;
 	if ($con_dt==$dt){
 		$sq="SELECT * FROM data WHERE id='".$id."'";
@@ -42,7 +37,8 @@ while ($row=mysqli_fetch_array($result)){
 		echo "    Valid   ".$phone."  ".$phone."  -";
 		
 		
-		$txt=$ndate." -Clinic Date";
+        $txt="Clinic Date- ".$ndate." Time- ".$ntime;
+        //$txt=$ndate." Clinic date";
 		$session=createSession('','esmsusr_15q5','1a576oh','');
 		echo sendMessages($session,'MOH Gampaha',$txt,array($phone),0);
 		closeSession($session);
