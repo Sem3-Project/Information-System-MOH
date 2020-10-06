@@ -108,19 +108,19 @@ require '../controllers/login.php';
       <p id="caption"></p>
       <div class="icon-image">
       <a href="register_test.php">
-        <img src="../../public/images/newadd1.png" style="width:12%;height:200%;" />
+        <img src="../../public/images/newadd1.png" style="width:12%;height:125%;" />
       </a>
       <a href="contents_page.php">
-        <img src="../../public/images/newedit1.png" style="width:12%;height:200%;"/>
+        <img src="../../public/images/newedit1.png" style="width:12%;height:125%;"/>
       </a>
       <a href="deactivate.php">
-        <img src="../../public/images/newdelete1.png" style="width:12%;height:200%;"/>
+        <img src="../../public/images/newdelete1.png" style="width:12%;height:125%;"/>
       </a>
       <a href="WeightGainChart.html">
-        <img src="../../public/images/newweight4.png" style="width:12%;height:200%;"/>
+        <img src="../../public/images/newweight4.png" style="width:12%;height:125%;"/>
       </a>
       <a href="adminOptional.php">
-        <img src="../../public/images/newdate1.png" style="width:12%;height:200%;"/>
+        <img src="../../public/images/newdate1.png" style="width:12%;height:125%;"/>
       </a>
     </div>   
       </div>
