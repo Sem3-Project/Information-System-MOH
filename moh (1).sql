@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2020 at 06:19 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Oct 06, 2020 at 11:12 AM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -56,6 +55,7 @@ CREATE TABLE `childdata` (
   `date23` date NOT NULL,
   `date24` date NOT NULL,
   `date25` date NOT NULL,
+  `date26` date NOT NULL,
   `num1` int(11) NOT NULL,
   `num2` int(11) NOT NULL,
   `num3` int(11) NOT NULL,
@@ -81,6 +81,7 @@ CREATE TABLE `childdata` (
   `num23` int(11) NOT NULL,
   `num24` int(11) NOT NULL,
   `num25` int(11) NOT NULL,
+  `num26` int(20) NOT NULL,
   `test1` text NOT NULL,
   `test2` text NOT NULL,
   `test3` text NOT NULL,
@@ -105,12 +106,16 @@ CREATE TABLE `childdata` (
   `test22` text NOT NULL,
   `test23` text NOT NULL,
   `test24` text NOT NULL,
-  `test25` text NOT NULL
+  `test25` text NOT NULL,
+  `test26` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `childdata`
 --
+
+INSERT INTO `childdata` (`id`, `bcg`, `date1`, `date2`, `date3`, `date4`, `date5`, `date6`, `date7`, `date8`, `date9`, `date10`, `date11`, `date12`, `date13`, `date14`, `date15`, `date16`, `date17`, `date18`, `date19`, `date20`, `date21`, `date22`, `date23`, `date24`, `date25`, `date26`, `num1`, `num2`, `num3`, `num4`, `num5`, `num6`, `num7`, `num8`, `num9`, `num10`, `num11`, `num12`, `num13`, `num14`, `num15`, `num16`, `num17`, `num18`, `num19`, `num20`, `num21`, `num22`, `num23`, `num24`, `num25`, `num26`, `test1`, `test2`, `test3`, `test4`, `test5`, `test6`, `test7`, `test8`, `test9`, `test10`, `test11`, `test12`, `test13`, `test14`, `test15`, `test16`, `test17`, `test18`, `test19`, `test20`, `test21`, `test22`, `test23`, `test24`, `test25`, `test26`) VALUES
+('C947123456', 'No', '2020-10-03', '2020-09-28', '2020-10-14', '2020-10-22', '2020-10-06', '2020-09-30', '2020-10-13', '2020-10-05', '2020-10-21', '2020-10-29', '2020-10-16', '2020-10-07', '2020-10-12', '2020-10-13', '2020-10-25', '2020-10-22', '2020-10-28', '2020-10-14', '2020-10-07', '2020-10-07', '2020-10-28', '2020-10-28', '2020-10-29', '2020-10-21', '2020-10-08', '2020-10-03', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 20, '2', '42', '1', '1', '1', '1', '2', '1', '2', '3', '2', '3', '2', '1', '4', '2', '1', '2', '23', '2', '1', '4', '5', '6', '6', '23');
 
 -- --------------------------------------------------------
 
@@ -149,6 +154,13 @@ CREATE TABLE `childdata1` (
   `date0` date NOT NULL,
   `date10` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `childdata1`
+--
+
+INSERT INTO `childdata1` (`id`, `doctor`, `moh`, `idnum`, `childname`, `regno`, `childbday`, `regdate`, `momname`, `momage`, `num1`, `weight1`, `headperi`, `length`, `health`, `vitk`, `posture`, `rel`, `date1`, `date2`, `date3`, `date4`, `date5`, `date6`, `date7`, `date8`, `date9`, `date0`, `date10`) VALUES
+('C947123456', '5', '5', 985623, 'tenny', 55, '2020-10-06', '2202-05-06', 'feni', 25, 2, 200, 50, 100, 'needspec', 'No', 'Correct', 'Wrong', '2020-09-30', '2020-10-19', '2020-10-06', '2020-10-13', '2020-10-13', '2020-10-11', '2020-09-30', '2020-10-06', '2020-10-12', '2020-10-21', '2020-10-21');
 
 -- --------------------------------------------------------
 
@@ -212,6 +224,13 @@ CREATE TABLE `childdata2` (
   `date20` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `childdata2`
+--
+
+INSERT INTO `childdata2` (`id`, `dat1`, `dat2`, `dat3`, `dat4`, `scolor1`, `scolor2`, `scolor3`, `scolor4`, `eye1`, `eye2`, `eye3`, `eye4`, `sc1`, `sc2`, `sc3`, `sc4`, `m1`, `m2`, `m3`, `m4`, `pos1`, `pos2`, `pos3`, `pos4`, `rel1`, `rel2`, `rel3`, `rel4`, `other1`, `other2`, `other3`, `other4`, `date1`, `date2`, `date3`, `date4`, `date5`, `date6`, `date7`, `date8`, `date9`, `date10`, `date11`, `date12`, `date13`, `date14`, `date15`, `date16`, `date17`, `date18`, `date19`, `date20`) VALUES
+('C947123456', '2020-10-13', '2020-10-04', '2020-10-12', '2020-10-05', 'tan', 'tan', 'tan', 'tan', 'balck', 'balck', 'balck', 'tan', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'no', 'no', 'no', 'no', '2020-09-28', '2020-10-28', '2020-09-29', '2020-09-30', '2020-09-29', '2020-10-03', '2020-10-07', '2020-10-10', '2020-10-14', '2020-09-30', '2020-10-04', '2020-10-08', '2020-10-11', '2020-10-15', '2020-10-01', '2020-10-05', '2020-10-09', '2020-10-12', '2020-10-15', '2020-10-02');
+
 -- --------------------------------------------------------
 
 --
@@ -247,6 +266,14 @@ CREATE TABLE `childdata3` (
   `text25` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `childdata3`
+--
+
+INSERT INTO `childdata3` (`id`, `text1`, `text2`, `text3`, `text4`, `text5`, `text6`, `text7`, `text8`, `text9`, `text10`, `text11`, `text12`, `text13`, `text14`, `text15`, `text16`, `text17`, `text18`, `text19`, `text20`, `text21`, `text22`, `text23`, `text24`, `text25`) VALUES
+('C947123456', '', 'tgc', 'gbvnm', 'ytyjj', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -267,6 +294,13 @@ CREATE TABLE `childdata4` (
   `recognize` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `childdata4`
+--
+
+INSERT INTO `childdata4` (`id`, `light`, `watch`, `smile`, `eye`, `look`, `touch`, `eyeerror`, `pick`, `touch2`, `recognize`) VALUES
+('C947123456', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes');
+
 -- --------------------------------------------------------
 
 --
@@ -286,6 +320,13 @@ CREATE TABLE `childdata5` (
   `respond` varchar(30) NOT NULL,
   `look` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `childdata5`
+--
+
+INSERT INTO `childdata5` (`id`, `sound`, `highsound`, `smile`, `eye`, `hear`, `search`, `song`, `name`, `respond`, `look`) VALUES
+('C947123456', 'Yes', 'Yes', 'No', 'No', 'Yes', 'No', 'No', 'Yes', 'No', 'No');
 
 -- --------------------------------------------------------
 
@@ -329,6 +370,13 @@ CREATE TABLE `data` (
   `POA_at_Registration` text NOT NULL,
   `tele` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `data`
+--
+
+INSERT INTO `data` (`id`, `BloodGroup`, `BMI`, `height`, `allergies`, `Name_of_the_mother`, `Name_of_the_Hospital_Clinic`, `age`, `Name_of_the_Consultant_Obstetrician`, `Name_of_the_field_Clinic`, `GramaNiladariDivision`, `RegistrationNoEligibleFamilyRegister`, `RegistrationDateEligibleFamilyRegister`, `RegistrationNoPregnantmothersRegister`, `RegistrationDatePregnantmothersRegister`, `IdentifiedAntenatalRiskConditionsModifiers`, `consanguinity`, `RubellaImmunization`, `PrePregnancyScreeningDone`, `PreconceptionalFolicAcid`, `Planed_pregnancy_or_not`, `Historyofsubfertility`, `Family_planing_method_last_used`, `G`, `P`, `C`, `AgeOfYoungestChild`, `LRMP`, `EDD`, `US_corrected_EDD`, `POA_at_dating_Scan`, `Date_of_Quickening`, `POA_at_Registration`, `tele`) VALUES
+('947123456V', 'B-', '25', '159', '', '', '', '', '', '', '', '', '0000-00-00', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -395,6 +443,13 @@ CREATE TABLE `data2` (
   `Consent_form_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `data2`
+--
+
+INSERT INTO `data2` (`id`, `Companion`, `Intended_Hospital_Delivery`, `Intended_Hospital_Emergency`, `Mode_of_Transport_Delivery`, `Mode_of_Transport_Emergency`, `Average_cost_Delivery`, `Average_cost_Emergency`, `Distance_from_Home_Delivery`, `Distance_from_Home_Emergency`, `Time_taken_to_reach_Delivery`, `Time_taken_to_reach_Emergency`, `first_date`, `first_Husband`, `first_wife`, `first_Other`, `sec_date`, `sec_Husband`, `sec_wife`, `sec_Other`, `third_date`, `third_Husband`, `third_wife`, `third_Other`, `pre_pregnancy_book`, `Feeding_breastmilk_book`, `pre_childhood_book`, `family_planing_book`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `d10`, `d11`, `d12`, `cd1`, `cd2`, `cd3`, `cd4`, `cd5`, `cd6`, `cd7`, `cd8`, `cd9`, `cd10`, `cd11`, `cd12`, `Conselling_date`, `chosen_method`, `reson_not_method`, `Consent_form_date`) VALUES
+('947123456V', '2020-10-12', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '0000-00-00', '', '', '', '0000-00-00', '', '', '', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '', '', '0000-00-00');
+
 -- --------------------------------------------------------
 
 --
@@ -427,6 +482,13 @@ CREATE TABLE `day1` (
   `officer` varchar(50) NOT NULL,
   `post` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `day1`
+--
+
+INSERT INTO `day1` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '2020-10-20', 0, 'not done', 'not d', 'not d', 'not d', 'not d', 0, 0, 0, 0, 'not done', 'not done', 'not done', 'not d', 'not d', 0, 0, 0, 0, 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -461,6 +523,13 @@ CREATE TABLE `day2` (
   `post` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `day2`
+--
+
+INSERT INTO `day2` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '0000-00-00', 0, '', '', '', '', '', 0, 0, 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -493,6 +562,13 @@ CREATE TABLE `day3` (
   `officer` varchar(50) DEFAULT NULL,
   `post` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `day3`
+--
+
+INSERT INTO `day3` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -527,6 +603,13 @@ CREATE TABLE `day4` (
   `post` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `day4`
+--
+
+INSERT INTO `day4` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -559,6 +642,13 @@ CREATE TABLE `day5` (
   `officer` varchar(50) DEFAULT NULL,
   `post` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `day5`
+--
+
+INSERT INTO `day5` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -593,6 +683,13 @@ CREATE TABLE `day6` (
   `post` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `day6`
+--
+
+INSERT INTO `day6` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -625,6 +722,13 @@ CREATE TABLE `day7` (
   `officer` varchar(50) DEFAULT NULL,
   `post` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `day7`
+--
+
+INSERT INTO `day7` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -659,6 +763,13 @@ CREATE TABLE `day8` (
   `post` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `day8`
+--
+
+INSERT INTO `day8` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -691,6 +802,13 @@ CREATE TABLE `day9` (
   `officer` varchar(50) DEFAULT NULL,
   `post` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `day9`
+--
+
+INSERT INTO `day9` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -725,6 +843,13 @@ CREATE TABLE `day10` (
   `post` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `day10`
+--
+
+INSERT INTO `day10` (`id`, `dov`, `poa`, `sugar`, `alb`, `pallor`, `ankle`, `facial`, `sys`, `dia`, `fundalh`, `weight`, `lie`, `presen`, `engage`, `fm`, `fhs`, `iron`, `fol`, `cal`, `vitc`, `food`, `officer`, `post`) VALUES
+('947123456V', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -750,6 +875,13 @@ CREATE TABLE `hoscliniccare` (
   `designation` text NOT NULL,
   `donext` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `hoscliniccare`
+--
+
+INSERT INTO `hoscliniccare` (`id`, `date1`, `poa`, `weight1`, `sugar`, `albumin`, `oedema`, `systolic`, `diastolic`, `fundalheight`, `fundalheight1`, `lie`, `presentation`, `fm`, `fhs`, `designation`, `donext`) VALUES
+('947123456V', '0000-00-00', '', '', 'Green', 'NIL', '+', '', '', '', '', 'LL', 'Cephalic', '+', '+', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -802,6 +934,13 @@ CREATE TABLE `investigations` (
   `tnebatch` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `investigations`
+--
+
+INSERT INTO `investigations` (`id`, `ausT1`, `ausT2`, `ausT3`, `menT1`, `menT2`, `menT3`, `respirEx`, `breastEx`, `bs1`, `bs1res`, `bs2`, `bs2res`, `heam1`, `heam1res`, `heam2`, `heam2res`, `other`, `anti`, `kick`, `dentref`, `dentex`, `denttreat`, `syppoa`, `syptake`, `sypreci`, `sypres`, `sypref`, `hivtake`, `hivinform`, `tdate1`, `tbatch1`, `tdate2`, `tbatch2`, `tdate3`, `tbatch3`, `tdate4`, `tbatch4`, `tdate5`, `tbatch5`, `tne`, `tnebatch`) VALUES
+('947123456V', '25', '', '', '', '', '', '', '', 0, '', 0, '', 0, '', 0, '', '', 'not done', '0000-00-00', '0000-00-00', '0000-00-00', '', 0, '0000-00-00', '0000-00-00', 'not done', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '');
+
 -- --------------------------------------------------------
 
 --
@@ -809,12 +948,20 @@ CREATE TABLE `investigations` (
 --
 
 CREATE TABLE `optionaldate` (
-  `id` varchar(10) NOT NULL,
+  `id` varchar(20) NOT NULL,
   `date1` date NOT NULL,
   `date2` date NOT NULL,
   `confirmedDate` text NOT NULL,
   `time` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `optionaldate`
+--
+
+INSERT INTO `optionaldate` (`id`, `date1`, `date2`, `confirmedDate`, `time`) VALUES
+('947123456V', '0000-00-00', '0000-00-00', '', ''),
+('C947123456', '0000-00-00', '0000-00-00', '', '');
 
 -- --------------------------------------------------------
 
@@ -855,6 +1002,13 @@ CREATE TABLE `pg7` (
   `dis_dt` date DEFAULT NULL,
   `notes` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `pg7`
+--
+
+INSERT INTO `pg7` (`id`, `hosptal`, `birth_weight`, `poa`, `live_birth`, `still_birth`, `abs`, `del_dt`, `sex`, `del_mod`, `ep`, `bt`, `ve`, `mc`, `infect`, `fpm`, `cm`, `reason`, `danger`, `bf`, `bp`, `vita`, `rubella`, `antid`, `diags`, `chdr`, `presc`, `reff`, `other`, `dis_dt`, `notes`) VALUES
+('947123456V', '', 250, '50', 'yes', 'no', 'no', '2020-10-05', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'T', 'T', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', '', NULL, 'Yes', 'Yes', '', '', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -930,6 +1084,13 @@ CREATE TABLE `table1` (
   `poText` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `table1`
+--
+
+INSERT INTO `table1` (`id`, `wAge`, `hAge`, `wEducation`, `hEducation`, `wOccupation`, `hOccupation`, `fhDiabetes`, `fhHypertension`, `fhHaematologic`, `fhTwin`, `fhOthers`, `shDiabetes`, `shHypertension`, `shCardiac`, `shRenal`, `shHepatic`, `shPsychiatric`, `shEpilepsy`, `shMalignancies`, `shHaematological`, `shTuberculosis`, `shThyroid`, `shBronchial`, `shDVT`, `shSurgeries`, `shOther`, `shScore`, `poGoneAc`, `poGonePm`, `poGoneOut`, `poGoneW`, `poGonePc`, `poGoneSa`, `poGtwoAc`, `poGtwoPm`, `poGtwoOut`, `poGtwoW`, `poGtwoPc`, `poGtwoSa`, `poGthAc`, `poGthPm`, `poGthOut`, `poGthW`, `poGthPc`, `poGthSa`, `poGfoAc`, `poGfoPm`, `poGfoOut`, `poGfoW`, `poGfoPc`, `poGfoSa`, `poGfiAc`, `poGfiPm`, `poGfiOut`, `poGfiW`, `poGfiPc`, `poGfiSa`, `poGsAc`, `poGsPm`, `poGsOut`, `poGsW`, `poGsPc`, `poGsSa`, `poText`) VALUES
+('947123456V', 25, 28, 'degree', 'degree', 'teacher', 'teacher', 'Yes', 'No', 'Yes', 'No', 'no', 'No', 'Yes', 'No', 'No', 'No', 'Yes', 'Yes', 'No', 'No', 'No', 'No', 'No', 'no', 'no', 'no', '25', 'no', 'hospital', 'good', 250, 'no', 'male', 'no', 'no', 'no', 2, 'no', 'no', 'no', 'no', 'no', 4, 'no', 'no', 'no', 'no', 'no', 5, 'no', 'no', 'no', 'no', 'no', 6, 'no', 'non', 'no', 'no', 'no', 7, 'no', 'no', 'nno');
+
 -- --------------------------------------------------------
 
 --
@@ -937,7 +1098,7 @@ CREATE TABLE `table1` (
 --
 
 CREATE TABLE `table2` (
-  `idNew` text NOT NULL,
+  `id` text NOT NULL,
   `ipp` text NOT NULL,
   `zscore` varchar(50) NOT NULL,
   `day1` date NOT NULL,
@@ -978,7 +1139,7 @@ CREATE TABLE `table2` (
   `reason` text NOT NULL,
   `fpPlace` text NOT NULL,
   `fpDate` date NOT NULL,
-  `fpTime` time(6) NOT NULL,
+  `fpTime` text NOT NULL,
   `sNote` text NOT NULL,
   `oName` text NOT NULL,
   `designation` text NOT NULL,
@@ -988,6 +1149,13 @@ CREATE TABLE `table2` (
   `mohTel` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `table2`
+--
+
+INSERT INTO `table2` (`id`, `ipp`, `zscore`, `day1`, `day2`, `day3`, `day4`, `day5`, `day6`, `day7`, `day8`, `imday1`, `imday2`, `imday3`, `imday4`, `imday5`, `imday6`, `imday7`, `imday8`, `cday`, `cplace`, `date`, `bpro`, `avd`, `evb`, `pallor`, `icterus`, `oedema`, `bp`, `cs`, `rs`, `ae`, `ve`, `epds`, `other`, `problem`, `method`, `Chosen`, `reason`, `fpPlace`, `fpDate`, `fpTime`, `sNote`, `oName`, `designation`, `cName`, `cTel`, `phmTel`, `mohTel`) VALUES
+('947123456V', 'steps', '25', '2020-09-28', '2020-09-30', '2020-10-14', '2020-10-06', '2020-09-30', '2020-10-15', '2020-10-07', '2020-10-13', '2020-10-02', '2020-10-07', '2020-10-28', '2020-10-26', '2020-10-03', '2020-10-01', '2020-10-01', '2020-10-05', '2020-10-01', 'hospital', '2020-10-01', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'good', 'no', 'no', 'T', 'IP', 'no', 'hospital', '2020-09-30', '23:01', 'no', 'homs', 'doctor', 'gampaha,Colombo', '075-825-2533', '012-520-5222', '012-520-5222');
+
 -- --------------------------------------------------------
 
 --
@@ -995,7 +1163,7 @@ CREATE TABLE `table2` (
 --
 
 CREATE TABLE `table3` (
-  `idn` text NOT NULL,
+  `id` text NOT NULL,
   `sMonth` int(10) NOT NULL,
   `cMonth` int(10) NOT NULL,
   `cStatus` varchar(50) NOT NULL,
@@ -1091,6 +1259,13 @@ CREATE TABLE `table3` (
   `cspart` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `table3`
+--
+
+INSERT INTO `table3` (`id`, `sMonth`, `cMonth`, `cStatus`, `shead`, `chead`, `cshead`, `slook`, `clook`, `cslook`, `ssound`, `csound`, `cssound`, `sreaction`, `creaction`, `csreaction`, `ssmile`, `csmile`, `cssmile`, `smonth1`, `cmonth1`, `cstatus1`, `sheart`, `cheart`, `csheart`, `sfinger`, `cfinger`, `csfinger`, `shand`, `chand`, `cshand`, `shsound`, `chsound`, `cshsound`, `ssingle`, `csingle`, `cssingle`, `sssmile`, `cssmile1`, `csssmile`, `smonths`, `cmonths`, `cstatuses`, `shrise`, `chrise`, `cshrise`, `ssame`, `csame`, `cssame`, `schange`, `cchange`, `cschange`, `sagain`, `cagain`, `csagain`, `snine`, `cnine`, `csnine`, `ssit`, `csit`, `cssit`, `sstand`, `cstand`, `csstand`, `sitem`, `citem`, `csitem`, `smimicry`, `cmimicry`, `csmimicry`, `sword`, `cword`, `csword`, `sadvice`, `cadvice`, `csadvice`, `stwelve`, `ctwelve`, `cstwelve`, `swalk`, `cwalk`, `cswalk`, `sgive`, `cgive`, `csgive`, `sfamiliar`, `cfamiliar`, `csfamiliar`, `sball`, `cball`, `csball`, `spart`, `cpart`, `cspart`) VALUES
+('C947123456', 2, 1, 'doctor', 2, 3, 'doctor', 3, 3, 'doctor', 4, 3, 'doctor', 5, 3, 'doctor', 6, 6, 'doctor', 7, 5, 'doctor', 6, 5, 'doctor', 6, 5, 'doctor', 6, 5, 'doctor', 6, 5, 'doctor', 6, 5, 'doctor', 5, 5, 'doctor', 7, 6, 'doctor', 7, 6, 'doctor', 7, 6, 'doctor', 7, 6, 'doctor', 7, 6, 'doctor', 9, 9, 'doctor', 9, 9, 'doctor', 9, 9, 'doctor', 9, 9, 'doctor', 9, 9, 'doctor', 9, 9, 'doctor', 9, 9, 'doctor', 12, 12, 'doctor', 12, 12, 'doctor', 12, 12, 'doctor', 12, 12, 'nurse', 12, 12, 'nurse', 12, 12, 'nurse');
+
 -- --------------------------------------------------------
 
 --
@@ -1184,6 +1359,13 @@ CREATE TABLE `table4` (
   `cname` int(10) NOT NULL,
   `csname` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `table4`
+--
+
+INSERT INTO `table4` (`id`, `seighteen`, `ceighteen`, `cseighteen`, `sawalk`, `cawalk`, `csawalk`, `sstair`, `cstair`, `csstair`, `sblock`, `cblock`, `csblock`, `seat`, `ceat`, `cseat`, `stenWord`, `ctenWord`, `cstenWord`, `slip`, `clip`, `cslip`, `syear`, `cyear`, `csyear`, `srun`, `crun`, `csrun`, `sup`, `cup`, `csup`, `scircle`, `ccircle`, `cscircle`, `ssentence`, `csentence`, `cssentence`, `sthree`, `cthree`, `csthree`, `sleg`, `cleg`, `csleg`, `sjump`, `cjump`, `csjump`, `sshoe`, `cshoe`, `csshoe`, `scopy`, `ccopy`, `cscopy`, `scount`, `ccount`, `cscount`, `snear`, `cnear`, `csnear`, `scomplex`, `ccomplex`, `cscomplex`, `sfour`, `cfour`, `csfour`, `slegJump`, `clegJump`, `cslegJump`, `sdressing`, `cdressing`, `csdressing`, `sfood`, `cfood`, `csfood`, `sskeleton`, `cskeleton`, `csskeleton`, `splay`, `cplay`, `csplay`, `stime`, `ctime`, `cstime`, `sname`, `cname`, `csname`) VALUES
+('C947123456', 20, 20, 'doctor', 20, 20, 'doctor', 20, 20, 'doctor', 21, 20, 'doctor', 21, 20, 'doctor', 22, 20, 'doctor', 22, 22, 'doctor', 2, 3, 'doctor', 2, 3, 'doctor', 2, 3, 'doctor', 2, 3, 'doctor', 2, 3, 'doctor', 3, 4, 'doctor', 3, 4, 'doctor', 3, 4, 'doctor', 3, 4, 'doctor', 3, 4, 'doctor', 3, 4, 'doctor', 3, 4, 'doctor', 3, 4, 'doctor', 4, 5, 'doctor', 4, 5, 'doctor', 4, 5, 'doctor', 4, 5, 'doctor', 4, 5, 'doctor', 4, 5, 'doctor', 4, 5, 'doctor', 4, 5, 'doctor');
 
 -- --------------------------------------------------------
 
@@ -1310,6 +1492,13 @@ CREATE TABLE `table5` (
   `position5` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `table5`
+--
+
+INSERT INTO `table5` (`id`, `day1`, `day2`, `day3`, `day4`, `day5`, `attack1`, `attack2`, `attack3`, `attack4`, `attack5`, `eye1`, `eye2`, `eye3`, `eye4`, `eye5`, `left1`, `left2`, `left3`, `left4`, `left5`, `right1`, `right2`, `right3`, `right4`, `right5`, `hleft1`, `hleft2`, `hleft3`, `hleft4`, `hleft5`, `hright1`, `hright2`, `hright3`, `hright4`, `hright5`, `tooth1`, `tooth2`, `fault1`, `fault2`, `weight1`, `weight2`, `weight3`, `weight4`, `weight5`, `height1`, `height2`, `height3`, `height4`, `height5`, `develop1`, `develop2`, `develop3`, `develop4`, `develop5`, `heart1`, `heart2`, `heart3`, `heart4`, `heart5`, `joint1`, `joint2`, `joint3`, `joint4`, `joint5`, `disease1`, `disease2`, `disease3`, `disease4`, `disease5`, `adisease0`, `adisease1`, `adisease2`, `adisease3`, `adisease4`, `adisease5`, `bdisease0`, `bdisease1`, `bdisease2`, `bdisease3`, `bdisease4`, `bdisease5`, `cdisease0`, `cdisease1`, `cdisease2`, `cdisease3`, `cdisease4`, `cdisease5`, `ddisease0`, `ddisease1`, `ddisease2`, `ddisease3`, `ddisease4`, `ddisease5`, `edisease0`, `edisease1`, `edisease2`, `edisease3`, `edisease4`, `edisease5`, `fdisease0`, `fdisease1`, `fdisease2`, `fdisease3`, `fdisease4`, `fdisease5`, `name1`, `name2`, `name3`, `name4`, `name5`, `position1`, `position2`, `position3`, `position4`, `position5`) VALUES
+('C947123456', '2020-09-29', '2020-09-30', '2020-10-08', '2020-10-13', '2020-10-05', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'no', 'no', 'no', 'no', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'nonn', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'Joe', 'Joe', 'Joe', 'Joe', 'Joe', 'doctor', 'doctor', 'doctor', 'doctor', 'doctor');
+
 -- --------------------------------------------------------
 
 --
@@ -1418,6 +1607,13 @@ CREATE TABLE `table6` (
   `position9` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `table6`
+--
+
+INSERT INTO `table6` (`id`, `day6`, `day7`, `day8`, `day9`, `attack6`, `attack7`, `attack8`, `attack9`, `eye6`, `eye7`, `eye8`, `eye9`, `left6`, `left7`, `left8`, `left9`, `right6`, `right7`, `right8`, `right9`, `blind1`, `blind2`, `blind3`, `bito1`, `bito2`, `bito3`, `hleft6`, `hleft7`, `hleft8`, `hleft9`, `hright6`, `hright7`, `hright8`, `hright9`, `tooth3`, `tooth4`, `tooth5`, `tooth6`, `fault3`, `fault4`, `fault5`, `fault6`, `weight6`, `weight7`, `weight8`, `weight9`, `height6`, `height7`, `height8`, `height9`, `develop6`, `develop7`, `develop8`, `develop9`, `heart6`, `heart7`, `heart8`, `heart9`, `joint6`, `joint7`, `joint8`, `joint9`, `disease6`, `disease7`, `disease8`, `disease9`, `adisease6`, `adisease7`, `adisease8`, `adisease9`, `bdisease6`, `bdisease7`, `bdisease8`, `bdisease9`, `cdisease6`, `cdisease7`, `cdisease8`, `cdisease9`, `ddisease6`, `ddisease7`, `ddisease8`, `ddisease9`, `edisease6`, `edisease7`, `edisease8`, `edisease9`, `fdisease6`, `fdisease7`, `fdisease8`, `fdisease9`, `name6`, `name7`, `name8`, `name9`, `position6`, `position7`, `position8`, `position9`) VALUES
+('C947123456', '2020-10-06', '2020-10-02', '2020-10-08', '2020-10-04', 'no', 'non', 'no', 'no', 'no', 'no', 'no', 'no', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'no', 'no', 'no', 'no', 'no', 'no', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'no', 'no', 'non', 'nnno', 'no', 'no', 'no', 'no', 'no', 'non', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'john', 'john', 'john', 'john', 'nurse', 'nurse', 'nurse', 'nurse');
+
 -- --------------------------------------------------------
 
 --
@@ -1494,6 +1690,13 @@ CREATE TABLE `table7` (
   `louse3` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `table7`
+--
+
+INSERT INTO `table7` (`id`, `date1`, `date2`, `date3`, `age1`, `age2`, `age3`, `teacher1`, `teacher2`, `teacher3`, `attendance1`, `attendance2`, `attendance3`, `house1`, `house2`, `house3`, `clean1`, `clean2`, `clean3`, `activity1`, `activity2`, `activity3`, `behaviour1`, `behaviour2`, `behaviour3`, `speak1`, `speak2`, `speak3`, `hearing1`, `hearing2`, `hearing3`, `vees1`, `vees2`, `vees3`, `fit1`, `fit2`, `fit3`, `mental1`, `mental2`, `mental3`, `weight1`, `weight2`, `weight3`, `type1`, `type2`, `type3`, `interrupt1`, `interrupt2`, `interrupt3`, `height1`, `height2`, `height3`, `sheight1`, `sheight2`, `sheight3`, `night1`, `night2`, `night3`, `bito1`, `bito2`, `bito3`, `ni1`, `ni2`, `ni3`, `louse1`, `louse2`, `louse3`) VALUES
+('C947123456', '2020-10-12', '2020-10-11', '2020-10-20', '5', '5', '5', 'done', 'done', 'done', '3', '4', '4', '4', '3', '4', '4', '4', '3', '3', '4', '4', 'X', 'O', 'X', 'X', 'O', 'X', 'X', 'O', 'X', 'X', 'X', 'O', 'X', 'X', 'X', 'O', 'X', 'X', '20', '20', '20', 'optimum', 'optimum', 'optimum', 'no', 'no', 'no', '120', '120', '120', 'good', 'good', 'good', 'X', 'X', 'X', 'X', 'O', 'X', 'O', 'X', 'O', 'O', 'X', 'X');
+
 -- --------------------------------------------------------
 
 --
@@ -1567,6 +1770,13 @@ CREATE TABLE `table8` (
   `tposition2` text NOT NULL,
   `tposition3` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `table8`
+--
+
+INSERT INTO `table8` (`id`, `lsquint1`, `lsquint2`, `lsquint3`, `rsquint1`, `rsquint2`, `rsquint3`, `lvision1`, `lvision2`, `lvision3`, `rvision1`, `rvision2`, `rvision3`, `lhearing1`, `lhearing2`, `lhearing3`, `rhearing1`, `rhearing2`, `rhearing3`, `speech1`, `speech2`, `speech3`, `tooth1`, `tooth2`, `tooth3`, `teeth1`, `teeth2`, `teeth3`, `ynt1`, `ynt2`, `ynt3`, `mark1`, `mark2`, `mark3`, `bone1`, `bone2`, `bone3`, `heart1`, `heart2`, `heart3`, `lungs1`, `lungs2`, `lungs3`, `ovarious1`, `ovarious2`, `ovarious3`, `ovarious4`, `tvarious1`, `tvarious2`, `tvarious3`, `tvarious4`, `thvarious1`, `thvarious2`, `thvarious3`, `thvarious4`, `fvarious1`, `fvarious2`, `fvarious3`, `fvarious4`, `tname1`, `tname2`, `tname3`, `tposition1`, `tposition2`, `tposition3`) VALUES
+('C947123456', 'O', 'O', 'X', 'X', 'O', 'X', 'O', 'X', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'X', 'X', 'X', 'X', 'X', 'O', 'X', 'O', 'X', 'X', 'O', 'X', 'X', 'O', 'X', 'O', 'O', 'O', 'X', 'X', 'O', 'X', 'O', 'O', 'X', 'O', 'O', 'non', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'john', 'joe', 'joe', 'Doctor', 'Doctor', 'Midwife');
 
 -- --------------------------------------------------------
 
@@ -1658,6 +1868,13 @@ CREATE TABLE `table9` (
   `result20` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `table9`
+--
+
+INSERT INTO `table9` (`id`, `date1`, `reason1`, `place1`, `result1`, `date2`, `reason2`, `place2`, `result2`, `date3`, `reason3`, `place3`, `result3`, `date4`, `reason4`, `place4`, `result4`, `date5`, `reason5`, `place5`, `result5`, `date6`, `reason6`, `place6`, `result6`, `date7`, `reason7`, `place7`, `result7`, `date8`, `reason8`, `place8`, `result8`, `date9`, `reason9`, `place9`, `result9`, `date10`, `reason10`, `place10`, `result10`, `date11`, `reason11`, `place11`, `result11`, `date12`, `reason12`, `place12`, `result12`, `date13`, `reason13`, `place13`, `result13`, `date14`, `reason14`, `place14`, `result14`, `date15`, `reason15`, `place15`, `result15`, `date16`, `reason16`, `place16`, `result16`, `date17`, `reason17`, `place17`, `result17`, `date18`, `reason18`, `place18`, `result18`, `date19`, `reason19`, `place19`, `result19`, `date20`, `reason20`, `place20`, `result20`) VALUES
+('C947123456', '2020-10-29', 'fever', 'hospital', 'no', '2020-10-14', 'fever', 'clinic', 'no', '2020-10-07', 'fever', 'clinic', 'no', '2020-10-14', 'fever', 'clinic', 'no', '2020-10-08', 'fever', 'clinic', 'no', '2020-10-15', 'fever', 'clinic', 'no', '2020-10-15', 'fever', 'clinic', 'no', '2020-10-27', 'fever', 'clinic', 'no', '2020-10-22', 'fever', 'clinic', 'no', '2020-10-28', 'fever', 'clinic', 'no', '2020-10-20', 'fever', 'clinic', 'no', '2020-10-05', 'fever', 'clinic', 'no', '2020-09-29', 'fever', 'clinic', 'no', '2020-10-13', 'fever', 'clinic', 'no', '2020-10-07', 'fever', 'clinic', 'no', '2020-10-20', 'fever', 'clinic', 'no', '2020-10-06', 'fever', 'clinic', 'no', '2020-10-07', 'fever', 'clinic', 'no', '2020-10-21', 'fever', 'clinic', 'no', '2020-11-04', 'fever', 'clinic', 'no');
+
 -- --------------------------------------------------------
 
 --
@@ -1744,6 +1961,13 @@ CREATE TABLE `table10` (
   `nresult19` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `table10`
+--
+
+INSERT INTO `table10` (`id`, `ndate1`, `nreason1`, `nplace1`, `nresult1`, `ndate2`, `nreason2`, `nplace2`, `nresult2`, `ndate3`, `nreason3`, `nplace3`, `nresult3`, `ndate4`, `nreason4`, `nplace4`, `nresult4`, `ndate5`, `nreason5`, `nplace5`, `nresult5`, `ndate6`, `nreason6`, `nplace6`, `nresult6`, `ndate7`, `nreason7`, `nplace7`, `nresult7`, `ndate8`, `nreason8`, `nplace8`, `nresult8`, `ndate9`, `nreason9`, `nplace9`, `nresult9`, `ndate10`, `nreason10`, `nplace10`, `nresult10`, `ndate11`, `nreason11`, `nplace11`, `nresult11`, `ndate12`, `nreason12`, `nplace12`, `nresult12`, `ndate13`, `nreason13`, `nplace13`, `nresult13`, `ndate14`, `nreason14`, `nplace14`, `nresult14`, `ndate15`, `nreason15`, `nplace15`, `nresult15`, `ndate16`, `nreason16`, `nplace16`, `nresult16`, `ndate17`, `nreason17`, `nplace17`, `nresult17`, `ndate18`, `nreason18`, `nplace18`, `nresult18`, `ndate19`, `nreason19`, `nplace19`, `nresult19`) VALUES
+('C947123456', '2020-09-29', 'fever', 'judge', 'no', '2020-10-06', 'fever', 'judge', 'no', '2020-10-28', 'fever', 'judge', 'no', '2020-10-21', 'fever', 'judge', 'no', '2020-10-15', 'fever', 'judge', 'no', '2020-10-06', 'fever', 'judge', 'no', '2020-10-06', 'fever', 'judge', 'no', '2020-10-06', 'fever', 'judge', 'no', '2020-10-12', 'fever', 'judge', 'no', '2020-10-28', 'fever', 'judge', 'no', '2020-10-22', 'fever', 'judge', 'no', '2020-10-07', 'fever', 'judge', 'no', '2020-09-30', 'fever', 'judge', 'no', '2020-09-30', 'fever', 'judge', 'no', '2020-11-04', 'fever', 'judge', 'nono', '2020-10-22', 'fever', 'judge', 'no', '2020-10-07', 'fever', 'judge', 'no', '2020-11-05', 'fever', 'judge', 'no', '2020-10-23', 'fever', 'judge', 'no');
+
 -- --------------------------------------------------------
 
 --
@@ -1761,7 +1985,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `password`, `catagory`) VALUES
-('988011002V', '81dc9bdb52d04dc20036dbd8313ed055', 'Receptionist');
+('947123456V', '81dc9bdb52d04dc20036dbd8313ed055', 'Patient-Mother'),
+('988011002V', '81dc9bdb52d04dc20036dbd8313ed055', 'Receptionist'),
+('C947123456', '81dc9bdb52d04dc20036dbd8313ed055', 'Patient-Child');
 
 -- --------------------------------------------------------
 
@@ -1786,6 +2012,13 @@ CREATE TABLE `usscan` (
   `any_other` text NOT NULL,
   `designation` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `usscan`
+--
+
+INSERT INTO `usscan` (`id`, `date1`, `poa`, `ebw`, `crl`, `gest_sac`, `bpd`, `hc`, `ac`, `fl`, `liquor`, `placenta`, `average_poa`, `any_other`, `designation`) VALUES
+('947123456V', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -1876,24 +2109,13 @@ ALTER TABLE `optionaldate`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table3`
---
-ALTER TABLE `table3`
-  ADD PRIMARY KEY (`idn`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`(10));
-
---
--- Indexes for table `usscan`
---
-ALTER TABLE `usscan`
-  ADD PRIMARY KEY (`id`) USING BTREE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
