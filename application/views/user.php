@@ -107,21 +107,21 @@ require '../controllers/login.php';
       <p id="caption"></p>
       <div class="icon-image">
       <a href="../models/PDF_Selecting.php">
-        <img src="../../public/images/newview1.png"  style="width:15%;height:200%;"/>
+        <img src="../../public/images/newview1.png"  style="width:15%;height:150%;"/>
       </a>
       <a href="optionalDate.php">
-        <img src="../../public/images/newdate1.png"  style="width:15%;height:200%;"/>
+        <img src="../../public/images/newdate1.png"  style="width:15%;height:150%;"/>
       </a>
       
       <?php if(($_SESSION['catagory']) =='Patient-Child' ) 
             {
         ?>
-            <a href="BMIcalc_page.php"> <img src="../../public/images/newweight4.png"  style="width:15%;height:200%;"/></a>
+            <a href="BMIcalc_page.php"> <img src="../../public/images/newweight4.png"  style="width:15%;height:150%;"/></a>
         <?php
             }
             else{ 
         ?>
-            <a href="WeightGainChart.html"> <img src="../../public/images/newweight4.png"  style="width:15%;height:200%;"/></a>
+            <a href="WeightGainChart.html"> <img src="../../public/images/newweight4.png"  style="width:15%;height:150%;"/></a>
         <?php
             }
         ?>
