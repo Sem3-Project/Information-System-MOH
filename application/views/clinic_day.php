@@ -28,7 +28,7 @@ require '../models/clinic_day_model.php';
     <body>
     <div>
         <div class="caption-container1">
-        <h2 class="title" align="center">සායනික සංරක්ෂණය / Clinic Care</h2>
+        <div class="caption-container"><h2 class="title" align="center">සායනික සංරක්ෂණය / Clinic Care</h2></div>
     <form action="clinic_day.php" method="POST">
     <div class="caption-container">
             <h3 >Search NIC :</h3>

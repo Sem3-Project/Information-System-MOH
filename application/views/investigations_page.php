@@ -29,7 +29,7 @@ require '../models/inves.model.php';
         <div>
         <div class="caption-container1">
         <form action="investigations_page.php" method="post">
-        <h2 class="title" align="center">පරීක්ෂණ / Investigations</h2>
+        <div class="caption-container"><h2 class="title" align="center">පරීක්ෂණ / Investigations</h2></div>
         <div class="caption-container">
             <h3 >Search NIC :</h3>
         </div>
