@@ -36,6 +36,7 @@ $date22='';
 $date23='';
 $date24='';
 $date25='';
+$date26='';
 $num1='';
 $num2='';
 $num3='';
@@ -61,31 +62,33 @@ $num22='';
 $num23='';
 $num24='';
 $num25='';
-$text1='';
-$text2='';
-$text3='';
-$text4='';
-$text5='';
-$text6='';
-$text7='';
-$text8='';
-$text9='';
-$text10='';
-$text11='';
-$text12='';
-$text13='';
-$text14='';
-$text15='';
-$text16='';
-$text17='';
-$text18='';
-$text19='';
-$text20='';
-$text21='';
-$text22='';
-$text23='';
-$text24='';
-$text25='';
+$num26='';
+$test1='';
+$test2='';
+$test3='';
+$test4='';
+$test5='';
+$test6='';
+$test7='';
+$test8='';
+$test9='';
+$test10='';
+$test11='';
+$test12='';
+$test13='';
+$test14='';
+$test15='';
+$test16='';
+$test17='';
+$test18='';
+$test19='';
+$test20='';
+$test21='';
+$test22='';
+$test23='';
+$test24='';
+$test25='';
+$test26='';
 
 //get data from the form
 function getData(){
@@ -142,31 +145,34 @@ function getData(){
     $data[49]=(isset($_POST['num23']) ? $_POST['num23'] : '');
     $data[50]=(isset($_POST['num24']) ? $_POST['num24'] : '');
     $data[51]=(isset($_POST['num25']) ? $_POST['num25'] : '');
-    $data[52]=(isset($_POST['text1']) ? $_POST['text1'] : '');
-    $data[53]=(isset($_POST['text2']) ? $_POST['text2'] : '');
-    $data[54]=(isset($_POST['text3']) ? $_POST['text3'] : '');
-    $data[55]=(isset($_POST['text4']) ? $_POST['text4'] : '');
-    $data[56]=(isset($_POST['text5']) ? $_POST['text5'] : '');
-    $data[57]=(isset($_POST['text6']) ? $_POST['text6'] : '');
-    $data[58]=(isset($_POST['text7']) ? $_POST['text7'] : '');
-    $data[59]=(isset($_POST['text8']) ? $_POST['text8'] : '');
-    $data[60]=(isset($_POST['text9']) ? $_POST['text9'] : '');
-    $data[61]=(isset($_POST['text10']) ? $_POST['text10'] : '');
-    $data[62]=(isset($_POST['text11']) ? $_POST['text11'] : '');
-    $data[63]=(isset($_POST['text12']) ? $_POST['text12'] : '');
-    $data[64]=(isset($_POST['text13']) ? $_POST['text13'] : '');
-    $data[65]=(isset($_POST['text14']) ? $_POST['text14'] : '');
-    $data[66]=(isset($_POST['text15']) ? $_POST['text15'] : '');
-    $data[67]=(isset($_POST['text16']) ? $_POST['text16'] : '');
-    $data[68]=(isset($_POST['text17']) ? $_POST['text17'] : '');
-    $data[69]=(isset($_POST['text18']) ? $_POST['text18'] : '');
-    $data[70]=(isset($_POST['text19']) ? $_POST['text19'] : '');
-    $data[71]=(isset($_POST['text20']) ? $_POST['text20'] : '');
-    $data[72]=(isset($_POST['text21']) ? $_POST['text21'] : '');
-    $data[73]=(isset($_POST['text22']) ? $_POST['text22'] : '');
-    $data[74]=(isset($_POST['text23']) ? $_POST['text23'] : '');
-    $data[75]=(isset($_POST['text24']) ? $_POST['text24'] : '');
-    $data[76]=(isset($_POST['text25']) ? $_POST['text25'] : '');
+    $data[52]=(isset($_POST['test1']) ? $_POST['test1'] : '');
+    $data[53]=(isset($_POST['test2']) ? $_POST['test2'] : '');
+    $data[54]=(isset($_POST['test3']) ? $_POST['test3'] : '');
+    $data[55]=(isset($_POST['test4']) ? $_POST['test4'] : '');
+    $data[56]=(isset($_POST['test5']) ? $_POST['test5'] : '');
+    $data[57]=(isset($_POST['test6']) ? $_POST['test6'] : '');
+    $data[58]=(isset($_POST['test7']) ? $_POST['test7'] : '');
+    $data[59]=(isset($_POST['test8']) ? $_POST['test8'] : '');
+    $data[60]=(isset($_POST['test9']) ? $_POST['test9'] : '');
+    $data[61]=(isset($_POST['test10']) ? $_POST['test10'] : '');
+    $data[62]=(isset($_POST['test11']) ? $_POST['test11'] : '');
+    $data[63]=(isset($_POST['test12']) ? $_POST['test12'] : '');
+    $data[64]=(isset($_POST['test13']) ? $_POST['test13'] : '');
+    $data[65]=(isset($_POST['test14']) ? $_POST['test14'] : '');
+    $data[66]=(isset($_POST['test15']) ? $_POST['test15'] : '');
+    $data[67]=(isset($_POST['test16']) ? $_POST['test16'] : '');
+    $data[68]=(isset($_POST['test17']) ? $_POST['test17'] : '');
+    $data[69]=(isset($_POST['test18']) ? $_POST['test18'] : '');
+    $data[70]=(isset($_POST['test19']) ? $_POST['test19'] : '');
+    $data[71]=(isset($_POST['test20']) ? $_POST['test20'] : '');
+    $data[72]=(isset($_POST['test21']) ? $_POST['test21'] : '');
+    $data[73]=(isset($_POST['test22']) ? $_POST['test22'] : '');
+    $data[74]=(isset($_POST['test23']) ? $_POST['test23'] : '');
+    $data[75]=(isset($_POST['test24']) ? $_POST['test24'] : '');
+    $data[76]=(isset($_POST['test25']) ? $_POST['test25'] : '');
+    $data[77]=(isset($_POST['date26']) ? $_POST['date26'] : '');
+    $data[78]=(isset($_POST['num26']) ? $_POST['num26'] : '');
+    $data[79]=(isset($_POST['test26']) ? $_POST['test26'] : '');
     return $data;
 }
 $immun = new table();
@@ -206,6 +212,7 @@ if(isset($_POST['search'])){
                         $date23=$row['date23'];
                         $date24=$row['date24'];
                         $date25=$row['date25'];
+                        $date26=$row['date26'];
                         $num1=$row['num1'];
                         $num2=$row['num2'];
                         $num3=$row['num3'];
@@ -231,31 +238,33 @@ if(isset($_POST['search'])){
                         $num23=$row['num23'];
                         $num24=$row['num24'];
                         $num25=$row['num25'];
-                        $text1=$row['text1'];
-                        $text2=$row['text2'];
-                        $text3=$row['text3'];
-                        $text4=$row['text4'];
-                        $text5=$row['text5'];
-                        $text6=$row['text6'];
-                        $text7=$row['text7'];
-                        $text8=$row['text8'];
-                        $text9=$row['text9'];
-                        $text10=$row['text10'];
-                        $text11=$row['text11'];
-                        $text12=$row['text12'];
-                        $text13=$row['text13'];
-                        $text14=$row['text14'];
-                        $text15=$row['text15'];
-                        $text16=$row['text16'];
-                        $text17=$row['text17'];
-                        $text18=$row['text18'];
-                        $text19=$row['text19'];
-                        $text20=$row['text20'];
-                        $text21=$row['text21'];
-                        $text22=$row['text22'];
-                        $text23=$row['text23'];
-                        $text24=$row['text24'];
-                        $text25=$row['text25'];
+                        $num26=$row['num26'];
+                        $test1=$row['test1'];
+                        $test2=$row['test2'];
+                        $test3=$row['test3'];
+                        $test4=$row['test4'];
+                        $test5=$row['test5'];
+                        $test6=$row['test6'];
+                        $test7=$row['test7'];
+                        $test8=$row['test8'];
+                        $test9=$row['test9'];
+                        $test10=$row['test10'];
+                        $test11=$row['test11'];
+                        $test12=$row['test12'];
+                        $test13=$row['test13'];
+                        $test14=$row['test14'];
+                        $test15=$row['test15'];
+                        $test16=$row['test16'];
+                        $test17=$row['test17'];
+                        $test18=$row['test18'];
+                        $test19=$row['test19'];
+                        $test20=$row['test20'];
+                        $test21=$row['test21'];
+                        $test22=$row['test22'];
+                        $test23=$row['test23'];
+                        $test24=$row['test24'];
+                        $test25=$row['test25'];
+                        $test26=$row['test26'];
                         
                     }
                 }else{
@@ -279,10 +288,10 @@ if(isset($_POST['search'])){
     `date17`='$info[18]',`date18`='$info[19]',`date19`='$info[20]',`date20`='$info[21]',`date21`='$info[22]',`date22`='$info[23]',`date23`='$info[24]',`date24`='$info[25]',`date25`='$info[26]',`num1`='$info[27]',
     `num2`='$info[28]',`num3`='$info[29]',`num4`='$info[30]',`num5`='$info[31]',`num6`='$info[32]',`num7`='$info[33]',`num8`='$info[34]',`num9`='$info[35]',`num10`='$info[36]',`num11`='$info[37]',`num12`='$info[38]',
     `num13`='$info[39]',`num14`='$info[40]',`num15`='$info[41]',`num16`='$info[42]',`num17`='$info[43]',`num18`='$info[44]',`num19`='$info[45]',`num20`='$info[46]',`num21`='$info[47]',`num22`='$info[48]',`num23`='$info[49]',
-    `num24`='$info[50]',`num25`='$info[51]',`text1`='$info[52]',`text2`='$info[53]',`text3`='$info[54]',
-    `text4`='$info[55]',`text5`='$info[56]',`text6`='$info[57]',`text7`='$info[58]',`text8`='$info[59]',`text9`='$info[60]',
-    `text10`='$info[61]',`text11`='$info[62]',`text12`='$info[63]',`text13`='$info[64]',`text14`='$info[65]',`text15`='$info[66]',`text16`='$info[67]',`text17`='$info[68]',`text18`='$info[69]',`text19`='$info[70]',`text20`='$info[71]',
-    `text21`='$info[72]',`text22`='$info[73]',`text23`='$info[74]',`text24`='$info[75]',`text25`='$info[76]' WHERE  id='$info[0]'";
+    `num24`='$info[50]',`num25`='$info[51]',`test1`='$info[52]',`test2`='$info[53]',`test3`='$info[54]',
+    `test4`='$info[55]',`test5`='$info[56]',`test6`='$info[57]',`test7`='$info[58]',`test8`='$info[59]',`test9`='$info[60]',
+    `test10`='$info[61]',`test11`='$info[62]',`test12`='$info[63]',`test13`='$info[64]',`test14`='$info[65]',`test15`='$info[66]',`test16`='$info[67]',`test17`='$info[68]',`test18`='$info[69]',`test19`='$info[70]',`test20`='$info[71]',
+    `test21`='$info[72]',`test22`='$info[73]',`test23`='$info[74]',`test24`='$info[75]',`test25`='$info[76]',`date26`='$info[77]',`num26`='$info[78]',`test26`='$info[79]' WHERE  id='$info[0]'";
     
     
 try{
