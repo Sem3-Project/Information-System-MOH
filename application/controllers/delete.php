@@ -62,7 +62,7 @@ if (isset($_POST['deactivate'])) {
             $dbObj->doQuery(delete('childdata4','id',$id));
             $dbObj->doQuery(delete('childdata5','id',$id));
             $dbObj->doQuery(delete('optionaldate','id',$id));
-            $dbObj->doQuery(delete('table3','idn',$id));
+            $dbObj->doQuery(delete('table3','id',$id));
             $dbObj->doQuery(delete('table4','id',$id));
             $dbObj->doQuery(delete('table5','id',$id));
             $dbObj->doQuery(delete('table6','id',$id));

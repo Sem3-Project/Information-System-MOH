@@ -6,7 +6,7 @@ require '../controllers/login.php';
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home page</title>
+        <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href ="../../public/css/home.css">
     </head>

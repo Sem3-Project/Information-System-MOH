@@ -4,7 +4,7 @@
 <?php
 
 require '../../framework/libraries/Model.php';
-require '../models/table.php';
+require '../controllers/tableNew.php';
 require '../models/login_table.php';
 
 
@@ -88,7 +88,7 @@ if (isset($_POST['save'])) {
               $dbObj->doQuery(insert('childdata4','id',$id));
               $dbObj->doQuery(insert('childdata5','id',$id));
               $dbObj->doQuery(insert('optionaldate','id',$id));
-              $dbObj->doQuery(insert('table3','idn',$id));
+              $dbObj->doQuery(insert('table3','id',$id));
               $dbObj->doQuery(insert('table4','id',$id));
               $dbObj->doQuery(insert('table5','id',$id));
               $dbObj->doQuery(insert('table6','id',$id));
