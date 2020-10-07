@@ -77,7 +77,7 @@ if (isset($_POST['save'])) {
             $dbObj->doQuery(insert('usscan','id',$id));
             $dbObj->doQuery(insert('pg7','id',$id));
             $dbObj->doQuery(insert('table1','id',$id));
-            $dbObj->doQuery(insert('table2','idNew',$id));
+            $dbObj->doQuery(insert('table2','id',$id));
           
           }
             else{

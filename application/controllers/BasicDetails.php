@@ -11,9 +11,9 @@ class Basicdetail extends Mother{
     var $BloodGroup=null;
     var $BMI=null;
     var $height=null;
-    var $allergies=null
-    var $Name_of_the_mother=null
-    var $Name_of_the_Hospital_Clinic=null
+    var $allergies=null;
+    var $Name_of_the_mother=null;
+    var $Name_of_the_Hospital_Clinic=null;
     var $age=null;
     var $tele=null;
     var $Name_of_the_Consultant_Obstetrician=null;

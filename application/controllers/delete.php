@@ -51,7 +51,7 @@ if (isset($_POST['deactivate'])) {
           $dbObj->doQuery(delete('usscan','id',$id));
           $dbObj->doQuery(delete('pg7','id',$id));
           $dbObj->doQuery(delete('table1','id',$id));
-          $dbObj->doQuery(delete('table2','idNew',$id));
+          $dbObj->doQuery(delete('table2','id',$id));
         
         }
           else{
