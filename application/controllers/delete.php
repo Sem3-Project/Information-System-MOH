@@ -4,7 +4,7 @@
 <?php 
 require '../../framework/libraries/Model.php';
 require '../models/table.php';
-
+require 'FolderProxy.php';
 
 $dbObj = Model::getInstance();
 $dbObj->connect('localhost','root','','moh');
@@ -13,15 +13,34 @@ if (isset($_POST['deactivate'])) {
 
     if (empty($_POST['id'])) {
         echo '<script type="text/javascript">';
-        echo 'setTimeout(function () { swal("Error!","Enter username!","error");';
+        echo 'setTimeout(function () { swal("Error!","කරුණාකර මුරපදය ඇතුලත් කරන්න<br>Please enter username!","error");';
         echo '}, 200);</script>';
     }
     else{
 
         $id = $_POST['id'];
         $catagory = $_POST['catagory'];
-        
-        function delete($tableName,$idname, $id){
+
+        $log = new login();
+
+        $sql1 = "Select * from users where id = '$id'";
+        $result = $log->featuredLoad($dbObj, $sql1);
+        $numOfRows = mysqli_num_rows($result);
+
+        if ($numOfRows !=1){
+          echo '<script type="text/javascript">';
+          echo 'setTimeout(function () { swal("Error!","කරුණාකර වලංගු තොරතුරු ඇතුලත් කරන්න<br>Please enter valid details!","error");';
+          echo '}, 200);</script>';
+        }
+
+        else if ($log->catagory != $catagory){
+          echo '<script type="text/javascript">';
+          echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න<br>Please select correct category","error");';
+          echo '}, 200);</script>'; 
+        }
+
+        else {
+          function delete($tableName,$idname, $id){
             $query_delete = "DELETE FROM $tableName WHERE $idname='$id'";
             return $query_delete;
           }
@@ -72,17 +91,13 @@ if (isset($_POST['deactivate'])) {
             $dbObj->doQuery(delete('table10','id',$id));
            
           }
-  
+
           echo '<script type="text/javascript">';
-          echo 'setTimeout(function () { swal("Successful!","Registration completed successfully!","success");';
+          echo 'setTimeout(function () { swal("Successful!","අක්‍රීය කිරීම සාර්ථකයි<br>Deactivation successful!","success");';
           echo '}, 200);</script>';
-      }
-
-
-        
-        echo '<script type="text/javascript">';
-        echo 'setTimeout(function () { swal("Success!","Successfully deactivated!","success");';
-        echo '}, 200);</script>';      
+        }
+          
+      }  
     }
 
 ?>

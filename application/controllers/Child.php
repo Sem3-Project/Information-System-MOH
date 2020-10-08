@@ -1,7 +1,7 @@
 <?php
 require '../controllers/tableNew.php';
 require '../controllers/Edit.php';
-abstract Class Child extends table implements Editable{
+Class Child extends table implements Editable{
 
     function Child(){}
 

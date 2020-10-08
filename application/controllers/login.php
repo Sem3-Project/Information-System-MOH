@@ -83,6 +83,11 @@ if (isset($_POST['login_user'])) {
                 echo '}, 200);</script>'; 
             }
         }
+        else{
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Error!","පරිශීලක නාමය හෝ මුරපදය වලංගු නැත\nUsername or password is invalid","error");';
+            echo '}, 200);</script>';
+        }
      
     }
     ?>

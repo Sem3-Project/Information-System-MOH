@@ -10,6 +10,7 @@ require '../controllers/login.php';
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href ="../../public/css/user1.css">
         <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+        
     </head>
     <head>
         <body>
@@ -107,22 +108,22 @@ require '../controllers/login.php';
   <div class="caption-container">
       <p id="caption"></p>
       <div class="icon-image">
-      <a href="../models/PDF_Selecting.php">
-        <img src="../../public/images/newview1.png"  style="width:15%;height:150%;"/>
-      </a>
+      <a href="../models/PDF_Selecting.php">      
+        <img src="../../public/images/newview1.png"  style="width:15%;height:150%;" title="ඔබේ සායනික වාර්තා ලබා ගැනීමට පිවිසෙන්න" id="t1"/>
+      </a>  
       <a href="optionalDate.php">
-        <img src="../../public/images/newdate1.png"  style="width:15%;height:150%;"/>
+        <img src="../../public/images/newdate1.png"  style="width:15%;height:150%;" title="ඔබේ සායනික දින තහවුරු කිරීමට පිවිසෙන්න"/>
       </a>
       
       <?php if(($_SESSION['catagory']) =='Patient-Child' ) 
             {
         ?>
-            <a href="BMIcalc_page.php"> <img src="../../public/images/newweight4.png"  style="width:15%;height:150%;"/></a>
+            <a href="BMIcalc_page.php"> <img src="../../public/images/newweight4.png"  style="width:15%;height:150%;" title="දරුවාගේ ස්කන්ධ දර්ශකය ලබා ගැනීමට පිවිසෙන්න"/></a>
         <?php
             }
             else{ 
         ?>
-            <a href="WeightGainChart.html"> <img src="../../public/images/newweight4.png"  style="width:15%;height:150%;"/></a>
+            <a href="WeightGainChart.html"> <img src="../../public/images/newweight4.png"  style="width:15%;height:150%;" title="ඔබේ ස්කන්ධ දර්ශකය ලබා ගැනීමට පිවිසෙන්න"/></a>
         <?php
             }
         ?>
