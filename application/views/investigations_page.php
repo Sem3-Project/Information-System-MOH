@@ -8,7 +8,7 @@ require '../models/inves.model.php';
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <link rel ="stylesheet" type="text/css" href="../../public/css/newForm.css">
         <link rel="stylesheet" type="text/css" href="../../public/css/table.css">
-
+        <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
         
     </head>
     <head>

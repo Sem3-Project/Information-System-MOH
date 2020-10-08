@@ -11,7 +11,7 @@ require '../controllers/login.php';
         <link rel = "stylesheet" href ="../../public/css/loging.css">
        
         <link rel = "stylesheet" href ="../../public/css/split.css">
-        <!-- <link rel = "stylesheet" href ="../../public/css/style.css"> -->
+        <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
 
         <style>
 

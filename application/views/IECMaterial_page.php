@@ -8,6 +8,8 @@ require '../models/IECMaterial_model.php';
 <title>IEC Material</title>
 <meta name="viewpoint" content="width-device-width initial-scale=1.0">
 <link rel = "stylesheet" href ="../../public/css/IEC.css">
+<link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+
 <!-- <style>
     .idClass{
         width: 10cm;

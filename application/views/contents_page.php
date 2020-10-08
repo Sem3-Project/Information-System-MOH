@@ -4,6 +4,8 @@
         <title>Content</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href ="../../public/css/icon.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+
     </head>
     <head>
         <body>

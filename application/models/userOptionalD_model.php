@@ -1,8 +1,4 @@
 <?php
-// $host="localhost";
-// $user = "root";
-// $password = "";
-// $database = "moh";
 
 //require '../../framework/libraries/Model.php';
 //require '../models/table.php';
@@ -20,16 +16,6 @@ $date1="";
 $date2="";
 $confirmedDate="";
 $time="";
-
-// //connect to mysql database
-// mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-// try{
-//     $connect = mysqli_connect($host, $user, $password, $database);
-    
-// }catch(Exception $ex){
-//     echo("<p style='color:black; font-size: 30px; background-color:white;'>"."Error in connecting"."</p>");
-//     // echo 'Error in connecting';
-// }
 
 //get data from the form
 function getData(){
@@ -111,17 +97,16 @@ if(isset($_POST['Confirmed'])){
     try{
         $pdate_result=$userod->featuredLoad($dbObj,$Confirmed_query);
         if($pdate_result){
-            // if(mysqli_affected_rows($connect)>0){
-            //     echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date confirmed"."</p>");
-            // }else{
-            //     // echo("date not confirmed");
-            //     echo("<p style='color:black; font-size: 30px; background-color:white;'>" ."date not confirmed"."</p>");
-            // }
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Success!","සායන දිනය තහවුරු කිරීම සාර්ථකයි<br>Clinical date confirmation successful!","success");';
+            echo '}, 200);</script>';
         }
     }catch(Exception $ex){
         echo("<p style='color:black; font-size: 30px; background-color:white;'>" ."error in Confirmed".$ex->getMessage()."</p>");
-        // echo("error in Confirmed".$ex->getMessage());
-    }
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal("Error!","තහවුරු කිරීමේ දෝෂයකි<br>Error in confirmation!","error");';
+        echo '}, 200);</script>';    }
+
 }
 
 

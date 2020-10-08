@@ -26,19 +26,18 @@ if(isset($_POST['Insert'])){
 
     try{
         $pdate_result=$adminod->featuredLoad($dbObj,$update_query);
-        // if($pdate_result){
-        //     // if(mysqli_affected_rows($connect)>0){
-        //     //     echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date updated"."</p>");
-        //     //     // echo("date is updated");
-        //     // }else{
-        //     //     echo("<p style='color:black; font-size: 30px; background-color:white;'>"."date not updated"."</p>");
-        //     //     // echo("date is not updated");
-        //     // }
-        // }
+        if($pdate_result){
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Success!","Data saved successfully!","success");';
+            echo '}, 200);</script>';
+        }
     }catch(Exception $ex){
         echo("<p style='color:black; font-size: 30px; background-color:white;'>"."error in update".$ex->getMessage()."</p>");
-        // echo("error in update".$ex->getMessage());
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal("Error!","Error in update!","error");';
+        echo '}, 200);</script>';
     }
+
 }
 
 ?>

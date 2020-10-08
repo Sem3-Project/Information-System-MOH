@@ -6,6 +6,8 @@ require '../models/clinic_day_model.php';
         <title>Clinic Care</title>
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <link rel ="stylesheet" type="text/css" href="../../public/css/newForm.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+
         <!-- <link rel="stylesheet" href="../../public/css/clinic style.css"> -->
      
     </head>

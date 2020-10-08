@@ -10,6 +10,8 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 <meta charset="UTF-8">
 <title>ClinicDateSelection</title>
 <link rel = "stylesheet" href ="../../public/css/PatientViewDate.css">
+<link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+
 <style>
     .content{
         width: 10cm;

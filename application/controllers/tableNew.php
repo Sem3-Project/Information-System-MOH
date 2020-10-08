@@ -73,23 +73,6 @@ class table
 
     }
 
-    // function insert($dbObj)
-    // {
-    //     $sql = $this->buildQuery('insert');
-    //     $dbObj->doQuery($sql);
-    // }
-    // function search($dbObj)
-    // {
-    //     $sql = $this->buildQuery('insert');
-    //     $dbObj->doQuery($sql);
-    // }
-
-    // function update($dbObj)
-    // {
-    //     $sql = $this->buildQuery('update');
-    //     $dbObj->doQuery($sql);
-    // }
-
     function featuredLoad($dbObj,$sql){
         $result = mysqli_query($dbObj->getConnection(),$sql) or die("Database access failed..!!");
         return $result;

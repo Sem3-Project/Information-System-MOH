@@ -9,6 +9,7 @@ require '../models/ChildHealth1.model.php';
         <meta charset ="UTF-8">
         <meta name="viewpoint" content="width-device-width initial-scale=1.0">
         <link rel ="stylesheet" type="text/css" href="../../public/css/newForm.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
     </head>
     <head>
         <body>

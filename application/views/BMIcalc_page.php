@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calculate your BMI</title>
   <link rel ="stylesheet" type="text/css" href="../../public/css/newForm.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+
 
   <!--<link rel="stylesheet" href="../../public/css/bootstrap.min.css">-->
   <!-- <link rel = "stylesheet" href ="../../public/css/BasicDetails.css"/> -->

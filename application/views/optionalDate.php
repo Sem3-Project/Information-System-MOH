@@ -6,8 +6,9 @@ require '../models/userOptionalD_model.php';
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ClinicDateSelection</title>
+        <title>Clinic Date Selection</title>
         <link rel = "stylesheet" href ="../../public/css/patientView.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
     </head>
     <head>
             <body>
@@ -29,7 +30,7 @@ require '../models/userOptionalD_model.php';
         <div>
         <div class="caption-container1">
         <div class="caption-container">
-        <h2>Date Selection</h2>
+        <h2>සායන දිනය වෙන් කිරීම - Clinic Date Confirmation</h2>
         </div>
         <div class="caption-container">
             <h3 >Search NIC :</h3>
@@ -39,7 +40,7 @@ require '../models/userOptionalD_model.php';
 
                 <!-- <input type="submit" class="link" name="search" value="Search"> -->
                 <input type="submit" class="link" name="Search" value="Search">
-                <p ><b>Date/දිනය :</b></p>
+                <p ><b>දිනය / Date:</b></p>
                 <select name="confirmedDate" style="width:42%; height: 30px; ">
                     <option  selected hidden value=""></option>
                     <option value="<?php echo($date1);?>" <?php if($confirmedDate==$date1) echo 'selected="selected"'; ?>><?php echo($date1);?></option>
@@ -47,7 +48,7 @@ require '../models/userOptionalD_model.php';
                 </select>
                 <br><br>
 
-                <p ><b>Time/වේලාව:</b></p>
+                <p ><b>වේලාව / Time:</b></p>
 
                 <select name="time" style="width: 42%; height: 30px; ">
                     <option  selected hidden value=""></option>
@@ -57,7 +58,7 @@ require '../models/userOptionalD_model.php';
                 <br><br><br><br>
 
                 <!-- <input type="submit" class="link" name="update" style="margin-bottom: 50px;" value="Confirmed"></center> -->
-                <input type="submit" class="link" name="Confirmed" style="margin-bottom: 50px;" value="Confirmed"></center>
+                <input type="submit" class="link" name="Confirmed" style="margin-bottom: 50px;" value="Confirm"></center>
    
    </div>
 </div>

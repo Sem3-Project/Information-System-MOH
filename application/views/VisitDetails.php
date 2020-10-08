@@ -9,6 +9,7 @@
     <link rel = "stylesheet" href ="../../public/css/visitDetails.css">
     <script src="../../public/js/jquery.min.js"></script>
     <script src="../../public/js/bootstrap.min.css"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
     
   <!-- <style>
     .button1{

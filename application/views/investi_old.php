@@ -11,6 +11,8 @@ require '../models/inves.model.php';
         <!-- <link rel="stylesheet" type="text/css" href="../../public/css/formsCommon.css">
         <link rel="stylesheet" type="text/css" href="../../public/css/clinic style.css"> -->
         <link rel="stylesheet" type="text/css" href="../../public/css/table.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+
 
         
     </head>

@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href=:../../public/css/bootstrap.min.css">
         <link rel = "stylesheet" href ="../../public/css/changepw.css">
-       
+        <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
         <link rel = "stylesheet" href ="../../public/css/split.css">
         <!-- <link rel = "stylesheet" href ="../../public/css/style.css"> -->
 

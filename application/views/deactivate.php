@@ -6,6 +6,7 @@ require '../controllers/delete.php';
 <html>
     <head>
         <title>Deactivate Account</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href=:../../public/css/bootstrap.min.css">
         <!-- <link rel = "stylesheet" href ="../../public/css/loging.css"> -->

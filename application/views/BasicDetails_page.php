@@ -8,6 +8,8 @@ require '../models/BasicDetails_model.php';
     <meta name="viewpoint" content="width-device-width initial-scale=1.0">
     <title>Basic Details</title>
 <link rel = "stylesheet" href ="../../public/css/BasicDetail.css">
+<link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+
 <!-- <style>
     /* .idClass{
         width: 10cm;

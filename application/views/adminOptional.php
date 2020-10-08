@@ -14,6 +14,7 @@ require '../models/adminOptionalD_model.php';
                 <div class="hero-image">
                     <img src="../../public/images/logo.png" class="logo-image"/>
                     <img src="../../public/images/line.jpg" class="line-image"/>
+                    <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
                     <a href="login_test.php"><img src="../../public/images/logout.png" class="logout-image"></a>
                     <a href="newHome.php"><img src="../../public/images/home.png" class="home-image"></a>
                     <div class="hero-text">
