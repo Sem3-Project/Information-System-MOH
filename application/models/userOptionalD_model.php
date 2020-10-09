@@ -76,12 +76,15 @@ if(isset($_POST['Search'])){
                 
                     }
                 }else{
-                    echo("<p style='color:black; font-size: 30px; background-color:white;'>"."no data are available"."</p>");
+                    echo '<script type="text/javascript">';
+                    echo 'setTimeout(function () { swal("Error!","සායන දිනයන් නියම කර නොමැත<br>Clinic dates are not assigned","error");';
+                    echo '}, 200);</script>';
                    
                 }
         }else{
-            echo("<p style='color:black; font-size: 30px; background-color:white;'>"."result error"."</p>");
-           
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { swal("Error!","දෝෂයකි<br>Result error","error");';
+            echo '}, 200);</script>';
         }
     }
 }
@@ -97,12 +100,19 @@ if(isset($_POST['Confirmed'])){
     try{
         $pdate_result=$userod->featuredLoad($dbObj,$Confirmed_query);
         if($pdate_result){
+            if (empty($confirmedDate) || empty($time)){
+                echo '<script type="text/javascript">';
+                echo 'setTimeout(function () { swal("Error!","කරුණාකර අවශ්‍ය සියලු තොරතුරු ඇතුළත් කරන්න<br>Please enter all required details","error");';
+                echo '}, 200);</script>'; 
+            }
+            else{
             echo '<script type="text/javascript">';
-            echo 'setTimeout(function () { swal("Success!","සායන දිනය තහවුරු කිරීම සාර්ථකයි<br>Clinical date confirmation successful!","success");';
+            echo 'setTimeout(function () { swal("Success!","සායන දිනය තහවුරු කිරීම සාර්ථකයි<br>Clinical date confirmation is successful","success");';
             echo '}, 200);</script>';
+            }
         }
     }catch(Exception $ex){
-        echo("<p style='color:black; font-size: 30px; background-color:white;'>" ."error in Confirmed".$ex->getMessage()."</p>");
+      //  echo("<p style='color:black; font-size: 30px; background-color:white;'>" ."error in Confirmed".$ex->getMessage()."</p>");
         echo '<script type="text/javascript">';
         echo 'setTimeout(function () { swal("Error!","තහවුරු කිරීමේ දෝෂයකි<br>Error in confirmation!","error");';
         echo '}, 200);</script>';    }

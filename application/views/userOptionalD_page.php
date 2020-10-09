@@ -54,7 +54,7 @@ echo'You have logged in with user id: '.($_SESSION['id']);
 <!-- <input type="text" name="id" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න/Enter patient's NIC here" value="<--?php echo($id);?>"><br><br> -->
 <input type="text" name="id" readonly style="width: 800px; height: 50px ;font-size: 20px; "  value="<?php echo($_SESSION['id'])?>"><br><br>
 
-<input type="submit" name="Search" value="Search">
+<input type="submit" name="Search" value="Search" autofocus>
 <br><br>
 
 <p>Date/දිනය :</p>

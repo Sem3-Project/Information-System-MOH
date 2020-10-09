@@ -30,17 +30,17 @@ require '../models/userOptionalD_model.php';
         <div>
         <div class="caption-container1">
         <div class="caption-container">
-        <h2>සායන දිනය වෙන් කිරීම - Clinic Date Confirmation</h2>
-        </div>
-        <div class="caption-container">
+        <h2>සායන දිනය වෙන් කිරීම - Reservation of Clinical Date</h2>
+        </div><br><br>
+        <!-- <div class="caption-container">
             <h3 >Search NIC :</h3>
-        </div>
+        </div> -->
             <center><input type="text" text-align="center" readonly placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br>
 
                 <!-- <input type="submit" class="link" name="search" value="Search"> -->
-                <input type="submit" class="link" name="Search" value="Search">
-                <p ><b>දිනය / Date:</b></p>
+                <input type="submit" class="link" name="Search" value="සායන දින ලබා ගැනීමට පිවිසෙන්න">
+                <br><br><p ><b>දිනය / Date:</b></p>
                 <select name="confirmedDate" style="width:42%; height: 30px; ">
                     <option  selected hidden value=""></option>
                     <option value="<?php echo($date1);?>" <?php if($confirmedDate==$date1) echo 'selected="selected"'; ?>><?php echo($date1);?></option>
@@ -58,7 +58,7 @@ require '../models/userOptionalD_model.php';
                 <br><br><br><br>
 
                 <!-- <input type="submit" class="link" name="update" style="margin-bottom: 50px;" value="Confirmed"></center> -->
-                <input type="submit" class="link" name="Confirmed" style="margin-bottom: 50px;" value="Confirm"></center>
+                <input type="submit" class="link" name="Confirmed" style="margin-bottom: 50px;" value="තහවුරු කිරීමට පිවිසෙන්න"></center>
    
    </div>
 </div>
