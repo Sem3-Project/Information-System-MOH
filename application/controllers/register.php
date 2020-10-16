@@ -47,6 +47,11 @@ if (isset($_POST['save'])) {
       echo '}, 200);</script>';
 
     }
+    else if(($catagory=="Patient-Mother" && !(strlen($id)==10 || strlen($id)==12)) || ($catagory=="Patient-Child" && !(strlen($id)==11 || strlen($id)==13))){
+      echo '<script type="text/javascript">';
+      echo 'setTimeout(function () { swal("Error!","Please enter a valid username!","error");';
+      echo '}, 200);</script>';
+    }
         
         else{
 

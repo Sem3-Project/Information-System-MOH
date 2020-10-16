@@ -11,6 +11,8 @@
         <link rel = "stylesheet" href ="../../public/css/changepw.css">
         <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
         <link rel = "stylesheet" href ="../../public/css/split.css">
+        <link rel = "stylesheet" href ="../../public/css/tooltip.css">
+
         <!-- <link rel = "stylesheet" href ="../../public/css/style.css"> -->
 
         <style>
@@ -87,9 +89,12 @@
                                 <h2 class="blink"><b><blink>User Registration</blink></b></h2>
                             </div>
                             <br>
-                            <div> 
+                            
+                            <div class="qtip tip-right" data-tip="Antenatal:10/12 characters 9********V / 2*********** 
+                            Paediatric:11/13 characters C9********V / C2***********"> 
                                 <label><b>පරිශීලක නාමය</b></label>
-                                <input type="text" class="form-control" name="id" placeholder="Enter username" >
+                                <input type="text" size="360 px" class="form-control" name="id" placeholder="Enter username" >
+
                             </div>
                             
                             <div>
