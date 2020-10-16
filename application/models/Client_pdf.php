@@ -67,10 +67,11 @@ if(isset($_POST["Generate"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BasicDetails_PDF</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+    <title>Clinical Report</title>
 
     <link rel = "stylesheet" href ="../../public/css/B_PDF.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+
 <style>
     .content{
         width: 10cm;
@@ -121,13 +122,13 @@ if(isset($_POST["Generate"])){
 <div>
         <div class="caption-container1">
         <div class="caption-container">
-            <h3 >Search NIC :</h3>
+            <h3 >පරිශීලක නාමය :</h3>
         </div>
             <center><input type="text" text-align="center" readonly placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br>
 
 <!-- <input type="submit" name="Search" value="Search"> -->
-<input type="submit" class="link" name="Generate" value="Generate the Report"></center>
+<input type="submit" class="link" name="Generate" value="සායනික වාර්තාව ලබා ගැනීමට පිවිසෙන්න"></center>
 <!-- <input type="submit" name="Generate" value="Generate the Report"> -->
 <!-- <input type="submit" name="Generate" value="Generate"> -->
 <!-- <button class="mother">Generate Mother's</button> -->

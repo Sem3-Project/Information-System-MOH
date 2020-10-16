@@ -6,8 +6,10 @@ require '../models/adminOptionalD_model.php';
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ClinicDate</title>
+<title>Clinic Date</title>
 <link rel = "stylesheet" href ="../../public/css/patientView.css">
+<link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
+
 </head>
         <head>
             <body>
