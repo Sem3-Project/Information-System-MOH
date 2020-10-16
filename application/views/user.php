@@ -109,21 +109,23 @@ require '../controllers/login.php';
       <p id="caption"></p>
       <div class="icon-image">
       <a href="../models/PDF_Selecting.php">      
-        <img src="../../public/images/newview1.png"  style="width:15%;height:150%;" title="ඔබේ සායනික වාර්තා ලබා ගැනීමට පිවිසෙන්න" id="t1"/>
+      <img src="../../public/images/views1.png" onmouseover="src='../../public/images/newview1.png'" onmouseout="src='../../public/images/views1.png'"  style="width:15%;height:150%;"/>
       </a>  
       <a href="optionalDate.php">
-        <img src="../../public/images/newdate1.png"  style="width:15%;height:150%;" title="ඔබේ සායනික දින තහවුරු කිරීමට පිවිසෙන්න"/>
+        <img src="../../public/images/dates1.png" onmouseover="src='../../public/images/newdate1.png'" onmouseout="src='../../public/images/dates1.png'" style="width:15%;height:150%;" />
       </a>
       
       <?php if(($_SESSION['catagory']) =='Patient-Child' ) 
             {
         ?>
-            <a href="BMIcalc_page.php"> <img src="../../public/images/newweight4.png"  style="width:15%;height:150%;" title="දරුවාගේ ස්කන්ධ දර්ශකය ලබා ගැනීමට පිවිසෙන්න"/></a>
+            <a href="BMIcalc_page.php"> 
+            <img src="../../public/images/weights1.png" onmouseover="src='../../public/images/newweight4.png'" onmouseout="src='../../public/images/weights1.png'" style="width:15%;height:150%;" /></a>
         <?php
             }
             else{ 
         ?>
-            <a href="WeightGainChart.html"> <img src="../../public/images/newweight4.png"  style="width:15%;height:150%;" title="ඔබේ ස්කන්ධ දර්ශකය ලබා ගැනීමට පිවිසෙන්න"/></a>
+            <a href="WeightGainChart.html">
+             <img src="../../public/images/weights1.png" onmouseover="src='../../public/images/newweight4.png'" onmouseout="src='../../public/images/weights1.png'" style="width:15%;height:150%;" /></a>
         <?php
             }
         ?>
