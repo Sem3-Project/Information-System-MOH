@@ -79,19 +79,21 @@
           $bmiRounded = round($bmi, 1);
           
             if($bmiRounded <= 18.4){
-              $output = "UNDERWEIGHT";
+              $output = "අඩු බර / UNDERWEIGHT";
             }
             else if($bmiRounded >= 18.5 && $bmiRounded <= 24.9){
-              $output = "NORMAL WEIGHT";
+              $output = "සාමාන්‍ය / NORMAL WEIGHT";
             }
             else if($bmiRounded >= 25 && $bmiRounded <= 29.9){
-              $output = "OVERWEIGHT";
+              $output = "අධි බර / OVERWEIGHT";
             }
             else if($bmiRounded >= 30 && $bmiRounded <= 39.9){
-              $output = "OBESE";
+              $output = "ස්ථුල / OBESE";
             }
-            echo "<h2 >Your BMI value is  ${bmiRounded}   and you are : "; 
+            echo "<h2 >ඔබේ ස්කන්ධ දර්ශක අගය  ${bmiRounded}  වන අතර ඔබ අයත්වන ස්කන්ධ කාණ්ඩය  : "; 
 echo "$output";
+//             echo "<h2 >Your BMI value is  ${bmiRounded}   and you are : "; 
+// echo "$output";
 
         }
 
