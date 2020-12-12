@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Calculate your BMI</title>
+  <title>Calculate child's BMI</title>
   <link rel ="stylesheet" type="text/css" href="../../public/css/newForm.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
 
@@ -50,12 +50,12 @@
 
       <div class="form-group row">
       <div class="caption-container"><h4>ස්කන්ධය කි.ග්‍රෑ. මගින්  / Weight in kg.</h4></div>
-          <input type="text" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="weight" name="weight" placeholder="Enter your weight in kilograms.">
+          <input type="text" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="weight" name="weight" placeholder="Enter child's weight in kilograms.">
         
       </div>
       <div class="form-group row">
       <div class="caption-container"><h4>උස සෙ.මි. මගින් / Height in cm.</h4></div>
-          <input type="text" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="height" name="height" placeholder="Enter your height in centimeters.">
+          <input type="text" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="height" name="height" placeholder="Enter child's height in centimeters.">
           
       </div>
       <br><br>
@@ -90,7 +90,7 @@
             else if($bmiRounded >= 30 && $bmiRounded <= 39.9){
               $output = "ස්ථුල / OBESE";
             }
-            echo "<h2 >ඔබේ ස්කන්ධ දර්ශක අගය  ${bmiRounded}  වන අතර ඔබ අයත්වන ස්කන්ධ කාණ්ඩය  : "; 
+            echo "<h2 >ස්කන්ධ දර්ශක අගය  ${bmiRounded}  වන අතර දරුවා අයත්වන ස්කන්ධ කාණ්ඩය  : "; 
 echo "$output";
 //             echo "<h2 >Your BMI value is  ${bmiRounded}   and you are : "; 
 // echo "$output";
@@ -100,11 +100,11 @@ echo "$output";
 
         if(isset($_POST['calculate'])){
           if (!isset($_POST['weight'])) {
-            return 'Please enter your weight';
+            return "Please enter child's weight";
             exit();
           }
           if (!isset($_POST['height'])) {
-            return 'Please enter your height';
+            return "Please enter child's height";
             exit();
           }
           $weight = filter_var(htmlentities(floatval($_POST['weight'])),FILTER_SANITIZE_NUMBER_FLOAT);
