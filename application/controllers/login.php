@@ -52,20 +52,20 @@ if (isset($_POST['login_user'])) {
             
             if($id != $log->id ){
                 echo '<script type="text/javascript">';
-                echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි පරිශීලක නාමය ඇතුළත් කරන්න\nPlease enter correct username","error");';
+                echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි පරිශීලක නාමය ඇතුළත් කරන්න<br>Please enter correct username","error");';
                 echo '}, 200);</script>';
 
         //select category
             }
             else if($log->password != $passwordEnc ){ 
                 echo '<script type="text/javascript">';
-                echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි මුරපදය ඇතුළත් කරන්න\nPlease enter correct password","error");';
+                echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි මුරපදය ඇතුළත් කරන්න<br>Please enter correct password","error");';
                 echo '}, 200);</script>';
                         }
 
             else if ($log->catagory != $catagory){
                 echo '<script type="text/javascript">';
-                echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න\nPlease select correct category","error");';
+                echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න<br>Please select correct category","error");';
                 echo '}, 200);</script>'; 
                        }
 
