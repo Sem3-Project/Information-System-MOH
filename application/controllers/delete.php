@@ -13,7 +13,7 @@ if (isset($_POST['deactivate'])) {
 
     if (empty($_POST['id'])) {
         echo '<script type="text/javascript">';
-        echo 'setTimeout(function () { swal("Error!","කරුණාකර මුරපදය ඇතුලත් කරන්න<br>Please enter username!","error");';
+        echo 'setTimeout(function () { swal("Error!","කරුණාකර වලංගු තොරතුරු ඇතුලත් කරන්න<br>Please enter valid details!","error");';
         echo '}, 200);</script>';
     }
     else{
