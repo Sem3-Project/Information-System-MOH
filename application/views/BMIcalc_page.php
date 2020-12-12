@@ -39,7 +39,7 @@
 	
   </header> -->
   <div class="container mt-3">
-    <form method="POST" align="center">
+    <form method="POST" align="center" autocomplete="off">
     <header class="mt-3 text-center row">
   
   <div class="col-sm-10 align-right">
@@ -49,12 +49,12 @@
 
 
       <div class="form-group row">
-      <div class="caption-container"><h4>Weight in kg.</h4></div>
+      <div class="caption-container"><h4>ස්කන්ධය කි.ග්‍රෑ. මගින්  / Weight in kg.</h4></div>
           <input type="text" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="weight" name="weight" placeholder="Enter your weight in kilograms.">
         
       </div>
       <div class="form-group row">
-      <div class="caption-container"><h4>Height in cm.</h4></div>
+      <div class="caption-container"><h4>උස සෙ.මි. මගින් / Height in cm.</h4></div>
           <input type="text" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="height" name="height" placeholder="Enter your height in centimeters.">
           
       </div>
@@ -62,7 +62,7 @@
       <div class="form-group mt-3 row">
         <div class="col-sm-2"></div>
         <div class="col-sm-10 align-right">
-          <input type="submit"  class="link"  style="margin-bottom: 50px; " name="calculate" value="Calculate">
+          <input type="submit"  class="link"  style="margin-bottom: 50px; " name="calculate" value="ස්කන්ධ දර්ශකය ලබා ගැනීමට පිවිසෙන්න ">
         </div>
       </div>
     </form>
