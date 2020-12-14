@@ -1,5 +1,5 @@
 <?php
-require '../models/childDetails2.model.php';
+require '../models/childDetails2_model.php';
 ?>
 
 <!DOCTYPE html>
