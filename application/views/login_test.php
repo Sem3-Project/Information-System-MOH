@@ -14,7 +14,13 @@ require '../controllers/login.php';
         <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
 
         <style>
-
+            body {
+            background-image: url('../../public/images/wave.png');
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            }                                                                               
+                                                                                           
             input[type=text], select, [type=password] {
             width: 100%;
             padding: 12px 20px;
@@ -58,8 +64,7 @@ require '../controllers/login.php';
        
     </head>
     <body>
-        <div class="wave-image">
-        <p id="caption"></p>
+        <div>
         <div style="color:rgb(10, 214, 146); opacity: 0.8 font-style:bold" >
       		<marquee behavior="scroll" direction="right" onmouseover="this.stop();" onmouseout="this.start();">Please send your comments to gampahamoh@yahoo.com</marquee>
         </div>
