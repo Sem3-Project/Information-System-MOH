@@ -1,14 +1,14 @@
- <?php
-require '../models/Refer2.model.php';
+<?php
+require '../models/Nursery2.model.php';
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Refarrals on Immunization - II</title>
+        <title>Record for Nursery Children - II</title>
         <meta charset ="UTF-8">
         <meta name="viewpoint" content="width-device-width initial-scale=1.0">
-        <link rel ="stylesheet" type="text/css" href="../../public/css/newForm.css">
+        <link rel ="stylesheet" type="text/css" href="../../public/css/newForm1.css">
         <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/logo.png">
 
     </head>
@@ -27,140 +27,367 @@ require '../models/Refer2.model.php';
         </body>
     </head>
     <body>
-        <form action="Refer2_page.php" method="post" >
+        <form action="Nursery2_page.php" method="post" >
             <div>
                 <div class="caption-container1">
-                <div class="caption-container"><h3>යොමු කිරීම් - වගුව II</h3></div>
+                <div class="caption-container"><h3>පෙර පාසැල් දරුවන්ගේ වෛද්‍ය පරීක්ෂණය - වගුව II</h3></div>
 
-                    <div class="caption-container"><h3>Search NIC :</h3></div>
+                    <div class="caption-container"><h3 >Search NIC :</h3></div>
                     <center><input type="text" text-align="center" placeholder="රෝගියාගේ හැඳුනුම්පත් අංකය සඳහන් කරන්න / Enter patient's id here" 
-                    style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php if (isset($_POST['id'])) echo $_POST['id'];?>">
-                    <br><br>
-                    <input type="submit" name="search" class="link" value="Search"></center>
+                    style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php if (isset($_POST['id'])) echo $_POST['id'];?>"><br><br>
 
+                    <input type="submit" class="link" name="search" value="Search"></center>
+                    <br><br>
+
+                    <table style="width:100%" >
+                        <tr>
+                            <th></th>
+                            <th style="width:15.5%">1</th>
+                            <th style="width:15.5%">2</th>
+                            <th style="width:15.5%">3</th>
+                        </tr>
+                    </table>
+                    <table style="width:100%" >
+                    <tr>
+                            <th rowspan="2" align="left">වපරය / Squint</th>
+                            <td>වම / Left</td>
+                            <th style="width:15.5%"><select id="lsquint1" name="lsquint1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lsquint1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lsquint1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="lsquint2" name="lsquint2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lsquint2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lsquint2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="lsquint3" name="lsquint3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lsquint3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lsquint3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <td>දකුණ / Right</td>
+                            <th style="width:15.5%"><select id="rsquint1" name="rsquint1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['rsquint1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['rsquint1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="rsquint2" name="rsquint2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['rsquint2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['rsquint2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="rsquint3" name="rsquint3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['rsquint3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['rsquint3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" align="left">පෙනීම / Vision</th>
+                            <td>වම / Left</td>
+                            <th style="width:15.5%"><select id="lvision1" name="lvision1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lvision1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lvision1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="lvision2" name="lvision2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lvision2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lvision2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="lvision3" name="lvision3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lvision3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lvision3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <td>දකුණ / Right</td>
+                            <th style="width:15.5%"><select id="rvision1" name="rvision1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['rvision1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['rvision1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="rvision2" name="rvision2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['rvision2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['rvision2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="rvision3" name="rvision3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['rvision3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['rvision3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" align="left">ඇසීම / Hearing</th>
+                            <td>වම / Left</td>
+                            <th style="width:15.5%"><select id="lhearing1" name="lhearing1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lhearing1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lhearing1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="lhearing2" name="lhearing2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lhearing2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lhearing2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="lhearing3" name="lhearing3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lhearing3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lhearing3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <td>දකුණ / Right</td>
+                            <th style="width:15.5%"><select id="rhearing1" name="rhearing1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['rhearing1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['rhearing1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="rhearing2" name="rhearing2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['rhearing2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['rhearing2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="rhearing3" name="rhearing3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['rhearing3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['rhearing3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                    </table>
+                    <table style="width:100% ;">
+                        <tr>
+                            <th align="left">කතාව / Speech</th>
+                            <th style="width:15.5%"><select id="speech1" name="speech1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['speech1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['speech1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="speech2" name="speech2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['speech2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['speech2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="speech3" name="speech3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['speech3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['speech3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <th align="left">දන්ත ව්‍යසනය / Dental Deformity</th>
+                            <th style="width:15.5%"><select id="tooth1" name="tooth1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['tooth1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['tooth1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="tooth2" name="tooth2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['tooth2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['tooth2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="tooth3" name="tooth3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['tooth3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['tooth3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <th align="left">දන්ත දෝෂ / Dental Problems</th>
+                            <th style="width:15.5%"><select id="teeth1" name="teeth1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['teeth1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['teeth1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="teeth2" name="teeth2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['teeth2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['teeth2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="teeth3" name="teeth3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['teeth3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['teeth3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <th align="left">කණ, නාසය, උගුර / Ear, Nose, Throat</th>
+                            <th style="width:15.5%"><select id="ynt1" name="ynt1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['ynt1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['ynt1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="ynt2" name="ynt2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['ynt2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['ynt2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="ynt3" name="ynt3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['ynt3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['ynt3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <th align="left">අසංවේදී, ලප කැලැල් / Insensitive, Patches</th>
+                            <th style="width:15.5%"><select id="mark1" name="mark1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['mark1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['mark1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="mark2" name="mark2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['mark2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['mark2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="mark3" name="mark3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['mark3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['mark3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <th align="left">අස්ථි ආබාධ / Bony Deformities</th>
+                            <th style="width:15.5%"><select id="bone1" name="bone1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['bone1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['bone1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="bone2" name="bone2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['bone2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['bone2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="bone3" name="bone3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['bone3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['bone3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <th align="left">හෘදය / Heart</th>
+                            <th style="width:15.5%"><select id="heart1" name="heart1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['heart1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['heart1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="heart2" name="heart2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['heart2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['heart2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="heart3" name="heart3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['heart3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['heart3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                        <tr>
+                            <th align="left">පෙනහළු / Lungs</th>
+                            <th style="width:15.5%"><select id="lungs1" name="lungs1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lungs1']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lungs1']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="lungs2" name="lungs2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lungs2']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lungs2']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="lungs3" name="lungs3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="X" <?php if($_POST['lungs3']=="X") echo 'selected="selected"';?>>X</option>
+                            <option value="O" <?php if($_POST['lungs3']=="O") echo 'selected="selected"';?>>O</option>
+                            </select></th>
+                        </tr>
+                    </table>
+                    <table style="width:100% ;">
+                        <tr>
+                            <td align="left" rowspan="4"><b>වෙනත් ආබාධ / Other Deformities</b><br>(සදහන් කරන්න) / (Mention)</td>
+                            <td align="center" style="width:30%"><textarea name="ovarious1" rows="2" cols="40" ><?php if (isset($_POST['ovarious1'])) echo $_POST['ovarious1'];?></textarea></td>
+                            <td align="center" style="width:15.5%"><textarea name="ovarious2" rows="2" cols="20" ><?php if (isset($_POST['ovarious2'])) echo $_POST['ovarious2'];?></textarea></td>
+                            <td align="center" style="width:15.5%"><textarea name="ovarious3" rows="2" cols="20" ><?php if (isset($_POST['ovarious3'])) echo $_POST['ovarious3'];?></textarea></td>
+                            <td align="center" style="width:15.5%"><textarea name="ovarious4" rows="2" cols="20" ><?php if (isset($_POST['ovarious4'])) echo $_POST['ovarious4'];;?></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td align="center"><textarea name="tvarious1" rows="2" cols="40" ><?php if (isset($_POST['tvarious1'])) echo $_POST['tvarious1'];?></textarea></td>
+                            <td align="center"><textarea name="tvarious2" rows="2" cols="20" ><?php if (isset($_POST['tvarious2'])) echo $_POST['tvarious2'];?></textarea></td>
+                            <td align="center"><textarea name="tvarious3" rows="2" cols="20" ><?php if (isset($_POST['tvarious3'])) echo $_POST['tvarious3'];?></textarea></td>
+                            <td align="center"><textarea name="tvarious4" rows="2" cols="20" ><?php if (isset($_POST['tvarious4'])) echo $_POST['tvarious4'];?></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="center"><textarea name="thvarious1" rows="2" cols="40" ><?php if (isset($_POST['thvarious1'])) echo $_POST['thvarious1'];?></textarea></td>
+                            <td align="center"><textarea name="thvarious2" rows="2" cols="20" ><?php if (isset($_POST['thvarious2'])) echo $_POST['thvarious2'];?></textarea></td>
+                            <td align="center"><textarea name="thvarious3" rows="2" cols="20" ><?php if (isset($_POST['thvarious3'])) echo $_POST['thvarious3'];?></textarea></td>
+                            <td align="center"><textarea name="thvarious4" rows="2" cols="20" ><?php if (isset($_POST['thvarious4'])) echo $_POST['thvarious4'];?></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="center"><textarea name="fvarious1" rows="2" cols="40" ><?php if (isset($_POST['fvarious1'])) echo $_POST['fvarious1'];?></textarea></td>
+                            <td align="center"><textarea name="fvarious2" rows="2" cols="20" ><?php if (isset($_POST['fvarious2'])) echo $_POST['fvarious2'];?></textarea></td>
+                            <td align="center"><textarea name="fvarious3" rows="2" cols="20" ><?php if (isset($_POST['fvarious3'])) echo $_POST['fvarious3'];?></textarea></td>
+                            <td align="center"><textarea name="fvarious4" rows="2" cols="20" ><?php if (isset($_POST['fvarious4'])) echo $_POST['fvarious4'];?></textarea></td>
+                        </tr>
+                    </table>
                     <table style="width:100% ;margin-bottom: 50px;">
                         <tr>
-                            <th colspan="4" align="left">රෝහල්ගත වීම / බරපතල රෝග තත්වයන්</th>    
+                            <td align="left">පරීක්ෂකගේ නම / Name of Examiner</td>
+                            <td align="center" style="width:15.5%"><textarea name="tname1" rows="2" cols="20" ><?php if (isset($_POST['tname1'])) echo $_POST['tname1'];?></textarea></td>
+                            <td align="center" style="width:15.5%"><textarea name="tname2" rows="2" cols="20" ><?php if (isset($_POST['tname2'])) echo $_POST['tname2'];?></textarea></td>
+                            <td align="center" style="width:15.5%"><textarea name="tname3" rows="2" cols="20" ><?php if (isset($_POST['tname3'])) echo $_POST['tname3'];?></textarea></td>
                         </tr>
                         <tr>
-                            <th>දිනය</th>
-                            <th>රෝහල්ගත කිරීමට හේතුව</th>
-                            <th>රෝග විනිශ්චය</th>
-                            <th>ආපසු යොමු කිරීම/පසු විපරම්වල ප්‍රතිඵල</th>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate1" value="<?php if (isset($_POST ['ndate1'])) echo $_POST ['ndate1'];?>"></td>
-                            <td align="center"><textarea  name="nreason1" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason1'])) echo $_POST ['nreason1'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace1" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace1'])) echo $_POST ['nplace1'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult1" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult1'])) echo $_POST ['nresult1'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate2" value="<?php if (isset($_POST ['ndate2'])) echo $_POST ['ndate2'];?>"></td>
-                            <td align="center"><textarea  name="nreason2" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason2'])) echo $_POST ['nreason2'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace2" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace2'])) echo $_POST ['nplace2'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult2" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult2'])) echo $_POST ['nresult2'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate3" value="<?php if (isset($_POST ['ndate3'])) echo $_POST ['ndate3'];?>"></td>
-                            <td align="center"><textarea  name="nreason3" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason3'])) echo $_POST ['nreason3'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace3" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace3'])) echo $_POST ['nplace3'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult3" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult3'])) echo $_POST ['nresult3'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate4" value="<?php if (isset($_POST ['ndate4'])) echo $_POST ['ndate4'];?>"></td>
-                            <td align="center"><textarea  name="nreason4" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason4'])) echo $_POST ['nreason4'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace4" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace4'])) echo $_POST ['nplace4'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult4" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult4'])) echo $_POST ['nresult4'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate5" value="<?php if (isset($_POST ['ndate5'])) echo $_POST ['ndate5'];?>"></td>
-                            <td align="center"><textarea  name="nreason5" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason5'])) echo $_POST ['nreason5'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace5" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace5'])) echo $_POST ['nplace5'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult5" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult5'])) echo $_POST ['nresult5'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate6" value="<?php if (isset($_POST ['ndate6'])) echo $_POST ['ndate6'];?>"></td>
-                            <td align="center"><textarea  name="nreason6" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason6'])) echo $_POST ['nreason6'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace6" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace6'])) echo $_POST ['nplace6'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult6" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult6'])) echo $_POST ['nresult6'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate7" value="<?php if (isset($_POST ['ndate7'])) echo $_POST ['ndate7'];?>"></td>
-                            <td align="center"><textarea  name="nreason7" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason7'])) echo $_POST ['nreason7'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace7" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace7'])) echo $_POST ['nplace7'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult7" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult7'])) echo $_POST ['nresult7'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate8" value="<?php if (isset($_POST ['ndate8'])) echo $_POST ['ndate8'];?>"></td>
-                            <td align="center"><textarea  name="nreason8" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason8'])) echo $_POST ['nreason8'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace8" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace8'])) echo $_POST ['nplace8'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult8" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult8'])) echo $_POST ['nresult8'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate9" value="<?php if (isset($_POST ['ndate9'])) echo $_POST ['ndate9'];?>"></td>
-                            <td align="center"><textarea  name="nreason9" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason9'])) echo $_POST ['nreason9'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace9" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace9'])) echo $_POST ['nplace9'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult9" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult9'])) echo $_POST ['nresult9'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate10" value="<?php if (isset($_POST ['ndate10'])) echo $_POST ['ndate10'];?>"></td>
-                            <td align="center"><textarea  name="nreason10" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason10'])) echo $_POST ['nreason10'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace10" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace10'])) echo $_POST ['nplace10'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult10" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult10'])) echo $_POST ['nresult10'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate11" value="<?php if (isset($_POST ['ndate11'])) echo $_POST ['ndate11'];?>"></td>
-                            <td align="center"><textarea  name="nreason11" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason11'])) echo $_POST ['nreason11'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace11" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace11'])) echo $_POST ['nplace11'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult11" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult11'])) echo $_POST ['nresult11'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate12" value="<?php if (isset($_POST ['ndate12'])) echo $_POST ['ndate12'];?>"></td>
-                            <td align="center"><textarea  name="nreason12" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason12'])) echo $_POST ['nreason12'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace12" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace12'])) echo $_POST ['nplace12'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult12" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult12'])) echo $_POST ['nresult12'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate13" value="<?php if (isset($_POST ['ndate13'])) echo $_POST ['ndate13'];?>"></td>
-                            <td align="center"><textarea  name="nreason13" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason13'])) echo $_POST ['nreason13'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace13" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace13'])) echo $_POST ['nplace13'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult13" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult13'])) echo $_POST ['nresult13'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate14" value="<?php if (isset($_POST ['ndate14'])) echo $_POST ['ndate14'];?>"></td>
-                            <td align="center"><textarea  name="nreason14" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason14'])) echo $_POST ['nreason14'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace14" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace14'])) echo $_POST ['nplace14'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult14" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult14'])) echo $_POST ['nresult14'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate15" value="<?php if (isset($_POST ['ndate15'])) echo $_POST ['ndate15'];?>"></td>
-                            <td align="center"><textarea  name="nreason15" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason15'])) echo $_POST ['nreason15'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace15" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace15'])) echo $_POST ['nplace15'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult15" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult15'])) echo $_POST ['nresult15'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate16" value="<?php if (isset($_POST ['ndate16'])) echo $_POST ['ndate16'];?>"></td>
-                            <td align="center"><textarea  name="nreason16" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason16'])) echo $_POST ['nreason16'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace16" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace16'])) echo $_POST ['nplace16'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult16" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult16'])) echo $_POST ['nresult16'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate17" value="<?php if (isset($_POST ['ndate17'])) echo $_POST ['ndate17'];?>"></td>
-                            <td align="center"><textarea  name="nreason17" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason17'])) echo $_POST ['nreason17'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace17" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace17'])) echo $_POST ['nplace17'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult17" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult17'])) echo $_POST ['nresult17'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate18" value="<?php if (isset($_POST ['ndate18'])) echo $_POST ['ndate18'];?>"></td>
-                            <td align="center"><textarea  name="nreason18" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason18'])) echo $_POST ['nreason18'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace18" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace18'])) echo $_POST ['nplace18'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult18" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult18'])) echo $_POST ['nresult18'];?></textarea></td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type ="date"  name="ndate19" value="<?php if (isset($_POST ['ndate19'])) echo $_POST ['ndate19'];?>"></td>
-                            <td align="center"><textarea  name="nreason19" rows="2" style="width:100%" ><?php if (isset($_POST ['nreason19'])) echo $_POST ['nreason19'];?></textarea></td>
-                            <td align="center"><textarea  name="nplace19" rows="2" style="width:100%" ><?php if (isset($_POST ['nplace19'])) echo $_POST ['nplace19'];?></textarea></td>
-                            <td align="center"><textarea  name="nresult19" rows="2" style="width:100%" ><?php if (isset($_POST ['nresult19'])) echo $_POST ['nresult19'];?></textarea></td>
+                            <td align="left">පරීක්ෂකගේ තනතුර / Post of Examiner</td>
+                            <th style="width:15.5%"><select id="tposition1" name="tposition1" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="Doctor" <?php if($_POST['tposition1']=="Doctor") echo 'selected="selected"';?>>Doctor</option>
+                            <option value="Midwife" <?php if($_POST['tposition1']=="Midwife") echo 'selected="selected"';?>>Midwife</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="tposition2" name="tposition2" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="Doctor" <?php if($_POST['tposition2']=="Doctor") echo 'selected="selected"';?>>Doctor</option>
+                            <option value="Midwife" <?php if($_POST['tposition2']=="Midwife") echo 'selected="selected"';?>>Midwife</option>
+                            </select></th>
+
+                            <th style="width:15.5%"><select id="tposition3" name="tposition3" style="width: 100px; height:30px;" >
+                            <option value="not done">---Select---</option>
+                            <option value="Doctor" <?php if($_POST['tposition3']=="Doctor") echo 'selected="selected"';?>>Doctor</option>
+                            <option value="Midwife" <?php if($_POST['tposition3']=="Midwife") echo 'selected="selected"';?>>Midwife</option>
+                            </select></th>
                         </tr>
                     </table>
                     <!-- <input type="submit" name="insert" style="height: 30px; width: 150px; margin-bottom: 50px; margin-right: 50px;" value="Add"> -->
