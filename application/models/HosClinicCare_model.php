@@ -8,23 +8,23 @@ $dbObj = Model::getInstance();
 $dbObj->connect('localhost', 'root', '', 'moh');
 session_start();
 
-$id = "";
-$date1="";
-$poa="";
-$weight1="";
-$sugar="";
-$albumin="";
-$oedema="";
-$systolic="";
-$diastolic="";
-$fundalheight="";
-$fundalheight2="";
-$lie="";
-$presentation="";
-$fm="";
-$fhs="";
-$designation="";
-$donext="";
+$id = '';
+$date1='';
+$poa='';
+$weight1='';
+$sugar='';
+$albumin='';
+$oedema='';
+$systolic='';
+$diastolic='';
+$fundalheight='';
+$fundalheight2='';
+$lie='';
+$presentation='';
+$fm='';
+$fhs='';
+$designation='';
+$donext='';
 
 //get data from the form
 function getData(){
@@ -55,7 +55,7 @@ $hosCC = new table();
 //search
 if(isset($_POST['search'])){
     $info=getData();
-    $search_Query="SELECT * FROM `hoscliniccare` WHERE id='$info[0]'";
+    $search_Query="SELECT * FROM hoscliniccare WHERE id='".$info[0]."'";
 
     $search_Result=$hosCC->featuredLoad($dbObj,$search_Query);
 
@@ -99,8 +99,26 @@ if(isset($_POST['search'])){
 //update
 if(isset($_POST['update'])){
     $info=getData();
-    $update_Query="UPDATE hoscliniccare SET id='$info[0]',date1='$info[1]',poa= '$info[2]',weight1='$info[3]',sugar='$info[4]',albumin='$info[5]',oedema='$info[6]',systolic='$info[7]',diastolic='$info[8]',fundalheight='$info[9]',fundalheight1='$info[10]',lie='$info[11]',presentation='$info[12]',fm='$info[13]',fhs='$info[14]',designation='$info[15]'
-    ,donext='$info[16]'  WHERE id='$info[0]'";
+    $update_Query="UPDATE hoscliniccare SET 
+        id      =   '".$info[0]."',
+        date1   =   '".$info[1]."',
+        poa     =   '".$info[2]."',
+        weight1 =   '".$info[3]."',
+        sugar   =   '".$info[4]."',
+        albumin =   '".$info[5]."',
+        oedema  =   '".$info[6]."',
+        systolic=   '".$info[7]."',
+        diastolic=  '".$info[8]."',
+        fundalheight='".$info[9]."',
+        fundalheight1='".$info[10]."',
+        lie     =   '".$info[11]."',
+        presentation='".$info[12]."',
+        fm      =   '".$info[13]."',
+        fhs     =   '".$info[14]."',
+        designation='".$info[15]."',
+        donext  =   '".$info[16]."'  
+        WHERE id='".$info[0]."'";
+
 
 try{
     $update_Result=$hosCC->featuredLoad($dbObj,$update_Query);
