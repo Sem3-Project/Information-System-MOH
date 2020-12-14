@@ -90,11 +90,12 @@
                             </div>
                             <br>
                             
-                            <div class="qtip tip-right" data-tip="Antenatal:10/12 characters 9********V / 2*********** 
-                            Paediatric:11/13 characters C9********V / C2***********"> 
+                            <div> 
                                 <label><b>පරිශීලක නාමය</b></label>
                                 <input type="text" size="360 px" class="form-control" name="id" placeholder="Enter username" >
-
+                                <p style="font-size:15px; color:grey; " >User name for:</p> 
+                                <p style="font-size:15px; color:grey; " >Antenatal:10/12 characters 9********V / 2***********</p> 
+                                <p style="font-size:15px; color:grey">Paediatric:11/13 characters C9********V / C2***********</p>
                             </div>
                             
                             <div>
