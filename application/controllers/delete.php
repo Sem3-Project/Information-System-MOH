@@ -32,18 +32,23 @@ if (isset($_POST['deactivate'])) {
     $result = $log->featuredLoad($dbObj, $sql1);
     $numOfRows = mysqli_num_rows($result);
 
-    //echo $numOfRows;
+    if ($numOfRows == 1) {
+      foreach (mysqli_fetch_assoc($result) as $key => $value) {
+          $log->$key = $value;
+      }
+    }
+
 
     if ($numOfRows != 1) {
       echo '<script type="text/javascript">';
       echo 'setTimeout(function () { swal("Error!","කරුණාකර වලංගු තොරතුරු ඇතුලත් කරන්න<br>Please enter valid details!","error");';
       echo '}, 200);</script>';
     }
-    //  else if ($log->catagory != $catagory) {
-    //   echo '<script type="text/javascript">';
-    //   echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න<br>Please select correct category","error");';
-    //   echo '}, 200);</script>';
-    // } 
+     else if ( $catagory!=$log->catagory) {  
+      echo '<script type="text/javascript">';
+      echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න<br>Please select correct category","error");';
+      echo '}, 200);</script>';
+    } 
     // else if ($cat != $catagory){
     //   echo '<script type="text/javascript">';
     //   echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න<br>Please select correct category","error");';
