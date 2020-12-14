@@ -95,7 +95,7 @@ require '../controllers/delete.php';
                             <label><b>පරිශීලක නාමය(Username)</b></label>
                             <input type="text" class="form-control" name="id">
                         </div>
-                        <!-- <div>
+                        <div>
                                 <label><b>කාණ්ඩය(Category)</b></label>
                                 <select name="catagory" class="form-control">
                                     <option value="Patient-Mother" >මාතෘ-Mother</option>
@@ -104,7 +104,8 @@ require '../controllers/delete.php';
                                     <option value="Midwife" >පවුල් සෞඛ්‍ය සේවා නිලධාරී-Midwife</option>
                                     <option value="Receptionist">පිළිගැනීමේ නිලධාරි-Receptionist</option>
                                 </select>
-                            </div> -->
+
+                            </div>
 
                         <input type="submit" class="btn" style="vertical-align:middle" name="deactivate" value="Delete Account">
 
