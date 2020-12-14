@@ -15,6 +15,12 @@ require '../controllers/delete.php';
         <!-- <link rel = "stylesheet" href ="../../public/css/style.css"> -->
 
         <style>
+            body {
+            background-image: url('../../public/images/wave.png');
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            }                                                           
 
             input[type=text], select, [type=password] {
             width: 100%;
@@ -60,8 +66,7 @@ require '../controllers/delete.php';
        
     </head>
     <body>
-        <div class="wave-image">
-        <p id="caption"></p>
+        <div>
         <!-- <div style="color:rgb(10, 214, 146); opacity: 0.8 font-style:bold" >
       		<marquee behavior="scroll" direction="right" onmouseover="this.stop();" onmouseout="this.start();">Please send your comments to gampahamoh@yahoo.com</marquee>
         </div> -->
