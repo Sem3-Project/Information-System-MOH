@@ -25,7 +25,7 @@ if (isset($_POST['Insert'])) {
     $info = getData();
 
     $update_query = "UPDATE `optionaldate` SET `id`='$info[0]',`date1`='$info[1]',`date2`='$info[2]' WHERE id='$info[0]'";
-
+    if (!empty($info[0])){
     if ($info[1] > $curdate && $info[2] > $curdate) {
         try {
             $pdate_result = $adminod->featuredLoad($dbObj, $update_query);
@@ -46,6 +46,13 @@ if (isset($_POST['Insert'])) {
         echo 'setTimeout(function () { swal("Error!","Please Select Valid Dates!","error");';
         echo '}, 200);</script>';
     }
+}
+else{
+    echo '<script type="text/javascript">';
+    echo 'setTimeout(function () { swal("Error!","Please Select Valid Patient ID!","error");';
+    echo '}, 200);</script>';
+}
+
 }
 
 
