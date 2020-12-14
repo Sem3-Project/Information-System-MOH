@@ -5,7 +5,7 @@ require '../models/USScan_model.php';
 <!DOCTYPE html>
 <html>
 <head>
-        <title>DelivPostnatalCare</title>
+        <title>USScan</title>
         <meta charset ="UTF-8">
         <meta name="viewpoint" content="width-device-width initial-scale=1.0">
         <link rel ="stylesheet" type="text/css" href="../../public/css/newForm3.css">
