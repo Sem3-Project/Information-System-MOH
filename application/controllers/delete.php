@@ -49,11 +49,7 @@ if (isset($_POST['deactivate'])) {
       echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න<br>Please select correct category","error");';
       echo '}, 200);</script>';
     } 
-    // else if ($cat != $catagory){
-    //   echo '<script type="text/javascript">';
-    //   echo 'setTimeout(function () { swal("Error!","කරුණාකර නිවැරදි කාණ්ඩය තෝරන්න<br>Please select correct category","error");';
-    //   echo '}, 200);</script>'; 
-    //          }
+   
     else {
       function delete($tableName, $idname, $id)
       {
