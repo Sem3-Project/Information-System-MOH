@@ -110,7 +110,7 @@ th, td {
     </tbody>
     </table>
     <br><br>
-    <button class="button1"><b>Sort By Date</b></button>
+    <button class="button1"><b>Sort</b></button>
     </div>
    <br><br>
    <br><br>

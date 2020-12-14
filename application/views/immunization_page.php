@@ -95,7 +95,7 @@ require '../models/immunization_model.php';
 </table>
 <table width="100%" border="0">
 <link rel="stylesheet" href="table.css"> 
-<tr width=100%><td  rowspan="2" width="15%" align="left"><h1>6 </h1>මාසය සම්පූර්ණ වූ විට​<br> months completed</td><td width="15%" align="left">සරම්ප </td><td  width="15%" align="left"><input type="date" name="date12" value="<?=$date12?>"> </td><td  width="15%" align="left"><input type="num" name="num12" value="<?=$num12?>"></td><td  width="30%" align="left"><input type="text" name="test12" value="<?=$test12?>"></td></tr>
+<tr width=100%><td  rowspan="2" width="15%" align="left"><h1>9 </h1>මාසය සම්පූර්ණ වූ විට​<br> months completed</td><td width="15%" align="left">සරම්ප </td><td  width="15%" align="left"><input type="date" name="date12" value="<?=$date12?>"> </td><td  width="15%" align="left"><input type="num" name="num12" value="<?=$num12?>"></td><td  width="30%" align="left"><input type="text" name="test12" value="<?=$test12?>"></td></tr>
 <tr><td width="15%" align="left">විටමින් A </td><td width="15%" align="left"><input type="date" name="date13" value="<?=$date13?>"> </td><td  width="15%" align="left"><input type="num" name="num13" value="<?=$num13?>"></td><td  width="30%" align="left"><input type="text" name="test13" value="<?=$test13?>"></td></tr>
 </table>
 <table width="100%" border="0">
