@@ -50,12 +50,12 @@
 
       <div class="form-group row">
       <div class="caption-container"><h4>ස්කන්ධය කි.ග්‍රෑ. මගින්  / Weight in kg.</h4></div>
-          <input type="text" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="weight" name="weight" placeholder="Enter child's weight in kilograms.">
+          <input type="float" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="weight" name="weight" placeholder="Enter child's weight in kilograms.">
         
       </div>
       <div class="form-group row">
       <div class="caption-container"><h4>උස සෙ.මි. මගින් / Height in cm.</h4></div>
-          <input type="text" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="height" name="height" placeholder="Enter child's height in centimeters.">
+          <input type="float" style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " class="form-control" id="height" name="height" placeholder="Enter child's height in centimeters.">
           
       </div>
       <br><br>
@@ -71,13 +71,16 @@
       <div class="col-sm-10 align-right"></div>
 
       <?php
-
-      
-
         function calculateBMI($weight, $height){
-          $bmi = ($weight / $height / $height) * 10000;
-          $bmiRounded = round($bmi, 1);
+          if ($weight==0 || $height==0){
+            $output = "<h3>අගයන් ඇතුලත් කරන්න.</h3>";
+          }
           
+          else{
+          $heightInm = $height/100;
+          $bmi =$weight/ ($heightInm * $heightInm);
+          $bmiRounded = round($bmi, 1);
+
             if($bmiRounded <= 18.4){
               $output = "අඩු බර / UNDERWEIGHT";
             }
@@ -87,29 +90,19 @@
             else if($bmiRounded >= 25 && $bmiRounded <= 29.9){
               $output = "අධි බර / OVERWEIGHT";
             }
-            else if($bmiRounded >= 30 && $bmiRounded <= 39.9){
+            else if($bmiRounded >= 30 ){
               $output = "ස්ථුල / OBESE";
             }
-            echo "<h2 >ස්කන්ධ දර්ශක අගය  ${bmiRounded}  වන අතර දරුවා අයත්වන ස්කන්ධ කාණ්ඩය  : "; 
-echo "$output";
-//             echo "<h2 >Your BMI value is  ${bmiRounded}   and you are : "; 
-// echo "$output";
-
+            echo "<h3 >ස්කන්ධ දර්ශක අගය  ${bmiRounded}  වන අතර දරුවා අයත්වන ස්කන්ධ කාණ්ඩය  : ";
+          }
+        echo "$output";
         }
 
-
         if(isset($_POST['calculate'])){
-          if (!isset($_POST['weight'])) {
-            return "Please enter child's weight";
-            exit();
-          }
-          if (!isset($_POST['height'])) {
-            return "Please enter child's height";
-            exit();
-          }
-          $weight = filter_var(htmlentities(floatval($_POST['weight'])),FILTER_SANITIZE_NUMBER_FLOAT);
+          
+          $weight = filter_var(htmlentities(floatval($_POST['weight'])));
 
-          $height = filter_var(htmlentities(floatval($_POST['height'])),FILTER_SANITIZE_NUMBER_FLOAT);
+          $height = filter_var(htmlentities(floatval($_POST['height'])));
 
           calculateBMI($weight, $height);
         }
