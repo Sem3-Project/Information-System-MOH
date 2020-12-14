@@ -48,59 +48,59 @@ require '../models/USScan_model.php';
 <table width="100%" border="0">
 <tr>
 <td width="50%">Date</td>
-       <td width="50%"><input type="date" name="date1"></td>
+       <td width="50%"><input type="date" name="date1" value="<?=$date1?>"></td>
 </tr>
 <tr>
 <td width="50%">POA</td>
-       <td width="50%"><input type="text" name="poa"></td>
+       <td width="50%"><input type="text" name="poa" value="<?=$poa?>"></td>
 </tr>
 <tr>
 <td width="50%">EBW</td>
-       <td width="50%"><input type="text" name="ebw"></td>
+       <td width="50%"><input type="text" name="ebw" value="<?=$ebw?>"></td>
 </tr>
 <tr>
 <td width="50%">CRL</td>
-       <td width="50%"><input type="text" name="crl"></td>
+       <td width="50%"><input type="text" name="crl" value="<?=$crl?>"></td>
 </tr>
 <tr>
 <td width="50%">Gest.Sac</td>
-       <td width="50%"><input type="text" name="gest_sac"></td>
+       <td width="50%"><input type="text" name="gest_sac" value="<?=$gest_sac?>"></td>
 </tr>
 <tr>
 <td width="50%">BPD</td>
-       <td width="50%"><input type="text" name="bpd"></td>
+       <td width="50%"><input type="text" name="bpd" value="<?=$bpd?>"></td>
 </tr>
 <tr>
 <td width="50%">HC</td>
-       <td width="50%"><input type="text" name="hc"></td>
+       <td width="50%"><input type="text" name="hc" value="<?=$hc?>"></td>
 </tr>
 <tr>
 <td width="50%">AC</td>
-       <td width="50%"><input type="text" name="ac"></td>
+       <td width="50%"><input type="text" name="ac" value="<?=$ac?>"></td>
 </tr>
 <tr>
 <td width="50%">FL</td>
-       <td width="50%"><input type="text" name="fl"></td>
+       <td width="50%"><input type="text" name="fl" value="<?=$fl?>"></td>
 </tr>
 <tr>
 <td width="50%">Liquor</td>
-       <td width="50%"><input type="text" name="liquor"></td>
+       <td width="50%"><input type="text" name="liquor" value="<?=$liquor?>"></td>
 </tr>
 <tr>
 <td width="50%">Placenta</td>
-       <td width="50%"><input type="text" name="placenta"></td>
+       <td width="50%"><input type="text" name="placenta" value="<?=$placenta?>"></td>
 </tr>
 <tr>
 <td width="50%">Average POA</td>
-       <td width="50%"><input type="text" name="average_poa"></td>
+       <td width="50%"><input type="text" name="average_poa" value="<?=$average_poa?>"></td>
 </tr>
 <tr>
 <td width="50%">Any other</td>
-       <td width="50%"><input type="text" name="any_other"></td>
+       <td width="50%"><input type="text" name="any_other" value="<?=$any_other?>"></td>
 </tr>
 <tr>
 <td width="50%">Designation</td>
-       <td width="50%"><input type="text" name="designation"></td>
+       <td width="50%"><input type="text" name="designation" value="<?=$designation?>"></td>
 </tr>
 </table>
 <input type="hidden" name="pat_id" value="<?=$pat_id?>">
