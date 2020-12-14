@@ -92,7 +92,7 @@ if(isset($_POST["Generate"])){
             style="text-align:center; width: 50%; height: 50px; padding:10px; font-size:15px; " name="id" value="<?php echo($_SESSION['id'])?>"><br><br>
 
 
-<input type="submit" class="link" name="Generate" style="margin-bottom: 110px;" value=" පිවිසෙන්න"></center>
+<input type="submit" class="link" name="Generate" style="margin-bottom: 110px;" value="වාර්තා කාණ්ඩය තෝරාගැනීම"></center>
 
 </div></div>
 </form>

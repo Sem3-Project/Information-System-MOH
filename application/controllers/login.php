@@ -30,7 +30,7 @@ if (isset($_POST['login_user'])) {
 
     if (empty($_POST['id']) || empty($_POST['password'])) {
         echo '<script type="text/javascript">';
-        echo 'setTimeout(function () { swal("Error!","කරුණාකර අවශ්‍ය සියලු තොරතුරු ඇතුළත් කරන්න\nPlease enter all required details","error");';
+        echo 'setTimeout(function () { swal("Error!","කරුණාකර අවශ්‍ය සියලු තොරතුරු ඇතුළත් කරන්න<br>Please enter all required details","error");';
         echo '}, 200);</script>';
     }
     else{
@@ -79,13 +79,13 @@ if (isset($_POST['login_user'])) {
             }
             else{
                 echo '<script type="text/javascript">';
-                echo 'setTimeout(function () { swal("Error!","පරිශීලක නාමය හෝ මුරපදය වලංගු නැත\nUsername or password is invalid","error");';
+                echo 'setTimeout(function () { swal("Error!","පරිශීලක නාමය හෝ මුරපදය වලංගු නැත<br>Username or password is invalid","error");';
                 echo '}, 200);</script>'; 
             }
         }
         else{
             echo '<script type="text/javascript">';
-            echo 'setTimeout(function () { swal("Error!","පරිශීලක නාමය හෝ මුරපදය වලංගු නැත\nUsername or password is invalid","error");';
+            echo 'setTimeout(function () { swal("Error!","පරිශීලක නාමය හෝ මුරපදය වලංගු නැත<br>Username or password is invalid","error");';
             echo '}, 200);</script>';
         }
      
