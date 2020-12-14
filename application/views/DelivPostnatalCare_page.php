@@ -53,7 +53,7 @@ require '../models/DelivPostnatalCare_model.php';
     <td width="14%" align="right"><table width="99%" border="1">
       <tr>
         <td width="43%"><h4>රෝහල​</h4>Hospital</td>
-        <td width="57%"><input type="text" name="hospital" value="<?=$hosptal?>"> </td>
+        <td width="57%"><input type="text" name="hosptal" value="<?=$hosptal?>"> </td>
       </tr>
     </table></td>
   </tr>
