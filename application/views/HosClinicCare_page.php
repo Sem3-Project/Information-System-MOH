@@ -49,17 +49,17 @@ require '../models/HosClinicCare_model.php';
 
        <tr>
        <td width="35.5%">Date</td>
-       <td width="50%"><input type="date" name="dt"></td>
+       <td width="50%"><input type="date" name="date1" value="<?=$date1?>"></td>
        
         </tr>
         <tr>
         <td>POA</td>
-        <td><input type="text" name="poa"></td>
+        <td><input type="text" name="poa" value="<?=$poa?>"></td>
         
         </tr>
         <tr>
         <td >Weight</td>
-        <td ><input type="text" name="wt"></td>
+        <td ><input type="text" name="weight1" value="<?=$weight1?>"></td>
        
         </tr>
   </table>
@@ -68,18 +68,18 @@ require '../models/HosClinicCare_model.php';
         <td width="35.5%" >Urine</td>
         <td width="25%"> Sugar:
         <select name="sugar">
-            <option value="Green">Green</option>
-            <option value="Yellow">Yellow</option>
-            <option value="Orange">Orange</option>
-            <option value="Brick red">Brick red</option>
-            <option value="NIL">NIL</option>
+            <option value="Green" <?php if ($sugar=='Green'){ echo 'selected';}?>>Green</option>
+            <option value="Yellow" <?php if ($sugar=='Yellow'){ echo 'selected';}?>>Yellow</option>
+            <option value="Orange" <?php if ($sugar=='Orange'){ echo 'selected';}?>>Orange</option>
+            <option value="Brick red" <?php if ($sugar=='Brick red'){ echo 'selected';}?>>Brick red</option>
+            <option value="NIL" <?php if ($sugar=='NIL'){ echo 'selected';}?>>NIL</option>
         </td>
         <td width="25%">Albumin:
         <select name="albumin">
-       <option value="NIL">NIL</option>
-       <option value="+">+</option>
-       <option value="++">++</option>
-       <option value="+++">+++</option>
+       <option value="NIL" <?php if ($albumin=='NIL'){ echo 'selected';}?>>NIL</option>
+       <option value="+" <?php if ($albumin=='+'){ echo 'selected';}?>>+</option>
+       <option value="++" <?php if ($albumin=='++'){ echo 'selected';}?>>++</option>
+       <option value="+++" <?php if ($albumin=='+++'){ echo 'selected';}?>>+++</option>
       </td>
       </tr>
     </table>
@@ -89,8 +89,8 @@ require '../models/HosClinicCare_model.php';
         <td width="35.5%">Oedema</td>
         <td width="50%">
         <select name="oedema">
-            <option value="+">+</option>
-            <option value="0">0</option>
+            <option value="+" <?php if ($oedema=='+'){ echo 'selected';}?>>+</option>
+            <option value="0" <?php if ($oedema=='0'){ echo 'selected';}?>>0</option>
         </td>
         </tr>
     </table>
@@ -98,8 +98,8 @@ require '../models/HosClinicCare_model.php';
     <table width="100%" border="0">
         <tr>
         <td width="66%" >BP</td>
-        <td width="18%">Systolic:<input type="text" name="Systolic"></td>
-        <td width="18%">Diastolic:<input type="text" name="Diastolic"></td>
+        <td width="18%" >Systolic:<input type="text" name="Systolic" value="<?=$systolic?>"></td>
+        <td width="18%">Diastolic:<input type="text" name="Diastolic" value="<?=$diastolic?>"></td>
         
       </tr>
     </table>
@@ -107,12 +107,12 @@ require '../models/HosClinicCare_model.php';
     <tr>
         <td width="37%" >Fundal Height</td>
         
-        <td width="26%"><input type="text" name="fundalHeight"></td>
+        <td width="26%"><input type="text" name="fundalHeight" value="<?=$fundalheight?>"></td>
         </td>
         <td width="26%">
         <select name="fundalHeight1">
-       <option value="NP">NP</option>
-       <option value="JP">JP</option>
+       <option value="NP"  <?php if ($fundalheight1=='NP'){ echo 'selected';}?>>NP</option>
+       <option value="JP"  <?php if ($fundalheight1=='JP'){ echo 'selected';}?> >JP</option>
        
       </td>
       </tr>
@@ -123,10 +123,10 @@ require '../models/HosClinicCare_model.php';
         <td width="35.5%">Lie</td>
         <td width="50%">
         <select name="lie">
-       <option value="LL">LL</option>
-       <option value="TL">TL</option>
-       <option value="OL">OL</option>
-       <option value="Other">Other</option>
+       <option value="LL"  <?php if ($lie=='LL'){ echo 'selected';}?>>LL</option>
+       <option value="TL"  <?php if ($lie=='TL'){ echo 'selected';}?>>TL</option>
+       <option value="OL"  <?php if ($lie=='OL'){ echo 'selected';}?>>OL</option>
+       <option value="Other"  <?php if ($lie=='Other'){ echo 'selected';}?>>Other</option>
         </td>
         
         </tr>
@@ -136,9 +136,9 @@ require '../models/HosClinicCare_model.php';
         <td width="35.5%">Presentation</td>
         <td width="50%">
         <select name="presentation">
-       <option value="Cephalic">Cephalic</option>
-       <option value="Breech">Breech</option>
-       <option value="Other">Other</option>
+       <option value="Cephalic"  <?php if ($presentation=='Cephalic'){ echo 'selected';}?>>Cephalic</option>
+       <option value="Breech" <?php if ($presentation=='Breech'){ echo 'selected';}?>>Breech</option>
+       <option value="Other" <?php if ($presentation=='Other'){ echo 'selected';}?>>Other</option>
        </td>
        </tr>
         </table>
@@ -148,13 +148,13 @@ require '../models/HosClinicCare_model.php';
         <td width="35.5%" >FM/FHS</td>
         <td width="25%"> FM:
         <select name="fm">
-            <option value="+">+</option>
-            <option value="0">0</option>
+            <option value="+"<?php if ($fm=='+'){ echo 'selected';}?>>+</option>
+            <option value="0" <?php if ($fm=='0'){ echo 'selected';}?>>0</option>
          </td>
         <td width="25%">FHS:
         <select name="fhs">
-       <option value="+">+</option>
-       <option value="0">0</option>
+       <option value="+" <?php if ($fhs=='+'){ echo 'selected';}?>>+</option>
+       <option value="0" <?php if ($fhs=='0'){ echo 'selected';}?>>0</option>
        </td>
       </tr>
     </table>
@@ -162,12 +162,12 @@ require '../models/HosClinicCare_model.php';
     <table width="100%" border="0">        
         <tr>
         <td width="35.5%">Designation</td>
-        <td width="50%"><input type="text" name="designation"></td>
+        <td width="50%"><input type="text" name="designation"  value="<?=$designation?>"></td>
         
         </tr>
         <tr>
         <td width="35.5%">Date of next visit</td>
-        <td width="50%"><input type="date" name="donext1"></td>
+        <td width="50%"><input type="date" name="donext1"  value="<?=$donext?>"></td>
         
         </tr>
         </table>
