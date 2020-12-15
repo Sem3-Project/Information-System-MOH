@@ -17,7 +17,7 @@ class table
             $sql = "SELECT * from {$this->tableName} where id = '{$this->id}'";
             return $sql;
         } 
-     
+        
     }
 
     function load($dbObj, $id)
@@ -43,10 +43,18 @@ class table
 
     }
 
+  
+
     function featuredLoad($dbObj,$sql){
         $result = mysqli_query($dbObj->getConnection(),$sql) or die("Database access failed..!!");
         return $result;
     }
 
+    function bind($data)
+    {
+        foreach ($data as $key => $value) {
+            $this->$key = $value;
+        }
+    }
 }
 ?>
